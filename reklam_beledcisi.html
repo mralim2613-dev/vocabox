@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<title>Vocabox — Reklam və Kopiraytinq Bələdçisi</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm 20mm 18mm;
+  }
+  body {
+    font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+    color: #1a2e26;
+    background-color: #ffffff;
+    line-height: 1.5;
+    font-size: 10.5pt;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* COVER PAGE */
+  .cover {
+    page-break-after: always;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  .cover-badge {
+    display: inline-block;
+    background-color: #eaf1e7;
+    color: #205043;
+    font-weight: 700;
+    font-size: 11pt;
+    padding: 6px 18px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+  }
+  .cover-title {
+    font-size: 32pt;
+    font-weight: 800;
+    color: #173f35;
+    line-height: 1.15;
+    margin: 0 0 15px 0;
+  }
+  .cover-subtitle {
+    font-size: 15pt;
+    color: #556b62;
+    font-weight: 500;
+    max-width: 650px;
+    margin: 0 auto 35px auto;
+    line-height: 1.4;
+  }
+  .cover-divider {
+    width: 80px;
+    height: 4px;
+    background-color: #8cac68;
+    margin: 0 auto 40px auto;
+    border-radius: 2px;
+  }
+  .cover-meta {
+    background-color: #f7f9f6;
+    border: 1px solid #e2e8e0;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .cover-meta-row {
+    margin-bottom: 10px;
+    font-size: 10pt;
+  }
+  .cover-meta-row:last-child {
+    margin-bottom: 0;
+  }
+  .cover-meta-label {
+    font-weight: 700;
+    color: #205043;
+    display: inline-block;
+    width: 130px;
+  }
+  .cover-meta-val {
+    color: #33443d;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-size: 18pt;
+    font-weight: 750;
+    color: #173f35;
+    border-bottom: 2px solid #8cac68;
+    padding-bottom: 8px;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    page-break-after: avoid;
+  }
+  h2 {
+    font-size: 13.5pt;
+    font-weight: 700;
+    color: #205043;
+    margin-top: 22px;
+    margin-bottom: 12px;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: #31584b;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    page-break-after: avoid;
+  }
+  p {
+    margin: 0 0 10px 0;
+    text-align: justify;
+  }
+
+  /* BOXES & CALLOUTS */
+  .callout {
+    background-color: #f6f8f5;
+    border-left: 4px solid #205043;
+    padding: 12px 16px;
+    margin: 14px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .callout-title {
+    font-weight: 700;
+    color: #205043;
+    margin-bottom: 4px;
+    font-size: 11pt;
+  }
+  .script-box {
+    background-color: #fbfcfb;
+    border: 1px solid #dbe2d9;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+  }
+  .script-header {
+    font-weight: 700;
+    color: #173f35;
+    font-size: 10.5pt;
+    border-bottom: 1px dashed #cad4c7;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 9.5pt;
+  }
+  th {
+    background-color: #205043;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: left;
+    padding: 9px 12px;
+    border: 1px solid #205043;
+  }
+  td {
+    padding: 8px 12px;
+    border: 1px solid #dbe2d9;
+    vertical-align: top;
+  }
+  tr:nth-child(even) {
+    background-color: #f7f9f6;
+  }
+
+  /* LISTS */
+  ul, ol {
+    margin: 0 0 12px 0;
+    padding-left: 22px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+
+  /* BADGES & HIGHLIGHTS */
+  .tag {
+    display: inline-block;
+    background-color: #e4ece1;
+    color: #235446;
+    font-size: 8.5pt;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+  }
+  .highlight {
+    color: #1e5a49;
+    font-weight: 600;
+  }
+  
+  .page-break {
+    page-break-before: always;
+  }
+  .footer-note {
+    font-size: 8.5pt;
+    color: #72837b;
+    text-align: center;
+    border-top: 1px solid #e5ece2;
+    padding-top: 10px;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="cover-badge">Strateji Reklam və Kopiraytinq Bələdçisi</div>
+  <h1 class="cover-title">VOCABOX</h1>
+  <div class="cover-subtitle">Ağıllı Söz Qutusu — Fasiləli Təkrar və Leitner Sistemi ilə Xarici Dil Lüğəti üçün Satış və Marketinq Playbook-u</div>
+  <div class="cover-divider"></div>
+  
+  <div class="cover-meta">
+    <div class="cover-meta-row">
+      <span class="cover-meta-label">Məhsul:</span>
+      <span class="cover-meta-val">Vocabox (Mobil Tətbiq & Veb Platforma)</span>
+    </div>
+    <div class="cover-meta-row">
+      <span class="cover-meta-label">Sənədin Təyinatı:</span>
+      <span class="cover-meta-val">Reklam, Kopiraytinq, Video Ssenariləri və Satış Strategiyası</span>
+    </div>
+    <div class="cover-meta-row">
+      <span class="cover-meta-label">Bazalar:</span>
+      <span class="cover-meta-val">11 170+ Kart (Goethe A1–B1, Oxford 3000, Brown 5000)</span>
+    </div>
+    <div class="cover-meta-row">
+      <span class="cover-meta-label">Hədəf Kanallar:</span>
+      <span class="cover-meta-val">Instagram, TikTok, YouTube Shorts, Telegram, WhatsApp</span>
+    </div>
+    <div class="cover-meta-row">
+      <span class="cover-meta-label">Tarix:</span>
+      <span class="cover-meta-val">2026-cı il</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<h1>1. Məhsulun Analizi və Əsas Pozisiyalaşdırma (USP)</h1>
+<p>
+  Xarici dil öyrənənlərin 90%-i eyni təməl problemlə qarşılaşır: <strong>«Sözləri dəftərə yazıb əzbərləyirəm, amma bir neçə gün sonra heç nə xatırlamıram.»</strong> Bu fenomen elmdə <em>Ebbinghaus Unutma Əyrisi</em> kimi tanınır. İnsan beyni passiv siyahı əzbərləməsini qısa müddət sonra zibil qutusuna atır.
+</p>
+
+<div class="callout">
+  <div class="callout-title">Vocabox-un Təməl Satış Fəlsəfəsi (Core Value Proposition)</div>
+  <strong>«Beyin əzbərləməyi sevmir, fasiləli təkrarı sevir.»</strong> Vocabox istifadəçiyə sadəcə quru lüğət vermir; sözü unudacağı dəqiq anda qarşısına çıxararaq onu uzunmüddətli yaddaşa (Long-Term Memory) həkk edir.
+</div>
+
+<h2>Vocabox-un Rəqiblərdən 4 Əsas Fərqi (Killer Features):</h2>
+<ul>
+  <li>
+    <strong>1. Elmi Leitner Sistemi (6 Səviyyəli Qutu):</strong> Yeni kart 3-cü qutudan başlayır. Hər düzgün cavab kartı növbəti qutuya aparır (daha gec təkrar olunur), hər səhv cavab isə dərhal 1-ci qutuya qaytarır. Beləliklə, istifadəçi bildiyi sözlərə deyil, yalnız çətinlik çəkdiyi sözlərə vaxt xərcləyir.
+  </li>
+  <li>
+    <strong>2. Hazır 11 170+ Rəsmi və Akademik Söz Bazası:</strong>
+    <ul>
+      <li><strong>Alman dili:</strong> Goethe-Institut rəsmi imtahan bazası (Start Deutsch A1, A2 və B1 üzrə 3 200 söz, nümunə cümlə və təlimat izahları).</li>
+      <li><strong>Rus dili:</strong> Nicholas J. Brown-un məşhur lüğətindən seçilmiş və tezlik sırası ilə düzülmüş 5 000 ən vacib söz.</li>
+      <li><strong>İngilis dili:</strong> Oxford 3000 bazasında hazırlanmış, azərbaycanca qarşılığı və hədəf dildə sadə tərifi olan 2 970 kart.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>3. Süni İntellekt (AI) ilə Mətndən Lüğət Yaratma:</strong> İstifadəçi oxuduğu məqaləni, kitabı və ya serial altyazısını daxil edir; sistemdəki hazır prompt sayəsində AI saniyələr içində fərdi kart dəsti hazırlayır və birbaşa tətbiqə idxal edir.
+  </li>
+  <li>
+    <strong>4. Aylıq Abunə Haqqının Olmaması (Birdəfəlik Lisenziya):</strong> Duolingo, Quizlet və digər platformalar hər ay 10–15 dollar tələb etdiyi halda, Vocabox fərdi lisenziya nömrəsi (VB-XXXXXX) ilə birdəfəlik ödəniş və ömürlük istifadə imkanı təqdim edir.
+  </li>
+</ul>
+
+<!-- SECTION 2 -->
+<div class="page-break"></div>
+<h1>2. Diqqətçəkən Başlıqlar, Şüarlar və "Hook"-lar</h1>
+<p>
+  Sosial şəbəkə istifadəçisi lentdə (feed) videonu 1.5–2 saniyə ərzində dəyərləndirir. Reklam kampaniyalarında diqqəti anında cəlb edən ən güclü formulalar:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Kateqoriya</th>
+      <th style="width: 45%;">Reklam Başlığı / Şüar (Hook)</th>
+      <th style="width: 30%;">Psixoloji Təsiri</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Problemə Vuran (Pain Point)</strong></td>
+      <td>«10 dəfə oxuyub yenə unutmusan? Problem sənin yaddaşında deyil, metodundadır.»</td>
+      <td>İstifadəçinin günahkarlıq hissini aradan qaldırır və yeni çıxış yolu təklif edir.</td>
+    </tr>
+    <tr>
+      <td><strong>Dəftər Əzbərinə Qarşı</strong></td>
+      <td>«Lüğət dəftərlərini zibilə atın: Beyin siyahıları deyil, fasiləli təkrarı sevir.»</td>
+      <td>Köhnə, nəticə verməyən vərdişləri sındırır; maraq oyadır.</td>
+    </tr>
+    <tr>
+      <td><strong>Alman Dili (Goethe)</strong></td>
+      <td>«Goethe A1–B1 imtahanının bütün rəsmi sözləri (3 200 söz) artıq cibindədir!»</td>
+      <td>İmtahana hazırlaşan tələbələrin ən böyük axtarışına birbaşa dəqiq cavab verir.</td>
+    </tr>
+    <tr>
+      <td><strong>Rus Dili (Tezlik)</strong></td>
+      <td>«Rus dilində 100 000 söz var, amma canlı dildə sadəcə bu 5 000 söz işlənir!»</td>
+      <td>Zaman qənaəti və 80/20 Pareto qaydası ilə güclü cəlbedicilik yaradır.</td>
+    </tr>
+    <tr>
+      <td><strong>AI Texnologiyası</strong></td>
+      <td>«Oxuduğun mətni 10 saniyədə şəxsi lüğət kartlarına çevirən tətbiq.»</td>
+      <td>Müasir süni intellekt trendindən faydalanaraq innovasiya hissi verir.</td>
+    </tr>
+    <tr>
+      <td><strong>Maliyyə / Abunəlik</strong></td>
+      <td>«Hər ay pul ödəməkdən bezdiniz? Bir dəfə əldə edin, ömürlük istifadə edin.»</td>
+      <td>İqtisadi sərfəlilik və mülkiyyət hissi təqdim edir.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- SECTION 3 -->
+<h1>3. Sosial Şəbəkələr üçün Hazır Reklam Mətnləri (Ad Copies)</h1>
+
+<h2>A. Instagram Postu / Karusel (AIDA Modeli)</h2>
+<div class="script-box">
+  <div class="script-header">📌 Format: Instagram Karusel Postu (Karusel şəkli üzərində böyük başlıq + Mətn)</div>
+  <p><strong>Şəkil 1 (Kover):</strong> «Niyə gündə 20 söz əzbərləyib heç birini xatırlamırsan? 🧠👇»</p>
+  <p><strong>Postun Mətni:</strong></p>
+  <p>Əksər insanlar dil öyrənərkən eyni səhvi edir: Uzun bir söz siyahısı yazır, dalbadal oxuyur və elə bilir ki, artıq öyrəndi. Amma insan beyni işlənməyən məlumatı 48 saat ərzində 80% silir!</p>
+  <p><strong>Bəs çıxış yolu nədir?</strong></p>
+  <p>Dünyanın ən effektiv yaddaş metodu olan <strong>Leitner Sistemi (6 Qutulu Fasiləli Təkrar)</strong>.</p>
+  <p>İndi bu sistem <strong>Vocabox</strong> ilə cibinizdədir:</p>
+  <ul>
+    <li>📦 Bildiyin sözlər növbəti qutuya keçir və nadir hallarda təkrar olunur.</li>
+    <li>🔁 Unutduğun və ya çətin sözlər isə dərhal 1-ci qutuya qayıdır və tətbiq onu sən tam mənimsəyənə qədər qarşına çıxarır.</li>
+  </ul>
+  <p><strong>Hazır daxil olan xəzinələr:</strong></p>
+  <ul>
+    <li>🇩🇪 <strong>Alman dili:</strong> Goethe A1, A2, B1 rəsmi imtahan bazası (3 200 söz və cümlə)</li>
+    <li>🇷🇺 <strong>Rus dili:</strong> Ən çox işlənən 5 000 söz (Nicholas Brown tezlik lüğəti)</li>
+    <li>🇬🇧 <strong>İngilis dili:</strong> Oxford 3000 bazasında hazırlanmış, azərbaycanca tərcümə və ingiliscə sadə izahlar</li>
+    <li>🤖 <strong>AI İnteqrasiyası:</strong> İstənilən mətndən bir kliklə öz fərdi kartlarını çıxarmaq imkanı!</li>
+  </ul>
+  <p>💡 <em>Aylıq abunə haqqı YOXDUR. Fərdi lisenziya nömrənizi bir dəfə əldə edirsiniz və ömürlük istifadə edirsiniz!</em></p>
+  <p>📲 <strong>Sözləri birdəfəlik yaddaşa həkk etmək üçün bio-dakı linkə keçin və bu gün başlayın!</strong></p>
+</div>
+
+<!-- SECTION 3 CONTINUED -->
+<div class="page-break"></div>
+<h2>B. TikTok / Instagram Reels / Shorts üçün 30 Saniyəlik Video Ssenarisi</h2>
+<div class="script-box">
+  <div class="script-header">🎬 Format: UGC (User Generated Content) — Dinamik, real və cəlbedici video</div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 15%;">Zaman</th>
+        <th style="width: 40%;">Vizual / Kadrlar</th>
+        <th style="width: 45%;">Səs / Deyilən Sözlər</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>00:00 – 00:05</strong></td>
+        <td>Aparıcı əlində qalın lüğət dəftəri tutub başını yelləyir, bezgin görünüş. Ekranda böyük yazı: <em>«Sözləri niyə unuduruq?»</em></td>
+        <td>«Əgər hələ də xarici dildə sözləri dəftərə yazıb əzbərləyirsənsə, vaxtını boşa xərcləyirsən. İnsan beyni belə işləmir!»</td>
+      </tr>
+      <tr>
+        <td><strong>00:05 – 00:12</strong></td>
+        <td>Kamera telefona yaxınlaşır. Vocabox tətbiqi açılır, kartlar sürüşdürülür, 6 fərqli rəngli qutu göstərilir.</td>
+        <td>«Bunun üçün Vocabox var. Burada 6 fərqli yaddaş qutusu var. Bildiyin sözlər irəli gedir, çətin sözləri isə tətbiq unudacağın an təkrar qarşına çıxarır.»</td>
+      </tr>
+      <tr>
+        <td><strong>00:12 – 00:20</strong></td>
+        <td>Ekranda ardıcıl olaraq Goethe A1-B1 dəsti və Rus dilinin 5 000-lik bazası açılır.</td>
+        <td>«Üstəlik sıfırdan söz axtarmırsan: Alman dilindən rəsmi Goethe imtahan sözləri, Rus dilindən isə ən çox işlənən 5 000 söz hazır içindədir!»</td>
+      </tr>
+      <tr>
+        <td><strong>00:20 – 00:25</strong></td>
+        <td>«Mətndən lüğət yarat» bölməsinə mətni yapışdırıb saniyələr içində kartların çıxması göstərilir.</td>
+        <td>«Hətta oxuduğun istənilən mətni süni intellektlə saniyələr içində fərdi kartlara çevirə bilərsən.»</td>
+      </tr>
+      <tr>
+        <td><strong>00:25 – 00:30</strong></td>
+        <td>Aparıcı gülümsəyir, telefonu göstərir. Ekranda ox işarəsi ilə: <em>«Link bio-da!»</em></td>
+        <td>«Aylıq abunəlik də yoxdur. Bir dəfə lisenziya al, ömürlük işlət. Bio-dakı linkdən dərhal sına!»</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2>C. Instagram Stories / Qısa Reklam Mətnləri (Direct-Response)</h2>
+<div class="script-box">
+  <div class="script-header">📱 Format: 3 Fərqli Hekayə (Story) Şablonu</div>
+  <p><strong>Variant 1 (Alman dili tələbələri üçün):</strong><br>
+  «🇩🇪 Goethe A1, A2 və ya B1 imtahanına hazırlaşırsan?<br>
+  Rəsmi 3 200 söz və cümlə bir tətbiqdə toplandı. Qutularla təkrar et, imtahan lüğətini zəmanətli mənimsə! 👉 [Linkə keç]»</p>
+  
+  <p><strong>Variant 2 (Tezlik və effektivlik axtaranlar üçün):</strong><br>
+  «🧠 Gündə cəmi 15 dəqiqə fasiləli təkrarla ayda 300+ aktiv söz öyrənə biləcəyini bilirdin?<br>
+  Vocabox ilə beynini aldatmaqdan əl çək, elmi metodla öyrən. 👉 [İndi sına]»</p>
+  
+  <p><strong>Variant 3 (Aylıq abunədən qaçanlar üçün):</strong><br>
+  «❌ Hər ay xarici tətbiqlərə 20 AZN verməkdən yorulmusan?<br>
+  Vocabox-da abunəlik yoxdur! 1 dəfə lisenziya nömrəsi al, ömürlük cibində qalsın. 👉 [Ətraflı məlumat]»</p>
+</div>
+
+<!-- SECTION 4 -->
+<div class="page-break"></div>
+<h1>4. Dil Seqmentləri Üzrə Xüsusi Reklam Strategiyası</h1>
+<p>
+  Reklam büdcəsini eyni vaxtda hər kəsə xərcləmək əvəzinə, auditoriyanı dil üzrə seqmentasiya etmək dönüşümü (conversion rate) 3 dəfədən çox artırır.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Dil Qrupu</th>
+      <th style="width: 30%;">Hədəf Kütlə</th>
+      <th style="width: 50%;">Tövsiyə Olunan Reklam Mesajı</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>🇩🇪 Alman Dili</strong><br><span class="tag">Goethe 3 200</span></td>
+      <td>
+        • Almaniyada təhsil almaq istəyənlər<br>
+        • Ausbildung və Chancenkarte müraciəti edənlər<br>
+        • Goethe A1–B1 imtahan tələbələri
+      </td>
+      <td>
+        <strong>«Goethe imtahanında ən böyük maneə söz çatışmazlığıdır.»</strong><br>
+        Tətbiqdə Goethe-Institut-un Start Deutsch 1 (A1), A2 və B1 rəsmi söz siyahıları nümunə cümlələri və izahları ilə hazırdır. İmtahana hazırlaşarkən təsadüfi sözlərlə vaxt itirməyin!
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🇷🇺 Rus Dili</strong><br><span class="tag">Brown 5 000</span></td>
+      <td>
+        • Karyera və yerli şirkətlərdə iş axtaranlar<br>
+        • Rusdilli mühitdə sərbəst danışmaq istəyənlər<br>
+        • Şifahi nitqini cilalamaq istəyənlər
+      </td>
+      <td>
+        <strong>«Lüğətlərdə minlərlə yararsız söz var, amma canlı dildə ilk 5 000 söz bəs edir.»</strong><br>
+        Nicholas J. Brown-un elmi tezlik lüğəti ilə ən çox işlənən sözləri 1–1000, 1001–2000 ardıcıllığı ilə öyrənin. Boş qaydalar deyil, real canlı rus dili!
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🇬🇧 İngilis Dili</strong><br><span class="tag">Oxford 3 000</span></td>
+      <td>
+        • Tələbələr və gənclər<br>
+        • IELTS / TOEFL hazırlığı keçənlər<br>
+        • Şəxsi inkişaf və qlobal iş imkanları
+      </td>
+      <td>
+        <strong>«Sözün tərcüməsini deyil, hədəf dildə izahını öyrənərək ingiliscə düşünün.»</strong><br>
+        Oxford 3000 bazasında hazırlanmış dəstlə sözlərin yalnız azərbaycanca qarşılığını deyil, ingiliscə sadə izahlarını da mənimsəyin.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- SECTION 5 -->
+<h1>5. Satış və Dönüşüm (Conversion) Məsləhətləri</h1>
+
+<h2>1. Lisenziya Nömrəsi (VB-XXXXXX) Satış Psixologiyası</h2>
+<p>
+  Tətbiqinizdə tətbiq olunan Supabase əsaslı <code>VB-EN-XXXXXX</code>, <code>VB-RU-XXXXXX</code>, <code>VB-DE-XXXXXX</code> lisenziya modeli böyük bir marketinq üstünlüyüdür:
+</p>
+<ul>
+  <li><strong>«Özəl Açarı Almaq» Hissi:</strong> İstifadəçiyə sadəcə qeydiyyatdan keçmək deyil, ona məxsus xüsusi "VIP Lisenziya Kodu" təqdim etmək məhsulun dəyərini artırır.</li>
+  <li><strong>Paket Təklifi (Bundle Offer):</strong> «Tək dil: 15 AZN / İki dil birlikdə: 22 AZN (8 AZN Qənaət)». İki dili eyni anda öyrənənlər üçün bu təklif satışı dərhal ikiqat artırır.</li>
+</ul>
+
+<h2>2. Müştəri Etirazlarının Əvvəlcədən Zərərsizləşdirilməsi</h2>
+<ul>
+  <li>
+    <em>Etiraz 1: «Məndə onsuz da pulsuz Duolingo var, buna nə ehtiyac var?»</em><br>
+    <strong>Cavab:</strong> Duolingo oyun xarakterlidir və söz bazasını çox yavaş artırır. Vocabox isə konkret imtahan və akademik hədəflər üçün 11 000+ sözü intensiv yadda saxlamaq üçün yaradılmış peşəkar alətdir.
+  </li>
+  <li>
+    <em>Etiraz 2: «Özüm lüğət dəftərinə yazıb oxuya bilərəm.»</em><br>
+    <strong>Cavab:</strong> Dəftər sənə hansı sözü unudacağını xatırlada bilmir. Vocabox-un 6 qutulu alqoritmi isə hansı gün hansı kartı təkrar etməli olduğunu avtomatik idarə edir.
+  </li>
+</ul>
+
+<h2>3. Fəaliyyətə Güclü Çağırış (Strong Call to Action - CTA)</h2>
+<p>
+  «Daha çox öyrən» və ya «Bax» kimi zəif düymələr əvəzinə nəticə vəd edən dinamik çağırışlardan istifadə edin:
+</p>
+<ul>
+  <li>👉 <em>«Lisenziya nömrəni əldə et və bu gün başla»</em></li>
+  <li>👉 <em>«Goethe imtahan lüğətini indi mənimsə»</em></li>
+  <li>👉 <em>«Sözləri unutmağa son qoy — İndi sına»</em></li>
+</ul>
+
+<div class="footer-note">
+  © Vocabox — Reklam və Kopiraytinq Strategiyası. Bütün hüquqlar qorunur.
+</div>
+
+</body>
+</html>

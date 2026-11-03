@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Vocabox</string>
+    <string name="title_activity_main">Vocabox</string>
+    <string name="package_name">com.vocabox.app</string>
+    <string name="custom_url_scheme">com.vocabox.app</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "appId": "com.vocabox.app",
+  "appName": "Vocabox",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "backgroundColor": "#173f35",
+      "showSpinner": false
+    },
+    "SystemBars": {
+      "insetsHandling": "native",
+      "initialViewportFitValueHint": "cover",
+      "style": "LIGHT",
+      "hidden": false
+    }
+  },
+  "ios": {
+    "contentInset": "never",
+    "preferredContentMode": "mobile"
+  },
+  "android": {
+    "backgroundColor": "#173f35",
+    "allowMixedContent": false
+  }
+}

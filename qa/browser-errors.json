@@ -1,0 +1,36 @@
+{
+  "development": [
+    {
+      "level": "error",
+      "message": "Error: Təkrar kart var.\n    at http://127.0.0.1:3000/src/main.js:25:949\n    at Array.map (<anonymous>)\n    at validateState (http://127.0.0.1:3000/src/main.js:25:733)\n    at withBundledDecks (http://127.0.0.1:3000/src/main.js:203:9)\n    at http://127.0.0.1:3000/src/main.js:216:28",
+      "timestamp": "2026-10-30T12:05:12.795Z",
+      "url": "http://127.0.0.1:3000/src/main.js"
+    },
+    {
+      "level": "error",
+      "message": "ReferenceError: Cannot access 'activeUserNumber' before initialization\n    at triggerCloudPush (http://127.0.0.1:3000/src/main.js:223:3)\n    at commit (http://127.0.0.1:3000/src/main.js:46:191)\n    at grade (http://127.0.0.1:3000/src/main.js:122:300)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:3000/src/main.js:206:1236)",
+      "timestamp": "2026-10-30T12:05:45.289Z",
+      "url": "http://127.0.0.1:3000/src/main.js"
+    },
+    {
+      "level": "error",
+      "message": "ReferenceError: Cannot access 'activeUserNumber' before initialization\n    at triggerCloudPush (http://127.0.0.1:3000/src/main.js:223:3)\n    at commit (http://127.0.0.1:3000/src/main.js:46:191)\n    at HTMLButtonElement.applyImport (http://127.0.0.1:3000/src/main.js:147:950)",
+      "timestamp": "2026-10-30T12:06:48.298Z",
+      "url": "http://127.0.0.1:3000/src/main.js"
+    },
+    {
+      "level": "error",
+      "message": "ReferenceError: Cannot access 'activeUserNumber' before initialization\n    at triggerCloudPush (http://127.0.0.1:3000/src/main.js:223:3)\n    at commit (http://127.0.0.1:3000/src/main.js:46:191)\n    at grade (http://127.0.0.1:3000/src/main.js:122:300)\n    at choose (http://127.0.0.1:3000/src/main.js:123:493)\n    at HTMLDocument.<anonymous> (http://127.0.0.1:3000/src/main.js:206:1126)",
+      "timestamp": "2026-10-30T12:07:06.514Z",
+      "url": "http://127.0.0.1:3000/src/main.js"
+    }
+  ],
+  "production": [
+    {
+      "level": "error",
+      "message": "Error: Təkrar kart var.\n    at http://127.0.0.1:4173/assets/index-B_pCB4yA.js:75:67670\n    at Array.map (<anonymous>)\n    at Rr (http://127.0.0.1:4173/assets/index-B_pCB4yA.js:75:67485)\n    at li (http://127.0.0.1:4173/assets/index-B_pCB4yA.js:90:14091)\n    at http://127.0.0.1:4173/assets/index-B_pCB4yA.js:90:19923",
+      "timestamp": "2026-10-30T12:07:54.322Z",
+      "url": "http://127.0.0.1:4173/assets/index-B_pCB4yA.js"
+    }
+  ]
+}

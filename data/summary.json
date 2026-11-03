@@ -1,0 +1,30 @@
+{
+  "projectName": "Vocabox — Ağıllı Söz Qutusu",
+  "totalCards": 11170,
+  "languages": {
+    "en": {
+      "name": "İngilis dili",
+      "deckId": "en-core",
+      "deckName": "Əsas sözlər",
+      "count": 2970
+    },
+    "ru": {
+      "name": "Rus dili",
+      "deckId": "ru-core",
+      "deckName": "Əsas — 5 000",
+      "count": 5000
+    },
+    "de": {
+      "name": "Alman dili",
+      "deckId": "de-core",
+      "deckName": "Əsas — Goethe A1–B1",
+      "totalCount": 3200,
+      "levels": {
+        "A1": 679,
+        "A2": 725,
+        "B1": 1796
+      }
+    }
+  },
+  "updatedAt": "2026-10-28T10:05:51.107Z"
+}

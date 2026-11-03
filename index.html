@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#173f35">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Vocabox — Ağıllı Söz Qutusu</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/src/styles/app.css">
+</head>
+<body>
+<header><div class="row between"><div class="brand"><svg class="logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="hdrBg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#205043"/><stop offset="1" stop-color="#12332a"/></linearGradient><linearGradient id="hdrAccent" x1="12" y1="12" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#e2f59e"/><stop offset="1" stop-color="#8fd463"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#hdrBg)"/><rect x="0.75" y="0.75" width="46.5" height="46.5" rx="12.25" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/><rect x="13" y="10" width="20" height="14" rx="3.5" transform="rotate(-9 13 10)" fill="#ffffff" fill-opacity="0.18"/><rect x="16" y="11" width="20" height="14" rx="3.5" transform="rotate(7 16 11)" fill="#ffffff" fill-opacity="0.32"/><path d="M13 18.5L24 33.5L35 18.5" stroke="url(#hdrAccent)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 19.5L24 28.5L30.5 19.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/><circle cx="24" cy="14" r="2.5" fill="#e2f59e"/></svg><span>Vocabox</span></div><span class="badge-preview">v1.0.0</span></div><nav aria-label="Əsas menyu"><button class="active" data-tab="study">Məşq</button><button data-tab="library">Sözlər</button><button data-tab="decks">Dəstlərim</button><button data-tab="import">Mətn → lüğət</button><button data-tab="settings">Ayarlar</button></nav></header>
+<main><div id="bootStatus" class="note" role="status">Lüğət yüklənir...</div><div id="storageWarning" class="warning" role="alert" hidden></div><div class="selectbar"><div class="field"><label for="language">Öyrəndiyim dil</label><select id="language"></select></div><div class="field deck" style="max-width: 460px;"><label for="deck">Söz dəsti</label><select id="deck"></select></div></div>
+<section id="tab-study"><div class="topline"><div class="eyebrow" id="activeLanguage">İngilis dili</div><h1>Məşq</h1></div><div id="stats" class="stats"></div><div class="study-grid"><div class="panel"><div id="setup"><h2 class="study-title">Məşqə başla</h2><p id="levelNote" class="helper" style="margin:-12px 0 20px" hidden>Bu dəstdə A1/A2 səviyyələri təxminidir.</p><div class="formgrid"><div class="field"><label for="mode">Məşq rejimi</label><select id="mode"><option value="flip">Fləşkart</option><option value="type">Yazaraq xatırla</option><option value="choice">Variant seç</option></select></div><div class="field"><label for="direction">Kartın ön tərəfi</label><select id="direction"><option value="random">Qarışıq</option><option value="term">Hədəf dildə söz</option><option value="translation">Azərbaycanca qarşılıq</option></select></div><div class="field" id="cefrField"><label for="cefr">Dil səviyyəsi</label><select id="cefr"><option value="all">Hamısı</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option><option value="unknown">Qeyd edilməyib</option></select></div><div class="field" id="wordBandField" hidden><label for="wordBand">Dəstdə söz sırası</label><select id="wordBand"><option value="all">Bütün sözlər</option><option value="1">1–1 000</option><option value="2">1 001–2 000</option><option value="3">2 001–3 000</option><option value="4">3 001–4 000</option><option value="5">4 001–5 000</option><option value="custom">Sonradan əlavə etdiklərim</option></select></div><div class="field"><label for="box">Yaddaş səviyyəsi</label><select id="box"><option value="all">Hamısı</option><option value="weak">Zəiflər · 1–2</option><option value="new">Yeni kartlar</option><option value="neutral">Yenidən neytral · 3</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">Mənimsənilmiş · 6</option></select></div><div class="field"><label for="kind">Məzmun</label><select id="kind"><option value="all">Söz və ifadələr</option><option value="word">Sözlər</option><option value="phrase">İfadələr</option></select></div><div class="field"><label for="size">Kart sayı</label><select id="size"><option>10</option><option selected>20</option><option>40</option><option>100</option></select></div></div><div class="start-block row between"><span id="poolInfo" class="small muted" aria-live="polite"></span><button id="start" class="primary" disabled>Məşqə başla →</button></div><div id="languageEmpty" class="note" hidden>Bu dil üçün hazır dəst hələ əlavə edilməyib. Öz mətnindən lüğət yarada və ya JSON yükləyə bilərsən. <button class="small quiet" id="goImport">Lüğət əlavə et →</button></div></div><div id="session" hidden><div class="session-bar"><span id="sessionCount" class="small muted"></span><button id="endSession" class="small quiet">Bitir</button></div><div class="track"><i id="sessionTrack"></i></div><div id="card" class="card"></div><div id="cardActions" class="card-actions"></div><p id="feedback" class="feedback small" aria-live="polite"></p></div><div id="result" class="result" hidden></div></div><aside class="panel"><h2>Yaddaş qutuları</h2><div id="boxes" class="boxes"></div><p class="helper section-space">Yeni kart: 3 · Düz: +1 · Səhv: −1</p></aside></div></section>
+<section id="tab-library" hidden><div class="row between topline"><h1>Sözlər</h1><button id="addCard" class="primary">+ Kart əlavə et</button></div><div class="panel"><div class="toolbar"><input id="search" type="search" placeholder="Söz və ya tərcümə axtar" aria-label="Söz axtar"><select id="listCefr" aria-label="Dil səviyyəsi"><option value="all">Bütün səviyyələr</option><option>A1</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>C2</option><option value="unknown">Qeyd edilməyib</option></select></div><p id="listCount" class="small muted"></p><div id="vocab" class="list"></div><div class="row between pagination"><button id="prev">← Əvvəlki</button><span id="page" class="small muted"></span><button id="next">Növbəti →</button></div></div></section>
+<section id="tab-decks" hidden><div class="row between topline"><h1>Dəstlərim</h1><button id="newDeck" class="primary">+ Dəst yarat</button></div><div id="deckGrid" class="decks-grid"></div></section>
+<section id="tab-import" hidden><div class="topline"><h1>Mətndən öz lüğətini yarat</h1></div><div class="import-grid"><div class="panel"><h2><span class="step">01</span>Promptu AI agentinə göndər</h2><ol class="instructions"><li>Aşağıdakı promptu kopyala.</li><li>Promptu və öyrənmək istədiyin mətni AI agentinə göndər.</li><li>Agentin verdiyi JSON-u sağdakı sahəyə yapışdır.</li></ol><button id="copyPrompt" class="primary">Promptu kopyala</button><details class="section-space"><summary>Promptu göstər</summary><pre id="promptText"></pre></details><p class="helper">Mətnini seçdiyin AI xidmətinə özün göndərirsən.</p></div><div class="panel"><h2><span class="step">02</span>JSON-u əlavə et</h2><div class="field section-space"><label for="importTarget">Dəst</label><select id="importTarget"></select></div><button id="newImportDeck" class="small quiet section-space">+ Yeni dəst yarat</button><div class="field section-space"><label for="importText">JSON mətni</label><textarea id="importText" rows="8" spellcheck="false" placeholder='[{"type":"word","term":"…","translation":"…","definition":"…"}]'></textarea></div><div class="import-file"><label class="small" for="importFile">və ya fayl seç</label><input id="importFile" type="file" accept=".json,.csv,.tsv,.txt,application/json,text/plain,text/csv"></div><button id="preview" class="primary">Yoxla və önbaxış göstər</button><div id="previewInfo" class="preview small" aria-live="polite"></div><div id="previewRows"></div><label id="updateWrap" class="small" hidden><input id="updateExisting" type="checkbox" style="width:auto"> Mövcud kartların mətnini də yenilə</label><button id="apply" class="primary section-space" hidden>Dəstə əlavə et</button></div></div></section>
+<section id="tab-settings" hidden><div class="topline"><h1>Ayarlar</h1></div><div class="import-grid"><div class="stack"><div class="panel"><h2>Məlumatlarım</h2><p id="offlineStatus" class="helper" aria-live="polite"></p><p class="small muted section-space">İrəliləyiş hazırda bu brauzerdə saxlanır. Cihaz dəyişməzdən əvvəl ehtiyat nüsxə endir.</p><div class="row section-space"><button id="backup" class="primary">Ehtiyat nüsxə endir</button><button id="exportDeck">Dəsti endir</button></div><div class="field section-space"><label for="restoreFile">Ehtiyat nüsxəni bərpa et</label><input id="restoreFile" type="file" accept=".json,application/json"></div><p class="helper">Bərpa hazırkı dəstləri və irəliləyişi əvəz edir.</p></div><div class="panel"><h2>Qısa kömək</h2><details class="section-space"><summary>Kartlar necə işləyir?</summary><p>Ön tərəfdə hədəf dildə söz və ya Azərbaycanca qarşılıq görünür. Cavabı açdıqdan sonra tərcümə və hədəf dildə izah göstərilir. Nümunə cümlə kartda varsa görünür; bütün hazır kartlarda nümunə yoxdur.</p></details><details><summary>Yaddaş səviyyəsi və dil səviyyəsi</summary><p>Yaddaş qutuları 1–6 arasındadır. Yeni kart 3-cü qutudan başlayır. Düz cavab +1, səhv cavab −1 verir. A1–C2 isə sözün dil səviyyəsidir; irəliləyişini göstərmir. Təkrar üçün vaxt məhdudiyyəti yoxdur.</p></details><details><summary>Məşq rejimləri</summary><p>Fləşkart və yazılı məşqdə cavabı açıb özünü qiymətləndirirsən. Variant seçimində nəticə avtomatik hesablanır. Bir sessiyada eyni kart bir dəfə göstərilir.</p></details><details><summary>Klaviatura</summary><p>Boşluq: cavabı aç / növbəti kart. 1: səhv, 2: düz. Variant seçimində 1–4: cavab. Mətn sahəsində yazarkən qısayollar işləmir.</p></details><details><summary>Fayl formatı</summary><p>JSON kart sahələri: type (word və ya phrase), term, translation, definition, example və cefrLevels. Söz üçün izah tələb olunur. CSV/TSV də eyni başlıqlarla qəbul edilir. Köhnə en/az formatlı söz siyahıları ingilis dili üçün qəbul edilir.</p><button id="template" class="small section-space">Nümunə JSON endir</button></details></div></div>
+<div class="panel">
+  <h2>İstifadəçi Hesabı və Sinxronizasiya</h2>
+  <p class="small muted section-space">Dəstləri, kartları və tərəqqini cihazlar arasında saxlamaq üçün istifadəçi nömrənizi və giriş açarınızı daxil edin. Bulud bağlantısı istəyə bağlıdır. Oflayn istifadə üçün ilk yüklənmənin və lüğət keşinin tamamlanmasını gözləyin.</p>
+  <div id="cloudStatusBadge" class="note" style="margin: 12px 0;">Oflayn rejim (Lokal yaddaş)</div>
+  <div id="cloudAuthForm" class="stack section-space">
+    <div class="field">
+      <label for="userNumberInput">İstifadəçi nömrəniz</label>
+      <input id="userNumberInput" type="text" placeholder="Məsələn: VB-EN-1001" autocomplete="off" autocapitalize="characters" style="font-weight: 600; letter-spacing: 1px;">
+    </div>
+    <div class="field"><label for="userAccessKey">Şifrə</label><input id="userAccessKey" type="password" autocomplete="off" placeholder="Sizə verilmiş şifrə"></div>
+    <div class="row">
+      <button id="cloudLoginBtn" class="primary" type="button" style="min-width: 170px;">Nömrəni təsdiqlə və daxil ol</button>
+    </div>
+  </div>
+  <div id="cloudUserSection" class="stack section-space" hidden>
+    <div class="row between">
+      <div>
+        <div class="eyebrow">Aktiv istifadəçi</div>
+        <strong id="cloudUserDisplay" style="font-size: 19px; color: var(--green);"></strong>
+      </div>
+      <button id="cloudSignOut" class="small quiet" type="button">Çıxış et</button>
+    </div>
+    <div class="row between section-space" style="border-top: 1px solid var(--line); padding-top: 14px;">
+      <button id="cloudSyncNow" class="primary small" type="button">İndi sinxronlaşdır</button>
+      <button id="cloudDeleteAccount" class="small quiet danger" type="button" title="Hesabı və bütün bulud məlumatlarını birdəfəlik sil">Hesabı və məlumatları sil</button>
+    </div>
+  </div>
+  <details id="connectionSettings" class="section-space" hidden>
+    <summary>Bağlantı Parametrləri</summary>
+    <div class="field section-space">
+      <label for="customSupabaseUrl">Supabase Project URL</label>
+      <input id="customSupabaseUrl" placeholder="https://xyz.supabase.co">
+    </div>
+    <div class="field">
+      <label for="customSupabaseKey">Supabase Anon Key</label>
+      <input id="customSupabaseKey" type="password" placeholder="sb_publishable_...">
+    </div>
+    <button id="saveSupabaseConfig" class="small section-space" type="button">Parametrləri yadda saxla</button>
+  </details>
+</div>
+
+<div class="panel">
+  <h2>Məxfilik və Hüquqi Məlumatlar</h2>
+  <p class="small muted section-space">Bulud sinxronizasiyasını seçdikdə istifadəçi nömrəniz, fərdi kartlarınız və məşq tərəqqiniz Supabase-də hesabınıza bağlı saxlanır. Tətbiqdə reklam və reklam izləyiciləri yoxdur.</p>
+  <div class="row section-space">
+    <button id="openPrivacyBtn" class="small" type="button">Məxfilik Siyasəti</button>
+    <button id="openTermsBtn" class="small" type="button">İstifadə Şərtləri</button>
+  </div>
+  <div class="section-space" style="border-top: 1px solid var(--line); padding-top: 15px;">
+    <h3 style="font-size: 14px; margin-bottom: 6px;">Lokal Cihaz Yaddaşı</h3>
+    <p class="small muted" style="margin-bottom: 12px;">Bu cihazda saxlanan bütün lokal lüğət və tərəqqini ilkin vəziyyətinə qaytarmaq üçün:</p>
+    <button id="resetLocalDataBtn" class="small quiet danger" type="button">Lokal yaddaşı sıfırla</button>
+  </div>
+  <div class="section-space" style="border-top: 1px solid var(--line); padding-top: 15px;">
+    <p class="helper">Dəstək və suallar üçün: <a href="mailto:musabayramov@zehniapp.com">musabayramov@zehniapp.com</a></p>
+  </div>
+</div>
+
+<div class="panel"><h2>Lüğət mənbələri</h2><p class="small muted section-space">Rus dili üçün 5 000 kart, Alman dili üçün A1–B1 üzrə 3 064 kart və İspan dili üçün A1–B1 üzrə 2 672 kart əlavə edilib. Bütün kartlar ümumi Avropa Dil Çərçivəsi (CEFR) standartlarına uyğunlaşdırılmışdır.</p><div id="sources" class="source-grid"></div><details class="section-space"><summary>Müəlliflik hüququ və ticarət nişanları bildirişi</summary><p>Vocabox açıq lüğət bazalarından və ümumi Avropa Dil Çərçivəsi (CEFR) standartlarından istifadə edir. Adı çəkilən bütün üçüncü tərəf ticarət nişanları və təşkilatlar müvafiq hüquq sahiblərinə məxsusdur. Vocabox müstəqil tədris tətbiqidir və adı çəkilən heç bir kənar qurumla rəsmi tərəfdaşlıq əlaqəsi yoxdur.</p></details><div id="licenses"></div></div></div></section>
+</main><footer><div class="row between"><span>Vocabox v1.0.0</span><div class="row" style="gap:16px;"><button id="footerPrivacy" class="quiet small muted" type="button" style="padding:0; border:0; text-decoration:underline;">Məxfilik Siyasəti</button><button id="footerTerms" class="quiet small muted" type="button" style="padding:0; border:0; text-decoration:underline;">İstifadə Şərtləri</button></div><span id="storageStatus">Bu cihazda saxlanır</span></div></footer>
+<dialog id="editor"><form id="editForm"><div class="row between"><h2 id="editorTitle">Kart əlavə et</h2><button type="button" data-close="editor" aria-label="Bağla">✕</button></div><div class="field"><label for="editType">Növ</label><select id="editType"><option value="word">Söz</option><option value="phrase">İfadə</option></select></div><div class="formgrid"><div class="field"><label id="editTermLabel" for="editTerm">Söz</label><input id="editTerm" required maxlength="1500"></div><div class="field"><label for="editTranslation">Azərbaycanca qarşılıq</label><input id="editTranslation" required maxlength="1500"></div></div><div class="field"><label for="editDefinition">Hədəf dildə izah</label><textarea id="editDefinition" maxlength="2000"></textarea></div><div class="field"><label for="editExample">Nümunə cümlə</label><textarea id="editExample" maxlength="3000"></textarea></div><div class="field"><label for="editCefr">Dil səviyyəsi</label><input id="editCefr" placeholder="A1 və ya A1, A2"></div><p id="editError" class="small error" role="alert"></p><button type="submit" class="primary section-space">Yadda saxla</button></form></dialog>
+<dialog id="deckDialog"><form id="deckForm"><div class="row between"><h2 id="deckTitle">Dəst yarat</h2><button type="button" data-close="deckDialog" aria-label="Bağla">✕</button></div><div class="field"><label for="deckName">Dəstin adı</label><input id="deckName" maxlength="100" required placeholder="Məsələn: Səyahət"></div><p id="deckError" class="small error" role="alert"></p><button class="primary section-space" type="submit">Yadda saxla</button></form></dialog>
+
+<!-- Məxfilik Siyasəti Modalı -->
+<dialog id="privacyDialog" class="legal-dialog"><div class="row between"><h2>Vocabox — Məxfilik siyasəti</h2><button type="button" data-close="privacyDialog" aria-label="Bağla">✕</button></div>
+<p class="note">Lüğət və məşq tərəqqisi cihazınızda saxlanır. Bulud sinxronizasiyasını seçdikdə istifadəçi nömrəsi, fərdi kartlar, dəstlər və tərəqqi hesabınıza bağlı Supabase-də emal olunur. İstifadəçi nömrəsi anonim məlumat sayılmır.</p>
+<h2>Hansı məlumatlardan istifadə olunur?</h2><ul><li>İstifadəçi nömrəsi, paket dili, aktivlik və hesabın yaradılma/aktivləşmə vaxtı.</li><li>Fərdi dəst adları, sözlər, tərcümələr, izahlar və nümunələr.</li><li>Yaddaş qutusu, təkrar və düzgün cavab sayı, son məşq vaxtı.</li><li>Hesabın yoxlanması üçün giriş açarı və müddəti məhdud sessiya. Serverdə açarın və sessiya tokeninin yalnız heşi saxlanır; sessiya tokeni bu cihazda saxlanır.</li></ul>
+<p>Bu məlumatlar girişin yoxlanması, məşq, ehtiyat nüsxə və cihazlararası sinxronizasiya üçün istifadə olunur. Kartlara daxil etdiyiniz mətn sizin seçiminizdir; həssas şəxsi məlumatları kartlarda saxlamayın.</p>
+<h2>Saxlanma və xidmət təminatçısı</h2><p>Lokal məlumat brauzer/WebView yaddaşında saxlanır. Buluddan istifadə edildikdə sorğular HTTPS ilə Supabase-ə göndərilir. Supabase infrastrukturun işləməsi və təhlükəsizliyi üçün texniki sorğu jurnalları, o cümlədən IP ünvanı emal edə bilər. Provayderin jurnalları və ehtiyat nüsxələri onun ayrıca saxlanma qaydalarına tabedir.</p>
+<h2>Reklam və icazələr</h2><p>Tətbiqdə reklam şəbəkəsi və tətbiqlərarası reklam izləməsi yoxdur. Tətbiq GPS, kamera, mikrofon və kontaktlara giriş istəmir. Fayl idxalında yalnız seçdiyiniz fayl oxunur; ixrac və paylaşmada seçdiyiniz xarici tətbiq faylın surətini ala bilər. Məlumatlar satılmır.</p>
+<h2>Tətbiqdən kənar hesab alınması</h2><p>Tətbiq bank kartı rekvizitlərini qəbul etmir. Tətbiqdən kənar ödəniş və hesabın təqdim edilməsi prosesində paylaşdığınız əlaqə və ödəniş məlumatları hesabı təqdim edən şəxs və bank tərəfindən ayrıca emal oluna bilər.</p>
+<h2>Silinmə və ehtiyat nüsxə</h2><p>Hesab məlumatları siz hesabı silənədək və ya silinmə tələb edənədək aktiv bazada saxlanır. Ayarlar → Hesabı və məlumatları sil əməliyyatı aktiv bazadakı lisenziyanı, fərdi məzmunu, tərəqqini, giriş açarının heşini və bütün sessiyaları silir. Əməliyyatın edildiyi cihazda həmin hesabın lokal məlumatı da təmizlənir. Başqa cihazlardakı oflayn surətləri və əvvəl endirdiyiniz ehtiyat nüsxələri ayrıca silməlisiniz. Provayderin ehtiyat nüsxələrindəki və texniki jurnallarındakı məlumatlar onların saxlanma müddəti bitənədək qala bilər.</p><p><a href="/delete-account.html">Tətbiqsiz hesab silmə müraciəti</a>. Ayarlar bölməsində məlumatlarınızın JSON ehtiyat nüsxəsini endirə və lokal yaddaşı sıfırlaya bilərsiniz.</p>
+<h2>Əlaqə</h2><p>Məxfilik və məlumat sorğularını <a href="mailto:musabayramov@zehniapp.com">musabayramov@zehniapp.com</a> ünvanına göndərin. Giriş açarınızı və bank kartı məlumatlarını göndərməyin.</p><footer>Əlaqə: <a href="mailto:musabayramov@zehniapp.com">musabayramov@zehniapp.com</a><br>Son yenilənmə: 30 oktyabr 2026</footer><div class="row section-space"><button type="button" data-close="privacyDialog" class="primary small">Anladım</button></div></dialog>
+
+<!-- İstifadə Şərtləri Modalı -->
+<dialog id="termsDialog" class="legal-dialog">
+  <div class="row between" style="border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:16px;">
+    <h2>Vocabox — İstifadə Şərtləri</h2>
+    <button type="button" data-close="termsDialog" aria-label="Bağla">✕</button>
+  </div>
+  <h2>1. Ümumi Qaydalar</h2>
+  <p>Vocabox xarici dil lüğəti və Leitner sistemi ilə təkrar məşqi üçün nəzərdə tutulmuş təhsil tətbiqidir. Tətbiqdən istifadə bu şərtlərin qəbulu deməkdir.</p>
+  <h2>2. Əqli Mülkiyyət və Ticarət Nişanları</h2>
+  <p>Tətbiqdə istifadə edilən dil səviyyələri və lüğət bazaları Avropa Ümumi Dil Çərçivəsi (CEFR) beynəlxalq standartlarına və ictimaiyyətə açıq tezlik korpuslarına əsaslanır. Vocabox müstəqil təhsil alətidir və heç bir kənar qurumla (Oxford University Press, Goethe-Institut, Instituto Cervantes) rəsmi bağlılığı yoxdur. Bütün ticarət nişanları müvafiq sahiblərinə məxsusdur.</p>
+  <h2>3. İmtina</h2>
+  <p>Tətbiq "olduğu kimi" təqdim edilir. Cihaz dəyişikliyi zamanı məlumatların təhlükəsizliyi üçün mütəmadi "Ehtiyat nüsxə endir" funksiyasından istifadə tövsiyə edilir.</p>
+  <div class="row section-space" style="justify-content:flex-end;">
+    <button type="button" class="primary small" data-close="termsDialog">Bağla</button>
+  </div>
+</dialog>
+
+<div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
+

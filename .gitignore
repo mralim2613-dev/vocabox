@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
+# Environment & credentials
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+credentials.json
+google-services.json
+GoogleService-Info.plist
+
+# Mobile build & cache
+android/.gradle/
+android/local.properties
+android/app/build/
+android/build/
+android/.idea/
+ios/App/Pods/
+ios/App/build/
+ios/App/DerivedData/
+ios/App/App.xcworkspace/xcuserdata/
+ios/App/App.xcodeproj/xcuserdata/
+
+# Release private artifacts & logs
+release/private/
+*.log
+
+# Backups & temp files
+*.backup.html
+artifacts/
+.DS_Store
+Thumbs.db

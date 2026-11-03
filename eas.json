@@ -1,0 +1,56 @@
+{
+  "cli": {
+    "version": "27.2.0",
+    "appVersionSource": "local"
+  },
+  "build": {
+    "production": {
+      "distribution": "store",
+      "node": "22.22.2",
+      "android": {
+        "image": "ubuntu-24.04-jdk-17-ndk-r27b-sdk-55",
+        "config": "capacitor-android.yml",
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "image": "macos-tahoe-26.5-xcode-26.6",
+        "config": "capacitor-ios.yml",
+        "scheme": "App",
+        "buildConfiguration": "Release"
+      },
+      "environment": "production",
+      "env": {
+        "SHARP_IGNORE_GLOBAL_LIBVIPS": "1"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "environment": "preview",
+      "node": "22.22.2",
+      "android": {
+        "image": "ubuntu-24.04-jdk-17-ndk-r27b-sdk-55",
+        "config": "capacitor-android-preview.yml",
+        "buildType": "apk",
+        "withoutCredentials": true
+      },
+      "env": {
+        "SHARP_IGNORE_GLOBAL_LIBVIPS": "1"
+      }
+    },
+    "simulator": {
+      "distribution": "internal",
+      "environment": "preview",
+      "node": "22.22.2",
+      "ios": {
+        "image": "macos-tahoe-26.5-xcode-26.6",
+        "config": "capacitor-ios-simulator.yml",
+        "simulator": true,
+        "withoutCredentials": true,
+        "scheme": "App"
+      },
+      "env": {
+        "SHARP_IGNORE_GLOBAL_LIBVIPS": "1"
+      }
+    }
+  }
+}
