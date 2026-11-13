@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vocabox Skript 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mp4-muxer@5.1.3/build/mp4-muxer.min.js"></script>
+<style>
+  :root { --bg: #0b1d18; --fg: #e8f1ec; --btn: #e2f59e; --btn-fg: #12332a; }
+  @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --bg: #eef3f0; --fg: #172c24; } }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font: 15px/1.4 Inter, system-ui, sans-serif; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 12px 16px; box-sizing: border-box; }
+  canvas { height: min(80vh, 1920px); max-width: 100%; aspect-ratio: 9 / 16; border-radius: 14px; box-shadow: 0 10px 40px rgba(0,0,0,.35); background: #12332a; }
+  .bar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center; }
+  button { font: inherit; font-weight: 700; border: 0; border-radius: 10px; padding: 9px 16px; background: var(--btn); color: var(--btn-fg); cursor: pointer; }
+  button:disabled { opacity: .5; cursor: default; }
+  #status { min-width: 220px; text-align: center; opacity: .8; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div class="bar">
+  <button id="play">▶ Oynat</button>
+  <button id="record">● Videonu yaz</button>
+  <span id="status">Hazırlanır…</span>
+</div>
+<script>
+// ===== Parametrlər =====
+const W = 1080, H = 1920, DUR = 21, AUDIO = 'ses_take1.mp3';
+const C = { bg1: '#205043', bg2: '#12332a', lime: '#e2f59e', green: '#8fd463', white: '#ffffff', ink: '#172c24', paper: '#f5f7f6', coral: '#ff9b8a', line: 'rgba(23,44,36,.12)' };
+// Səs cümlələrinin vaxtları (ses_take1.mp3 üzərində ölçülüb)
+const CUES = [
+  [0.10, 1.04, 'İngiliscə bilirsən.'],
+  [1.56, 3.24, 'Amma yazmaq lazım olanda...'],
+  [3.76, 4.90, '“tam bilmirəm” deyirsən.'],
+  [5.44, 7.18, 'Çox vaxt problem qrammatika yox,'],
+  [7.48, 9.48, 'lazım olan sözün yadına düşməməsidir.'],
+  [9.92, 12.64, 'Vocabox-da ingilis dili üçün hazır söz dəsti var.'],
+  [13.14, 14.42, 'Bildiyin söz irəli gedir,'],
+  [14.66, 16.22, 'çətin söz yenə qarşına çıxır.'],
+  [16.70, 17.72, 'Gəl sözlərdən başlayaq.'],
+  [18.08, 18.98, 'Link bio-dadır.'],
+];
+
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d', { willReadFrequently: true });
+const F = (w, s) => `${w} ${s}px Inter, "Segoe UI", system-ui, sans-serif`;
+
+// ===== Köməkçilər =====
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const easeOut = x => 1 - Math.pow(1 - x, 3);
+const easeInOut = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const backOut = x => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const lerp = (a, b, x) => a + (b - a) * x;
+const fadeWin = (t, a, b, d = .3) => Math.min(easeOut(prog(t, a, a + d)), 1 - prog(t, b - d, b));
+
+function rr(x, y, w, h, r) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); }
+function text(s, x, y, { size = 40, weight = 700, color = C.white, align = 'left', base = 'alphabetic' } = {}) {
+  ctx.font = F(weight, size); ctx.fillStyle = color; ctx.textAlign = align; ctx.textBaseline = base; ctx.fillText(s, x, y);
+}
+function wrap(s, maxW, size, weight) {
+  ctx.font = F(weight, size); const words = s.split(' '), lines = []; let cur = '';
+  for (const w of words) { const test = cur ? cur + ' ' + w : w; if (ctx.measureText(test).width > maxW && cur) { lines.push(cur); cur = w; } else cur = test; }
+  if (cur) lines.push(cur); return lines;
+}
+
+// Logo (tətbiqin başlığındakı SVG)
+const LOGO_SVG = `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#205043"/><stop offset="1" stop-color="#12332a"/></linearGradient><linearGradient id="b" x1="12" y1="12" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#e2f59e"/><stop offset="1" stop-color="#8fd463"/></linearGradient></defs><rect width="48" height="48" rx="13" fill="url(#a)"/><rect x="0.75" y="0.75" width="46.5" height="46.5" rx="12.25" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/><rect x="13" y="10" width="20" height="14" rx="3.5" transform="rotate(-9 13 10)" fill="#ffffff" fill-opacity="0.18"/><rect x="16" y="11" width="20" height="14" rx="3.5" transform="rotate(7 16 11)" fill="#ffffff" fill-opacity="0.32"/><path d="M13 18.5L24 33.5L35 18.5" stroke="url(#b)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 19.5L24 28.5L30.5 19.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/><circle cx="24" cy="14" r="2.5" fill="#e2f59e"/></svg>`;
+const logo = new Image();
+const logoReady = new Promise(r => { logo.onload = r; logo.onerror = r; });
+logo.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(LOGO_SVG);
+
+// ===== Ümumi elementlər =====
+function background(t) {
+  const g = ctx.createLinearGradient(0, 0, W, H); g.addColorStop(0, C.bg1); g.addColorStop(1, C.bg2);
+  ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  const gx = 540 + Math.sin(t * .35) * 260, gy = 760 + Math.cos(t * .27) * 220;
+  const rg = ctx.createRadialGradient(gx, gy, 0, gx, gy, 760);
+  rg.addColorStop(0, 'rgba(226,245,158,.13)'); rg.addColorStop(1, 'rgba(226,245,158,0)');
+  ctx.fillStyle = rg; ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = 'rgba(255,255,255,.05)';
+  for (let y = 40; y < H; y += 60) for (let x = 30 + ((y / 60) % 2) * 30; x < W; x += 60) { ctx.beginPath(); ctx.arc(x, y, 2, 0, 7); ctx.fill(); }
+}
+function watermark(a) {
+  if (a <= 0) return; ctx.save(); ctx.globalAlpha *= a;
+  ctx.drawImage(logo, 64, 72, 64, 64);
+  text('Vocabox', 146, 117, { size: 38, weight: 800 }); ctx.restore();
+}
+// Başlıq: sətirlər [mətn, rəng]
+function headline(lines, t, tin, tout, y = 330, size = 82) {
+  const a = fadeWin(t, tin, tout, .32); if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a; const dy = (1 - easeOut(prog(t, tin, tin + .4))) * 40;
+  lines.forEach(([s, col], i) => text(s, W / 2, y + dy + i * size * 1.14, { size, weight: 800, color: col || C.white, align: 'center' }));
+  ctx.restore();
+}
+function captions(t) {
+  if (t > 16.45) return;
+  const cue = CUES.find(([a, b]) => t >= a - .05 && t <= b + .3); if (!cue) return;
+  const [a, b, s] = cue, al = Math.min(prog(t, a - .05, a + .12), 1 - prog(t, b + .15, b + .3));
+  const lines = wrap(s, 860, 44, 600), lh = 58, h = lines.length * lh + 40;
+  ctx.save(); ctx.globalAlpha *= al;
+  let maxW = 0; ctx.font = F(600, 44); lines.forEach(l => maxW = Math.max(maxW, ctx.measureText(l).width));
+  rr(W / 2 - maxW / 2 - 34, 1700 - h / 2, maxW + 68, h, 26); ctx.fillStyle = 'rgba(6,20,16,.55)'; ctx.fill();
+  lines.forEach((l, i) => text(l, W / 2, 1700 - h / 2 + 20 + lh * i + 44, { size: 44, weight: 600, align: 'center' }));
+  ctx.restore();
+}
+
+// ===== Səhnə A · Hook (0–5.3) =====
+function sceneA(t) {
+  headline([['İngiliscə'], ['bilirsən.', C.lime]], t, 0, 1.55);
+  headline([['Bilirəm...'], ['amma tam yox.', C.lime]], t, 1.5, 5.6);
+  const a = easeOut(prog(t, 1.15, 1.65)); if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a; ctx.translate(0, (1 - a) * 80);
+  const x = 110, y = 690, w = 860, h = 660;
+  ctx.shadowColor = 'rgba(0,0,0,.35)'; ctx.shadowBlur = 50; ctx.shadowOffsetY = 20;
+  rr(x, y, w, h, 36); ctx.fillStyle = C.white; ctx.fill(); ctx.shadowColor = 'transparent';
+  [C.coral, '#ffd36e', C.green].forEach((c, i) => { ctx.beginPath(); ctx.arc(x + 48 + i * 34, y + 46, 10, 0, 7); ctx.fillStyle = c; ctx.fill(); });
+  text('Yeni mesaj', x + w / 2, y + 58, { size: 32, weight: 700, color: C.ink, align: 'center' });
+  ctx.fillStyle = C.line; ctx.fillRect(x, y + 92, w, 2);
+  text('Kimə:', x + 48, y + 150, { size: 30, weight: 600, color: 'rgba(23,44,36,.5)' });
+  text('Komanda', x + 150, y + 150, { size: 30, weight: 600, color: C.ink });
+  ctx.fillStyle = C.line; ctx.fillRect(x + 48, y + 178, w - 96, 2);
+  text('Mövzu:', x + 48, y + 236, { size: 30, weight: 600, color: 'rgba(23,44,36,.5)' });
+  text('Layihə yeniləməsi', x + 166, y + 236, { size: 30, weight: 600, color: C.ink });
+  ctx.fillStyle = C.line; ctx.fillRect(x + 48, y + 264, w - 96, 2);
+  // Yazılan mətn
+  const l1 = 'Hi team,', l2 = 'I would like to ';
+  const full = l1 + '\n' + l2, n = Math.floor(lerp(0, full.length, prog(t, 1.7, 3.25)));
+  const typed = full.slice(0, n).split('\n');
+  text(typed[0] || '', x + 48, y + 340, { size: 40, weight: 500, color: C.ink });
+  const second = typed[1] || '';
+  text(second, x + 48, y + 400, { size: 40, weight: 500, color: C.ink });
+  ctx.font = F(500, 40); const cx = x + 48 + ctx.measureText(typed.length > 1 ? second : typed[0]).width + 4;
+  const cy = typed.length > 1 ? y + 400 : y + 340;
+  const stuck = t > 3.3;
+  if (!stuck || Math.floor(t * 2.4) % 2 === 0) { ctx.fillStyle = stuck ? '#e2574c' : C.ink; ctx.fillRect(cx, cy - 36, 4, 46); }
+  // Boşluq və sual
+  if (stuck) {
+    const q = easeOut(prog(t, 3.3, 3.7));
+    ctx.save(); ctx.globalAlpha *= q; ctx.setLineDash([12, 10]); ctx.strokeStyle = '#e2574c'; ctx.lineWidth = 4;
+    rr(cx + 20, cy - 42, 200, 58, 12); ctx.stroke(); ctx.setLineDash([]);
+    text('?', cx + 120, cy + 2, { size: 44, weight: 800, color: '#e2574c', align: 'center' }); ctx.restore();
+  }
+  // "tam bilmirəm" düşüncə balonu
+  const b = backOut(prog(t, 3.72, 4.15));
+  if (b > 0) {
+    ctx.save(); const bx = x + w / 2, by = y + 560; ctx.translate(bx, by); ctx.scale(b, b);
+    rr(-250, -62, 500, 112, 56); ctx.fillStyle = C.lime; ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-40, -62); ctx.lineTo(-10, -100); ctx.lineTo(10, -62); ctx.fill();
+    text('“tam bilmirəm...”', 0, 12, { size: 46, weight: 800, color: C.ink, align: 'center' });
+    ctx.restore();
+  }
+  ctx.restore();
+}
+
+// ===== Səhnə B · Problem (5.3–9.8) =====
+const CHIPS = [['schedule', 210, 1250], ['deadline', 600, 1215], ['suggest', 870, 1320], ['approach', 330, 1400], ['improve', 720, 1450], ['deliver', 140, 1500]];
+function pill(label, cx, cy, { bg, fg, size = 52, padX = 46, h = 112 }) {
+  ctx.font = F(800, size); const w = ctx.measureText(label).width + padX * 2;
+  rr(cx - w / 2, cy - h / 2, w, h, h / 2); ctx.fillStyle = bg; ctx.fill();
+  text(label, cx, cy + size * .36, { size, weight: 800, color: fg, align: 'center' }); return w;
+}
+function sceneB(t) {
+  headline([['Problem'], ['qrammatika deyil.', C.lime]], t, 5.35, 7.6);
+  headline([['Lazım olan söz'], ['yadına düşmür.', C.lime]], t, 7.5, 9.95);
+  // Qrammatika — üstündən xətt çəkilir
+  const a1 = backOut(prog(t, 5.5, 5.95));
+  if (a1 > 0) {
+    ctx.save(); const dim = 1 - .55 * prog(t, 6.7, 7.1); ctx.globalAlpha *= Math.min(1, a1) * dim;
+    ctx.translate(540, 820); ctx.scale(a1, a1);
+    const w = pill('Qrammatika', 0, 0, { bg: 'rgba(255,255,255,.12)', fg: C.white });
+    const s = easeInOut(prog(t, 6.25, 6.75));
+    ctx.strokeStyle = C.coral; ctx.lineWidth = 9; ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(-w / 2 + 26, 4); ctx.lineTo(-w / 2 + 26 + (w - 52) * s, -4); ctx.stroke();
+    ctx.restore();
+  }
+  // Lazım olan söz — vurğulanır
+  const a2 = backOut(prog(t, 7.5, 7.95));
+  if (a2 > 0) {
+    ctx.save(); ctx.translate(540, 1010); const pulse = 1 + .04 * Math.sin(Math.max(0, t - 8) * 6) * (1 - prog(t, 8.6, 9.4));
+    ctx.scale(a2 * pulse, a2 * pulse); pill('Lazım olan söz', 0, 0, { bg: C.lime, fg: C.ink }); ctx.restore();
+  }
+  // İngilis sözləri görünür və unudulur
+  CHIPS.forEach(([w, x, y], i) => {
+    const ap = easeOut(prog(t, 7.7 + i * .09, 8.1 + i * .09)); if (ap <= 0) return;
+    const fade = easeInOut(prog(t, 8.55 + i * .1, 9.6 + i * .05));
+    ctx.save(); ctx.globalAlpha *= ap * (1 - fade); ctx.filter = `blur(${fade * 14}px)`;
+    ctx.translate(x, y - fade * 120);
+    ctx.font = F(600, 38); const cw = ctx.measureText(w).width + 56;
+    rr(-cw / 2, -38, cw, 76, 38); ctx.fillStyle = 'rgba(255,255,255,.92)'; ctx.fill();
+    text(w, 0, 13, { size: 38, weight: 600, color: C.ink, align: 'center' });
+    ctx.restore(); ctx.filter = 'none';
+  });
+}
+
+// ===== Səhnə C · Həll (9.8–16.5) =====
+function field(label, value, x, y, w, hl) {
+  text(label, x, y, { size: 24, weight: 600, color: 'rgba(23,44,36,.6)' });
+  rr(x, y + 14, w, 64, 14); ctx.fillStyle = C.white; ctx.fill();
+  ctx.lineWidth = hl ? 4 : 2; ctx.strokeStyle = hl ? C.green : 'rgba(23,44,36,.18)'; ctx.stroke();
+  text(value, x + 22, y + 58, { size: 30, weight: 700, color: C.ink });
+  ctx.strokeStyle = C.ink; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x + w - 44, y + 40); ctx.lineTo(x + w - 32, y + 52); ctx.lineTo(x + w - 20, y + 40); ctx.stroke();
+}
+function phone(t) {
+  const a = Math.min(easeOut(prog(t, 9.85, 10.35)), 1 - prog(t, 12.75, 13.1)); if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a; ctx.translate(0, (1 - easeOut(prog(t, 9.85, 10.35))) * 160);
+  const x = 230, y = 600, w = 620, h = 960;
+  ctx.shadowColor = 'rgba(0,0,0,.45)'; ctx.shadowBlur = 60; ctx.shadowOffsetY = 24;
+  rr(x, y, w, h, 64); ctx.fillStyle = '#0b1f19'; ctx.fill(); ctx.shadowColor = 'transparent';
+  const sx = x + 18, sy = y + 18, sw = w - 36, sh = h - 36;
+  ctx.save(); rr(sx, sy, sw, sh, 48); ctx.clip();
+  ctx.fillStyle = C.paper; ctx.fillRect(sx, sy, sw, sh);
+  ctx.fillStyle = C.bg2; ctx.fillRect(sx, sy, sw, 120);
+  ctx.drawImage(logo, sx + 30, sy + 40, 52, 52);
+  text('Vocabox', sx + 96, sy + 80, { size: 32, weight: 800 });
+  const hl = t > 10.3 && t < 11.3;
+  field('Öyrəndiyim dil', 'İngilis dili', sx + 30, sy + 170, sw - 60, hl);
+  field('Söz dəsti', 'Əsas sözlər', sx + 30, sy + 290, sw - 60, false);
+  // Kart: üz → arxa
+  const f = prog(t, 11.35, 11.85), sc = Math.abs(Math.cos(f * Math.PI)), back = f > .5;
+  const kx = sx + 30, ky = sy + 410, kw = sw - 60, kh = 300;
+  ctx.save(); ctx.translate(kx + kw / 2, ky + kh / 2); ctx.scale(Math.max(sc, .02), 1);
+  rr(-kw / 2, -kh / 2, kw, kh, 26); ctx.fillStyle = back ? '#fbfde9' : C.white; ctx.fill();
+  ctx.lineWidth = 2; ctx.strokeStyle = 'rgba(23,44,36,.14)'; ctx.stroke();
+  if (!back) { text('İNGİLİS DİLİ', 0, -70, { size: 22, weight: 700, color: 'rgba(23,44,36,.45)', align: 'center' }); text('improve', 0, 20, { size: 64, weight: 800, color: C.ink, align: 'center' }); text('B1', 0, 90, { size: 24, weight: 700, color: 'rgba(23,44,36,.45)', align: 'center' }); }
+  else { text('improve', 0, -50, { size: 30, weight: 700, color: 'rgba(23,44,36,.5)', align: 'center' }); text('yaxşılaşdırmaq', 0, 22, { size: 50, weight: 800, color: C.ink, align: 'center' }); text('to make something better', 0, 80, { size: 24, weight: 500, color: 'rgba(23,44,36,.6)', align: 'center' }); }
+  ctx.restore();
+  // Düymələr
+  const by = ky + kh + 40, bw = (kw - 20) / 2, ba = easeOut(prog(t, 11.85, 12.15));
+  ctx.save(); ctx.globalAlpha *= ba;
+  rr(kx, by, bw, 84, 18); ctx.fillStyle = '#fde3de'; ctx.fill(); text('1 · Səhv bildim', kx + bw / 2, by + 52, { size: 27, weight: 700, color: '#a2392c', align: 'center' });
+  rr(kx + bw + 20, by, bw, 84, 18); ctx.fillStyle = C.bg2; ctx.fill(); text('2 · Düz bildim', kx + bw * 1.5 + 20, by + 52, { size: 27, weight: 700, color: C.white, align: 'center' });
+  ctx.restore();
+  ctx.restore(); ctx.restore();
+}
+const BOX = { x0: 60, w: 145, gap: 18, y: 930, h: 330 };
+const boxX = i => BOX.x0 + i * (BOX.w + BOX.gap);
+const STACK = [2, 3, 4, 3, 2, 1];
+function miniCard(word, cx, cy, s, glow) {
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(s, s);
+  if (glow) { ctx.shadowColor = glow; ctx.shadowBlur = 40; }
+  rr(-110, -56, 220, 112, 20); ctx.fillStyle = C.white; ctx.fill(); ctx.shadowColor = 'transparent';
+  text(word, 0, 12, { size: 34, weight: 800, color: C.ink, align: 'center' }); ctx.restore();
+}
+function chip(label, cx, cy, bg, fg, a) {
+  if (a <= 0) return; ctx.save(); ctx.globalAlpha *= a; ctx.translate(cx, cy); const s = lerp(.85, 1, easeOut(a)); ctx.scale(s, s);
+  pill(label, 0, 0, { bg, fg, size: 38, padX: 34, h: 84 }); ctx.restore();
+}
+function boxes(t) {
+  const a = easeOut(prog(t, 12.95, 13.35)); if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a * (1 - prog(t, 16.3, 16.6));
+  for (let i = 0; i < 6; i++) {
+    const x = boxX(i), d = easeOut(prog(t, 12.95 + i * .05, 13.35 + i * .05));
+    ctx.save(); ctx.translate(0, (1 - d) * 60); ctx.globalAlpha *= d;
+    rr(x, BOX.y, BOX.w, BOX.h, 24); ctx.fillStyle = 'rgba(255,255,255,.07)'; ctx.fill();
+    ctx.lineWidth = 3; ctx.strokeStyle = i === 5 ? 'rgba(226,245,158,.6)' : 'rgba(255,255,255,.22)'; ctx.stroke();
+    text(String(i + 1), x + BOX.w / 2, BOX.y + 78, { size: 62, weight: 800, color: i === 5 ? C.lime : C.white, align: 'center' });
+    for (let k = 0; k < STACK[i]; k++) { rr(x + 22, BOX.y + BOX.h - 54 - k * 30, BOX.w - 44, 22, 6); ctx.fillStyle = 'rgba(255,255,255,.75)'; ctx.fill(); }
+    ctx.restore();
+  }
+  text('Yeni kart: 3 · Düz: +1 · Səhv: −1', W / 2, BOX.y + BOX.h + 70, { size: 32, weight: 600, color: 'rgba(255,255,255,.72)', align: 'center' });
+  // Kart "improve": 3 → 4 (+1)
+  const startY = BOX.y - 110;
+  const m1 = easeInOut(prog(t, 13.3, 14.25));
+  const p1x = lerp(boxX(2) + BOX.w / 2, boxX(3) + BOX.w / 2, m1), p1y = startY - Math.sin(m1 * Math.PI) * 120;
+  miniCard('improve', p1x, p1y, .9, t > 13.2 && t < 14.6 ? 'rgba(226,245,158,.9)' : null);
+  chip('+1', boxX(3) + BOX.w / 2, startY - 150, C.lime, C.ink, fadeWin(t, 14.0, 15.2, .25));
+  chip('Düz bildim ✓', W / 2, 1530, C.lime, C.ink, fadeWin(t, 13.2, 14.5, .2));
+  // Kart "approach": 3 → 2 (−1) və yenə qarşına çıxır
+  const app = easeOut(prog(t, 14.45, 14.75));
+  if (app > 0) {
+    const m2 = easeInOut(prog(t, 14.75, 15.6));
+    const p2x = lerp(boxX(2) + BOX.w / 2, boxX(1) + BOX.w / 2, m2), p2y = startY - Math.sin(m2 * Math.PI) * 120;
+    ctx.save(); ctx.globalAlpha *= app;
+    const pulse = t > 15.6 ? 1 + .06 * Math.sin((t - 15.6) * 9) : 1;
+    miniCard('approach', p2x, p2y, .9 * pulse, t > 14.6 ? 'rgba(255,155,138,.9)' : null);
+    ctx.restore();
+    chip('−1', boxX(1) + BOX.w / 2, startY - 150, C.coral, C.ink, fadeWin(t, 15.3, 16.4, .25));
+    chip('Səhv bildim', W / 2, 1530, C.coral, C.ink, fadeWin(t, 14.6, 16.4, .2));
+  }
+  ctx.restore();
+}
+function sceneC(t) {
+  headline([['Hazır söz dəsti'], ['İngilis dili', C.lime]], t, 9.85, 13.05);
+  headline([['Yaddaş'], ['qutuları', C.lime]], t, 12.95, 16.55);
+  phone(t); boxes(t);
+}
+
+// ===== Səhnə D · CTA (16.5–21) =====
+function sceneD(t) {
+  const a = easeOut(prog(t, 16.45, 16.85)); if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha *= a;
+  const s = backOut(prog(t, 16.5, 17.05)), size = 280;
+  ctx.save(); ctx.translate(W / 2, 700); ctx.scale(s, s); ctx.drawImage(logo, -size / 2, -size / 2, size, size); ctx.restore();
+  const tA = easeOut(prog(t, 16.75, 17.15));
+  ctx.save(); ctx.globalAlpha *= tA; text('Vocabox', W / 2, 960 + (1 - tA) * 30, { size: 110, weight: 800, align: 'center' }); ctx.restore();
+  const tB = easeOut(prog(t, 16.95, 17.4));
+  ctx.save(); ctx.globalAlpha *= tB;
+  text('Gəl sözlərdən', W / 2, 1130 + (1 - tB) * 30, { size: 76, weight: 800, align: 'center' });
+  text('başlayaq.', W / 2, 1220 + (1 - tB) * 30, { size: 76, weight: 800, color: C.lime, align: 'center' });
+  ctx.restore();
+  const c = backOut(prog(t, 18.05, 18.45));
+  if (c > 0) {
+    ctx.save(); ctx.translate(W / 2, 1420); ctx.scale(c, c);
+    pill('Link bio-da', 0, 0, { bg: C.lime, fg: C.ink, size: 50, padX: 56, h: 120 }); ctx.restore();
+    const bob = Math.sin(Math.max(0, t - 18.4) * 5) * 14;
+    ctx.save(); ctx.globalAlpha *= easeOut(prog(t, 18.3, 18.6)); ctx.strokeStyle = C.lime; ctx.lineWidth = 10; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.beginPath(); ctx.moveTo(W / 2, 1530 + bob); ctx.lineTo(W / 2, 1610 + bob); ctx.moveTo(W / 2 - 34, 1578 + bob); ctx.lineTo(W / 2, 1612 + bob); ctx.lineTo(W / 2 + 34, 1578 + bob); ctx.stroke(); ctx.restore();
+  }
+  ctx.restore();
+}
+
+// ===== Kadr =====
+function draw(t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.filter = 'none';
+  background(t);
+  watermark(1 - prog(t, 16.2, 16.5));
+  const scene = (fn, a, b) => { const al = Math.min(prog(t, a - .01, a + .3), 1 - prog(t, b - .3, b)); if (al <= 0) return; ctx.save(); ctx.globalAlpha = al; fn(t); ctx.restore(); };
+  scene(sceneA, 0, 5.55);
+  scene(sceneB, 5.3, 10.0);
+  scene(sceneC, 9.8, 16.65);
+  if (t >= 16.4) sceneD(t);
+  captions(t);
+  // Sonda yumşaq qaralma
+  const out = prog(t, DUR - .5, DUR); if (out > 0) { ctx.globalAlpha = out; ctx.fillStyle = C.bg2; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
+}
+
+// ===== İdarəetmə =====
+const status = document.getElementById('status');
+const playBtn = document.getElementById('play'), recBtn = document.getElementById('record');
+let busy = false;
+async function ready() { await Promise.all([logoReady, document.fonts.load(F(800, 80)), document.fonts.load(F(600, 40)), document.fonts.load(F(500, 40)), document.fonts.load(F(700, 40))]); }
+
+playBtn.onclick = async () => {
+  if (busy) return; busy = true; playBtn.disabled = recBtn.disabled = true;
+  const audio = new Audio(AUDIO); await audio.play(); const t0 = performance.now();
+  status.textContent = 'Oynadılır…';
+  const f = () => { const t = (performance.now() - t0) / 1000; draw(Math.min(t, DUR)); if (t < DUR) requestAnimationFrame(f); else { busy = false; playBtn.disabled = recBtn.disabled = false; status.textContent = 'Hazırdır'; } };
+  requestAnimationFrame(f);
+};
+
+async function record() {
+  if (busy) return; busy = true; playBtn.disabled = recBtn.disabled = true;
+  status.textContent = 'Yazılır… (21 san.)';
+  const ac = new AudioContext(); await ac.resume();
+  const buf = await ac.decodeAudioData(await (await fetch(AUDIO)).arrayBuffer());
+  const dest = ac.createMediaStreamDestination(), src = ac.createBufferSource(); src.buffer = buf; src.connect(dest);
+  const stream = canvas.captureStream(30); stream.addTrack(dest.stream.getAudioTracks()[0]);
+  const types = ['video/mp4;codecs=avc1.640028,mp4a.40.2', 'video/mp4;codecs=avc1,mp4a.40.2', 'video/mp4', 'video/webm;codecs=vp9,opus', 'video/webm'];
+  const mime = types.find(m => MediaRecorder.isTypeSupported(m));
+  const rec = new MediaRecorder(stream, { mimeType: mime, videoBitsPerSecond: 14e6, audioBitsPerSecond: 192e3 });
+  const chunks = []; rec.ondataavailable = e => e.data.size && chunks.push(e.data);
+  const stopped = new Promise(r => rec.onstop = r);
+  draw(0); rec.start(250);
+  const t0 = ac.currentTime + .2; src.start(t0);
+  await new Promise(done => { const f = () => { const t = ac.currentTime - t0; draw(clamp(t, 0, DUR)); if (t < DUR + .1) requestAnimationFrame(f); else done(); }; requestAnimationFrame(f); });
+  rec.stop(); await stopped; ac.close();
+  const ext = mime.startsWith('video/mp4') ? 'mp4' : 'webm', name = 'vocabox_skript1.' + ext;
+  const blob = new Blob(chunks, { type: mime });
+  const r = await fetch('/save?dir=skript1&name=' + name, { method: 'POST', body: blob });
+  window.lastRecording = { ok: r.ok, name, mime, size: blob.size };
+  status.textContent = r.ok ? `Saxlanıldı: ${name} (${(blob.size / 1e6).toFixed(1)} MB)` : 'Saxlamaq alınmadı';
+  busy = false; playBtn.disabled = recBtn.disabled = false;
+}
+// Kadr-kadr MP4 ixracı (H.264 + AAC). Real vaxtdan asılı deyil.
+async function exportMp4(fps = 30) {
+  if (busy) return; busy = true; playBtn.disabled = recBtn.disabled = true;
+  const { Muxer, ArrayBufferTarget } = Mp4Muxer;
+  const SR = 48000;
+  const audioBuf = await new OfflineAudioContext(1, 1, SR).decodeAudioData(await (await fetch(AUDIO)).arrayBuffer());
+  const CH = audioBuf.numberOfChannels;
+  let vCodec = 'avc1.640033';
+  if (!(await VideoEncoder.isConfigSupported({ codec: vCodec, width: W, height: H })).supported) vCodec = 'avc1.4d0033';
+  let aCodec = 'aac';
+  const aCfg = { codec: 'mp4a.40.2', sampleRate: SR, numberOfChannels: CH, bitrate: 192000 };
+  if (!(await AudioEncoder.isConfigSupported(aCfg)).supported) { aCodec = 'opus'; aCfg.codec = 'opus'; }
+  const target = new ArrayBufferTarget();
+  const muxer = new Muxer({ target, fastStart: 'in-memory', video: { codec: 'avc', width: W, height: H, frameRate: fps }, audio: { codec: aCodec, numberOfChannels: CH, sampleRate: SR } });
+  let err = null;
+  const ve = new VideoEncoder({ output: (c, m) => muxer.addVideoChunk(c, m), error: e => err = e });
+  ve.configure({ codec: vCodec, width: W, height: H, bitrate: 10e6, framerate: fps });
+  const ae = new AudioEncoder({ output: (c, m) => muxer.addAudioChunk(c, m), error: e => err = e });
+  ae.configure(aCfg);
+  const total = Math.round(DUR * fps);
+  for (let i = 0; i < total; i++) {
+    if (err) throw err;
+    draw(i / fps);
+    // Kadrı birbaşa piksellərdən götür (gizli paneldə canvas snapshot köhnə qala bilər)
+    const px = ctx.getImageData(0, 0, W, H).data;
+    const frame = new VideoFrame(px, { format: 'RGBA', codedWidth: W, codedHeight: H, timestamp: Math.round(i * 1e6 / fps), duration: Math.round(1e6 / fps) });
+    ve.encode(frame, { keyFrame: i % (fps * 2) === 0 }); frame.close();
+    if (ve.encodeQueueSize > 8) await new Promise(r => ve.addEventListener('dequeue', r, { once: true }));
+    if (i % 30 === 0) status.textContent = `Kodlanır… ${Math.round(i / total * 100)}%`;
+  }
+  // Səs: videonun sonuna qədər sükutla tamamlanır
+  const totalS = Math.round(DUR * SR), block = 1024;
+  for (let s = 0; s < totalS; s += block) {
+    const n = Math.min(block, totalS - s), data = new Float32Array(n * CH);
+    for (let ch = 0; ch < CH; ch++) { const src = audioBuf.getChannelData(ch); for (let k = 0; k < n; k++) data[ch * n + k] = src[s + k] || 0; }
+    ae.encode(new AudioData({ format: 'f32-planar', sampleRate: SR, numberOfFrames: n, numberOfChannels: CH, timestamp: Math.round(s / SR * 1e6), data }));
+  }
+  await ve.flush(); await ae.flush(); if (err) throw err;
+  muxer.finalize();
+  const name = 'vocabox_skript1.mp4', body = target.buffer;
+  const r = await fetch('/save?dir=skript1&name=' + name, { method: 'POST', body });
+  busy = false; playBtn.disabled = recBtn.disabled = false;
+  const info = { ok: r.ok, name, videoCodec: vCodec, audioCodec: aCodec, sizeMB: +(body.byteLength / 1e6).toFixed(2), frames: total };
+  status.textContent = r.ok ? `Saxlanıldı: ${name} (${info.sizeMB} MB)` : 'Saxlamaq alınmadı';
+  return info;
+}
+recBtn.onclick = () => (window.VideoEncoder && window.Mp4Muxer ? exportMp4() : record());
+window.draw = draw; window.record = record; window.exportMp4 = exportMp4;
+
+ready().then(() => {
+  const q = new URLSearchParams(location.search).get('t');
+  draw(q ? Number(q) : 0.6); status.textContent = 'Hazırdır';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "reklam",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["reklam/server.mjs"],
+      "port": 5180
+    }
+  ]
+}

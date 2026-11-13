@@ -1,0 +1,20 @@
+<!doctype html><html lang="az"><meta charset="utf-8"><title>Şrift testi</title>
+<style>
+body{margin:0;padding:16px;background:#18202b;color:#e6e1d3}
+p{margin:6px 0;font-size:30px;line-height:1.25}
+small{display:block;font:13px monospace;color:#8fa0b3;margin-top:12px}
+</style>
+<body>
+<script>
+// Azərbaycan dili üçün yoxlama: pangram, Ə/ə, İ/ı, böyük hərf (az-AZ)
+const PANGRAM = 'Zəfər, jaketini də papağını da götür, bu axşam hava çox soyuq olacaq.';
+const UPPER = 'inevitable · qaçılmaz · ' + 'bilirsən'.toLocaleUpperCase('az-AZ') + ' · ' + 'ilk dəfə'.toLocaleUpperCase('az-AZ');
+const FONTS = [['Bahnschrift', 600, 'normal'], ['Bahnschrift', 700, 'condensed'], ['Ink Free', 400, 'normal'], ['Sitka Heading', 700, 'normal'], ['Georgia', 700, 'normal']];
+for (const [f, w, s] of FONTS) {
+  const sm = document.createElement('small'); sm.textContent = `${f} ${w} ${s}`; document.body.appendChild(sm);
+  for (const t of [PANGRAM, 'Ə ə · İ ı · Ş ş Ç ç Ğ ğ Ö ö Ü ü · ' + UPPER]) {
+    const p = document.createElement('p'); p.textContent = t; p.style.fontFamily = `"${f}", "Comic Sans MS"`; p.style.fontWeight = w; p.style.fontStretch = s; document.body.appendChild(p);
+  }
+}
+</script>
+</body></html>

@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><title>Səs analizi</title><body>analiz</body>
+<script>
+window.analyze = async (file) => {
+  const buf = await (await fetch(file)).arrayBuffer();
+  const ctx = new OfflineAudioContext(1, 44100, 44100);
+  const audio = await ctx.decodeAudioData(buf);
+  const d = audio.getChannelData(0), sr = audio.sampleRate, win = Math.round(sr * 0.02);
+  const rms = [];
+  for (let i = 0; i < d.length; i += win) { let s = 0; for (let j = i; j < Math.min(i + win, d.length); j++) s += d[j] * d[j]; rms.push(Math.sqrt(s / win)); }
+  const thr = 0.012, gaps = []; let start = null;
+  rms.forEach((v, k) => { const t = k * 0.02; if (v < thr) { if (start === null) start = t; } else if (start !== null) { if (t - start >= 0.25) gaps.push([+start.toFixed(2), +t.toFixed(2)]); start = null; } });
+  const first = rms.findIndex(v => v >= thr) * 0.02, last = (rms.length - 1 - [...rms].reverse().findIndex(v => v >= thr)) * 0.02;
+  return {duration: +audio.duration.toFixed(2), speechStart: +first.toFixed(2), speechEnd: +last.toFixed(2), gaps};
+};
+</script>

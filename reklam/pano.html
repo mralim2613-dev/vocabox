@@ -1,0 +1,34 @@
+<!doctype html><meta charset="utf-8"><title>Kadr panosu</title>
+<style>body{margin:0;background:#111}canvas{width:100%;display:block}</style>
+<canvas id="c"></canvas>
+<script>
+// Kadr panosu aləti (sistemin "Kontrol" addımı üçün; ffmpeg tile filtri olmadığından brauzerdə qurulur).
+// panoVideo('remotion/cikti/skript1.mp4', 48, 8, 'remotion/cikti', 'pano.jpg')
+// panoSekil(['remotion/cikti/k_1.png', ...], 6, 'remotion/cikti', 'pano_kadr.jpg')
+const TW = 240;
+async function saxla(canvas, dir, name) {
+  const blob = await new Promise(r => canvas.toBlob(r, 'image/jpeg', 0.88));
+  const r = await fetch(`/save?dir=${encodeURIComponent(dir)}&name=${name}`, {method: 'POST', body: blob});
+  return r.ok;
+}
+function etiket(g, x, y, s) { g.fillStyle = 'rgba(0,0,0,.6)'; g.fillRect(x, y, 64, 22); g.fillStyle = '#ff0'; g.font = '15px sans-serif'; g.fillText(s, x + 5, y + 16); }
+window.panoVideo = async (file, n = 48, cols = 8, dir, name) => {
+  const blob = await (await fetch(file + '?x=' + Date.now())).blob();
+  const v = document.createElement('video'); v.muted = true; v.src = URL.createObjectURL(blob);
+  await new Promise(r => v.oncanplaythrough = r);
+  const th = Math.round(TW * v.videoHeight / v.videoWidth), rows = Math.ceil(n / cols);
+  const c = document.getElementById('c'); c.width = TW * cols; c.height = th * rows; const g = c.getContext('2d');
+  for (let i = 0; i < n; i++) {
+    v.currentTime = Math.min(v.duration - 0.05, i * v.duration / n + 0.05); await new Promise(r => v.onseeked = r);
+    const x = (i % cols) * TW, y = Math.floor(i / cols) * th; g.drawImage(v, x, y, TW, th); etiket(g, x + 4, y + 4, v.currentTime.toFixed(1) + 's');
+  }
+  return {duration: v.duration, saved: await saxla(c, dir, name)};
+};
+window.panoSekil = async (files, cols = 6, dir, name) => {
+  const imgs = await Promise.all(files.map(f => new Promise((r, j) => { const i = new Image(); i.onload = () => r(i); i.onerror = j; i.src = f + '?x=' + Date.now(); })));
+  const th = Math.round(TW * imgs[0].height / imgs[0].width), rows = Math.ceil(imgs.length / cols);
+  const c = document.getElementById('c'); c.width = TW * cols; c.height = th * rows; const g = c.getContext('2d');
+  imgs.forEach((im, i) => { const x = (i % cols) * TW, y = Math.floor(i / cols) * th; g.drawImage(im, x, y, TW, th); etiket(g, x + 4, y + 4, files[i].match(/(\d+)\.png$/)?.[1] || String(i)); });
+  return {saved: await saxla(c, dir, name)};
+};
+</script>
