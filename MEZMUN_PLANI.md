@@ -33,9 +33,11 @@ Seriya = izləyicinin tanıdığı format. Hər gün sıfırdan fikir axtarmır�
 | **D** | **"Təsisçinin hekayəsi"** — 5 hekayə tipindən biri | Etibar, brend · S1–4 | 30–60 san | Üz, kameraya danışıq | 15% |
 | **E** | **"Söz öyrənmə səhvləri"** — aykırı fikir, mif | Problemi adlandırmaq · S2–3 | 20–40 san | Üz + yazı | 10% |
 | **F** | **"DM-dən sual"** — real sual/etiraza cavab | Şübhəni silmək · S4 | 15–30 san | Üz və ya ekran + DM screenshot | 5% → artır |
+| **G** | **"Yaddaşın elmi"** — öyrənmə elminin rəqəmsiz, mənbəli izahı (Həftə 4-dən) | Etibar, saxlama, paylaşma · S2–3 | 30–45 san | Motion video (diaqram) + tətbiqin real ekranı | Həftə 4: 100%, sonra həftədə 1 |
 
 **Funksiya balansı (20 gün):** F1 — 8 video, F2 — 10, F3 — 5 (bir videoda birdən çox ola bilər). Hər C videosu 3 funksiyadan ən azı ikisini göstərir.
 **Dil balansı:** EN 11 · RU 4 · DE 3 · ümumi 2 (strategiyadakı büdcə prioriteti ilə uyğun).
+**Həftə 4 (G seriyası):** 6 video, hamısı ümumi (dildən asılı olmayan elm), F2 — 5, F3 — 2, F1 — 1.
 
 ### 2.1 Hər seriyanın şablonu
 
@@ -86,7 +88,7 @@ Son      "Sualın var? Mesajla yaz"
 
 ---
 
-## 3. İlk 20 günün təqvimi
+## 3. Təqvim: ilk 20 gün + Həftə 4 (elm seriyası)
 
 Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: H1 reel kimi paylaşılır; H2 və H3 eyni gövdə ilə TikTok/Shorts-da və ya 10-cu gündən sonra trial reel kimi sınanır. Hook = ilk 2 saniyədəki **ekran yazısı + ilk cümlə**.
 
@@ -132,6 +134,33 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 4. RU: *быть, сказать, мочь, говорить, знать* — hər biri bir qısa cümlə ilə.
 5. FAQ cavabları yalnız REKLAM_QAYDALARI 2–4-ə uyğun: oflayn işləyir, reklam şəbəkəsi və izləmə yoxdur, reklamda dillər: ingilis, rus, alman. Qiymət sualına video cavab vermir → "DM-ə yaz".
 6. Serial ifadələri: *Hang on* (bir dəqiqə) · *No way!* (ola bilməz!) · *I'm on it* · *It's not a big deal* (böyük məsələ deyil) · *Get over it* (unut getsin / keç bunu). Real serial adı çəkilmir.
+7. **Unutma əyrisi:** Hermann Ebbinghaus öz üzərində mənasız hecaları öyrənib müxtəlif fasilələrdən sonra yenidən öyrənməyə nə qədər vaxt getdiyini ölçüb (Über das Gedächtnis, 1885). Nəticə forması: unutma əvvəl sürətli gedir, sonra yavaşlayır; təkrar etdikcə əyri daha yavaş enir. Rəqəm (faiz/saat) deyilmir. Real ekran: Yaddaş qutuları.
+8. **Aralıqlı təkrar (spacing effect):** eyni öyrənmə vaxtını bir dəfəyə yığmaq əvəzinə aralıqlara bölmək uzunmüddətli yadda saxlamanı yaxşılaşdırır — çox sayda təcrübədə təsdiqlənib (məs. Cepeda və həmkarları, 2006, meta-analiz). "Bir gecədə əzbərləmək" qısamüddətli işləyir. Real ekran: qutular, "Zəiflər · 1–2" məşqi.
+9. **Leitner sistemi:** alman elm jurnalisti Sebastian Leitner kartlı qutu metodunu "So lernt man lernen" (1972) kitabında təsvir edib: bilinən kart növbəti qutuya keçir, səhv cavablanan kart geri qayıdır, çətin kartlar daha tez-tez təkrarlanır. Vocabox-da: 6 qutu, yeni kart 3-cü qutuda, düz +1, səhv −1 (Q1: "1-ci qutuya qayıdır" demə).
+10. **Passiv (reseptiv) və aktiv (produktiv) söz ehtiyatı:** dil öyrənənlərin tanıyıb başa düşdüyü sözlər adətən sərbəst işlədə bildiklərindən çox olur (I. S. P. Nation, Learning Vocabulary in Another Language, 2001). Danışmaq üçün sözü tanımaq yox, xatırlayıb tapmaq lazımdır. Rəqəm deyilmir. Real ekran: "Yazaraq xatırla" rejimi, "Kartın ön tərəfi: Azərbaycanca qarşılıq".
+11. **Aktiv xatırlama (testing effect):** materialı yenidən oxumaq əvəzinə özünü yoxlamaq (xatırlamağa çalışmaq) uzunmüddətli yadda saxlamanı yaxşılaşdırır (Roediger və Karpicke, 2006). Yenidən oxumaq "bilirəm" hissi yarada bilər. Real ekran: fləşkartda "Cavabı göstər" — cavab gizlidir.
+12. **Kontekst:** sözü cümlədə və mətndə görmək onun mənasını, işlənmə yerini və yanında gələn sözləri göstərir (Nation, 2001). Sözü tək siyahıda yox, rast gəldiyin mətndən götürmək + təkrar etmək. Rəqəm və "X dəfə yaxşı" iddiası yoxdur. Real ekran: Mətn → lüğət (nümunə cümlə bəzi kartlarda var — "hamısında var" demə).
+
+### Həftə 4 — "Yaddaşın elmi" (G seriyası, 21–26-cı günlər)
+
+Məqsəd: izləyiciyə **niyə** unutduğunu və **niyə** təkrarın işlədiyini izah etmək (məlumatlılıq səviyyəsi 2–3), Vocabox-un mexanizmini elmi əsasla bağlamaq. Bu seriya saxlama və paylaşma üçün qurulub; hər video sonunda tətbiqin uyğun real ekranı göstərilir.
+
+| Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
+|---|---|---|---|---|
+| **21** | G · ümumi · S2 · F2 | **Unutma əyrisi:** sözlər niyə yadından çıxır? ⁷ | H1 "1885-ci ildə bir alim özünü sınağa çəkdi" / H2 "Unutmağın da qrafiki var" / H3 "Dünən öyrəndin, bu gün yoxdur. Niyə?" | "Saxla" + "Əyrini necə düzəldirik — mesajla yaz" |
+| **22** | G · ümumi · S2–3 · F2 | **Aralıqlı təkrar:** az, amma vaxtında ⁸ | H1 "Eyni vaxt, fərqli nəticə" / H2 "Bir gecədə əzbərləmək niyə tez unudulur?" / H3 "Təkrarın vaxtı onun sayından vacibdir" | "Mesajla yaz, təkrarı necə planladığımızı göstərək" |
+| **23** | G · ümumi · S3 · F2 | **Leitner qutuları:** 1970-ci illərin kağız sistemi ⁹ | H1 "Bu metod 50 ildən çoxdur kağız qutularda işləyir" / H2 "Bir qutu, bir qayda" / H3 "Düz bildin — irəli. Səhv — geri." | "Mesajla yaz, qutularını quraq" |
+| **24** | G · ümumi · S2 · F2 | **"Başa düşürəm, amma danışa bilmirəm":** passiv və aktiv söz ehtiyatı ¹⁰ | H1 "Başa düşürsən, amma danışa bilmirsən? Səbəbi var" / H2 "Sözü tanımaq və xatırlamaq fərqli bacarıqdır" / H3 "Sənin iki lüğətin var" | "Hansı dildə ilişirsən? Mesajla yaz" |
+| **25** | G · ümumi · S2–3 · F2 | **Oxumaq vs özünü yoxlamaq** (aktiv xatırlama) ¹¹ | H1 "Yenidən oxumaq səni aldada bilər" / H2 "Cavaba baxmadan əvvəl 3 saniyə dayan" / H3 "Bildiyini hiss etmək ≠ bilmək" | "Mesajla yaz, necə işlədiyini göstərək" |
+| **26** | G · ümumi · S3 · F3, F1 | **Sözü kontekstlə öyrən** ¹² | H1 "Tək söz yaddan çıxır, cümlə qalır" / H2 "Siyahı yox, mətn" / H3 "Sözün evi cümlədir" | "Öz mətnindən lüğət — mesajla yaz" |
+
+**G seriyası üçün xüsusi qaydalar (REKLAM_QAYDALARI Q3 və bölmə 4 ilə):**
+- **Rəqəm yoxdur:** faiz, saat/gün sayı, "X söz lazımdır", "N dəfə sürətli" — heç biri. Qrafiklərin oxlarında rəqəm yazılmır, yalnız forma göstərilir ("tez düşür, sonra yavaşlayır").
+- **Yalnız tarixi və konseptual faktlar,** aşağıdakı qeydlərdəki mənbələrə əsaslanan. Hər video çəkilişdən əvvəl faktlar yenidən yoxlanır; şübhəli cümlə çıxarılır.
+- **"Beyin belə işləyir" tipli neyrobiologiya iddiası yoxdur.** Davranış səviyyəsində danışırıq: "təkrar olmayanda unutmaq sürətlənir", "xatırlamağa çalışmaq yadda saxlamağa kömək edir".
+- **Mənbə caption-da göstərilir** (məs. "Mənbə: H. Ebbinghaus, Über das Gedächtnis, 1885").
+- **Tətbiq iddiası ayrıca və dürüst:** elm "təkrar kömək edir" deyir; Vocabox "təkrarı qutularla təşkil edir" deyir. "Vocabox elmi olaraq sübut olunub" demirik.
+- Format: motion video (diaqram + izlənən söz kartı), sonda real ekran. Uzunluq 30–45 san.
 
 ---
 
@@ -214,7 +243,7 @@ Hər gün sıfırdan çəkmək 20 günü yarımçıq qoydurur. Həftədə **2 ç
 - **Saxlama** B seriyasının, **paylaşma** A-nın, **DM** C və F-in əsas metrikidir. Seriyaları bir-biri ilə eyni metriklə müqayisə etmə.
 - İlk 3–4 video az baxış alsa — **davam et.** Yeni hesab üçün bu normaldır; videonu silmə.
 
-### 7.3 20-ci gündən sonra (21–22-ci gün icmalı)
+### 7.3 20-ci gündən sonra (Həftə 4 ərzində icmal)
 
 1. Ən yaxşı **3 seriyanı** saxla, ən zəifini 1 həftəlik ara ver.
 2. Ən yaxşı **5 hook-u** "hook bankı"na yaz — reklam kreativlərinin başlanğıcı (strategiya, bölmə 8).
