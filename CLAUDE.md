@@ -31,8 +31,8 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 4 | video04-leitner | Leitner qutuları (6 qutu, +1/−1) | 4 |
 | 5 | video05-alman-imtahan | Alman dili, imtahana hazırlaşanlar | 18 əvəzinə |
 | 6 | video06-sehvler | Söz öyrənəndə 3 səhv | 6 |
-| 8 | video08-yarimciq | Uğursuzluq hekayəsi: yarımçıq qoyduğum dəfələr (təsisçinin real cavabları), serif/təqvim üslubu | 9 |
 | 7 | video07-serial-luget | Serialdan öz lüğətin: 3 addım (prompt → öz AI köməkçin → yapışdır/önbaxış/əlavə et), telefon bələdçisi | 7 |
+| 8 | video08-yarimciq | Uğursuzluq hekayəsi: yarımçıq qoyduğum dəfələr (təsisçinin real cavabları), serif/təqvim üslubu | 9 |
 
 ## 5. Açıq məsələlər / növbəti addımlar
 - **Növbəti video:** 8-ci gün (B · DE · Almaniyada ilk həftə 5 söz). 7-ci gün istifadəçinin seçimi ilə video02-dən fərqli, C seriyası (real ekranda addım-addım) kimi hazırlandı.
