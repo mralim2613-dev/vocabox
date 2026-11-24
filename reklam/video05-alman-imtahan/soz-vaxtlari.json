@@ -1,0 +1,320 @@
+[
+ {
+  "i": 0,
+  "text": "İmtahana",
+  "start": 0.08,
+  "end": 0.56
+ },
+ {
+  "i": 1,
+  "text": "az",
+  "start": 0.64,
+  "end": 0.8
+ },
+ {
+  "i": 2,
+  "text": "qalıb,",
+  "start": 0.88,
+  "end": 1.28
+ },
+ {
+  "i": 3,
+  "text": "sözlər",
+  "start": 1.36,
+  "end": 1.68
+ },
+ {
+  "i": 4,
+  "text": "isə",
+  "start": 1.72,
+  "end": 1.84
+ },
+ {
+  "i": 5,
+  "text": "yadda",
+  "start": 1.92,
+  "end": 2.16
+ },
+ {
+  "i": 6,
+  "text": "qalmır?",
+  "start": 2.24,
+  "end": 3.04
+ },
+ {
+  "i": 7,
+  "text": "Almancada",
+  "start": 3.12,
+  "end": 3.68
+ },
+ {
+  "i": 8,
+  "text": "isim",
+  "start": 3.76,
+  "end": 4.08
+ },
+ {
+  "i": 9,
+  "text": "artiklsiz",
+  "start": 4.2,
+  "end": 4.72
+ },
+ {
+  "i": 10,
+  "text": "yarımçıqdır:",
+  "start": 4.8,
+  "end": 5.76
+ },
+ {
+  "i": 11,
+  "text": "der,",
+  "start": 5.92,
+  "end": 6.32
+ },
+ {
+  "i": 12,
+  "text": "die,",
+  "start": 6.48,
+  "end": 6.88
+ },
+ {
+  "i": 13,
+  "text": "das.",
+  "start": 7.08,
+  "end": 7.44
+ },
+ {
+  "i": 14,
+  "text": "Vocabox-da",
+  "start": 7.68,
+  "end": 8.4
+ },
+ {
+  "i": 15,
+  "text": "alman",
+  "start": 8.52,
+  "end": 8.72
+ },
+ {
+  "i": 16,
+  "text": "dili",
+  "start": 8.8,
+  "end": 8.96
+ },
+ {
+  "i": 17,
+  "text": "üçün",
+  "start": 9.0,
+  "end": 9.36
+ },
+ {
+  "i": 18,
+  "text": "A1,",
+  "start": 9.48,
+  "end": 10.08
+ },
+ {
+  "i": 19,
+  "text": "A2",
+  "start": 10.16,
+  "end": 10.64
+ },
+ {
+  "i": 20,
+  "text": "və",
+  "start": 10.72,
+  "end": 10.92
+ },
+ {
+  "i": 21,
+  "text": "B1",
+  "start": 11.04,
+  "end": 11.28
+ },
+ {
+  "i": 22,
+  "text": "səviyyələrinə",
+  "start": 11.36,
+  "end": 11.92
+ },
+ {
+  "i": 23,
+  "text": "görə",
+  "start": 12.0,
+  "end": 12.16
+ },
+ {
+  "i": 24,
+  "text": "bölünmüş",
+  "start": 12.2,
+  "end": 12.72
+ },
+ {
+  "i": 25,
+  "text": "üç",
+  "start": 12.8,
+  "end": 13.0
+ },
+ {
+  "i": 26,
+  "text": "mindən",
+  "start": 13.04,
+  "end": 13.36
+ },
+ {
+  "i": 27,
+  "text": "çox",
+  "start": 13.4,
+  "end": 13.52
+ },
+ {
+  "i": 28,
+  "text": "söz",
+  "start": 13.6,
+  "end": 13.76
+ },
+ {
+  "i": 29,
+  "text": "var.",
+  "start": 13.84,
+  "end": 14.293
+ },
+ {
+  "i": 30,
+  "text": "İsimlər",
+  "start": 14.347,
+  "end": 14.88
+ },
+ {
+  "i": 31,
+  "text": "artikl",
+  "start": 14.96,
+  "end": 15.44
+ },
+ {
+  "i": 32,
+  "text": "və",
+  "start": 15.52,
+  "end": 15.627
+ },
+ {
+  "i": 33,
+  "text": "cəm",
+  "start": 15.68,
+  "end": 15.84
+ },
+ {
+  "i": 34,
+  "text": "forması",
+  "start": 15.92,
+  "end": 16.24
+ },
+ {
+  "i": 35,
+  "text": "ilə,",
+  "start": 16.32,
+  "end": 16.747
+ },
+ {
+  "i": 36,
+  "text": "nümunə",
+  "start": 16.773,
+  "end": 17.04
+ },
+ {
+  "i": 37,
+  "text": "cümlələrlə.",
+  "start": 17.12,
+  "end": 17.96
+ },
+ {
+  "i": 38,
+  "text": "Səviyyəni",
+  "start": 18.0,
+  "end": 18.4
+ },
+ {
+  "i": 39,
+  "text": "seç,",
+  "start": 18.48,
+  "end": 18.96
+ },
+ {
+  "i": 40,
+  "text": "çətin",
+  "start": 19.0,
+  "end": 19.2
+ },
+ {
+  "i": 41,
+  "text": "sözləri",
+  "start": 19.28,
+  "end": 19.68
+ },
+ {
+  "i": 42,
+  "text": "qutular",
+  "start": 19.733,
+  "end": 20.0
+ },
+ {
+  "i": 43,
+  "text": "sənə",
+  "start": 20.08,
+  "end": 20.32
+ },
+ {
+  "i": 44,
+  "text": "yenə",
+  "start": 20.4,
+  "end": 20.56
+ },
+ {
+  "i": 45,
+  "text": "qaytarsın.",
+  "start": 20.613,
+  "end": 21.371
+ },
+ {
+  "i": 46,
+  "text": "Hansı",
+  "start": 21.44,
+  "end": 21.68
+ },
+ {
+  "i": 47,
+  "text": "səviyyəyə",
+  "start": 21.76,
+  "end": 22.08
+ },
+ {
+  "i": 48,
+  "text": "hazırlaşırsan?",
+  "start": 22.16,
+  "end": 23.08
+ },
+ {
+  "i": 49,
+  "text": "Mesajla",
+  "start": 23.12,
+  "end": 23.52
+ },
+ {
+  "i": 50,
+  "text": "yaz,",
+  "start": 23.56,
+  "end": 24.0
+ },
+ {
+  "i": 51,
+  "text": "dəstini",
+  "start": 24.027,
+  "end": 24.4
+ },
+ {
+  "i": 52,
+  "text": "göstərək.",
+  "start": 24.48,
+  "end": 25.12
+ }
+]

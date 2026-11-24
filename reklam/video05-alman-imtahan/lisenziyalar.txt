@@ -1,0 +1,7 @@
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), tək take (generation ThUu4Zos2NbOpGA6hJWg). Flow: 6hkKJJWx8s3hvNRtbnqr
+Söz vaxtları: ElevenLabs eleven_scribe_v1
+Fon musiqisi: Epidemic Sound — "Tell You (Instrumental Version)", waykap
+Effektlər (Epidemic Sound): "Clocks, Mechanics, Old, Small, Mechanism, Soft, Short, Light"; "User Interface, Click, UI Buttons, Bubbly, Select"; "Mechanical, Click, LED Light, Plastic, Button Press, Single"; "Designed, Whoosh, Soft Airy"; "User Interface, Alert, Tonal, Soft Digital Confirm"
+Şrift: Inter (SIL OFL)
+Şəkillər: Vocabox loqosu və tətbiqin real ekran görüntüləri (lokal veb versiya, Playwright)
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın hesaba bağlı olduğunu yoxlayın. dl/ repoya əlavə edilmir.
