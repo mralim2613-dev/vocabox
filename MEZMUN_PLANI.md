@@ -109,7 +109,7 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 | Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
 |---|---|---|---|---|
 | **8** | B · DE · S1–2 · F1 | Almaniyada ilk həftə lazım olan 5 söz ³ | H1 "Almaniyaya getmədən bu 5 sözü öyrən" / H2 "Birinci gün bu sözlər lazım olacaq" / H3 "A1-dən əvvəl bunlar" | "Saxla" + "A1–B1 dəstləri üçün mesajla yaz" |
-| **9** | D · ümumi · S1–2 · — | **Uğursuzluq hekayəsi:** dil öyrənməyə başlayıb buraxdığım dəfələr | H1 "Dil öyrənməyi neçə dəfə yarımçıq qoymuşam" / H2 "Hər yanvar yenidən başlayırdım" / H3 "Problem tənbəllik deyildi" | "Sən neçə dəfə başlamısan? Mesajla yaz" |
+| **9** | D · ümumi · S1–2 · F1, F3 | ✅ **Hazırdır (video08):** **Uğursuzluq hekayəsi:** dil öyrənməyə başlayıb buraxdığım dəfələr (təsisçinin öz cavabları; motion + Abbas səsi) | H1 "Dil öyrənməyi neçə dəfə yarımçıq qoymuşam" / H2 "Hər yanvar yenidən başlayırdım" / H3 "Problem tənbəllik deyildi" | "Sən neçə dəfə başlamısan? Mesajla yaz" |
 | **10** | C · EN · S3 · F3 | Mətn → lüğət demosu (**Skript 11**) | H1 "Oxu. Çıxar. Təkrar et." / H2 "Oxuduğun sözlər harada qalır?" / H3 "Hər mətn bir dərsdir" | "Mesajla yaz, necə işlədiyini göstərək" |
 | **11** | A · EN · S1 · — | E-poçt yazanda "tam bilmirəm" (**Skript 1** canlı versiyası) | H1 "Bilirəm… amma tam yox." / H2 "E-poçtu 4-cü dəfə silirəm" / H3 "Translate-ə 'just in case' baxıram" | "Səndə də olur? Mesajla yaz" |
 | **12** | B · RU · S1–2 · F1 | Ən çox işlənən 5 rus feli ⁴ | H1 "Rus dilində bu 5 feli bilmədən danışmaq çətindir" / H2 "Hər cümlədə lazım olan 5 söz" / H3 "Rusca başlamaq üçün ilk 5" | "Saxla" + "Rus dili dəsti üçün mesajla yaz" |

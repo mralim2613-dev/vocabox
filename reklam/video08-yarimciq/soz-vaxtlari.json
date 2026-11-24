@@ -1,0 +1,458 @@
+[
+ {
+  "i": 0,
+  "text": "Dil",
+  "start": 0.16,
+  "end": 0.24
+ },
+ {
+  "i": 1,
+  "text": "öyrənməyi",
+  "start": 0.32,
+  "end": 0.8
+ },
+ {
+  "i": 2,
+  "text": "neçə",
+  "start": 0.88,
+  "end": 1.04
+ },
+ {
+  "i": 3,
+  "text": "dəfə",
+  "start": 1.08,
+  "end": 1.28
+ },
+ {
+  "i": 4,
+  "text": "yarımçıq",
+  "start": 1.36,
+  "end": 1.76
+ },
+ {
+  "i": 5,
+  "text": "qoymuşam?",
+  "start": 1.8,
+  "end": 2.64
+ },
+ {
+  "i": 6,
+  "text": "Sayını",
+  "start": 2.72,
+  "end": 2.96
+ },
+ {
+  "i": 7,
+  "text": "itirmişəm.",
+  "start": 3.04,
+  "end": 3.92
+ },
+ {
+  "i": 8,
+  "text": "Ayın",
+  "start": 4.0,
+  "end": 4.24
+ },
+ {
+  "i": 9,
+  "text": "biri,",
+  "start": 4.373,
+  "end": 4.88
+ },
+ {
+  "i": 10,
+  "text": "ad",
+  "start": 4.96,
+  "end": 5.04
+ },
+ {
+  "i": 11,
+  "text": "günüm,",
+  "start": 5.12,
+  "end": 5.76
+ },
+ {
+  "i": 12,
+  "text": "hər",
+  "start": 5.84,
+  "end": 5.96
+ },
+ {
+  "i": 13,
+  "text": "dəfə",
+  "start": 6.0,
+  "end": 6.24
+ },
+ {
+  "i": 14,
+  "text": "yenidən",
+  "start": 6.32,
+  "end": 6.64
+ },
+ {
+  "i": 15,
+  "text": "başlayırdım.",
+  "start": 6.72,
+  "end": 7.48
+ },
+ {
+  "i": 16,
+  "text": "Bütün",
+  "start": 7.52,
+  "end": 7.84
+ },
+ {
+  "i": 17,
+  "text": "yolları",
+  "start": 7.92,
+  "end": 8.24
+ },
+ {
+  "i": 18,
+  "text": "yoxladım.",
+  "start": 8.32,
+  "end": 9.067
+ },
+ {
+  "i": 19,
+  "text": "Bəzən",
+  "start": 9.093,
+  "end": 9.44
+ },
+ {
+  "i": 20,
+  "text": "ilk",
+  "start": 9.52,
+  "end": 9.68
+ },
+ {
+  "i": 21,
+  "text": "gün",
+  "start": 9.76,
+  "end": 9.84
+ },
+ {
+  "i": 22,
+  "text": "buraxırdım,",
+  "start": 9.88,
+  "end": 10.76
+ },
+ {
+  "i": 23,
+  "text": "bəzən",
+  "start": 10.8,
+  "end": 11.2
+ },
+ {
+  "i": 24,
+  "text": "üç",
+  "start": 11.24,
+  "end": 11.36
+ },
+ {
+  "i": 25,
+  "text": "ay",
+  "start": 11.44,
+  "end": 11.52
+ },
+ {
+  "i": 26,
+  "text": "sonra.",
+  "start": 11.6,
+  "end": 12.267
+ },
+ {
+  "i": 27,
+  "text": "Çox",
+  "start": 12.293,
+  "end": 12.48
+ },
+ {
+  "i": 28,
+  "text": "qayda",
+  "start": 12.52,
+  "end": 12.8
+ },
+ {
+  "i": 29,
+  "text": "öyrəndim,",
+  "start": 12.84,
+  "end": 13.493
+ },
+ {
+  "i": 30,
+  "text": "danışıq",
+  "start": 13.547,
+  "end": 13.92
+ },
+ {
+  "i": 31,
+  "text": "da,",
+  "start": 14.12,
+  "end": 14.36
+ },
+ {
+  "i": 32,
+  "text": "lüğət",
+  "start": 14.4,
+  "end": 14.64
+ },
+ {
+  "i": 33,
+  "text": "də.",
+  "start": 14.72,
+  "end": 15.093
+ },
+ {
+  "i": 34,
+  "text": "Amma",
+  "start": 15.147,
+  "end": 15.36
+ },
+ {
+  "i": 35,
+  "text": "video",
+  "start": 15.48,
+  "end": 15.6
+ },
+ {
+  "i": 36,
+  "text": "izləyəndə,",
+  "start": 15.68,
+  "end": 16.453
+ },
+ {
+  "i": 37,
+  "text": "kitab",
+  "start": 16.507,
+  "end": 16.72
+ },
+ {
+  "i": 38,
+  "text": "oxuyanda",
+  "start": 16.76,
+  "end": 17.36
+ },
+ {
+  "i": 39,
+  "text": "yenə",
+  "start": 17.44,
+  "end": 17.6
+ },
+ {
+  "i": 40,
+  "text": "dayanırdım.",
+  "start": 17.68,
+  "end": 18.613
+ },
+ {
+  "i": 41,
+  "text": "Problem",
+  "start": 18.747,
+  "end": 18.88
+ },
+ {
+  "i": 42,
+  "text": "tənbəllik",
+  "start": 18.907,
+  "end": 19.36
+ },
+ {
+  "i": 43,
+  "text": "deyildi.",
+  "start": 19.44,
+  "end": 20.12
+ },
+ {
+  "i": 44,
+  "text": "Öyrəndiyim",
+  "start": 20.16,
+  "end": 20.64
+ },
+ {
+  "i": 45,
+  "text": "sözlər",
+  "start": 20.68,
+  "end": 21.12
+ },
+ {
+  "i": 46,
+  "text": "məqsədimlə",
+  "start": 21.173,
+  "end": 21.68
+ },
+ {
+  "i": 47,
+  "text": "üst-üstə",
+  "start": 21.76,
+  "end": 22.16
+ },
+ {
+  "i": 48,
+  "text": "düşmürdü.",
+  "start": 22.24,
+  "end": 23.051
+ },
+ {
+  "i": 49,
+  "text": "Özümə",
+  "start": 23.12,
+  "end": 23.4
+ },
+ {
+  "i": 50,
+  "text": "uyğun",
+  "start": 23.44,
+  "end": 23.68
+ },
+ {
+  "i": 51,
+  "text": "lüğətlə",
+  "start": 23.72,
+  "end": 24.08
+ },
+ {
+  "i": 52,
+  "text": "başlayanda",
+  "start": 24.16,
+  "end": 24.8
+ },
+ {
+  "i": 53,
+  "text": "motivasiyam",
+  "start": 24.88,
+  "end": 25.44
+ },
+ {
+  "i": 54,
+  "text": "qaldı.",
+  "start": 25.48,
+  "end": 26.027
+ },
+ {
+  "i": 55,
+  "text": "Vocabox-u",
+  "start": 26.053,
+  "end": 26.7
+ },
+ {
+  "i": 56,
+  "text": "buna",
+  "start": 26.76,
+  "end": 26.88
+ },
+ {
+  "i": 57,
+  "text": "görə",
+  "start": 26.92,
+  "end": 27.12
+ },
+ {
+  "i": 58,
+  "text": "qurdum:",
+  "start": 27.173,
+  "end": 27.707
+ },
+ {
+  "i": 59,
+  "text": "səviyyənə",
+  "start": 27.733,
+  "end": 28.08
+ },
+ {
+  "i": 60,
+  "text": "uyğun",
+  "start": 28.16,
+  "end": 28.48
+ },
+ {
+  "i": 61,
+  "text": "dəst",
+  "start": 28.52,
+  "end": 28.72
+ },
+ {
+  "i": 62,
+  "text": "seçirsən,",
+  "start": 28.8,
+  "end": 29.467
+ },
+ {
+  "i": 63,
+  "text": "ya",
+  "start": 29.493,
+  "end": 29.52
+ },
+ {
+  "i": 64,
+  "text": "da",
+  "start": 29.6,
+  "end": 29.68
+ },
+ {
+  "i": 65,
+  "text": "oxuduğun",
+  "start": 29.76,
+  "end": 30.08
+ },
+ {
+  "i": 66,
+  "text": "mətndən",
+  "start": 30.16,
+  "end": 30.68
+ },
+ {
+  "i": 67,
+  "text": "öz",
+  "start": 30.72,
+  "end": 30.8
+ },
+ {
+  "i": 68,
+  "text": "lüğətini",
+  "start": 30.88,
+  "end": 31.28
+ },
+ {
+  "i": 69,
+  "text": "düzəldirsən.",
+  "start": 31.333,
+  "end": 32.171
+ },
+ {
+  "i": 70,
+  "text": "Sən",
+  "start": 32.24,
+  "end": 32.4
+ },
+ {
+  "i": 71,
+  "text": "neçə",
+  "start": 32.44,
+  "end": 32.6
+ },
+ {
+  "i": 72,
+  "text": "dəfə",
+  "start": 32.64,
+  "end": 32.8
+ },
+ {
+  "i": 73,
+  "text": "başlamısan?",
+  "start": 32.88,
+  "end": 33.68
+ },
+ {
+  "i": 74,
+  "text": "Mesajla",
+  "start": 33.76,
+  "end": 34.0
+ },
+ {
+  "i": 75,
+  "text": "yaz.",
+  "start": 34.08,
+  "end": 34.56
+ }
+]
