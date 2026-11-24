@@ -1,0 +1,296 @@
+[
+ {
+  "i": 0,
+  "text": "Niyə",
+  "start": 0.227,
+  "end": 0.4
+ },
+ {
+  "i": 1,
+  "text": "daha",
+  "start": 0.44,
+  "end": 0.64
+ },
+ {
+  "i": 2,
+  "text": "bir",
+  "start": 0.72,
+  "end": 0.8
+ },
+ {
+  "i": 3,
+  "text": "dil",
+  "start": 0.88,
+  "end": 0.96
+ },
+ {
+  "i": 4,
+  "text": "tətbiqi?",
+  "start": 1.04,
+  "end": 1.72
+ },
+ {
+  "i": 5,
+  "text": "Çünki",
+  "start": 1.92,
+  "end": 2.24
+ },
+ {
+  "i": 6,
+  "text": "söz",
+  "start": 2.28,
+  "end": 2.48
+ },
+ {
+  "i": 7,
+  "text": "öyrənmək",
+  "start": 2.52,
+  "end": 2.88
+ },
+ {
+  "i": 8,
+  "text": "çətin",
+  "start": 2.96,
+  "end": 3.28
+ },
+ {
+  "i": 9,
+  "text": "deyil.",
+  "start": 3.36,
+  "end": 3.92
+ },
+ {
+  "i": 10,
+  "text": "Çətini",
+  "start": 3.96,
+  "end": 4.56
+ },
+ {
+  "i": 11,
+  "text": "onu",
+  "start": 4.64,
+  "end": 4.8
+ },
+ {
+  "i": 12,
+  "text": "yadda",
+  "start": 4.88,
+  "end": 5.12
+ },
+ {
+  "i": 13,
+  "text": "saxlamaqdır.",
+  "start": 5.16,
+  "end": 6.08
+ },
+ {
+  "i": 14,
+  "text": "Dəftər",
+  "start": 6.12,
+  "end": 6.48
+ },
+ {
+  "i": 15,
+  "text": "dolur,",
+  "start": 6.64,
+  "end": 7.28
+ },
+ {
+  "i": 16,
+  "text": "siyahı",
+  "start": 7.36,
+  "end": 7.68
+ },
+ {
+  "i": 17,
+  "text": "uzanır,",
+  "start": 7.76,
+  "end": 8.48
+ },
+ {
+  "i": 18,
+  "text": "amma",
+  "start": 8.6,
+  "end": 8.72
+ },
+ {
+  "i": 19,
+  "text": "sözlər",
+  "start": 8.76,
+  "end": 9.2
+ },
+ {
+  "i": 20,
+  "text": "yenə",
+  "start": 9.28,
+  "end": 9.44
+ },
+ {
+  "i": 21,
+  "text": "yadından",
+  "start": 9.493,
+  "end": 9.92
+ },
+ {
+  "i": 22,
+  "text": "çıxır.",
+  "start": 9.96,
+  "end": 10.56
+ },
+ {
+  "i": 23,
+  "text": "Vocabox",
+  "start": 10.64,
+  "end": 11.28
+ },
+ {
+  "i": 24,
+  "text": "bunun",
+  "start": 11.36,
+  "end": 11.6
+ },
+ {
+  "i": 25,
+  "text": "üçün",
+  "start": 11.68,
+  "end": 11.84
+ },
+ {
+  "i": 26,
+  "text": "yarandı.",
+  "start": 11.92,
+  "end": 12.64
+ },
+ {
+  "i": 27,
+  "text": "Hazır",
+  "start": 12.76,
+  "end": 12.96
+ },
+ {
+  "i": 28,
+  "text": "dəstlər",
+  "start": 13.04,
+  "end": 13.4
+ },
+ {
+  "i": 29,
+  "text": "var,",
+  "start": 13.44,
+  "end": 13.84
+ },
+ {
+  "i": 30,
+  "text": "səviyyənə",
+  "start": 13.88,
+  "end": 14.24
+ },
+ {
+  "i": 31,
+  "text": "görə",
+  "start": 14.32,
+  "end": 14.48
+ },
+ {
+  "i": 32,
+  "text": "seçirsən.",
+  "start": 14.56,
+  "end": 15.2
+ },
+ {
+  "i": 33,
+  "text": "Bildiyin",
+  "start": 15.24,
+  "end": 15.68
+ },
+ {
+  "i": 34,
+  "text": "söz",
+  "start": 15.733,
+  "end": 15.84
+ },
+ {
+  "i": 35,
+  "text": "qutuda",
+  "start": 15.92,
+  "end": 16.24
+ },
+ {
+  "i": 36,
+  "text": "irəli",
+  "start": 16.32,
+  "end": 16.56
+ },
+ {
+  "i": 37,
+  "text": "gedir,",
+  "start": 16.64,
+  "end": 17.12
+ },
+ {
+  "i": 38,
+  "text": "çətin",
+  "start": 17.16,
+  "end": 17.44
+ },
+ {
+  "i": 39,
+  "text": "söz",
+  "start": 17.52,
+  "end": 17.84
+ },
+ {
+  "i": 40,
+  "text": "yenə",
+  "start": 17.92,
+  "end": 18.08
+ },
+ {
+  "i": 41,
+  "text": "qarşına",
+  "start": 18.133,
+  "end": 18.48
+ },
+ {
+  "i": 42,
+  "text": "çıxır.",
+  "start": 18.56,
+  "end": 19.12
+ },
+ {
+  "i": 43,
+  "text": "Sən",
+  "start": 19.2,
+  "end": 19.32
+ },
+ {
+  "i": 44,
+  "text": "hansı",
+  "start": 19.36,
+  "end": 19.6
+ },
+ {
+  "i": 45,
+  "text": "dili",
+  "start": 19.64,
+  "end": 19.76
+ },
+ {
+  "i": 46,
+  "text": "öyrənirsən?",
+  "start": 19.84,
+  "end": 20.64
+ },
+ {
+  "i": 47,
+  "text": "Şərhdə",
+  "start": 20.68,
+  "end": 20.96
+ },
+ {
+  "i": 48,
+  "text": "yaz.",
+  "start": 21.04,
+  "end": 21.52
+ }
+]
