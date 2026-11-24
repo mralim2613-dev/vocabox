@@ -283,14 +283,38 @@
  },
  {
   "i": 47,
-  "text": "Şərhdə",
-  "start": 20.68,
-  "end": 20.96
+  "text": "Mesajla",
+  "start": 21.02,
+  "end": 21.5
  },
  {
   "i": 48,
-  "text": "yaz.",
-  "start": 21.04,
-  "end": 21.52
+  "text": "yaz,",
+  "start": 21.54,
+  "end": 21.98
+ },
+ {
+  "i": 49,
+  "text": "sənə",
+  "start": 22.14,
+  "end": 22.38
+ },
+ {
+  "i": 50,
+  "text": "uyğun",
+  "start": 22.46,
+  "end": 22.62
+ },
+ {
+  "i": 51,
+  "text": "dəsti",
+  "start": 22.7,
+  "end": 22.94
+ },
+ {
+  "i": 52,
+  "text": "göstərək.",
+  "start": 23.02,
+  "end": 23.82
  }
 ]

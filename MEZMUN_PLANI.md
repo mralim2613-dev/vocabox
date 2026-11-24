@@ -15,6 +15,7 @@
 | **Əsas platforma** | Instagram Reels (+ hər gün story). TikTok və YouTube Shorts — eyni video, ayrıca caption ("baxım rejimi"). |
 | **Paylaşım vaxtı** | Hər gün **20:00**, planlı paylaşım (Meta Business Suite). 20 gün fasiləsiz. |
 | **Həcm** | Gündə 1 reel · gündə 3–5 story · həftədə 1 karusel (dərsdən təkrar istifadə) |
+| **CTA qaydası** | **Hər videonun əsas CTA-sı mesaja (DM) yönləndirir** — Instagram DM və TikTok mesajları. Videoda platforma adı yoxdur, ümumi "Mesaj yaz" deyilir. Saxla / şərh yalnız köməkçi CTA kimi caption-da. |
 
 > **Açıq qərar (strategiya, bölmə 12.5):** kamerada kim görünür? Plan **təsisçinin üzü ilə** yazılıb (hekayə seriyası bunu tələb edir). Təsisçi görünməyəcəksə, S4 seriyası səsli motion video kimi çəkilir, qalanı dəyişmir.
 
@@ -43,7 +44,7 @@ Seriya = izləyicinin tanıdığı format. Hər gün sıfırdan fikir axtarmır�
 0–2 san  Vizual hook: donub qalan üz / pauza basılan ekran + 3 sözlük yazı
 2–10     Situasiya (dialoqsuz və ya 1–2 replika), sonunu gizlət
 10–15    Dönüş: "Səndə də olur?" / punchline
-Son      Yazı: "Belə olanlar 👇 şərhdə" (satış yox)
+Son      Yazı: "Səndə də olur? Mesajla yaz 💬" (DM)
 Caption  1-ci sətir = 2-ci hook. Sonda: "Sözlər qutuda qalsın → bio"
 ```
 
@@ -51,8 +52,8 @@ Caption  1-ci sətir = 2-ci hook. Sonda: "Sözlər qutuda qalsın → bio"
 ```
 0–2      "İşdə hər gün lazım olan 5 ifadə" (mətn hook) + yaxın üz
 2–35     Hər ifadə: ekranda ifadə + tərcümə + 1 qısa misal (5–6 san hər biri)
-35–40    "Saxla. 3 gün sonra yoxla — neçəsini xatırladın?" 
-Son      "Bunları Vocabox-da qutuya at → bio" (bir cümlə, F2)
+35–40    "Saxla. 3 gün sonra yoxla — neçəsini xatırladın?" (köməkçi)
+Son      "Bunları qutuya atmaq istəyirsən? Mesajla yaz" (DM, F2)
 ```
 > Dərslər **həqiqi faydalı** olmalıdır: izləyici tətbiqi almasa da videonu saxlamalıdır. Saxlama (save) bu seriyanın əsas metrikidir.
 
@@ -61,12 +62,12 @@ Son      "Bunları Vocabox-da qutuya at → bio" (bir cümlə, F2)
 0–2      Problem hook (mətn): "Dəftər dolu. Yaddaş?"
 2–6      Problem 1 cümlə
 6–22     Real ekran: dil → dəst → məşq → qutular (və ya mətn → lüğət)
-22–25    CTA: "Tətbiqə bax: link bio-da"
+22–25    CTA: "Mesajla yaz, sənə uyğun dəsti göstərək" (DM)
 ```
 
 **D — Təsisçinin hekayəsi (5 addım)**
 ```
-Hook → Problem (konkret, rəqəm/saat/yer) → Səyahət (cəhd, səhv, ümid) → Dərs → CTA (şərh/DM)
+Hook → Problem (konkret, rəqəm/saat/yer) → Səyahət (cəhd, səhv, ümid) → Dərs → CTA (DM)
 ```
 
 **E — Səhvlər / aykırı fikir**
@@ -80,7 +81,7 @@ Hook → Problem (konkret, rəqəm/saat/yer) → Səyahət (cəhd, səhv, ümid)
 ```
 0–2      DM screenshot-u (ad gizli, icazə ilə) + "Bu sualı çox alıram"
 2–20     Qısa, dürüst cavab; lazımsa real ekran
-Son      "Sualın var? DM-ə yaz"
+Son      "Sualın var? Mesajla yaz"
 ```
 
 ---
@@ -93,36 +94,36 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 
 | Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
 |---|---|---|---|---|
-| **1** | D · ümumi · S1 · — | **Mənşə hekayəsi:** Vocabox niyə yarandı | H1 "Bu tətbiqi əvvəl özüm üçün düzəltdim." / H2 "Niyə daha bir dil tətbiqi?" / H3 "Söz öyrənməkdən bezdiyim gün…" | "Sən hansı dili öyrənirsən? Şərhdə yaz" |
-| **2** | A · EN · S1 · — | Serialda pauza: eyni söz yenə çıxır | H1 "Bu sözü yenə görürəm…" / H2 "Pauza. Geri. Yenə pauza." / H3 "Serial 40 dəq, mən 2 saat izləyirəm" | "Belə olanlar 👇" |
-| **3** | B · EN · S1–2 · F2 | İşdə hər gün lazım olan 5 ifadə ¹ | H1 "İşdə bunları bilməmək ayıb deyil, amma…" / H2 "5 ifadə, 30 saniyə" / H3 "Müdirin bunu yazanda nə cavab verirsən?" | "Saxla, 3 gün sonra yoxla" |
-| **4** | C · EN · S3 · F2 | Leitner qutuları 25 saniyədə (**Skript 9** əsasında) | H1 "Eyni siyahı. Fərqli nəticə." / H2 "Bildiyin sözü niyə yenə oxuyursan?" / H3 "6 qutu. Bir qayda." | "Tətbiqə bax: bio" |
-| **5** | A · RU · S1 · — | Rusca başa düşürsən, cavabı azərbaycanca verirsən | H1 "Başa düşürəm… amma cavab verə bilmirəm" / H2 "Rusca sual, azərbaycanca cavab 😅" / H3 "Hamıda belə olur?" | "Belə olanlar 👇" |
-| **6** | E · ümumi · S2 · F2 | Söz öyrənəndə 3 səhv ² | H1 "Söz öyrənəndə bu 3 səhvi edirsən?" / H2 "Problem yaddaşında deyil." / H3 "Siyahını bir dəfə oxumaq bəs deyil" | "Hansını edirsən? 1, 2, 3?" |
-| **7** | C · EN · S3 · F3, F2 | Serialdan öz lüğətin (**Skript 5**) | H1 "Bu söz nə demək idi?" / H2 "Altyazıdakı sözlər sənin kartın olsun" / H3 "Qeydə yazırsan, sonra heç nə olmur" | "Tətbiqə bax: bio" |
+| **1** | D · ümumi · S1 · — | **Mənşə hekayəsi:** Vocabox niyə yarandı | H1 "Bu tətbiqi əvvəl özüm üçün düzəltdim." / H2 "Niyə daha bir dil tətbiqi?" / H3 "Söz öyrənməkdən bezdiyim gün…" | "Mesajla yaz, sənə uyğun dəsti göstərək" ✅ (hazırdır) |
+| **2** | A · EN · S1 · — | Serialda pauza: eyni söz yenə çıxır | H1 "Bu sözü yenə görürəm…" / H2 "Pauza. Geri. Yenə pauza." / H3 "Serial 40 dəq, mən 2 saat izləyirəm" | "Səndə də olur? Mesajla yaz" |
+| **3** | B · EN · S1–2 · F2 | İşdə hər gün lazım olan 5 ifadə ¹ | H1 "İşdə bunları bilməmək ayıb deyil, amma…" / H2 "5 ifadə, 30 saniyə" / H3 "Müdirin bunu yazanda nə cavab verirsən?" | "Saxla" + "İş üçün dəst — mesajla yaz" |
+| **4** | C · EN · S3 · F2 | Leitner qutuları 25 saniyədə (**Skript 9** əsasında) | H1 "Eyni siyahı. Fərqli nəticə." / H2 "Bildiyin sözü niyə yenə oxuyursan?" / H3 "6 qutu. Bir qayda." | "Mesajla yaz, dəstini göstərək" |
+| **5** | A · RU · S1 · — | Rusca başa düşürsən, cavabı azərbaycanca verirsən | H1 "Başa düşürəm… amma cavab verə bilmirəm" / H2 "Rusca sual, azərbaycanca cavab 😅" / H3 "Hamıda belə olur?" | "Rus dili dəsti üçün mesajla yaz" |
+| **6** | E · ümumi · S2 · F2 | Söz öyrənəndə 3 səhv ² | H1 "Söz öyrənəndə bu 3 səhvi edirsən?" / H2 "Problem yaddaşında deyil." / H3 "Siyahını bir dəfə oxumaq bəs deyil" | "Hansını edirsən? Mesajla yaz" |
+| **7** | C · EN · S3 · F3, F2 | Serialdan öz lüğətin (**Skript 5**) | H1 "Bu söz nə demək idi?" / H2 "Altyazıdakı sözlər sənin kartın olsun" / H3 "Qeydə yazırsan, sonra heç nə olmur" | "Serialından lüğət düzəltmək üçün mesajla yaz" |
 
 ### Həftə 2 — "Mexanizm + dillər üzrə genişlənmə"
 
 | Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
 |---|---|---|---|---|
-| **8** | B · DE · S1–2 · F1 | Almaniyada ilk həftə lazım olan 5 söz ³ | H1 "Almaniyaya getmədən bu 5 sözü öyrən" / H2 "Birinci gün bu sözlər lazım olacaq" / H3 "A1-dən əvvəl bunlar" | "Saxla" + "A1–B1 dəstlər → bio" |
-| **9** | D · ümumi · S1–2 · — | **Uğursuzluq hekayəsi:** dil öyrənməyə başlayıb buraxdığım dəfələr | H1 "Dil öyrənməyi neçə dəfə yarımçıq qoymuşam" / H2 "Hər yanvar yenidən başlayırdım" / H3 "Problem tənbəllik deyildi" | "Sən neçə dəfə başlamısan?" |
-| **10** | C · EN · S3 · F3 | Mətn → lüğət demosu (**Skript 11**) | H1 "Oxu. Çıxar. Təkrar et." / H2 "Oxuduğun sözlər harada qalır?" / H3 "Hər mətn bir dərsdir" | "Tətbiqə bax: bio" |
-| **11** | A · EN · S1 · — | E-poçt yazanda "tam bilmirəm" (**Skript 1** canlı versiyası) | H1 "Bilirəm… amma tam yox." / H2 "E-poçtu 4-cü dəfə silirəm" / H3 "Translate-ə 'just in case' baxıram" | "Belə olanlar 👇" |
-| **12** | B · RU · S1–2 · F1 | Ən çox işlənən 5 rus feli ⁴ | H1 "Rus dilində bu 5 feli bilmədən danışmaq çətindir" / H2 "Hər cümlədə lazım olan 5 söz" / H3 "Rusca başlamaq üçün ilk 5" | "Saxla" + "Rus dili dəsti → bio" |
-| **13** | E · ümumi · S2–3 · F2 | Aykırı: "Uzun dərs yox — vaxtında təkrar" | H1 "Hamı 'hər gün 1 saat' deyir. Mən başqa yol seçdim." / H2 "Daha çox oxumaq kömək etmədi" / H3 "Az, amma vaxtında" | "Razısan? 👇" |
-| **14** | F · ümumi · S4 · F1–3 | FAQ: internet olmayanda işləyir? reklam var? hansı dillər? ⁵ | H1 "Bu sualı ən çox alıram" / H2 "Vocabox haqqında 3 sual" / H3 "Almadan əvvəl bunu bil" | "Sualın var? DM-ə yaz" |
+| **8** | B · DE · S1–2 · F1 | Almaniyada ilk həftə lazım olan 5 söz ³ | H1 "Almaniyaya getmədən bu 5 sözü öyrən" / H2 "Birinci gün bu sözlər lazım olacaq" / H3 "A1-dən əvvəl bunlar" | "Saxla" + "A1–B1 dəstləri üçün mesajla yaz" |
+| **9** | D · ümumi · S1–2 · — | **Uğursuzluq hekayəsi:** dil öyrənməyə başlayıb buraxdığım dəfələr | H1 "Dil öyrənməyi neçə dəfə yarımçıq qoymuşam" / H2 "Hər yanvar yenidən başlayırdım" / H3 "Problem tənbəllik deyildi" | "Sən neçə dəfə başlamısan? Mesajla yaz" |
+| **10** | C · EN · S3 · F3 | Mətn → lüğət demosu (**Skript 11**) | H1 "Oxu. Çıxar. Təkrar et." / H2 "Oxuduğun sözlər harada qalır?" / H3 "Hər mətn bir dərsdir" | "Mesajla yaz, necə işlədiyini göstərək" |
+| **11** | A · EN · S1 · — | E-poçt yazanda "tam bilmirəm" (**Skript 1** canlı versiyası) | H1 "Bilirəm… amma tam yox." / H2 "E-poçtu 4-cü dəfə silirəm" / H3 "Translate-ə 'just in case' baxıram" | "Səndə də olur? Mesajla yaz" |
+| **12** | B · RU · S1–2 · F1 | Ən çox işlənən 5 rus feli ⁴ | H1 "Rus dilində bu 5 feli bilmədən danışmaq çətindir" / H2 "Hər cümlədə lazım olan 5 söz" / H3 "Rusca başlamaq üçün ilk 5" | "Saxla" + "Rus dili dəsti üçün mesajla yaz" |
+| **13** | E · ümumi · S2–3 · F2 | Aykırı: "Uzun dərs yox — vaxtında təkrar" | H1 "Hamı 'hər gün 1 saat' deyir. Mən başqa yol seçdim." / H2 "Daha çox oxumaq kömək etmədi" / H3 "Az, amma vaxtında" | "Razısan? Mesajla yaz" |
+| **14** | F · ümumi · S4 · F1–3 | FAQ: internet olmayanda işləyir? reklam var? hansı dillər? ⁵ | H1 "Bu sualı ən çox alıram" / H2 "Vocabox haqqında 3 sual" / H3 "Almadan əvvəl bunu bil" | "Sualın var? Mesajla yaz" |
 
 ### Həftə 3 — "Sübut və satış"
 
 | Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
 |---|---|---|---|---|
-| **15** | A · EN · S1–2 · F2 | Eyni söz yenə çaşdırır (**Skript 8** canlı versiyası) | H1 "Yenə bu söz?!" / H2 "Bu sözü 3 dəfə öyrənmişəm" / H3 "Hər dəfə eyni yerdə ilişirəm" | "Belə söz hansıdır? 👇" |
-| **16** | B · EN · S1–2 · F3 | Seriallarda tez-tez eşidilən 5 ifadə ⁶ | H1 "Seriallarda bunu hər bölümdə eşidirsən" / H2 "Altyazısız başa düşmək üçün 5 ifadə" / H3 "'Hang on' nə deməkdir?" | "Saxla" + "öz serialından lüğət → bio" |
-| **17** | D · ümumi · S4 · F2 | **Uğur hekayəsi:** "əvvəl–sonra" — təsisçinin öz qutuları (real ekran) | H1 "Bir ay əvvəlki qutularım və indikilər" / H2 "Bu ekran mənim irəliləyişimdir" / H3 "1-ci qutu boşalanda…" | "Tətbiqə bax: bio" |
-| **18** | C · DE · S3 · F1, F2 | Səviyyəni seç: A1 / A2 / B1 (**Skript 18** əsasında) | H1 "Alman dilində haradan başlayım?" / H2 "A1, A2, B1 — sən hansındasan?" / H3 "Səviyyənə uyğun hazır dəst" | "Tətbiqə bax: bio" |
-| **19** | E · EN · S3 · F3, F2 | "AI-dan soruşmaq yarısıdır" | H1 "AI sözün mənasını deyir. Bəs sabah?" / H2 "Soruşdun, öyrəndin, unutdun" / H3 "AI + qutular" | "Tətbiqə bax: bio" |
-| **20** | D/F · ümumi · S4–5 · F1–3 | 20 günün xülasəsi: nə öyrəndik, sizdən gələn suallar, ilk istifadəçilərin rəyi (icazə ilə) | H1 "20 gün, hər gün bir video. Nə oldu?" / H2 "Sizdən ən çox gələn sual" / H3 "İlk istifadəçilər nə dedi?" | "Başlamaq istəyirsən? DM-ə dilini yaz" |
+| **15** | A · EN · S1–2 · F2 | Eyni söz yenə çaşdırır (**Skript 8** canlı versiyası) | H1 "Yenə bu söz?!" / H2 "Bu sözü 3 dəfə öyrənmişəm" / H3 "Hər dəfə eyni yerdə ilişirəm" | "Belə söz hansıdır? Mesajla yaz" |
+| **16** | B · EN · S1–2 · F3 | Seriallarda tez-tez eşidilən 5 ifadə ⁶ | H1 "Seriallarda bunu hər bölümdə eşidirsən" / H2 "Altyazısız başa düşmək üçün 5 ifadə" / H3 "'Hang on' nə deməkdir?" | "Saxla" + "Öz serialından lüğət — mesajla yaz" |
+| **17** | D · ümumi · S4 · F2 | **Uğur hekayəsi:** "əvvəl–sonra" — təsisçinin öz qutuları (real ekran) | H1 "Bir ay əvvəlki qutularım və indikilər" / H2 "Bu ekran mənim irəliləyişimdir" / H3 "1-ci qutu boşalanda…" | "Mesajla yaz, səninkini də quraq" |
+| **18** | C · DE · S3 · F1, F2 | Səviyyəni seç: A1 / A2 / B1 (**Skript 18** əsasında) | H1 "Alman dilində haradan başlayım?" / H2 "A1, A2, B1 — sən hansındasan?" / H3 "Səviyyənə uyğun hazır dəst" | "Səviyyəni mesajla yaz, dəsti göstərək" |
+| **19** | E · EN · S3 · F3, F2 | "AI-dan soruşmaq yarısıdır" | H1 "AI sözün mənasını deyir. Bəs sabah?" / H2 "Soruşdun, öyrəndin, unutdun" / H3 "AI + qutular" | "Mesajla yaz, necə işlədiyini göstərək" |
+| **20** | D/F · ümumi · S4–5 · F1–3 | 20 günün xülasəsi: nə öyrəndik, sizdən gələn suallar, ilk istifadəçilərin rəyi (icazə ilə) | H1 "20 gün, hər gün bir video. Nə oldu?" / H2 "Sizdən ən çox gələn sual" / H3 "İlk istifadəçilər nə dedi?" | "Başlamaq istəyirsən? Dilini mesajla yaz" |
 
 **Mövzu qeydləri (dərs məzmunu — çəkilişdən əvvəl yoxlanır):**
 1. EN iş ifadələri: *I'll get back to you* (sənə sonra cavab verərəm) · *Let me check and confirm* (yoxlayıb təsdiqləyim) · *Could you clarify…?* (… dəqiqləşdirə bilərsən?) · *Just a quick reminder* (kiçik xatırlatma) · *I'm on it* (məşğulam, edirəm).
@@ -160,7 +161,8 @@ Story-lər isti auditoriya (S4–5) üçündür: reel-i görənləri DM-ə gəti
 [1-ci sətir: ikinci hook — videodakından fərqli, maraq yaradan]
 [2–3 qısa sətir: dərsin xülasəsi və ya hekayənin dərsi]
 [Sual: şərhə dəvət]
-[CTA: "Sözlər qutuda qalsın → link bio-da" / "DM-ə dilini yaz"]
+[CTA: "DM-ə öyrəndiyin dilin adını yaz — sənə uyğun dəsti göstərək"]
+[Köməkçi: "Saxla" / şərhə sual]
 #ingilisdili #dilöyrən #vocabox
 ```
 - **Hashtag:** 3–5 ədəd, həmişə eyni nüvə (`#vocabox` + dil + `#dilöyrən`). YouTube Shorts-da maks. 3 etiket.
@@ -240,5 +242,5 @@ Hər gün sıfırdan çəkmək 20 günü yarımçıq qoydurur. Həftədə **2 ç
 - [ ] Altyazı var, ekranda eyni anda ≤ 3 söz?
 - [ ] Tətbiq ekranı realdır?
 - [ ] REKLAM_QAYDALARI Q1–Q6: səhv cavab "bir qutu geri", qiymət/pulsuz yox, faiz/müddət vədi yox, "AI" yalnız istifadəçinin öz köməkçisi, ispan dili yox, rəqib/brend/serial adı yox?
-- [ ] CTA tək və aydındır?
+- [ ] Əsas CTA mesaja (DM) yönləndirir, tək və aydındır? Platforma adı/loqosu yoxdur?
 - [ ] Caption-un ilk sətri ikinci hook-dur?

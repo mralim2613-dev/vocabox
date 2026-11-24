@@ -72,7 +72,7 @@ html,body{width:1080px;height:1920px;margin:0;overflow:hidden;background:#fff;fo
  <div class="sc" id="CTA"><div class="h" id="ctaT" style="top:330px;font-size:80px">Sən hansı dili<br>öyrənirsən?</div>
   <div class="chip lc" id="lc0" style="top:620px">İngilis dili</div><div class="chip lc" id="lc1" style="top:774px">Rus dili</div><div class="chip lc" id="lc2" style="top:928px">Alman dili</div>
   <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
-   <text x="290" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Şərhdə yaz</text></svg>
+   <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g><text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
   <div id="ctaLogo" style="position:absolute;left:390px;top:1300px;width:300px;display:flex;align-items:center;gap:18px;justify-content:center"><div style="width:84px;height:84px">__LOGO2__</div><b style="font-size:54px;letter-spacing:-1.5px">Vocabox</b></div></div>
  <!-- tracked word card -->
  <div id="wc"><div class="face" id="wcF"><div class="tag">Qutu 3 · B1</div><div class="lang">İngilis dili</div><div class="term" id="wcT"></div></div>
@@ -93,7 +93,7 @@ const E={
  note:W('dəftər')-LEAD, dolur:W('dolur'), siyahi:W('siyahı')-LEAD, uzanir:WE('uzanır'), forget:W('sözlər'), forgetE:WE('çıxır'),
  logo:W('vocabox')-LEAD, app:W('hazır')-LEAD, lvl:W('səviyyənə')-LEAD, pick:W('seçirsən'),
  box:W('bildiyin')-LEAD, fwd:W('irəli')-LEAD, hard:W('çətin',2)-LEAD, back:W('söz',3), again:W('qarşına')-LEAD,
- cta:W('sən')-LEAD, l0:W('hansı'), l1:W('dili'), l2:W('öyrənirsən'), com:W('şərhdə')-LEAD
+ cta:W('sən')-LEAD, l0:W('hansı'), l1:W('dili'), l2:W('öyrənirsən'), com:W('mesajla')-LEAD, deck:W('dəsti'), gost:W('göstərək')
 };
 // ---- captions
 const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
@@ -166,7 +166,7 @@ function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/
    const on=i===2&&t>=E.pick;el.style.background=on?'var(--y)':'#fff';el.style.borderColor=on?'var(--yd)':'#dfe6dc'}
   $('APP').style.transform=`scale(${1-.06*eio(seg(t,E.box-.1,E.box+.35))})`;
  }
- tapAt(t,E.pick,371+61,1070+48);
+ if(t<E.box)tapAt(t,E.pick,371+61,1070+48);else tapAt(t,E.deck,540,620+62);
  // ===== BOXES
  const RY=r=>330+[289,466,639,814,988,1161][r-1]*600/1062; // row centers from real screenshot
  if(show('BOX',t,E.box,E.cta+.35)){
@@ -190,7 +190,8 @@ function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/
   $('ctaT').style.transform=`translateY(${(1-eo(seg(t,E.cta,E.cta+.45)))*40}px)`;
   [E.l0,E.l1,E.l2].forEach((a,i)=>{const el=$('lc'+i),x=seg(t,a,a+.4);el.style.transform=`scale(${x<1?Math.max(0,back(x)):1})`;el.style.opacity=cl(x*3)});
   const b=seg(t,E.com,E.com+.45);$('bub').style.transform=`scale(${b<1?Math.max(0,back(b)):1})`;$('bub').style.opacity=cl(b*3);
-  const g=seg(t,E.com+.5,E.com+.9);$('ctaLogo').style.opacity=eo(g);$('ctaLogo').style.transform=`translateY(${(1-eo(g))*30}px)`;
+  {const on=t>=E.deck;$('lc0').style.background=on?'var(--y)':'#fff';$('lc0').style.borderColor=on?'var(--yd)':'#dfe6dc'}
+  const g=seg(t,E.gost,E.gost+.4);$('ctaLogo').style.opacity=eo(g);$('ctaLogo').style.transform=`translateY(${(1-eo(g))*30}px)`;
  }
 }
 window.render=render;window.E=E;window.TT=TT;

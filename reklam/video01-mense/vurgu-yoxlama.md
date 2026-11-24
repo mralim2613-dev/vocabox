@@ -16,6 +16,8 @@ Vurğulu heca BÖYÜK hərflə.
 | Bildiyin söz qutuda irəli gedir, | bil-di-YİN · söz · qu-tu-DA · i-rə-Lİ · ge-DİR | **irəli** · yüksələn |
 | çətin söz yenə qarşına çıxır. | çə-TİN · söz · YE-nə · qar-şı-NA · çı-XIR | **yenə** · enən |
 | Sən hansı dili öyrənirsən? | sən · HAN-sı · di-Lİ · öy-rə-NİR-sən | **hansı** · sual, isti |
-| Şərhdə yaz. | şərh-DƏ · yaz | **yaz** · isti çağırış |
+| Mesajla yaz, sənə uyğun dəsti göstərək. | me-saj-LA · yaz · sə-NƏ · uy-ĞUN · dəs-Tİ · gös-tə-RƏK | **yaz** · isti çağırış, sonra sakit vəd |
 
 Yoxlanmalı: "Vocabox" sözünün tələffüzü (Vo-ka-boks), "qarşına", "səviyyənə".
+
+Qeyd: CTA cümləsi ayrıca yaradılıb (eyni səs, eleven_v4) və əsas take-ə "öyrənirsən?" sözündən sonra 0,30 s fasilə ilə calanıb. Ton keçidi qulaqla yoxlanmalıdır.

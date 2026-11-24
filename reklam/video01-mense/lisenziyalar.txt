@@ -1,4 +1,4 @@
-Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), take 1 (generation rzlfd1cNsOnWzt7GZHQQ). Flow: 6hkKJJWx8s3hvNRtbnqr
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), take 1 (generation rzlfd1cNsOnWzt7GZHQQ) + CTA cümləsi take 1 (generation Gjv6LJeivZ1GD0mG4Gh6), calanıb. Flow: 6hkKJJWx8s3hvNRtbnqr
 Söz vaxtları: ElevenLabs eleven_scribe_v1 transkripsiyası
 Fon musiqisi: Epidemic Sound — "Good Place to Start (Instrumental Version)", Vicki Vox (bəstəkar: Vicki Vox; prodüser: Andres Cardenas Janson). Trekin 16-cı saniyəsindən başlayır.
 Effektlər (Epidemic Sound): "Paper, Handle, Notepad, Page Turn 01"; "Designed, Whoosh, Soft Airy"; "User Interface, Click, UI Buttons, Bubbly, Select"

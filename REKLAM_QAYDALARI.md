@@ -108,7 +108,13 @@ Aşağıdakı 6 iddia və onların bütün formaları, sinonimləri, tərcüməl
 
 ## 5. CTA (çağırış) qaydaları
 
-- CTA yalnız **sınamağa və ya ətraflı məlumata** yönəlməlidir: "Tətbiqə bax", "Linkə keç", "Əlaqə saxla".
+- **Əsas CTA: mesaja (DM) yönləndirmə** (2026-11-24 qərarı). İzləyici Instagram DM-ə və ya TikTok-un mesaj bölməsinə yazmağa çağırılır, çünki satış yazışma ilə gedir (SATIS_MARKETINQ_STRATEGIYASI.md, bölmə 7).
+  - Səs üçün: "Mesajla yaz, sənə uyğun dəsti göstərək." / "Hansı dili öyrənirsən? Mesajla yaz."
+  - Ekran yazısı üçün: "Mesaj yaz", "Dilini mesajla yaz", "DM-ə dilini yaz".
+  - Caption-da: "DM-ə öyrəndiyin dilin adını yaz — sənə uyğun dəsti göstərək."
+  - Platforma adı (Instagram, TikTok) və onların loqosu videoda işlədilmir; ümumi mesaj/kağız təyyarə ikonu işlədilə bilər. Videolar hər iki platformada eyni qalsın.
+  - DM-də verilən cavab da bu sənədə tabedir: qiymət yalnız kommersiya modeli təsdiqlənəndən sonra deyilir.
+- Köməkçi CTA-lar (yalnız DM CTA-sı yanında, onu əvəz etmədən): "Saxla", "Tətbiqə bax", "Linkə keç".
 - Qiymət, endirim, lisenziya, "pulsuz" və "pulsuz sınaq" sözlərini **yalnız təsdiqlənmiş kommersiya modeli** olduqda işlət. Hazırda təsdiqlənməyib, ona görə yazma.
 - Link yazılacaqsa, `[LINK]` yer tutucusu işlət. Özün link uydurma.
 - Əlaqə ünvanı: `musabayramov@zehniapp.com` (yalnız dəstək və əlaqə üçün).
@@ -147,7 +153,7 @@ Hər reklam mətnindən sonra bu siyahını keç. Bir "Xeyr" varsa, mətni düz�
 - [ ] Ümumi cəm kart rəqəmi yoxdur və ispan dili heç yerdə keçmir?
 - [ ] "Rəsmi" sözü, Goethe, Oxford, Brown və rəqib adları qaydalara uyğun işlənib?
 - [ ] Tətbiqdə olmayan funksiya vəd edilməyib?
-- [ ] CTA yalnız təsdiqlənmiş yönləndirmədir, link yer tutucudur?
+- [ ] Əsas CTA mesaja (DM) yönləndirir, platforma adı/loqosu yoxdur, link varsa yer tutucudur?
 - [ ] Hər variantın yanında hansı funksiyalara əsaslandığı qeyd olunub?
 
 ---

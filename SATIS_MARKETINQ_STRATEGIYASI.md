@@ -23,6 +23,7 @@
 | **Unikal mexanizm ("köhnə yol / yeni yol")** | Köhnə yol: dəftər, siyahı, bir dəfə oxuyub unutmaq. Yeni yol: hazır dəst → qutular → çətin söz yenə qarşına çıxır. |
 | **Əsas kanal** | Instagram Reels (əsas) + TikTok / YouTube Shorts ("baxım rejimi"). Ödənişli reklam yalnız orqanikdə qazanan hook-larla. |
 | **Satış yeri** | DM / WhatsApp söhbəti (ödəniş kartdan-karta, hesabı admin verir) → bu, **söhbətlə satış** modelidir və skript tələb edir. |
+| **Əsas CTA** | Bütün kontent və reklamlarda: mesaja yaz (Instagram DM / TikTok mesajları). Söhbət satış skriptinin girişidir. |
 | **Birinci 90 gün** | 0–14 gün: bloklayıcıları bağla + təklif + VSSL. 15–34: 20 günlük kontent challenge, təsisçi özü satır. 35–90: qazanan hook-ları reklamla miqyasla, 1–2 DM satışçı götür. |
 | **Şimal ulduzu metrik** | Həftəlik ödəyən yeni istifadəçi sayı; dəstək metrikləri: 3 san. qalma nisbəti, DM sayı, DM → satış çevrilməsi, cavab sürəti. |
 
