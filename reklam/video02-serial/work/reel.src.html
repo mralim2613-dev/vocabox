@@ -1,0 +1,185 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;background:#fff;font-family:Inter,sans-serif;color:var(--tx)}
+#bgL{position:absolute;inset:0;background:radial-gradient(ellipse 950px 760px at 50% 42%, var(--pl), #fff 72%)}
+#bgD{position:absolute;inset:0;background:radial-gradient(ellipse 900px 800px at 50% 38%, #24453b, #0f201b 75%)}
+#world{position:absolute;inset:0;transform-origin:540px 760px}
+.sc{position:absolute;inset:0;display:none}
+.pill{position:absolute;border-radius:999px;font-weight:800;font-size:46px;padding:14px 34px;white-space:nowrap}
+.pp{background:var(--p);color:#fff}.py{background:var(--y);color:var(--tx)}
+.h{position:absolute;left:60px;right:60px;text-align:center;font-weight:800;letter-spacing:-1.5px;line-height:1.08}
+/* player */
+#pl{position:absolute;left:60px;top:470px;width:960px;height:560px;border-radius:32px;overflow:hidden;background:#0b1512;box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 2px rgba(255,255,255,.06);transform-origin:540px 750px}
+#show{position:absolute;inset:0;background:linear-gradient(180deg,#3b4a6b 0%,#6d5a73 45%,#c98f6b 80%,#e0b07c 100%)}
+.blob{position:absolute;border-radius:50%;filter:blur(2px)}
+#sub{position:absolute;left:0;right:0;top:372px;text-align:center}
+#sub span{display:inline-block;background:rgba(0,0,0,.62);color:#fff;font-weight:600;font-size:42px;padding:8px 18px;border-radius:10px}
+#sub i{font-style:normal;border-radius:8px;padding:0 6px}
+#chrome{position:absolute;left:0;right:0;bottom:0;height:84px;background:linear-gradient(transparent,rgba(0,0,0,.7));display:flex;align-items:center;gap:22px;padding:0 30px;box-sizing:border-box;color:#fff;font-weight:600;font-size:28px}
+#track{flex:1;height:8px;border-radius:4px;background:rgba(255,255,255,.3);position:relative}
+#trackF{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:#fff}
+#knob{position:absolute;top:-8px;width:24px;height:24px;margin-left:-12px;border-radius:50%;background:#fff}
+#bigIcon{position:absolute;left:50%;top:44%;width:180px;height:180px;margin:-90px 0 0 -90px;border-radius:50%;background:rgba(0,0,0,.5);display:none}
+#tip{position:absolute;background:#fff;color:var(--tx);border-radius:22px;padding:14px 26px;font-size:38px;font-weight:700;white-space:nowrap;box-shadow:0 12px 30px rgba(0,0,0,.3);display:none}
+#tip:after{content:"";position:absolute;left:50%;bottom:-14px;margin-left:-14px;border:14px solid transparent;border-bottom:0;border-top-color:#fff}
+/* chips (tracked) */
+.wchip{position:absolute;left:0;top:0;background:#fff;border-radius:26px;padding:0 36px;height:104px;line-height:104px;font-weight:800;font-size:54px;white-space:nowrap;box-shadow:0 16px 40px rgba(32,78,64,.2),0 0 0 4px var(--y);transform-origin:center;display:none;z-index:7}
+.panel{position:absolute;border-radius:30px;box-shadow:0 18px 50px rgba(32,78,64,.14),0 0 0 2px var(--pl);display:block}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:10}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px #fff,0 2px 0 #fff}
+body.dark #cap b{color:#fff;text-shadow:0 0 14px rgba(0,0,0,.8),0 2px 0 rgba(0,0,0,.6)}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:11}
+body.dark #prog{background:var(--y)}
+#tap{position:absolute;width:96px;height:96px;margin:-48px 0 0 -48px;border-radius:50%;background:#fff;box-shadow:0 0 0 8px var(--p),0 10px 30px rgba(32,78,64,.25);display:none;z-index:9}
+#ripple{position:absolute;border-radius:50%;border:6px solid var(--yd);display:none;z-index:8}
+#bub{position:absolute;left:250px;top:960px;width:580px;height:150px}
+</style></head><body>
+<div id="bgL"></div><div id="bgD"></div>
+<div id="world">
+ <!-- PLAYER -->
+ <div class="sc" id="PLAY">
+  <div class="h" id="hookT" style="top:320px;font-size:72px;color:#fff">Bu sözü yenə görürəm…</div>
+  <div class="h" id="tanT" style="top:300px;font-size:96px;color:var(--y);opacity:0">Tanışdır?</div>
+  <div id="pl"><div id="show">
+    <div class="blob" style="left:120px;top:420px;width:900px;height:300px;background:#2b2f3f;border-radius:40%"></div>
+    <div class="blob" id="b1" style="left:250px;top:150px;width:150px;height:150px;background:#1f2433"></div>
+    <div class="blob" id="b1b" style="left:215px;top:280px;width:220px;height:260px;background:#1f2433;border-radius:45% 45% 10% 10%"></div>
+    <div class="blob" id="b2" style="left:600px;top:170px;width:140px;height:140px;background:#262a3a"></div>
+    <div class="blob" id="b2b" style="left:565px;top:290px;width:210px;height:250px;background:#262a3a;border-radius:45% 45% 10% 10%"></div>
+    <div class="blob" style="left:780px;top:60px;width:90px;height:90px;background:#f3d49a;filter:blur(8px)"></div>
+   </div>
+   <div id="sub"><span id="subT"></span></div>
+   <div id="bigIcon"><svg id="icoP" viewBox="0 0 180 180" width="180" height="180"><rect x="58" y="50" width="22" height="80" rx="6" fill="#fff"/><rect x="100" y="50" width="22" height="80" rx="6" fill="#fff"/></svg>
+    <svg id="icoR" viewBox="0 0 180 180" width="180" height="180" style="position:absolute;left:0;top:0"><path d="M92 55v70L42 90z M142 55v70L92 90z" fill="#fff"/></svg></div>
+   <div id="chrome"><svg width="30" height="34" viewBox="0 0 30 34"><g id="cP"><rect x="2" y="2" width="9" height="30" rx="2" fill="#fff"/><rect x="19" y="2" width="9" height="30" rx="2" fill="#fff"/></g></svg>
+    <div id="track"><div id="trackF"></div><div id="knob"></div></div><span id="time">12:41</span></div>
+   <div id="tip">nəhayət; axırda</div>
+  </div>
+  <div class="pill py" id="pPlus5" style="display:none">+5 dəq</div>
+  <div class="pill py" id="pAgain" style="display:none">Yenə pauza</div>
+ </div>
+ <!-- IMPORT -->
+ <div class="sc" id="IMP"><img class="panel" id="prImg" src="__PROMPT__" style="left:211px;top:780px;width:658px">
+  <img class="panel" id="pvImg" src="__PREVIEW__" style="left:211px;top:330px;width:658px"></div>
+ <!-- BOXES -->
+ <div class="sc" id="BOX"><img class="panel" id="bxImg" src="__BOXES__" style="left:150px;top:330px;width:658px"></div>
+ <!-- CTA -->
+ <div class="sc" id="CTA"><div class="h" id="ctaT" style="top:330px;font-size:96px">Səndə də olur?</div>
+  <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+   <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+   <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+  <div id="ctaLogo" style="position:absolute;left:340px;top:1210px;width:400px;display:flex;align-items:center;gap:18px;justify-content:center"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:54px;letter-spacing:-1.5px">Vocabox</b></div></div>
+</div>
+<div class="wchip" id="c0">eventually</div><div class="wchip" id="c1">figure it out</div><div class="wchip" id="c2">cliffhanger</div>
+<div id="tap"></div><div id="ripple"></div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2;
+const norm=s=>s.toLowerCase().replace(/[.,?!:;“”"«»]/g,'');
+function Wd(w,n=1){let c=0;for(const x of WORDS)if(norm(x.text)===w&&++c===n)return x;throw Error('söz yoxdur: '+w)}
+const W=(w,n)=>Wd(w,n).start+OFF, WE=(w,n)=>Wd(w,n).end+OFF;
+const E={hl:W('sözü')-LEAD, pause:W('pauza')-LEAD, rew:W('geri')-LEAD, tip:W('tərcüməyə')-LEAD,
+ later:W('beş')-LEAD, hl2:W('eyni')-LEAD, pause2:W('pauza',2)-LEAD, tan:W('tanışdır')-LEAD,
+ light:W('altyazıdakı')-LEAD, more:W('sözləri'), ai:W('ai')-LEAD, cards:W('kartlara')-LEAD, paste:W('yapışdır'),
+ box:W('qutular')-LEAD, row:W('onları'), vax:W('vaxtında')-LEAD, ret:W('qaytarsın')-LEAD,
+ cta:W('səndə')-LEAD, msg:W('mesajla')-LEAD, send:W('yaz'), gost:W('göstərək')};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+function show(id,t,a,b){const el=document.getElementById(id);if(t<a||t>=b){el.style.display='none';return 0}
+ el.style.display='block';el.style.opacity=Math.min(eo(seg(t,a,a+.4)),1-seg(t,b-.35,b));return 1}
+const $=id=>document.getElementById(id);
+const bk=x=>x<=0?0:x<1?back(x):1;
+function popAt(el,t,a,cx,cy,dur=.4){const x=seg(t,a,a+dur);el.style.display=x>0?'block':'none';el.style.left=cx+'px';el.style.top=cy+'px';el.style.transform=`translate(-50%,-50%) scale(${bk(x)})`;el.style.opacity=cl(x*3)}
+function tapAt(t,a,x,y){const T=$('tap'),R=$('ripple');const u=seg(t,a-.35,a+.45);
+ if(u<=0||u>=1){T.style.display=R.style.display='none';return}
+ T.style.display='block';T.style.left=x+'px';T.style.top=y+'px';
+ const press=seg(t,a-.08,a+.04),rel=seg(t,a+.04,a+.2);T.style.transform=`scale(${1-.18*press+.18*rel})`;T.style.opacity=Math.min(seg(t,a-.35,a-.15),1-seg(t,a+.3,a+.45));
+ const r=seg(t,a,a+.45);R.style.display=r>0&&r<1?'block':'none';const rr=40+90*eo(r);R.style.left=(x-rr)+'px';R.style.top=(y-rr)+'px';R.style.width=R.style.height=2*rr+'px';R.style.opacity=1-r}
+const SUB1="I'll figure it out <i id='hw'>eventually</i>.",SUB2="We'll get there <i id='hw'>eventually</i>.";
+// chip placement helper: center coords + scale
+function chip(i,on,x,y,s,op=1){const c=$('c'+i);if(!on){c.style.display='none';return}c.style.display='block';
+ c.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%) scale(${s})`;c.style.opacity=op}
+let HW=null; // screen position of highlighted subtitle word at light transition
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ const dk=1-seg(t,E.light,E.light+.6);$('bgD').style.opacity=dk;document.body.classList.toggle('dark',dk>.5);
+ const ss=[0,E.light,E.box,E.cta].filter(a=>a<=t).at(-1);$('world').style.transform=`scale(${1+0.03*eio(seg(t,ss,ss+3))})`;
+ // ===== PLAYER
+ if(show('PLAY',t,-1,E.light+.6)){
+  const later=t>=E.later+.25;const st=$('subT');const want=later?SUB2:SUB1;if(st.dataset.v!==want){st.innerHTML=want;st.dataset.v=want}
+  $('sub').style.opacity=later?eo(seg(t,E.later+.25,E.later+.5)):1-seg(t,E.later,E.later+.25);
+  const hon=later?t>=E.hl2:t>=E.hl;$('hw').style.background=hon?'var(--y)':'transparent';$('hw').style.color=hon?'var(--tx)':'#fff';
+  // playback progress / time
+  let prog=.30+0.004*Math.min(t,E.pause);           // plays until pause
+  const rb=eio(seg(t,E.rew,E.rew+.7));prog-=0.03*rb;
+  const playing2=t>=E.later;const jump=eio(seg(t,E.later,E.later+.7));prog+=0.13*jump;if(playing2)prog+=0.004*cl(Math.min(t,E.pause2)-E.later-.7,0,9);
+  $('trackF').style.width=(prog*100)+'%';$('knob').style.left=(prog*100)+'%';
+  const secs=Math.round(prog*2530);$('time').textContent=`${Math.floor(secs/60)}:${String(secs%60).padStart(2,'0')}`;
+  // show drift (only while playing)
+  const paused=(t>=E.pause&&t<E.later)||(t>=E.pause2);const drift=paused?0:Math.sin(t*1.6)*8;
+  $('b1').style.transform=$('b1b').style.transform=`translateX(${drift}px)`;$('b2').style.transform=$('b2b').style.transform=`translateX(${-drift}px)`;
+  $('show').style.filter=`brightness(${paused?.75:1})`;$('cP').style.opacity=paused?.4:1;
+  // big icons
+  const bi=$('bigIcon');const pIn=(a,b)=>t>=a&&t<b;
+  let iconOn=pIn(E.pause,E.rew+.1)||pIn(E.pause2,E.tan+.2)||pIn(E.rew,E.tip);
+  bi.style.display=iconOn?'block':'none';
+  const isRew=pIn(E.rew,E.tip);$('icoP').style.display=isRew?'none':'block';$('icoR').style.display=isRew?'block':'none';
+  const ia=isRew?E.rew:(t>=E.pause2?E.pause2:E.pause);bi.style.transform=`scale(${bk(seg(t,ia,ia+.35))})`;
+  // translation tooltip
+  const tip=$('tip');const tOn=t>=E.tip&&t<E.later;tip.style.display=tOn?'block':'none';
+  if(tOn){const hw=$('hw').getBoundingClientRect(),pr=$('pl').getBoundingClientRect(),sc=pr.width/960;
+   const x=(hw.left+hw.width/2-pr.left)/sc,y=(hw.top-pr.top)/sc;const k=bk(seg(t,E.tip,E.tip+.35));
+   tip.style.left=x+'px';tip.style.top=(y-96)+'px';tip.style.transform=`translateX(-50%) scale(${k})`;tip.style.transformOrigin='50% 100%'}
+  popAt($('pPlus5'),t,E.later,860,500,.35);$('pPlus5').style.opacity=Math.min(cl(seg(t,E.later,E.later+.12)*3),1-seg(t,E.hl2+.6,E.hl2+.9));
+  popAt($('pAgain'),t,E.pause2+.1,540,1140,.35);
+  // hook → Tanışdır
+  $('hookT').style.opacity=1-seg(t,E.tan-.1,E.tan+.2);$('tanT').style.opacity=eo(seg(t,E.tan,E.tan+.3));$('tanT').style.transform=`scale(${bk(seg(t,E.tan,E.tan+.4))})`;
+  const z=eio(seg(t,E.tan,E.tan+.8));$('pl').style.transform=`scale(${1-.08*z}) rotate(${-2*z}deg)`;
+  $('PLAY').style.transform=`scale(${1-.15*eio(seg(t,E.light,E.light+.6))})`;
+  if(t<E.light+.02){const r=$('hw').getBoundingClientRect();HW={x:r.left+r.width/2,y:r.top+r.height/2}}
+ }
+ // ===== CHIPS (tracked)
+ if(t>=E.light && t<E.cards+.9){
+  const g=eio(seg(t,E.light,E.light+.8));const hw=HW||{x:700,y:850};
+  const Y=[420,560,700];
+  chip(0,true,lerp(hw.x,540,g),lerp(hw.y,Y[0],g),lerp(.62,1,g));
+  for(const i of [1,2]){const a=E.more+.12*(i-1),x=seg(t,a,a+.4);chip(i,x>0,540,Y[i],bk(x),cl(x*3))}
+  // fly into preview cards
+  const f=eio(seg(t,E.cards+.15,E.cards+.85));const dst=[508,708,912];
+  if(f>0)for(const i of [0,1,2]){const s=i===0?1:1;chip(i,true,lerp(540,470,f),lerp(Y[i],dst[i],f),lerp(1,.55,f),1-seg(t,E.cards+.6,E.cards+.85))}
+ } else if(t<E.box){for(const i of [0,1,2])chip(i,false)}
+ // ===== IMPORT
+ if(show('IMP',t,E.ai,E.box+.35)){
+  const pr=$('prImg');const pin=seg(t,E.ai,E.ai+.45),pout=eio(seg(t,E.cards-.1,E.cards+.4));
+  pr.style.opacity=Math.min(cl(pin*2),1-pout);pr.style.transform=`translateY(${(1-eo(pin))*80+300*pout}px)`;
+  const pv=$('pvImg');const vin=eio(seg(t,E.cards,E.cards+.7));pv.style.opacity=cl(vin*2);pv.style.transform=`translateX(${(1-vin)*900}px)`;
+  $('IMP').style.transform=`scale(${1-.06*eio(seg(t,E.box-.1,E.box+.35))})`;
+ }
+ if(t<E.box)tapAt(t,E.paste,211+264*.62,330+1233*.62);else{$('tap').style.display='none';$('ripple').style.display='none'}
+ // ===== BOXES
+ const RY=r=>330+[289,466,639,814,988,1161][r-1]*0.6196;
+ if(show('BOX',t,E.box,E.cta+.4)){
+  $('bxImg').style.transform=`translateY(${(1-eo(seg(t,E.box,E.box+.5)))*60}px)`;
+  const ia=seg(t,E.row,E.row+.4),mv=eio(seg(t,E.vax,E.vax+.7)),rt=eio(seg(t,E.ret,E.ret+.8));
+  chip(0,ia>0,lerp(895,540,rt),lerp(lerp(RY(3),RY(4),mv),760,rt),bk(ia)*lerp(.62,1.15,rt),cl(ia*3));
+  $('bxImg').style.opacity=1-.7*seg(t,E.ret,E.ret+.6);
+ }
+ // ===== CTA
+ if(show('CTA',t,E.cta,TT+1)){
+  $('ctaT').style.transform=`translateY(${(1-eo(seg(t,E.cta,E.cta+.45)))*40}px)`;
+  const b=seg(t,E.msg,E.msg+.45);$('bub').style.transform=`scale(${bk(b)})`;$('bub').style.opacity=cl(b*3);
+  const sd=eio(seg(t,E.send,E.send+.7));
+  chip(0,sd<1,lerp(540,600,sd),lerp(700,1035,sd),lerp(1.15,.2,sd),1-seg(t,E.send+.45,E.send+.7));
+  const g=seg(t,E.gost,E.gost+.4);$('ctaLogo').style.opacity=eo(g);$('ctaLogo').style.transform=`translateY(${(1-eo(g))*30}px)`;
+ }
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>

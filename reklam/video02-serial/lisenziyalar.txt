@@ -1,0 +1,7 @@
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), tək take (generation NiNxDaeqxXUQdJI9fkX1). Flow: 6hkKJJWx8s3hvNRtbnqr
+Söz vaxtları: ElevenLabs eleven_scribe_v1
+Fon musiqisi: Epidemic Sound — "Excuse the Dog", Stationary Sign
+Effektlər (Epidemic Sound): "Mechanical, Click, LED Light, Plastic, Button Press, Single"; "Communications, Phonograph, Record, Rewind, Reversed Vibration 01"; "User Interface, Click, UI Buttons, Bubbly, Select"; "Designed, Whoosh, Soft Airy"
+Şrift: Inter (SIL OFL)
+Şəkillər: Vocabox loqosu və tətbiqin real ekran görüntüləri (lokal veb versiya, Playwright). Pleyer illüstrasiyası kodla çəkilib.
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın hesaba bağlı olduğunu yoxlayın. dl/ repoya əlavə edilmir.
