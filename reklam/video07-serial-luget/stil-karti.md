@@ -1,0 +1,16 @@
+# Stil kartı — video07 "Serialdan öz lüğətin" (C · EN · F3, F2)
+
+Üç istiqamət: (a) video02 kimi tünd pleyer → açıq dünya, (b) telefon ekranında addım-addım bələdçi — solda 1-2-3 addım relsi, telefonda real "Mətn → lüğət" axını, (c) yalnız kinetik mətn + JSON tipoqrafiyası. **Seçim: (b)** — C seriyası "necə işləyir"dir və video02 artıq problemi (serialda pauza) göstərib; bu video həmin mövzunun **təlimat** tərəfidir: izləyici üç addımı real ekranda görür və "mən də edə bilərəm" deyir.
+
+1. **Əsas fikir:** qeydə yazılan serial sözləri itir → üç addımla (prompt → öz AI köməkçin → yapışdır/önbaxış/əlavə et) kartlara çevrilir → qutularda qalır. İzlənən obyekt: 4 qeyd kağızı (eventually, hang on, figure out, awkward) — hook-da yapışır, "heç nə olmur"da solur və biri düşür, "kartlara çevirək"də telefona uçur; söhbətdə vurğulu sözlər, JSON-da "term"-lər, qutuda çiplər kimi qayıdır; CTA-da "eventually" qeydi mesaj balonuna yapışır.
+2. **Material və ritm:** tam laym (--y) fon, tünd (--tx) telefon çərçivəsi, solda addım relsi (doldukca xətt uzanır, ✓). Hər addım: rels nöqtəsi + başlıq → ekran sürüşməsi/keçid → toxunma halqası → real toast. Musiqinin "açılması" "İndi sözlər qutulardadır" anına düşür.
+3. **Şrift:** Inter 800/700/600; JSON cavabında DejaVu Sans Mono (kod olduğunu dərhal göstərir); qeydlərdə Inter italik (əl yazısı hissi, ayrıca şrift olmadan).
+4. **Rənglər:** fon --y laym + açıq radial; telefon və rels --tx; aktiv addım --p; tamamlanan addım --tx üzərində laym ✓; vurğu halqası --yd; söz çipləri laym.
+5. **Yadda qalan detal:** 3 addım relsi — CTA-da "1 Prompt · 2 AI · 3 Kartlar" çipləri "addım-addım" sözü ilə bir-bir yanır.
+6. **Səs:** Abbas (eleven_v4, tək take); "Say" (Heyson) — optimist elektron bit; trekin sakit girişi +10 dB qaldırılıb, 17,5 s-dəki "açılma" saxlanıb; effektlər: sticky note (qeydlər), pop (toxunmalar, addımlar, CTA), klaviatura (altyazı mətni yazılır), whoosh (ekran keçidləri), ding ("4 kart əlavə edildi").
+7. **İşlədilməyəcək:** tətbiqdə AI var təəssüratı və sürət vədi (Q4) — AI yalnız "öz AI köməkçin", ayrıca sxematik ekran; real AI xidmətinin adı/loqosu/interfeysi; real serial adı; açıq dil siyahısı (Q5).
+
+**Fərq əvvəlki videolardan (3+ ox):** fon (tam laym — əvvəl istifadə olunmayıb), struktur (addım relsi + telefon bələdçisi), izlənən obyekt (qeyd kağızları), musiqi (elektron bit, "açılma" ilə), keçid (ekran içində yan sürüşmə/scroll).
+
+**Real ekranlar** (lokal veb versiya, Playwright 390×844 @3x): "Mətn → lüğət" bölməsi (boş, JSON yapışdırılmış, önbaxış — "4 yeni kart · 0 təkrar · Serial sözləri"), "Promptu kopyala", "Yoxla və önbaxış göstər", "Dəstə əlavə et" düymələri, toast-lar "Prompt kopyalandı." və "4 kart əlavə edildi.", "Yaddaş qutuları" paneli (Qutu 3 · Neytral · 4). JSON-dakı 4 kart bizim hazırladığımız nümunədir (tətbiqin öz formatında). Ekran koordinatları: `work/ekran-meta.json`.
+**Sxematik:** "AI köməkçin" söhbət ekranı (heç bir real xidmətə bənzəmir; prompt mətninin başlanğıcı tətbiqin real promptundan götürülüb), qeyd kağızları, altyazı zolağı, toast-ların telefon ekranındakı yeri (element real, yeri yuxarı köçürülüb), qutu çiplərinin uçuşu və "awkward −1" (real qaydanı — səhv cavab bir qutu geri — göstərən sxem), toxunma halqaları.
