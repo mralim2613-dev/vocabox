@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;background:#204E40;font-family:Inter,sans-serif;color:#fff}
+#bg{position:absolute;inset:0;background:radial-gradient(ellipse 900px 900px at 50% 40%,#2b6553,#204E40 60%,#183d32 100%)}
+#world{position:absolute;inset:0;transform-origin:540px 860px}
+.h{position:absolute;left:60px;right:60px;text-align:center;font-weight:800;letter-spacing:-1.5px;line-height:1.08}
+.box{position:absolute;width:136px}
+.box .back{position:absolute;left:6px;right:6px;top:0;height:150px;border-radius:18px 18px 10px 10px;background:#173a30;z-index:1}
+.box .front{position:absolute;left:0;right:0;top:60px;height:120px;border-radius:14px 14px 22px 22px;background:#fff;z-index:3;box-shadow:0 14px 30px rgba(0,0,0,.25);text-align:center}
+.box .front b{display:block;font-size:54px;font-weight:800;color:var(--tx);line-height:120px}
+.box .glow{position:absolute;left:-10px;right:-10px;top:-14px;height:208px;border-radius:26px;border:6px solid var(--y);z-index:0;opacity:0}
+.mc{position:absolute;width:104px;height:76px;margin-left:-52px;border-radius:12px;background:#f4f7ef;box-shadow:0 4px 10px rgba(0,0,0,.18);z-index:2;font-size:15px;font-weight:800;color:var(--tx);text-align:center;line-height:62px;overflow:hidden;white-space:nowrap}
+.mc.k{background:#fff;box-shadow:0 0 0 4px var(--y),0 8px 18px rgba(0,0,0,.25);z-index:4;font-size:20px}
+#big{position:absolute;left:280px;top:520px;width:520px;height:300px;border-radius:36px;background:#fff;color:var(--tx);text-align:center;box-shadow:0 30px 70px rgba(0,0,0,.3);z-index:5;transform-origin:center}
+#big .tg{display:inline-block;margin-top:40px;background:var(--y);border-radius:999px;font-weight:800;font-size:30px;padding:8px 22px}
+#big .w{font-size:112px;font-weight:800;letter-spacing:-3px;margin-top:22px}
+.pill{position:absolute;border-radius:999px;font-weight:800;font-size:46px;padding:12px 30px;white-space:nowrap;z-index:6}
+.pw{background:#fff;color:var(--tx)}.py{background:var(--y);color:var(--tx)}
+.shot{position:absolute;left:240px;top:800px;width:600px;border-radius:28px;box-shadow:0 20px 50px rgba(0,0,0,.35);display:none}
+.chip{position:absolute;background:#fff;border-radius:999px;font-weight:800;text-align:center;color:var(--tx);left:290px;width:500px;height:110px;line-height:110px;font-size:52px;display:none}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:10}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;color:#fff;text-shadow:0 0 14px rgba(0,0,0,.55),0 2px 0 rgba(0,0,0,.4)}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--y);z-index:11}
+#bub{position:absolute;left:250px;top:1120px;width:580px;height:150px;display:none}
+#ctaLogo{position:absolute;left:340px;top:1300px;width:400px;display:none;align-items:center;gap:18px;justify-content:center}
+</style></head><body>
+<div id="bg"></div>
+<div id="world">
+ <div class="h" id="hookT" style="top:290px;font-size:78px">Bildiyin sözü niyə<br>yenə oxuyursan?</div>
+ <div class="h" id="sixT" style="top:265px;font-size:72px;opacity:0">6 qutu. Bir qayda.</div>
+ <div class="h" id="ruleT" style="top:355px;font-size:46px;font-weight:700;color:var(--y);opacity:0">Düz → +1 &nbsp;·&nbsp; Səhv → −1</div>
+ <div id="shelf"></div>
+ <div id="big"><div class="tg">✓ bilirsən</div><div class="w">window</div></div>
+ <div class="pill py" id="pNew" style="display:none">Yeni</div>
+ <div class="pill pw" id="pPlus" style="display:none">+1</div>
+ <div class="pill py" id="pMinus" style="display:none">−1</div>
+ <img class="shot" id="sR" src="__FBR__"><img class="shot" id="sW" src="__FBW__"><img class="shot" id="sZ" src="__WEAK__">
+ <div class="h" id="ctaT" style="top:330px;font-size:84px;opacity:0">Hansı dili<br>öyrənirsən?</div>
+ <div class="chip" id="l0" style="top:640px">İngilis dili</div><div class="chip" id="l1" style="top:780px">Rus dili</div><div class="chip" id="l2" style="top:920px">Alman dili</div>
+ <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#D8ED9B"/>
+  <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#204E40"/><path d="M2 6 L34 -26" stroke="#D8ED9B" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#172F29">Mesaj yaz</text></svg>
+ <div id="ctaLogo"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:54px;letter-spacing:-1.5px;color:#fff">Vocabox</b></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=(txt,n=1)=>{let c=0;for(let i=0;i<WORDS.length;i++)if(WORDS[i].text===txt&&++c===n)return i;throw Error('söz yoxdur: '+txt)};
+const ST=i=>WORDS[i].start+OFF;
+const E={box:ST(IX('Vocabox-da'))-LEAD,six:ST(IX('Altı'))-LEAD,new:ST(IX('yeni'))-LEAD,right:ST(IX('Düz'))-LEAD,fwd:ST(IX('irəli.'))-LEAD,
+ wrong:ST(IX('Səhv'))-LEAD,bck:ST(IX('geri.'))-LEAD,weak:ST(IX('zəif'))-LEAD,known:ST(IX('bildiyinə'))-LEAD,
+ cta:ST(IX('Hansı'))-LEAD,l1:ST(IX('dili')),l2:ST(IX('öyrənirsən?')),msg:ST(IX('Mesajla'))-LEAD,gost:ST(IX('göstərək.'))};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+// shelf: 6 boxes
+const BX=i=>82+i*156+68, BY=580; // box center x, box top y
+for(let i=0;i<6;i++){const d=document.createElement('div');d.className='box';d.id='b'+i;d.style.left=(82+i*156)+'px';d.style.top=BY+'px';
+ d.innerHTML=`<div class="glow" id="g${i}"></div><div class="back"></div><div class="front"><b>${i+1}</b></div>`;$('shelf').appendChild(d)}
+// filler mini cards (deterministic) — distribution sketch
+const FILL=[[0,1],[1,2],[1,3],[2,1],[2,2],[2,3],[2,4],[3,1],[3,2],[4,1],[5,1]];
+const fill=FILL.map(([b,k],j)=>{const m=document.createElement('div');m.className='mc';m.style.zIndex=2;$('shelf').appendChild(m);return {el:m,b,k,j}});
+// key cards: feature (right), together (wrong), window (known)
+const mk=(txt)=>{const m=document.createElement('div');m.className='mc k';m.textContent=txt;$('shelf').appendChild(m);return m};
+const KF=mk('feature'),KT=mk('together'),KW=mk('window');
+function place(el,x,y,s=1,op=1){el.style.left=x+'px';el.style.top=y+'px';el.style.transform=`scale(${s})`;el.style.opacity=op;el.style.display=op>0?'block':'none'}
+const slotY=k=>BY-8-k*10; // stacked inside
+function pill(el,t,a,x,y,b=99){const v=seg(t,a,a+.35);el.style.display=v>0&&t<b?'block':'none';el.style.left=x+'px';el.style.top=y+'px';el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;el.style.opacity=1-seg(t,b-.3,b)}
+function shot(el,t,a,b){const v=seg(t,a,a+.45);const on=v>0&&t<b;el.style.display=on?'block':'none';if(!on)return;el.style.opacity=Math.min(cl(v*2),1-seg(t,b-.3,b));el.style.transform=`translateY(${(1-eo(v))*60}px)`}
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ const ss=[0,E.box,E.right,E.weak,E.cta].filter(a=>a<=t).at(-1);$('world').style.transform=`scale(${1+0.025*eio(seg(t,ss,ss+3))})`;
+ // hook big card: repeated flips ("yenə oxuyursan") then flies into box 5
+ const big=$('big');const flips=t<E.box?Math.sin(Math.min(t,E.box)*5.2)**2:0;
+ const into=eio(seg(t,E.known,E.known+.8));const vis=t<E.box+.4||t>=E.known;
+ if(t<E.box+.4){const sh=eio(seg(t,E.box,E.box+.4));big.style.display='block';big.style.opacity=1-sh;big.style.transform=`translateY(${-60*sh}px) scaleX(${1-.85*flips}) rotate(${-3+6*flips}deg)`}
+ else if(t>=E.known){big.style.display='block';big.style.opacity=1-seg(t,E.known+.6,E.known+.8);
+  const x=lerp(540,BX(4),into),y=lerp(670,slotY(3)+38,into),s=lerp(1,.2,into);big.style.transform=`translate(${x-540}px,${y-670}px) scale(${s})`}
+ else big.style.display='none';
+ $('hookT').style.opacity=1-seg(t,E.box-.1,E.box+.3);
+ $('sixT').style.opacity=Math.min(eo(seg(t,E.six,E.six+.3)),1-seg(t,E.cta-.1,E.cta+.3));
+ $('ruleT').style.opacity=Math.min(eo(seg(t,E.right,E.right+.3)),1-seg(t,E.cta-.1,E.cta+.3));
+ // shelf in
+ const sin=eio(seg(t,E.box,E.box+.7)),sout=eio(seg(t,E.cta,E.cta+.6));
+ $('shelf').style.transform=`translateY(${(1-sin)*700-900*sout}px)`;$('shelf').style.opacity=cl(sin*2)*(1-seg(t,E.cta,E.cta+.25));
+ for(let i=0;i<6;i++){const nb=$('b'+i).querySelector('b');const n=seg(t,E.six+.15*i,E.six+.15*i+.3);nb.style.transform=`scale(${t<E.six?0:bk(n)})`;
+  const weakOn=seg(t,E.weak,E.weak+.3)*(1-seg(t,E.cta,E.cta+.2));const g=$('g'+i);g.style.opacity=i<2?weakOn:0;
+  $('b'+i).style.opacity=i<2?1:1-.55*weakOn}
+ // filler cards rain in at E.box
+ fill.forEach(f=>{const a=E.box+.35+f.j*.06,x=seg(t,a,a+.35);const y=lerp(slotY(f.k)-260,slotY(f.k),eo(x));place(f.el,BX(f.b)+((f.k%2)?-6:6),y,1,cl(x*3)*(f.b>=2?1-.55*seg(t,E.weak,E.weak+.3):1))});
+ // feature: new -> box3, then +1 to box4
+ { const a=seg(t,E.new,E.new+.45),m=eio(seg(t,E.fwd,E.fwd+.7));
+   const x=lerp(BX(2),BX(3),m),hop=-120*4*m*(1-m),y=lerp(slotY(5)-300,slotY(5),eo(a))+hop;
+   place(KF,x,y,1,t<E.new?0:cl(a*3)*(1-.55*seg(t,E.weak,E.weak+.3))) }
+ pill($('pNew'),t,E.new+.2,BX(2),BY-118,E.right);
+ pill($('pPlus'),t,E.fwd+.55,BX(3),BY-120,E.wrong);
+ // together: appears in box3, −1 to box2
+ { const a=seg(t,E.wrong,E.wrong+.4),m=eio(seg(t,E.bck,E.bck+.7));
+   const x=lerp(BX(2),BX(1),m),hop=-120*4*m*(1-m),y=lerp(slotY(5)-300,slotY(5),eo(a))+hop;
+   place(KT,x,y,1,t<E.wrong?0:cl(a*3)) }
+ pill($('pMinus'),t,E.bck+.55,BX(1),BY-120,E.weak+.2);
+ place(KW,BX(4),slotY(3),1,t<E.known+.65?0:cl(seg(t,E.known+.65,E.known+.8)*3)*(1-.45*seg(t,E.known+.9,E.known+1.3)));
+ // real proofs below shelf
+ shot($('sR'),t,E.fwd+.2,E.wrong+.2);shot($('sW'),t,E.bck+.2,E.weak+.2);shot($('sZ'),t,E.weak+.2,E.cta+.2);
+ // CTA
+ $('ctaT').style.opacity=eo(seg(t,E.cta+.2,E.cta+.6));$('ctaT').style.transform=`translateY(${(1-eo(seg(t,E.cta+.2,E.cta+.6)))*40}px)`;
+ [E.cta+.35,E.l1,E.l2].forEach((a,i)=>{const el=$('l'+i),x=seg(t,a,a+.4);el.style.display=x>0?'block':'none';el.style.transform=`scale(${bk(x)})`;el.style.opacity=cl(x*3)});
+ const b=seg(t,E.msg,E.msg+.45);$('bub').style.display=b>0?'block':'none';$('bub').style.transform=`scale(${bk(b)})`;
+ const g=seg(t,E.gost,E.gost+.4);$('ctaLogo').style.display=g>0?'flex':'none';$('ctaLogo').style.opacity=eo(g);$('ctaLogo').style.transform=`translateY(${(1-eo(g))*30}px)`;
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>
