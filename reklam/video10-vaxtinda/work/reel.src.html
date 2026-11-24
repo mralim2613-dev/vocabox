@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#9FB0A8;--gr:#16A34A;--bg:#10231E}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:#fff;
+ background:radial-gradient(ellipse 900px 800px at 50% 45%,#1E3D34,var(--bg) 75%)}
+.ab{position:absolute}
+#world{position:absolute;inset:0;transform-origin:540px 900px}
+.hd{position:absolute;left:60px;right:60px;text-align:center;font-family:'Inter Display',Inter;font-weight:900;letter-spacing:-2.5px;line-height:1.04}
+.hd em{font-style:normal;color:var(--y)}
+#grid{position:absolute;left:0;top:0;width:1080px;height:1400px}
+#base{position:absolute;left:50px;width:880px;top:1150px;height:4px;background:rgba(255,255,255,.18);border-radius:2px}
+.day{position:absolute;top:1172px;width:104px;margin-left:-52px;text-align:center;font-weight:700;font-size:30px;color:var(--mu)}
+.ghost{position:absolute;width:104px;margin-left:-52px;border:4px dashed rgba(255,255,255,.28);border-radius:18px;box-sizing:border-box;color:var(--mu);font-family:'Inter Display';font-weight:900;font-size:56px;text-align:center}
+.blk{position:absolute;width:104px;margin-left:-52px;background:var(--y);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#big{position:absolute;left:110px;top:710px;width:104px;height:440px;margin-left:-52px;background:var(--y);border-radius:20px;box-shadow:0 16px 40px rgba(0,0,0,.4);transform-origin:50% 100%}
+#bigL{position:absolute;left:170px;top:640px;font-family:'Inter Display';font-weight:900;font-size:64px;color:var(--y);white-space:nowrap}
+#strike{position:absolute;left:30px;top:900px;width:260px;height:14px;background:#fff;border-radius:7px;transform-origin:0 50%;transform:rotate(-55deg)}
+.chip{position:absolute;background:#fff;color:var(--tx);font-weight:800;font-size:44px;padding:10px 26px;border-radius:16px;white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.dot{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#fff;box-shadow:0 0 0 6px rgba(216,237,155,.35)}
+/* real */
+.shot{position:absolute;border-radius:30px;overflow:hidden;box-shadow:0 26px 70px rgba(0,0,0,.5);background:#F5F4EF}
+.shot img{display:block;width:100%}
+.ring{position:absolute;border:8px solid var(--y);border-radius:24px;box-shadow:0 0 0 8px rgba(216,237,155,.3)}
+#brand{position:absolute;left:0;right:0;top:268px;text-align:center;font-weight:800;font-size:52px}
+#brand span{display:inline-block;width:88px;height:88px;vertical-align:middle;margin-right:18px}
+.pill{position:absolute;border-radius:999px;font-weight:900;font-family:'Inter Display';font-size:56px;padding:10px 34px;white-space:nowrap;background:var(--y);color:var(--tx)}
+#bal{position:absolute;left:210px;width:660px;top:1100px;height:160px;border-radius:999px;background:var(--y);color:var(--tx);font-weight:800;font-size:68px;line-height:160px;box-shadow:0 24px 50px rgba(0,0,0,.4)}
+#bal .pl{position:absolute;left:20px;top:20px;width:120px;height:120px;border-radius:50%;background:var(--tx)}
+#bal .tx{position:absolute;left:175px}
+#bal:after{content:'';position:absolute;left:110px;bottom:-26px;border:22px solid transparent;border-top:30px solid var(--y);border-bottom:0}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:30;color:#fff}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 3px 10px rgba(0,0,0,.5)}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--y);z-index:31}
+</style></head><body>
+<div id="world">
+ <div class="hd" id="h0" style="top:290px;font-size:52px;font-weight:700;color:var(--mu);letter-spacing:-.5px">Hamı deyir:</div>
+ <div class="hd" id="h1" style="top:360px;font-size:104px">Hər gün <em>1 saat</em></div>
+ <div class="hd" id="hm" style="top:300px;font-size:84px">Mənim fikrim<br><em>başqadır.</em></div>
+ <div class="hd" id="h2" style="top:300px;font-size:84px">Uzun dərs yox.<br><em>Vaxtında təkrar.</em></div>
+ <div id="grid">
+  <div id="base"></div>
+  <div id="days"></div>
+  <div id="ghosts"></div>
+  <div id="blocks"></div>
+  <div id="big"></div><div id="bigL">1 saat</div><div id="strike"></div>
+  <div class="chip" id="c0">deadline</div><div class="chip" id="c1">although</div><div class="chip" id="c2">improve</div>
+  <div id="dots"></div>
+ </div>
+ <div id="brand"><span>__LOGO__</span>Vocabox</div>
+ <div class="shot" id="sBx" style="left:150px;top:470px;width:780px"><img src="__BOXES12__"></div>
+ <div class="shot" id="sR" style="left:230px;top:400px;width:620px"><img src="__RIGHT__"></div>
+ <div class="pill" id="p1">+1</div>
+ <div class="shot" id="sW" style="left:180px;top:400px;width:720px"><img src="__WEAK__"></div>
+ <div class="ring" id="g1"></div><div class="ring" id="g2"></div>
+ <div class="hd" id="h3" style="top:560px;font-size:130px">Razısan?</div>
+ <div id="bal"><div class="pl"><svg width="120" height="120" viewBox="0 0 126 126"><path d="M34 62 L92 38 L78 92 L64 72 Z" fill="#D8ED9B"/><path d="M64 72 L92 38" stroke="#172F29" stroke-width="4"/></svg></div><span class="tx">Mesaj yaz</span></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2;
+const norm=s=>s.replace(/İ/g,'i').toLowerCase().replace(/[.,?!:;“”"«»]/g,'');
+function Wd(w,n=1){let c=0;for(const x of WORDS)if(norm(x.text)===w&&++c===n)return x;throw Error('söz yoxdur: '+w)}
+const W=(w,n)=>Wd(w,n).start+OFF-LEAD, WE=(w,n)=>Wd(w,n).end+OFF;
+const E={hami:W('hamı'),her:W('hər'),saat:W('saat'),bes:W('bəs'),tap:W('tapmayanda'),hemin:W('həmin'),hec:W('heç'),oxm:W('oxumursan'),
+ menim:W('mənim'),uzun:W('uzun'),yox:W('yox'),vax:W('vaxtında'),tek:W('təkrar'),az:W('az'),got:W('götür'),amma:W('amma'),tez:W('tez-tez'),qay:W('qayıt'),
+ voc:W('vocabox-da'),qut:W('qutular'),bil:W('bildiyin'),ire:W('irəli'),cet:W('çətinləri'),ayr:W('ayrıca'),zeif:W('zəif'),mesq:W('məşq'),raz:W('razısan'),mes:W('mesajla')};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+function st(id,o){const s=$(id).style;for(const k in o)s[k]=o[k]}
+function vis(id,on){$(id).style.display=on?'block':'none';return on}
+// həftə şəbəkəsi
+const CX=[...Array(7).keys()].map(i=>110+128*i),DN=['B.e.','Ç.a.','Ç.','C.a.','C.','Ş.','B.'];
+$('days').innerHTML=DN.map((d,i)=>`<div class="day" style="left:${CX[i]}px">${d}</div>`).join('');
+$('ghosts').innerHTML=CX.slice(1).map((x,i)=>`<div class="ghost" id="g_${i+1}" style="left:${x}px;top:910px;height:240px;line-height:232px">?</div>`).join('');
+$('blocks').innerHTML=CX.map((x,i)=>`<div class="blk" id="b_${i}" style="left:${x}px"></div>`).join('');
+const HOP=[0,1,3,5]; // "tez-tez qayıt": söz həftə ərzində bir neçə dəfə qayıdır (sxematik)
+$('dots').innerHTML=HOP.map((d,i)=>`<div class="dot" id="d_${i}" style="left:${CX[d]}px;top:1100px"></div>`).join('');
+function render(t){
+ caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ // başlıqlar
+ if(vis('h0',t<E.menim+.3)){st('h0',{opacity:Math.min(t<.05?1:eo(seg(t,E.hami-.2,E.hami+.2)),1-seg(t,E.menim,E.menim+.3))})}
+ if(vis('h1',t<E.menim+.3)){const p=seg(t,E.her-.1,E.her+.35);st('h1',{opacity:Math.min(p,1-seg(t,E.menim,E.menim+.3)),transform:`translateY(${(1-eo(p))*30}px)`})}
+ if(vis('hm',t>=E.menim-.05&&t<E.uzun)){const p=seg(t,E.menim-.05,E.menim+.3);st('hm',{opacity:Math.min(p,1-seg(t,E.uzun-.2,E.uzun)),transform:`translateY(${(1-eo(p))*30}px)`})}
+ if(vis('h2',t>=E.uzun-.1&&t<E.voc+.3)){const p=seg(t,E.uzun-.1,E.uzun+.3),q=seg(t,E.vax-.05,E.vax+.3);st('h2',{opacity:Math.min(p,1-seg(t,E.voc,E.voc+.3)),transform:`scale(${lerp(1.08,1,eo(p))})`});
+  $('h2').querySelector('em').style.opacity=q}
+ // ---- ŞƏBƏKƏ ----
+ if(vis('grid',t<E.voc+.4)){
+  $('grid').style.opacity=1-seg(t,E.voc,E.voc+.4);
+  // böyük blok: "1 saat"
+  const bp=seg(t,E.saat-.1,E.saat+.35),sh=eio(seg(t,E.yox,E.yox+.5));
+  vis('big',t>=E.saat-.1&&t<E.yox+.5);vis('bigL',t>=E.saat-.1&&t<E.yox+.5);
+  st('big',{transform:`scaleY(${bp<1?back(bp):1-sh})`,opacity:1-sh});st('bigL',{opacity:Math.min(bp,1-sh)});
+  vis('strike',t>=E.uzun-.1&&t<E.yox+.5);st('strike',{transform:`rotate(-55deg) scaleX(${eo(seg(t,E.uzun-.1,E.uzun+.25))})`,opacity:1-sh});
+  // boş günlər
+  for(let i=1;i<7;i++){const t0=E.tap-.35+.09*i,p=seg(t,t0,t0+.3);const on=vis('g_'+i,t>=t0&&t<E.vax+.2);if(!on)continue;
+   const zero=t>=E.oxm;$('g_'+i).textContent=zero?'0':'?';
+   st('g_'+i,{opacity:Math.min(p,1-seg(t,E.uzun,E.vax+.2))*(zero?.7:1),transform:`scale(${lerp(.8,1,eo(p))})`,color:zero?'#6c7f77':'var(--mu)'})}
+  // kiçik bloklar: vaxtında təkrar — hər gün az
+  for(let i=0;i<7;i++){const t0=E.vax+.07*i,p=seg(t,t0,t0+.35);if(!vis('b_'+i,t>=t0))continue;
+   const h=90+ (i%3)*12;st('b_'+i,{top:(1150-h)+'px',height:h+'px',opacity:p,transform:`translateY(${(1-eo(p))*-160}px)`})}
+  // söz kartları
+  const CP=[[150,560],[420,560],[690,560]];
+  for(let i=0;i<3;i++){const t0=E.az+.12*i;if(!vis('c'+i,t>=t0))continue;const p=seg(t,t0,t0+.3);
+   let [x,y]=CP[i];let o=p,s=p<1?back(p):1;
+   if(i===0){ // "tez-tez qayıt": deadline həftə boyu qayıdır
+    const hs=[E.tez-.1,E.tez+.25,E.tez+.6,E.qay+.1];let px=x,py=y;
+    for(let k=0;k<4;k++){const u=eio(seg(t,hs[k],hs[k]+.3));const tx=CX[HOP[k]]-90,ty=930;px=lerp(px,tx,u);py=lerp(py,ty,u)-Math.sin(u*Math.PI)*90}
+    x=px;y=py}
+   else o=Math.min(o,1-.5*seg(t,E.tez-.1,E.tez+.2));
+   st('c'+i,{left:x+'px',top:y+'px',opacity:o,transform:`scale(${s})`})}
+  for(let k=0;k<4;k++){const ta=[E.tez-.1,E.tez+.25,E.tez+.6,E.qay+.1][k]+.3;if(vis('d_'+k,t>=ta)){const p=seg(t,ta,ta+.25);st('d_'+k,{transform:`scale(${back(p)})`})}}
+ }
+ // ---- VOCABOX ----
+ if(vis('brand',t>=E.voc-.1&&t<E.raz)){const p=seg(t,E.voc-.1,E.voc+.3);st('brand',{opacity:Math.min(p,1-seg(t,E.raz-.3,E.raz)),transform:`translateY(${(1-eo(p))*-30}px)`})}
+ if(vis('sBx',t>=E.qut-.15&&t<E.bil+.2)){const p=seg(t,E.qut-.15,E.qut+.3),q=seg(t,E.bil-.15,E.bil+.2);st('sBx',{opacity:Math.min(p,1-q),transform:`translateY(${(1-eo(p))*100}px)`})}
+ if(vis('sR',t>=E.bil-.15&&t<E.cet+.2)){const p=seg(t,E.bil-.15,E.bil+.3),q=seg(t,E.cet-.15,E.cet+.2);st('sR',{opacity:Math.min(p,1-q),transform:`translateX(${(1-eo(p))*250-eio(q)*250}px)`})}
+ if(vis('p1',t>=E.ire&&t<E.cet)){const p=seg(t,E.ire,E.ire+.3);st('p1',{left:'760px',top:'640px',opacity:Math.min(p,1-seg(t,E.cet-.2,E.cet)),transform:`scale(${back(p)}) rotate(-6deg)`})}
+ if(vis('sW',t>=E.cet-.15&&t<E.raz)){const p=seg(t,E.cet-.15,E.cet+.3);st('sW',{opacity:Math.min(p,1-seg(t,E.raz-.3,E.raz)),transform:`translateX(${(1-eo(p))*250}px)`})}
+ // halqalar: Zəiflər · 1–2 seçimi və "4 uyğun kart" (real koordinatlar, css → ekran)
+ const K=720/354,SX=180,SY=400;
+ if(vis('g1',t>=E.zeif-.1&&t<E.raz)){const a=seg(t,E.zeif-.1,E.zeif+.25);st('g1',{left:(SX+183*K-12)+'px',top:(SY+185*K-12)+'px',width:(150*K+24)+'px',height:(45*K+24)+'px',opacity:Math.min(a,1-seg(t,E.raz-.3,E.raz)),transform:`scale(${lerp(1.15,1,eo(a))})`})}
+ if(vis('g2',t>=E.mesq-.1&&t<E.raz)){const a=seg(t,E.mesq-.1,E.mesq+.25);st('g2',{left:(SX+12*K)+'px',top:(SY+354*K)+'px',width:(180*K)+'px',height:(36*K)+'px',opacity:Math.min(a,1-seg(t,E.raz-.3,E.raz)),transform:`scale(${lerp(1.15,1,eo(a))})`})}
+ // ---- CTA ----
+ if(vis('h3',t>=E.raz-.1)){const p=seg(t,E.raz-.1,E.raz+.3);st('h3',{opacity:p,transform:`scale(${p<1?lerp(.8,1,back(p)):1})`})}
+ if(vis('bal',t>=E.mes-.1)){const m=seg(t,E.mes-.1,E.mes+.35);st('bal',{opacity:Math.min(1,m*2),transform:`scale(${m<1?lerp(.6,1,back(m)):1+.025*Math.sin((t-E.mes)*4)})`})}
+ // kamera
+ const ch=[0,E.bes,E.menim,E.az,E.voc,E.bil,E.cet,E.raz,99];let k=0;while(t>=ch[k+1])k++;
+ $('world').style.transform=`scale(${1+.03*eio(seg(t,ch[k],Math.min(ch[k+1],ch[k]+3)))})`;
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>

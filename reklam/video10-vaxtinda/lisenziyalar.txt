@@ -1,0 +1,5 @@
+Səsləndirmə: ElevenLabs — model eleven_v4, səs "Abbas - Engaging Delivery" (IVMbfLv3KqUc4qDj6Yif), tək take.
+Fon musiqisi: Epidemic Sound — "Time Split Up", Toby Tranter (bəstəkar: Tobias Fagerström). Trekin əvvəlindən; ilk ~7,6 s +6 dB qaldırılıb (dl/music.mp3, orijinal dl/music_orig.mp3).
+Effektlər (Epidemic Sound): "Clocks, Tick, Wooden Wall Clock, Ticking"; "User Interface, Click, UI Buttons, Bubbly, Select"; "Designed, Whoosh, Soft Airy"; "User Interface, Alert, Tonal, Soft Digital Confirm"
+Şəkillər: Vocabox loqosu (public/favicon.svg) və tətbiqin real ekran görüntüləri (lokal veb versiya, Playwright) — layihənin öz materialları.
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın Epidemic Sound hesabına bağlı olduğunu yoxlayın. Musiqi və effekt faylları (dl/) repoya əlavə edilmir.

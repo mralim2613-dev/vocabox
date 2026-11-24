@@ -1,0 +1,302 @@
+[
+ {
+  "i": 0,
+  "text": "Hamı",
+  "start": 0.08,
+  "end": 0.32
+ },
+ {
+  "i": 1,
+  "text": "deyir:",
+  "start": 0.4,
+  "end": 0.88
+ },
+ {
+  "i": 2,
+  "text": "hər",
+  "start": 0.96,
+  "end": 1.12
+ },
+ {
+  "i": 3,
+  "text": "gün",
+  "start": 1.2,
+  "end": 1.36
+ },
+ {
+  "i": 4,
+  "text": "bir",
+  "start": 1.44,
+  "end": 1.52
+ },
+ {
+  "i": 5,
+  "text": "saat",
+  "start": 1.6,
+  "end": 1.84
+ },
+ {
+  "i": 6,
+  "text": "oxu.",
+  "start": 1.92,
+  "end": 2.48
+ },
+ {
+  "i": 7,
+  "text": "Bəs",
+  "start": 2.507,
+  "end": 2.64
+ },
+ {
+  "i": 8,
+  "text": "o",
+  "start": 2.68,
+  "end": 2.72
+ },
+ {
+  "i": 9,
+  "text": "bir",
+  "start": 2.8,
+  "end": 2.88
+ },
+ {
+  "i": 10,
+  "text": "saatı",
+  "start": 2.96,
+  "end": 3.2
+ },
+ {
+  "i": 11,
+  "text": "tapmayanda?",
+  "start": 3.32,
+  "end": 4.24
+ },
+ {
+  "i": 12,
+  "text": "Həmin",
+  "start": 4.267,
+  "end": 4.56
+ },
+ {
+  "i": 13,
+  "text": "gün",
+  "start": 4.72,
+  "end": 4.88
+ },
+ {
+  "i": 14,
+  "text": "heç",
+  "start": 4.96,
+  "end": 5.12
+ },
+ {
+  "i": 15,
+  "text": "nə",
+  "start": 5.16,
+  "end": 5.253
+ },
+ {
+  "i": 16,
+  "text": "oxumursan.",
+  "start": 5.307,
+  "end": 6.16
+ },
+ {
+  "i": 17,
+  "text": "Mənim",
+  "start": 6.2,
+  "end": 6.4
+ },
+ {
+  "i": 18,
+  "text": "fikrim",
+  "start": 6.44,
+  "end": 6.72
+ },
+ {
+  "i": 19,
+  "text": "başqadır:",
+  "start": 6.8,
+  "end": 7.44
+ },
+ {
+  "i": 20,
+  "text": "uzun",
+  "start": 7.52,
+  "end": 7.68
+ },
+ {
+  "i": 21,
+  "text": "dərs",
+  "start": 7.76,
+  "end": 8.0
+ },
+ {
+  "i": 22,
+  "text": "yox,",
+  "start": 8.08,
+  "end": 8.56
+ },
+ {
+  "i": 23,
+  "text": "vaxtında",
+  "start": 8.6,
+  "end": 9.12
+ },
+ {
+  "i": 24,
+  "text": "təkrar.",
+  "start": 9.2,
+  "end": 9.92
+ },
+ {
+  "i": 25,
+  "text": "Az",
+  "start": 10.04,
+  "end": 10.16
+ },
+ {
+  "i": 26,
+  "text": "söz",
+  "start": 10.2,
+  "end": 10.4
+ },
+ {
+  "i": 27,
+  "text": "götür,",
+  "start": 10.44,
+  "end": 10.96
+ },
+ {
+  "i": 28,
+  "text": "amma",
+  "start": 11.08,
+  "end": 11.2
+ },
+ {
+  "i": 29,
+  "text": "onlara",
+  "start": 11.28,
+  "end": 11.6
+ },
+ {
+  "i": 30,
+  "text": "tez-tez",
+  "start": 11.64,
+  "end": 12.0
+ },
+ {
+  "i": 31,
+  "text": "qayıt.",
+  "start": 12.08,
+  "end": 12.64
+ },
+ {
+  "i": 32,
+  "text": "Vocabox-da",
+  "start": 12.72,
+  "end": 13.44
+ },
+ {
+  "i": 33,
+  "text": "qutular",
+  "start": 13.493,
+  "end": 13.84
+ },
+ {
+  "i": 34,
+  "text": "bunu",
+  "start": 13.88,
+  "end": 14.0
+ },
+ {
+  "i": 35,
+  "text": "asanlaşdırır:",
+  "start": 14.08,
+  "end": 15.04
+ },
+ {
+  "i": 36,
+  "text": "bildiyin",
+  "start": 15.12,
+  "end": 15.44
+ },
+ {
+  "i": 37,
+  "text": "söz",
+  "start": 15.48,
+  "end": 15.68
+ },
+ {
+  "i": 38,
+  "text": "irəli",
+  "start": 15.76,
+  "end": 16.0
+ },
+ {
+  "i": 39,
+  "text": "gedir,",
+  "start": 16.08,
+  "end": 16.48
+ },
+ {
+  "i": 40,
+  "text": "çətinləri",
+  "start": 16.52,
+  "end": 17.04
+ },
+ {
+  "i": 41,
+  "text": "isə",
+  "start": 17.08,
+  "end": 17.28
+ },
+ {
+  "i": 42,
+  "text": "ayrıca,",
+  "start": 17.36,
+  "end": 18.0
+ },
+ {
+  "i": 43,
+  "text": "zəif",
+  "start": 18.08,
+  "end": 18.32
+ },
+ {
+  "i": 44,
+  "text": "qutulardan",
+  "start": 18.36,
+  "end": 18.88
+ },
+ {
+  "i": 45,
+  "text": "məşq",
+  "start": 18.907,
+  "end": 19.12
+ },
+ {
+  "i": 46,
+  "text": "edirsən.",
+  "start": 19.2,
+  "end": 19.84
+ },
+ {
+  "i": 47,
+  "text": "Razısan?",
+  "start": 20.08,
+  "end": 20.8
+ },
+ {
+  "i": 48,
+  "text": "Mesajla",
+  "start": 20.92,
+  "end": 21.28
+ },
+ {
+  "i": 49,
+  "text": "yaz.",
+  "start": 21.32,
+  "end": 21.76
+ }
+]

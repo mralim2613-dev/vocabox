@@ -113,7 +113,7 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 | **10** | C · EN · S3 · F3, F2 | ✅ **Hazırdır (video09):** Mətn → lüğət demosu — "Oxu. Çıxar. Təkrar et." dövrəsi + real məşq kartı (**Skript 11** əsasında) | H1 "Oxu. Çıxar. Təkrar et." / H2 "Oxuduğun sözlər harada qalır?" / H3 "Hər mətn bir dərsdir" | "Mesajla yaz, necə işlədiyini göstərək" |
 | **11** | A · EN · S1 · — | E-poçt yazanda "tam bilmirəm" (**Skript 1** canlı versiyası) | H1 "Bilirəm… amma tam yox." / H2 "E-poçtu 4-cü dəfə silirəm" / H3 "Translate-ə 'just in case' baxıram" | "Səndə də olur? Mesajla yaz" |
 | **12** | B · RU · S1–2 · F1 | Ən çox işlənən 5 rus feli ⁴ | H1 "Rus dilində bu 5 feli bilmədən danışmaq çətindir" / H2 "Hər cümlədə lazım olan 5 söz" / H3 "Rusca başlamaq üçün ilk 5" | "Saxla" + "Rus dili dəsti üçün mesajla yaz" |
-| **13** | E · ümumi · S2–3 · F2 | Aykırı: "Uzun dərs yox — vaxtında təkrar" | H1 "Hamı 'hər gün 1 saat' deyir. Mən başqa yol seçdim." / H2 "Daha çox oxumaq kömək etmədi" / H3 "Az, amma vaxtında" | "Razısan? Mesajla yaz" |
+| **13** | E · ümumi · S2–3 · F2 | ✅ **Hazırdır (video10):** Aykırı: "Uzun dərs yox — vaxtında təkrar" (həftə şəbəkəsi; H1 fikir kimi: "Mənim fikrim başqadır") | H1 "Hamı 'hər gün 1 saat' deyir. Mən başqa yol seçdim." / H2 "Daha çox oxumaq kömək etmədi" / H3 "Az, amma vaxtında" | "Razısan? Mesajla yaz" |
 | **14** | F · ümumi · S4 · F1–3 | FAQ: internet olmayanda işləyir? reklam var? hansı dillər? ⁵ | H1 "Bu sualı ən çox alıram" / H2 "Vocabox haqqında 3 sual" / H3 "Almadan əvvəl bunu bil" | "Sualın var? Mesajla yaz" |
 
 ### Həftə 3 — "Sübut və satış"
