@@ -1,0 +1,144 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A;--red:#A33C3C}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;background:#f5f4ef;font-family:Inter,sans-serif;color:var(--tx)}
+#world{position:absolute;inset:0;transform-origin:540px 820px}
+.h{position:absolute;left:60px;right:60px;text-align:center;font-weight:800;letter-spacing:-1.5px;line-height:1.08}
+.sc{position:absolute;inset:0;display:none}
+.num{position:absolute;left:90px;top:440px;background:var(--tx);color:#fff;border-radius:999px;font-weight:800;font-size:36px;padding:10px 26px}
+.lab{position:absolute;left:90px;right:90px;top:520px;font-size:54px;font-weight:800;letter-spacing:-1px;line-height:1.12}
+.stamp{position:absolute;width:210px;height:210px;margin:-105px 0 0 -105px;border-radius:50%;border:12px solid var(--red);color:var(--red);font-size:150px;font-weight:800;line-height:184px;text-align:center;box-sizing:border-box;background:rgba(245,244,239,.85);z-index:8;display:none}
+.stamp.ok{border-color:var(--gr);color:var(--gr)}
+/* mistake 1: list */
+#list{position:absolute;left:250px;top:680px;width:580px;height:620px;background:#fff;border-radius:28px;box-shadow:0 18px 50px rgba(23,47,41,.12);overflow:hidden}
+#list .ln{position:absolute;left:40px;right:40px;height:64px;border-bottom:2px solid #e6ebe3;font-size:38px;font-weight:600;color:#33433d;line-height:64px}
+#eye{position:absolute;left:12px;width:20px;height:50px;border-radius:10px;background:var(--y)}
+/* mistake 2: cards row */
+.kc{position:absolute;width:210px;height:150px;margin:-75px 0 0 -105px;border-radius:22px;background:#fff;box-shadow:0 10px 26px rgba(23,47,41,.12);text-align:center;font-weight:800;font-size:38px;line-height:110px}
+.kc i{position:absolute;right:14px;top:10px;font-style:normal;font-size:26px;color:var(--gr);line-height:30px}
+.kc.hard{background:#fff;box-shadow:0 10px 26px rgba(23,47,41,.12),0 0 0 4px #e3b7b2;color:#7a5d5a}
+/* mistake 3 */
+#lone{position:absolute;left:290px;top:820px;width:500px;height:220px;border-radius:30px;background:#fff;box-shadow:0 18px 50px rgba(23,47,41,.12);text-align:center;font-size:84px;font-weight:800;line-height:220px;letter-spacing:-2px}
+#sent{position:absolute;left:110px;right:110px;top:1110px;display:flex;gap:16px;justify-content:center;align-items:center}
+#sent b{display:block;height:26px;border-radius:13px;background:#dfe5db}
+#sent span{font-size:40px;font-weight:700;color:#b4bdb7}
+/* fix */
+.shot{position:absolute;border-radius:28px;box-shadow:0 18px 50px rgba(23,47,41,.16);display:none}
+#fixT{position:absolute;left:60px;right:60px;top:300px;text-align:center;font-weight:800;font-size:64px;letter-spacing:-1.5px;opacity:0;color:var(--p)}
+.pill{position:absolute;border-radius:999px;font-weight:800;font-size:40px;padding:12px 28px;white-space:nowrap;z-index:7}
+.pp{background:var(--p);color:#fff}.py{background:var(--y);color:var(--tx)}
+.opt{position:absolute;left:160px;width:760px;height:110px;border-radius:30px;background:#fff;box-shadow:0 10px 26px rgba(23,47,41,.1);font-size:44px;font-weight:800;line-height:110px;padding-left:36px;box-sizing:border-box;display:none}
+.opt b{display:inline-block;width:62px;height:62px;border-radius:50%;background:var(--red);color:#fff;text-align:center;line-height:62px;font-size:34px;margin-right:22px;vertical-align:4px}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:10}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px #f5f4ef,0 2px 0 #f5f4ef}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:11}
+#bub{position:absolute;left:250px;top:1000px;width:580px;height:150px;display:none}
+#ctaLogo{position:absolute;left:340px;top:1210px;width:400px;display:none;align-items:center;gap:18px;justify-content:center}
+</style></head><body>
+<div id="world">
+ <div class="h" id="hookT" style="top:290px;font-size:82px">Söz öyrənəndə<br><span style="color:var(--red)">3 səhv</span></div>
+ <div class="stamp" id="hx0">✕</div><div class="stamp" id="hx1">✕</div><div class="stamp" id="hx2">✕</div>
+ <!-- M1 -->
+ <div class="sc" id="M1"><div class="num">1 / 3</div><div class="lab">Siyahını bir dəfə oxuyub<br>kənara qoymaq</div>
+  <div id="list"><div id="eye"></div></div></div>
+ <!-- M2 -->
+ <div class="sc" id="M2"><div class="num">2 / 3</div><div class="lab">Bildiyini təkrar-təkrar,<br>çətini heç vaxt</div></div>
+ <!-- M3 -->
+ <div class="sc" id="M3"><div class="num">3 / 3</div><div class="lab">Sözü tək yazmaq,<br>cümləsiz</div>
+  <div id="sent"><b style="width:120px"></b><b style="width:90px"></b><span>?</span><b style="width:150px"></b><b style="width:80px"></b></div></div>
+ <div class="kc hard" id="hard">although</div>
+ <div id="lone" style="display:none">although</div>
+ <div class="stamp" id="st1">✕</div><div class="stamp" id="st2">✕</div><div class="stamp" id="st3">✕</div>
+ <!-- FIX -->
+ <div id="fixT">Vocabox-da</div>
+ <div class="stamp ok" id="stOk">✓</div>
+ <img class="shot" id="sW" src="__FBW__" style="left:211px;top:420px;width:658px">
+ <div class="pill pp" id="pBack" style="display:none">çətin söz → yenə qarşına</div>
+ <img class="shot" id="sP" src="__PREVIEW__" style="left:248px;top:410px;width:584px">
+ <div class="pill py" id="pText" style="display:none">öz mətnindən kartlar</div>
+ <!-- CTA -->
+ <div class="h" id="ctaT" style="top:300px;font-size:80px;opacity:0">Hansı səhvi<br>edirsən?</div>
+ <div class="opt" id="o0" style="top:560px"><b>1</b>Bir dəfə oxuyuram</div>
+ <div class="opt" id="o1" style="top:690px"><b>2</b>Bildiyimi təkrarlayıram</div>
+ <div class="opt" id="o2" style="top:820px"><b>3</b>Cümləsiz yazıram</div>
+ <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+  <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+ <div id="ctaLogo"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:54px;letter-spacing:-1.5px">Vocabox</b></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=(txt,n=1)=>{let c=0;for(let i=0;i<WORDS.length;i++)if(WORDS[i].text===txt&&++c===n)return i;throw Error('söz yoxdur: '+txt)};
+const ST=i=>WORDS[i].start+OFF;
+const E={m1:ST(IX('Birinci:'))-LEAD,read:ST(IX('oxuyub')),side:ST(IX('kənara'))-LEAD,x1:ST(IX('qoyursan.')),
+ m2:ST(IX('İkinci:'))-LEAD,rep:ST(IX('təkrar-təkrar')),hard:ST(IX('çətinlər'))-LEAD,out:ST(IX('kənarda'))-LEAD,x2:ST(IX('qalır.')),
+ m3:ST(IX('Üçüncü:'))-LEAD,lone:ST(IX('tək'))-LEAD,x3:ST(IX('cümləsiz.')),
+ fix:ST(IX('Vocabox-da'))-LEAD,cet:ST(IX('çətin'))-LEAD,yene:ST(IX('yenə'))-LEAD,txt:ST(IX('sözləri',2))-LEAD,met:ST(IX('mətndən'))-LEAD,
+ cta:ST(IX('Hansı'))-LEAD,msg:ST(IX('Mesajla'))-LEAD,dz:ST(IX('düzəldək.'))};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+function show(id,t,a,b){const el=$(id);if(t<a||t>=b){el.style.display='none';return 0}el.style.display='block';el.style.opacity=Math.min(eo(seg(t,a,a+.35)),1-seg(t,b-.3,b));return 1}
+function stamp(el,t,a,b,x,y){const v=seg(t,a,a+.3);const on=v>0&&t<b;el.style.display=on?'block':'none';if(!on)return;el.style.left=x+'px';el.style.top=y+'px';
+ el.style.transform=`rotate(${-14}deg) scale(${lerp(1.8,1,eo(v))})`;el.style.opacity=Math.min(cl(v*2),1-seg(t,b-.25,b))}
+function popc(el,t,a,x,y,b=999,dur=.35){const v=seg(t,a,a+dur);const on=v>0&&t<b;el.style.display=on?'block':'none';if(!on)return;el.style.left=x+'px';el.style.top=y+'px';el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;el.style.opacity=1-seg(t,b-.3,b)}
+// build list
+const LW=['window — pəncərə','borrow — borc almaq','however — lakin','achieve — nail olmaq','decide — qərar vermək','likely — ehtimal ki','remind — xatırlatmaq','although — baxmayaraq','support — dəstək'];
+LW.forEach((w,i)=>{const d=document.createElement('div');d.className='ln';d.style.top=(30+i*64)+'px';d.textContent=w;$('list').appendChild(d)});
+// known cards for M2
+const KN=['window','house','water','friend'];const kcs=KN.map(w=>{const d=document.createElement('div');d.className='kc';d.innerHTML=w+'<i>✓</i>';$('world').appendChild(d);return d});
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ const ss=[0,E.m1,E.m2,E.m3,E.fix,E.cta].filter(a=>a<=t).at(-1);$('world').style.transform=`scale(${1+0.025*eio(seg(t,ss,ss+3))})`;
+ // hook title stays as header through mistakes, shrinks
+ const ht=$('hookT');const sh=eio(seg(t,E.m1-.1,E.m1+.4));ht.style.transform=`translateY(${-40*sh}px) scale(${1-.3*sh})`;ht.style.opacity=1-seg(t,E.fix-.1,E.fix+.2);
+ {const u=ST(IX('üç'))-LEAD;[230,540,850].forEach((x,i)=>{const el=$('hx'+i);const v=seg(t,u+i*.18,u+i*.18+.3);const on=t<E.m1+.3;el.style.display=on?'block':'none';if(!on)return;el.style.left=x+'px';el.style.top='860px';el.style.transform=`rotate(${-14+i*10}deg) scale(${v>0?lerp(1.8,1,eo(v)):1})`;el.style.opacity=Math.min(v>0?cl(.15+v*2):.15,1-seg(t,E.m1-.1,E.m1+.3))})}
+ // M1
+ if(show('M1',t,E.m1,E.m2+.3)){const L=$('list');const so=eio(seg(t,E.side,E.side+.7));
+  L.style.transform=`translate(${-560*so}px,${120*so}px) rotate(${-24*so}deg)`;L.style.opacity=1-.6*so;
+  const r=seg(t,E.read-.3,E.side);$('eye').style.top=(36+r*520)+'px';$('eye').style.opacity=r>0&&r<1?1:0;
+  // hook frame (t<m1): preview list visible slightly behind title
+ }
+ stamp($('st1'),t,E.x1,E.m2+.2,800,1000);
+ // M2: known cards rotate in front, hard card pushed aside
+ const m2on=show('M2',t,E.m2,E.m3+.3);
+ const pos=[[250,880],[420,880],[590,880],[760,880]];
+ kcs.forEach((c,i)=>{const v=seg(t,E.m2+.1+i*.1,E.m2+.45+i*.1);const on=m2on&&v>0;c.style.display=on?'block':'none';if(!on)return;
+  const cyc=Math.max(0,t-E.rep);const ph=(cyc*1.6+i*.25)%1;const lift=t>=E.rep?Math.max(0,Math.sin(ph*Math.PI*2))*-50:0;
+  c.style.left=pos[i][0]+'px';c.style.top=(pos[i][1]+lift)+'px';c.style.transform=`scale(${bk(v)*(1+(lift<-30?.06:0))})`;c.style.opacity=$('M2').style.opacity});
+ // hard card: M2 → pushed to corner, M3 → alone center (as lone), then fix → flies up
+ const H=$('hard');let hx=870,hy=1110,hs=1,ho=0;
+ if(t>=E.hard&&t<E.m3+.2){const v=seg(t,E.hard,E.hard+.35);ho=cl(v*3);const p=eio(seg(t,E.out,E.out+.7));hx=lerp(540,880,p);hy=lerp(1110,1200,p);hs=bk(v)*lerp(1,.8,p);ho*=lerp(1,.55,p);
+  if(t>E.m3-.2)ho*=1-seg(t,E.m3-.2,E.m3+.2)}
+ H.style.display=ho>0?'block':'none';H.style.left=hx+'px';H.style.top=hy+'px';H.style.transform=`scale(${hs})`;H.style.opacity=ho;
+ stamp($('st2'),t,E.x2,E.m3+.2,800,1000);
+ // M3
+ const m3on=show('M3',t,E.m3,E.fix+.3);const lo=$('lone');const lv=seg(t,E.m3+.2,E.m3+.55);
+ const fly=eio(seg(t,E.fix,E.fix+.6));
+ if(m3on&&lv>0){lo.style.display='block';lo.style.opacity=Math.min(cl(lv*2),1-fly);lo.style.transform=`translateY(${-300*fly}px) scale(${bk(lv)*(1-.4*fly)}) rotate(${t>=E.lone?Math.sin((t-E.lone)*3)*2:0}deg)`}else lo.style.display='none';
+ $('sent').style.opacity=t>=E.lone?.4+.6*Math.abs(Math.sin((t-E.lone)*2.2)):0;
+ stamp($('st3'),t,E.x3,E.fix+.2,820,820);
+ // FIX
+ $('fixT').style.opacity=Math.min(eo(seg(t,E.fix,E.fix+.35)),1-seg(t,E.cta-.1,E.cta+.2));
+ const ok=$('stOk');const ov=seg(t,E.fix+.1,E.fix+.4);ok.style.display=ov>0&&t<E.cta?'block':'none';ok.style.left='930px';ok.style.top='330px';ok.style.width=ok.style.height='150px';ok.style.margin='-75px 0 0 -75px';ok.style.fontSize='100px';ok.style.lineHeight='128px';ok.style.borderWidth='9px';
+ ok.style.transform=`rotate(-10deg) scale(${lerp(1.8,1,eo(ov))})`;ok.style.opacity=Math.min(cl(ov*2),1-seg(t,E.cta-.2,E.cta+.1));
+ const w1=seg(t,E.cet,E.cet+.45),w1o=seg(t,E.txt-.1,E.txt+.25);const sW=$('sW');sW.style.display=w1>0&&w1o<1?'block':'none';sW.style.opacity=Math.min(cl(w1*2),1-w1o);sW.style.transform=`translateY(${(1-eo(w1))*60-60*w1o}px)`;
+ popc($('pBack'),t,E.yene,540,1120,E.txt+.1);
+ const p1=seg(t,E.txt,E.txt+.5),p1o=seg(t,E.cta-.1,E.cta+.25);const sP=$('sP');sP.style.display=p1>0&&p1o<1?'block':'none';sP.style.opacity=Math.min(cl(p1*2),1-p1o);sP.style.transform=`translateY(${(1-eo(p1))*80}px)`;
+ popc($('pText'),t,E.met,540,1230,E.cta+.1);
+ // CTA
+ $('ctaT').style.opacity=eo(seg(t,E.cta+.1,E.cta+.45));$('ctaT').style.transform=`translateY(${(1-eo(seg(t,E.cta+.1,E.cta+.45)))*40}px)`;
+ for(let i=0;i<3;i++){const el=$('o'+i),v=seg(t,E.cta+.3+i*.15,E.cta+.65+i*.15);el.style.display=v>0?'block':'none';el.style.transform=`translateX(${(1-eo(v))*-60}px)`;el.style.opacity=cl(v*2)}
+ const b=seg(t,E.msg,E.msg+.45);$('bub').style.display=b>0?'block':'none';$('bub').style.transform=`scale(${bk(b)})`;
+ const g=seg(t,E.dz,E.dz+.4);$('ctaLogo').style.display=g>0?'flex':'none';$('ctaLogo').style.opacity=eo(g);$('ctaLogo').style.transform=`translateY(${(1-eo(g))*30}px)`;
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>
