@@ -33,9 +33,12 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 6 | video06-sehvler | Söz öyrənəndə 3 səhv | 6 |
 | 7 | video07-serial-luget | Serialdan öz lüğətin: 3 addım (prompt → öz AI köməkçin → yapışdır/önbaxış/əlavə et), telefon bələdçisi | 7 |
 | 8 | video08-yarimciq | Uğursuzluq hekayəsi: yarımçıq qoyduğum dəfələr (təsisçinin real cavabları), serif/təqvim üslubu | 9 |
+| 9 | video09-oxu-cixar | Oxu. Çıxar. Təkrar et. — dövrə diaqramı, marker sözlər, real məşq kartı (düz 3→4, səhv 3→2) | 10 |
 
 ## 5. Açıq məsələlər / növbəti addımlar
-- **Növbəti video:** 8-ci gün (B · DE · Almaniyada ilk həftə 5 söz). 7-ci gün istifadəçinin seçimi ilə video02-dən fərqli, C seriyası (real ekranda addım-addım) kimi hazırlandı.
+- **Növbəti video:** 8-ci gün (B · DE · Almaniyada ilk həftə 5 söz) hələ edilməyib; plan sırası ilə 11-ci gün (A · EN · e-poçt anı). 12-ci gün rus dili — gözləmədə.
+- Tətbiqin lokal brauzer yaddaşı hər Playwright kontekstində təmizdir; nümunə dəstlər ("Serial sözləri", "Oxuduğum mətnlər") hər çəkilişdə JSON ilə yenidən yaradılır (skriptlər: video07/09 `work/ekran-meta.json` yanında koordinatlar).
+- **video09:** səs qulaqla yoxlanmayıb ("e-poçt", "AI", "yapışdırırsan").
 - **video08:** hekayə təsisçinin 2026-11-24 cavablarındandır (sayını itirib; bütün yollar; ilk gün–3 ay; ayın 1-i, ad günü; məqsəd ≠ öyrənilən → özünə uyğun lüğət). Səs qulaqla yoxlanmayıb.
 - **video07:** səs qulaqla yoxlanmayıb — istifadəçi "AI", "promptu", "önbaxışa" tələffüzünü dinləməlidir.
 - **video03:** ingiliscə ifadələri Azərbaycan səsi oxuyur — aksent riski. Təklif: ingiliscə hissələri ingilisdilli səslə yaradıb calamaq. Cavab gözlənilir.

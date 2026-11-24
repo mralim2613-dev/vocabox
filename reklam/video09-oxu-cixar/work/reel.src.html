@@ -1,0 +1,170 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A;--hl:#E6F79A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:var(--tx);background:#fff}
+#bgring{position:absolute;left:90px;top:410px;width:900px;height:900px;border-radius:50%;border:3px dashed #e3e9df}
+.ab{position:absolute}
+#world{position:absolute;inset:0;transform-origin:540px 860px}
+/* dövrə */
+#loop{position:absolute;left:540px;top:860px;width:0;height:0}
+.node{position:absolute;width:300px;height:300px;margin:-150px 0 0 -150px;border-radius:50%;background:#fff;box-shadow:0 18px 50px rgba(23,47,41,.12),0 0 0 4px var(--pl);text-align:center;font-family:'Inter Display',Inter;font-weight:900;font-size:66px;line-height:300px;letter-spacing:-2px}
+.node.on{background:var(--tx);color:var(--y);box-shadow:0 22px 60px rgba(23,47,41,.3)}
+#arc{position:absolute;left:-400px;top:-400px}
+/* üst addım çubuğu */
+#steps{position:absolute;left:0;right:0;top:268px;text-align:center;white-space:nowrap}
+.sp{display:inline-block;vertical-align:middle;font-family:'Inter Display',Inter;font-weight:900;font-size:42px;padding:12px 30px;border-radius:999px;background:var(--pl);color:var(--mu);margin:0 4px}
+.sp.on{background:var(--tx);color:var(--y)}
+.ar{display:inline-block;vertical-align:middle;font-size:40px;color:#b8c4b5;font-weight:800}
+/* sənədlər (sxematik) */
+.doc{position:absolute;width:660px;background:#fff;border-radius:26px;box-shadow:0 18px 48px rgba(23,47,41,.14);padding:34px 38px;box-sizing:border-box;transform-origin:50% 50%}
+.doc .k{font-weight:800;font-size:26px;letter-spacing:2px;color:var(--mu);margin-bottom:14px}
+.doc .ttl{font-weight:800;font-size:48px;line-height:1.15;margin-bottom:12px;letter-spacing:-.5px}
+.doc p{margin:0;font-size:40px;line-height:1.38;color:#33433d}
+#dBook p{font-family:'DejaVu Serif',serif;font-size:38px}
+#dMail p{font-family:'JetBrains Mono',monospace;font-size:34px}
+.w{position:relative;white-space:nowrap}
+.w i{position:absolute;left:-6px;right:-6px;top:12%;bottom:4%;background:var(--hl);z-index:-1;border-radius:6px;transform-origin:0 50%}
+.w b{font-weight:inherit}
+#qm{position:absolute;left:840px;top:560px;font-family:'Inter Display',Inter;font-weight:900;font-size:200px;color:var(--p);line-height:1}
+/* uçan söz çipləri */
+.fly{position:absolute;background:var(--hl);color:var(--tx);font-weight:800;font-size:54px;padding:8px 22px;border-radius:14px;white-space:nowrap;box-shadow:0 10px 24px rgba(23,47,41,.16);z-index:12}
+/* AI addım çipləri (sxematik) */
+#flow{position:absolute;left:60px;right:60px;top:1180px;text-align:center;white-space:nowrap}
+.fc{display:inline-block;vertical-align:middle;background:#fff;border:3px solid #dfe6da;border-radius:20px;font-weight:700;font-size:38px;padding:14px 22px;margin:0 2px}
+.fc.dk{background:var(--tx);color:#fff;border-color:var(--tx)}
+.fa{display:inline-block;vertical-align:middle;font-size:34px;color:var(--mu);font-weight:800;margin:0 4px}
+/* real ekranlar */
+.shot{position:absolute;border-radius:30px;overflow:hidden;box-shadow:0 22px 56px rgba(23,47,41,.18);background:#F5F4EF}
+.shot img{display:block;width:100%}
+#toast{position:absolute;width:400px;border-radius:20px;box-shadow:0 12px 30px rgba(23,47,41,.25)}
+.pill{position:absolute;border-radius:999px;font-weight:900;font-family:'Inter Display',Inter;font-size:56px;padding:10px 34px;white-space:nowrap;z-index:14}
+.pp{background:var(--tx);color:var(--y)}
+#tap{position:absolute;width:100px;height:100px;margin:-50px 0 0 -50px;border-radius:50%;background:rgba(255,255,255,.85);box-shadow:0 0 0 8px var(--p);z-index:15}
+#ripple{position:absolute;width:100px;height:100px;margin:-50px 0 0 -50px;border-radius:50%;border:8px solid var(--yd);box-sizing:border-box;z-index:14}
+/* cta */
+#bal{position:absolute;left:210px;width:660px;top:1150px;height:160px;border-radius:999px;background:var(--tx);color:#fff;font-weight:800;font-size:68px;line-height:160px;box-shadow:0 24px 50px rgba(23,47,41,.3);z-index:16}
+#bal .pl{position:absolute;left:20px;top:20px;width:120px;height:120px;border-radius:50%;background:var(--y)}
+#bal .tx{position:absolute;left:175px}
+#bal:after{content:'';position:absolute;left:110px;bottom:-26px;border:22px solid transparent;border-top:30px solid var(--tx);border-bottom:0}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:30}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px #fff,0 2px 0 #fff}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:31}
+</style></head><body>
+<div id="world">
+ <div id="bgring"></div>
+ <div id="loop">
+  <svg id="arc" width="800" height="800" viewBox="-400 -400 800 800"><path id="arcp" d="M0 -300 A300 300 0 1 1 -0.1 -300" fill="none" stroke="#204E40" stroke-width="10" stroke-linecap="round"/></svg>
+  <div class="node" id="n0" style="left:0;top:-300px">Oxu.</div>
+  <div class="node" id="n1" style="left:225px;top:150px">Çıxar.</div>
+  <div class="node" id="n2" style="left:-225px;top:150px;font-size:56px">Təkrar et.</div>
+ </div>
+ <div id="steps"><span class="sp" id="s0">Oxu</span><span class="ar">→</span><span class="sp" id="s1">Çıxar</span><span class="ar">→</span><span class="sp" id="s2">Təkrar et</span></div>
+ <!-- sənədlər -->
+ <div class="doc" id="dArt" style="left:40px;top:410px"><div class="k">MƏQALƏ</div><div class="ttl">City plans a <span class="w" id="w0"><i></i><b>thorough</b></span> review of buses</div><p>The <span class="w" id="w1"><i></i><b>outcome</b></span> will be shared in spring.</p></div>
+ <div class="doc" id="dMail" style="left:370px;top:760px;width:600px"><div class="k">E-POÇT</div><p>Hi Sam, could we <span class="w" id="w2"><i></i><b>reschedule</b></span> our call to Friday?</p></div>
+ <div class="doc" id="dBook" style="left:60px;top:1040px"><div class="k">KİTAB</div><p>It was late. <span class="w" id="w3"><i></i><b>Nevertheless</b></span>, she caught a <span class="w" id="w4"><i></i><b>glimpse</b></span> of the sea.</p></div>
+ <div id="qm">?</div>
+ <div class="fly" id="f0">thorough</div><div class="fly" id="f1">outcome</div><div class="fly" id="f2">reschedule</div><div class="fly" id="f3">nevertheless</div><div class="fly" id="f4">glimpse</div>
+ <div id="flow"><span class="fc" id="fc0">Prompt + mətn</span><span class="fa">→</span><span class="fc dk" id="fc1">öz AI köməkçin</span><span class="fa">→</span><span class="fc" id="fc2">JSON</span></div>
+ <!-- real ekranlar -->
+ <div class="shot" id="shP" style="left:170px;top:400px;width:740px"><img src="__PREVIEW__"></div>
+ <img id="toast" src="__TOAST__">
+ <div class="shot" id="shB" style="left:220px;top:400px;width:640px"><img src="__BACK__"></div>
+ <div class="shot" id="shR" style="left:220px;top:400px;width:640px"><img src="__RIGHT__"></div>
+ <div class="shot" id="shW" style="left:220px;top:390px;width:640px"><img src="__WRONG__"></div>
+ <div class="pill pp" id="pl1">+1</div><div class="pill pp" id="pl2" style="background:var(--y);color:var(--tx)">−1 · yenə</div>
+ <div id="ripple"></div><div id="tap"></div>
+ <div id="bal"><div class="pl"><svg width="120" height="120" viewBox="0 0 126 126"><path d="M34 62 L92 38 L78 92 L64 72 Z" fill="#172F29"/><path d="M64 72 L92 38" stroke="#D8ED9B" stroke-width="4"/></svg></div><span class="tx">Mesaj yaz</span></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2;
+const norm=s=>s.replace(/İ/g,'i').replace(/Ç/g,'ç').toLowerCase().replace(/[.,?!:;“”"«»]/g,'');
+function Wd(w,n=1){let c=0;for(const x of WORDS)if(norm(x.text)===w&&++c===n)return x;throw Error('söz yoxdur: '+w)}
+const W=(w,n)=>Wd(w,n).start+OFF-LEAD, WE=(w,n)=>Wd(w,n).end+OFF;
+const E={oxu:W('oxu'),cix:W('çıxar'),tek:W('təkrar'),her:W('hər'),meq:W('məqalə'),ep:W('e-poçt'),kit:W('kitab'),amma:W('amma'),yeni:W('yeni'),har:W('harada'),qal:W('qalır'),
+ voc:W('vocabox-da'),met:W('mətnindən'),kart:W('kartlarını'),haz:W('hazır'),ai:W('ai'),gon:W('göndərirsən'),cav:W('cavabı'),yap:W('yapışdırırsan'),
+ tek2:W('təkrarı'),qut:W('qutular'),bil:W('bildiyin'),ire:W('irəli'),cet:W('çətini'),yene:W('yenə'),ciX:W('çıxır'),
+ oxu2:W('oxu',2),cix2:W('çıxar',2),tek3:W('təkrar',2),mes:W('mesajla')};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+function st(id,o){const s=$(id).style;for(const k in o)s[k]=o[k]}
+function vis(id,on){$(id).style.display=on?'block':'none';return on}
+function tapAt(t,t0,x,y){const u=t-t0;if(u<-.25||u>.7){vis('tap',0);vis('ripple',0);return}
+ vis('tap',1);vis('ripple',u>0&&u<.6);const pr=u<0?eo(seg(u,-.25,0)):1,press=u>=0&&u<.18?.82:1;
+ st('tap',{left:x+'px',top:y+'px',opacity:Math.min(pr,1-seg(u,.45,.7)),transform:`scale(${press*lerp(1.3,1,pr)})`});
+ if(u>0){const r=seg(u,0,.6);st('ripple',{left:x+'px',top:y+'px',transform:`scale(${1+1.6*eo(r)})`,opacity:1-r})}}
+const arcL=()=>$('arcp').getTotalLength();
+function render(t){
+ caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ // ---- DÖVRƏ (hook + son) ----
+ const loopA=t<E.her+.35, loopB=t>=E.oxu2-.2;
+ const lOn=vis('loop',loopA||loopB);vis('bgring',lOn);
+ if(lOn){
+  const a=loopA?1-seg(t,E.her,E.her+.35):eo(seg(t,E.oxu2-.2,E.oxu2+.25));
+  const sc=loopB?lerp(1,.78,eio(seg(t,E.mes-.4,E.mes+.4))):1, dy=loopB?lerp(0,-120,eio(seg(t,E.mes-.4,E.mes+.4))):0;
+  st('loop',{opacity:a,transform:`translateY(${dy}px) scale(${sc})`});$('bgring').style.opacity=a;
+  const tt=loopA?[E.oxu,E.cix,E.tek]:[E.oxu2,E.cix2,E.tek3];
+  for(let i=0;i<3;i++){const p=seg(t,tt[i]-.1,tt[i]+.3);const el=$('n'+i);
+   el.className='node'+(t>=tt[i]-.05&&(loopB||i===2||t<tt[i+1]-.05)?' on':'');
+   el.style.transform=`scale(${t<tt[i]-.1&&loopA&&t<.05?1:(p<1?lerp(.85,1,back(p)):1)})`;
+   if(loopA&&i>0)el.style.opacity=seg(t,tt[i]-.15,tt[i]+.1)*1;else el.style.opacity=1}
+  if(loopA&&t<E.oxu)$('n0').style.opacity=1;
+  const L=arcL(),pr=loopA?eio(seg(t,E.oxu,E.tek+.6)):eio(seg(t,E.oxu2,E.tek3+.6));
+  $('arcp').style.strokeDasharray=L;$('arcp').style.strokeDashoffset=L*(1-pr);
+  $('arc').style.transform=`rotate(${loopB?(t-E.oxu2)*8:0}deg)`;
+ }
+ // ---- ÜST ADDIMLAR ----
+ const sOn=vis('steps',t>=E.her&&t<E.oxu2);
+ if(sOn){st('steps',{opacity:Math.min(eo(seg(t,E.her,E.her+.4)),1-seg(t,E.oxu2-.3,E.oxu2))});
+  const k=t<E.voc?0:t<E.tek2?1:2;['s0','s1','s2'].forEach((s,i)=>{$(s).className='sp'+(i===k?' on':'');const ts=[E.her,E.voc,E.tek2][i];$(s).style.transform=`scale(${i===k?lerp(.85,1,back(seg(t,ts,ts+.35))):1})`})}
+ // ---- SƏNƏDLƏR ----
+ const docs=[['dArt',E.meq,-3],['dMail',E.ep,3],['dBook',E.kit,-2]];
+ const dEnd=E.voc+1.2;
+ docs.forEach(([id,t0,r],i)=>{if(!vis(id,t>=t0-.15&&t<dEnd))return;const p=seg(t,t0-.15,t0+.3),z=seg(t,E.voc+.5,dEnd);
+  st(id,{opacity:Math.min(p,1-z),transform:`translateY(${(1-eo(p))*80+z*-40}px) rotate(${r}deg) scale(${lerp(.92,1,eo(p))})`})});
+ // marker: "oxuduğun yeni sözlər" — söz-söz; "harada qalır?" — solur
+ const ht=[E.yeni,E.yeni+.18,E.yeni+.36,E.yeni+.54,E.yeni+.72];
+ for(let i=0;i<5;i++){const w=$('w'+i).querySelector('i');const p=eo(seg(t,ht[i],ht[i]+.25));
+  const fadeQ=seg(t,E.har,E.qal+.3)*(1-seg(t,E.voc,E.voc+.3));w.style.transform=`scaleX(${p})`;w.style.opacity=1-.75*fadeQ;
+  $('w'+i).querySelector('b').style.color=t>=E.voc+.1?'transparent':''}
+ if(vis('qm',t>=E.qal&&t<E.voc+.2)){const p=seg(t,E.qal,E.qal+.35);st('qm',{opacity:Math.min(p,1-seg(t,E.voc-.1,E.voc+.2)),transform:`scale(${back(p)}) rotate(${8*Math.sin(t*3)}deg)`})}
+ // ---- ÇIXAR: sözlər uçur ----
+ const FT=[[333,466],[142,607],[384,862],[301,1106],[256,1164]]; // başlanğıc (sxematik sənəddəki yeri)
+ for(let i=0;i<5;i++){const t0=E.voc+.1+.12*i;if(!vis('f'+i,t>=t0&&t<E.cav+.2))continue;
+  const sx=FT[i][0],sy=FT[i][1], ex=[150,560,150,560,330][i], ey=[470,470,620,620,770][i];
+  const p=eio(seg(t,t0,t0+.7)),q=seg(t,E.cav-.15,E.cav+.2);
+  st('f'+i,{left:lerp(sx,ex,p)+'px',top:lerp(sy,ey,p)+'px',opacity:1-q,transform:`rotate(${(1-p)*(i%2?6:-6)}deg) scale(${lerp(1,1.12,Math.sin(p*Math.PI))})`});}
+ // AI axını (sxematik)
+ if(vis('flow',t>=E.haz-.1&&t<E.cav+.2)){st('flow',{opacity:Math.min(eo(seg(t,E.haz-.1,E.haz+.3)),1-seg(t,E.cav-.15,E.cav+.2)),top:lerp(1100,940,eio(seg(t,E.haz-.1,E.haz+.5)))+'px'});
+  ['fc0','fc1','fc2'].forEach((c,i)=>{const ts=[E.haz,E.ai,E.gon][i];const p=seg(t,ts,ts+.3);$(c).style.opacity=.25+.75*p;$(c).style.transform=`scale(${p>0&&p<1?lerp(.9,1,back(p)):1})`})}
+ // real önbaxış
+ if(vis('shP',t>=E.cav-.15&&t<E.tek2+.3)){const p=seg(t,E.cav-.15,E.cav+.3),q=seg(t,E.tek2-.05,E.tek2+.3);
+  st('shP',{opacity:Math.min(p,1-q),transform:`translateY(${(1-eo(p))*120}px) scale(${lerp(1,.94,q)})`})}
+ if(vis('toast',t>=E.yap+.35&&t<E.tek2+.3)){const p=seg(t,E.yap+.35,E.yap+.6);st('toast',{left:'340px',top:'1180px',opacity:Math.min(p,1-seg(t,E.tek2-.05,E.tek2+.3)),transform:`translateY(${(1-eo(p))*40}px)`})}
+ // ---- TƏKRAR: real məşq kartları ----
+ if(vis('shB',t>=E.tek2&&t<E.ire+.2)){const p=seg(t,E.tek2,E.tek2+.4);st('shB',{opacity:p,transform:`translateX(${(1-eo(p))*300}px)`})}
+ if(vis('shR',t>=E.ire&&t<E.cet+.25)){const p=seg(t,E.ire,E.ire+.15),q=seg(t,E.cet-.1,E.cet+.25);st('shR',{opacity:Math.min(p,1-q),transform:`translateX(${-eio(q)*300}px)`})}
+ if(vis('shW',t>=E.cet-.1&&t<E.oxu2)){const p=seg(t,E.cet-.1,E.cet+.3),q=seg(t,E.oxu2-.35,E.oxu2);st('shW',{opacity:Math.min(p,1-q),transform:`translateX(${(1-eo(p))*300}px)`})}
+ // "Düz bildim" toxunuşu (real düymə: css 300,479 → ekran)
+ const sk=640/1090*3;
+ tapAt(t,E.ire-.05,220+(268-13.3)*sk,400+479*sk);
+ if(vis('pl1',t>=E.ire+.15&&t<E.cet)){const p=seg(t,E.ire+.15,E.ire+.45);st('pl1',{left:'760px',top:'700px',opacity:Math.min(p,1-seg(t,E.cet-.25,E.cet)),transform:`scale(${back(p)}) rotate(-6deg)`})}
+ if(vis('pl2',t>=E.yene&&t<E.oxu2)){const p=seg(t,E.yene,E.yene+.3);st('pl2',{left:'700px',top:'500px',opacity:Math.min(p,1-seg(t,E.oxu2-.35,E.oxu2)),transform:`scale(${back(p)}) rotate(5deg)`})}
+ // ---- CTA ----
+ if(vis('bal',t>=E.mes-.1)){const m=seg(t,E.mes-.1,E.mes+.35);st('bal',{opacity:Math.min(1,m*2),transform:`scale(${m<1?lerp(.6,1,back(m)):1+.025*Math.sin((t-E.mes)*4)})`})}
+ // kamera: hər fəsildə yavaş yaxınlaşma
+ const ch=[0,E.her,E.voc,E.haz,E.cav,E.tek2,E.cet,E.oxu2,99];let k=0;while(t>=ch[k+1])k++;
+ $('world').style.transform=`scale(${1+.03*eio(seg(t,ch[k],Math.min(ch[k+1],ch[k]+3)))})`;
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>
