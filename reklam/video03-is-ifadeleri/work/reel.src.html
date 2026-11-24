@@ -1,0 +1,120 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;background:#f7f6f0;font-family:Inter,sans-serif;color:var(--tx)}
+#bg{position:absolute;inset:0;background-image:radial-gradient(#dfe5da 2.2px,transparent 2.4px);background-size:44px 44px;opacity:.7}
+#world{position:absolute;inset:0;transform-origin:540px 800px}
+.sc{position:absolute;inset:0;display:none}
+#head{position:absolute;left:60px;right:60px;top:270px;text-align:center}
+#head .s{font-size:46px;font-weight:700;color:var(--mu)}
+#head .b{font-size:92px;font-weight:800;letter-spacing:-2.5px;line-height:1.05;margin-top:6px}
+#head .b u{text-decoration:none;background:var(--y);border-radius:18px;padding:0 14px}
+#dots{position:absolute;left:0;right:0;top:500px;display:flex;justify-content:center;gap:22px}
+.dot{width:64px;height:64px;border-radius:50%;border:3px solid #cfd9cb;background:#fff;font-weight:800;font-size:30px;line-height:58px;text-align:center;color:#9aa79f;box-sizing:border-box}
+.dot.on{background:var(--p);border-color:var(--p);color:#fff}
+#fc{position:absolute;left:90px;top:600px;width:900px;height:330px;background:#fff;border-radius:40px;box-shadow:0 22px 60px rgba(32,78,64,.14),0 0 0 2px var(--pl);transform-origin:450px 165px;display:none}
+#fc .num{position:absolute;left:44px;top:36px;background:var(--pl);color:#476348;border-radius:999px;font-weight:800;font-size:32px;padding:8px 22px}
+#fc .en{position:absolute;left:44px;right:44px;top:104px;font-size:74px;font-weight:800;letter-spacing:-2px;line-height:1.05}
+#fc .en span{display:inline-block;margin-right:18px}
+#fc .az{position:absolute;left:44px;top:236px;font-size:44px;font-weight:700;white-space:nowrap}
+#fc .az i{font-style:normal;position:relative;z-index:1}
+#fc .bar{position:absolute;left:36px;top:240px;height:58px;border-radius:14px;background:var(--y);transform-origin:left center}
+#list{position:absolute;left:90px;width:900px;top:960px}
+.row{position:absolute;left:0;width:900px;height:84px;display:flex;align-items:center;gap:20px}
+.ph{position:absolute;left:0;width:900px;height:84px;display:flex;align-items:center;gap:20px}.ph b{flex:none;width:52px;height:52px;border-radius:50%;border:3px dashed #cfd9cb;box-sizing:border-box}.ph i{display:block;height:22px;border-radius:11px;background:#e4e9e0}
+.row b{flex:none;width:52px;height:52px;border-radius:50%;background:var(--p);color:#fff;font-size:26px;line-height:52px;text-align:center}
+.row .t{font-size:38px;font-weight:800;letter-spacing:-.8px;white-space:nowrap}
+.row .m{font-size:30px;color:var(--mu);font-weight:600;white-space:nowrap}
+#listBg{position:absolute;left:70px;width:940px;border-radius:36px;background:#fff;box-shadow:0 18px 50px rgba(32,78,64,.12),0 0 0 2px var(--pl);display:none}
+.pill{position:absolute;border-radius:999px;font-weight:800;font-size:46px;padding:14px 34px;white-space:nowrap}
+.pp{background:var(--p);color:#fff}.py{background:var(--y);color:var(--tx)}
+#appCard{position:absolute;left:190px;top:470px;width:700px;border-radius:34px;box-shadow:0 22px 60px rgba(32,78,64,.18),0 0 0 2px var(--pl);display:none}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:10}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px #fff,0 2px 0 #fff}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:11}
+#bub{position:absolute;left:250px;top:1040px;width:580px;height:150px;display:none}
+#ctaLogo{position:absolute;left:340px;top:1250px;width:400px;display:none;align-items:center;gap:18px;justify-content:center}
+</style></head><body>
+<div id="bg"></div>
+<div id="world">
+ <div id="head"><div class="s">İşdə hər gün lazım olan</div><div class="b"><u>5</u> ingilis ifadəsi</div></div>
+ <div id="dots"></div>
+ <div id="listBg"></div><div id="list"></div>
+ <div id="fc"><div class="num" id="fcN">1 / 5</div><div class="en" id="fcE"></div><div class="bar" id="fcB"></div><div class="az" id="fcA"><i></i></div></div>
+ <div class="pill pp" id="pSave" style="display:none"><svg width="34" height="40" viewBox="0 0 34 40" style="vertical-align:-6px;margin-right:12px"><path d="M3 3h28v34L17 27 3 37z" fill="#D8ED9B"/></svg>Saxla</div>
+ <div class="pill py" id="p3" style="display:none">3 gün sonra yoxla</div>
+ <img id="appCard" src="__CARD__">
+ <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+  <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+ <div id="ctaLogo"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:54px;letter-spacing:-1.5px">Vocabox</b></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=txt=>{const i=WORDS.findIndex(w=>w.text===txt);if(i<0)throw Error('söz yoxdur: '+txt);return i};
+const ST=i=>WORDS[i].start+OFF, EN=i=>WORDS[i].end+OFF;
+// phrases from token structure
+const NUMS=['Bir:','İki:','Üç:','Dörd:','Beş:'];const SAX=IX('Saxla,');
+const P=NUMS.map((n,k)=>{const ni=IX(n);let yi=ni+1;while(WORDS[yi].text!=='Yəni,')yi++;
+ const nextI=k<4?IX(NUMS[k+1]):SAX;return {n:k+1,t0:ST(ni)-LEAD,en:[...Array(yi-ni-1).keys()].map(j=>ni+1+j),yeni:ST(yi)-LEAD,az:WORDS.slice(yi+1,nextI).map(w=>w.text).join(' ').replace(/[.?]$/,''),end:k<4?ST(nextI)-LEAD:ST(SAX)-LEAD}});
+P[2].az='dəqiqləşdirə bilərsən?';
+const E={save:ST(SAX)-LEAD,three:ST(SAX+1),box:ST(IX('qutuya'))-LEAD,msg:ST(IX('Mesajla'))-LEAD,gost:ST(IX('göstərək.'))};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+// build dots + rows
+for(let i=0;i<5;i++){const d=document.createElement('div');d.className='dot';d.id='d'+i;d.textContent=i+1;$('dots').appendChild(d);
+ const r=document.createElement('div');r.className='row';r.id='r'+i;r.style.top=(i*84)+'px';
+ const en=P[i].en.map(j=>WORDS[j].text).join(' ').replace(/[.]$/,'');
+ const ph=document.createElement('div');ph.className='ph';ph.id='ph'+i;ph.style.top=(i*84)+'px';ph.innerHTML=`<b></b><div><i style="width:${360+((i*137)%5)*40}px"></i><i style="width:${220+((i*71)%4)*40}px;margin-top:12px;height:16px"></i></div>`;$('list').appendChild(ph);
+ r.innerHTML=`<b>${i+1}</b><div><div class="t">${en}</div><div class="m">${P[i].az}</div></div>`;$('list').appendChild(r)}
+let curK=-1;
+function setCard(k){if(curK===k)return;curK=k;$('fcN').textContent=`${k+1} / 5`;
+ $('fcE').style.fontSize=(P[k].en.map(j=>WORDS[j].text).join(' ').length>20?'60px':'74px');
+ $('fcE').innerHTML=P[k].en.map(j=>`<span id="w${j}">${WORDS[j].text.replace(/[.]$/,'')}</span>`).join('');
+ $('fcA').firstElementChild.textContent=P[k].az;}
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ const ss=[0,P[0].t0,E.save,E.box].filter(a=>a<=t).at(-1);$('world').style.transform=`scale(${1+0.025*eio(seg(t,ss,ss+3))})`;
+ // header & dots
+ const hd=1-eio(seg(t,E.box-.1,E.box+.4));$('head').style.opacity=hd;$('dots').style.opacity=hd*(1-seg(t,E.save-.1,E.save+.3));
+ for(let i=0;i<5;i++){const on=t>=P[i].t0;const d=$('d'+i);d.className='dot'+(on?' on':'');d.style.transform=`scale(${on?bk(seg(t,P[i].t0,P[i].t0+.35)):1})`}
+ // focus card
+ const fc=$('fc');const D=i=>P[i].t0+(i>0?.5:0);let k=-1;for(let i=0;i<5;i++)if(t>=D(i)&&t<P[i].end+.55)k=i;
+ if(k>=0&&t<E.save+.55){fc.style.display='block';setCard(k);const p=P[k];
+  const inn=seg(t,D(k),D(k)+.4),out=eio(seg(t,p.end,p.end+.55));
+  // out: shrink toward its list row
+  const rowY=960+k*84+42, rowX=540;
+  const s=lerp(1,.16,out),y=lerp(765,rowY,out),x=lerp(540,rowX,out);
+  fc.style.transform=`translate(${x-540}px,${y-765}px) scale(${s*(inn<1?.85+.15*eo(inn):1)})`;fc.style.opacity=Math.min(cl(inn*2.5),1-seg(t,p.end+.35,p.end+.55));
+  p.en.forEach(j=>{const el=$('w'+j);if(!el)return;const a=ST(j)-LEAD,x=seg(t,a,a+.22);el.style.opacity=cl(x*1.5);el.style.transform=`translateY(${(1-eo(x))*24}px)`});
+  const yv=seg(t,p.yeni,p.yeni+.5);$('fcB').style.width=$('fcA').offsetWidth+16+'px';$('fcB').style.transform=`scaleX(${eo(yv)})`;$('fcA').style.opacity=cl(yv*2);
+ } else fc.style.display='none';
+ // list rows
+ const lsUp=eio(seg(t,E.save+.55,E.save+1.25)),lsGo=eio(seg(t,E.box,E.box+.7));
+ $('list').style.transform=`translateY(${-360*lsUp}px)`;
+ const lb=$('listBg');lb.style.display=lsUp>0?'block':'none';lb.style.top=(960-360-30)+'px';lb.style.height=(5*84+60)+'px';lb.style.opacity=lsUp*(1-lsGo);
+ for(let i=0;i<5;i++){const r=$('r'+i);const a=P[i].end+.35;const x=seg(t,a,a+.3);$('ph'+i).style.opacity=(1-cl(x*2))*(1-seg(t,E.box,E.box+.3));
+  r.style.opacity=cl(x*2)*(1-seg(t,E.box+.1+i*.06,E.box+.5+i*.06));
+  const fly=eio(seg(t,E.box+i*.06,E.box+.6+i*.06));
+  r.style.transform=`translate(${(1-eo(x))*-30+fly*0}px,${fly*(-80-i*84+250)}px) scale(${1-.6*fly})`}
+ // save + 3 days
+ const ps=$('pSave'),pa=seg(t,E.save+.75,E.save+1.15);ps.style.display=pa>0&&t<E.box+.3?'block':'none';ps.style.left='540px';ps.style.top='1170px';ps.style.transform=`translate(-50%,-50%) scale(${bk(pa)})`;ps.style.opacity=1-seg(t,E.box-.1,E.box+.3);
+ const p3=$('p3'),qa=seg(t,Math.max(E.three,E.save+1.0),Math.max(E.three,E.save+1.0)+.4);p3.style.display=qa>0&&t<E.box+.3?'block':'none';p3.style.left='540px';p3.style.top='1290px';p3.style.transform=`translate(-50%,-50%) scale(${bk(qa)})`;p3.style.opacity=1-seg(t,E.box-.1,E.box+.3);
+ // app card (real)
+ const ac=$('appCard'),ai=seg(t,E.box+.25,E.box+.75);ac.style.display=ai>0?'block':'none';
+ const up=eio(seg(t,E.msg,E.msg+.6));ac.style.transform=`translateY(${(1-eo(ai))*80-150*up}px) scale(${(.9+.1*eo(ai))*(1-.25*up)})`;ac.style.opacity=cl(ai*2);
+ // CTA
+ const b=seg(t,E.msg+.2,E.msg+.65);$('bub').style.display=b>0?'block':'none';$('bub').style.transform=`scale(${bk(b)})`;$('bub').style.opacity=cl(b*3);
+ const g=seg(t,E.gost,E.gost+.4);$('ctaLogo').style.display=g>0?'flex':'none';$('ctaLogo').style.opacity=eo(g);$('ctaLogo').style.transform=`translateY(${(1-eo(g))*30}px)`;
+}
+window.render=render;window.E=E;window.TT=TT;window.P=P;
+</script></body></html>

@@ -1,0 +1,392 @@
+[
+ {
+  "i": 0,
+  "text": "İşdə",
+  "start": 0.08,
+  "end": 0.4
+ },
+ {
+  "i": 1,
+  "text": "hər",
+  "start": 0.48,
+  "end": 0.64
+ },
+ {
+  "i": 2,
+  "text": "gün",
+  "start": 0.72,
+  "end": 0.88
+ },
+ {
+  "i": 3,
+  "text": "lazım",
+  "start": 0.96,
+  "end": 1.2
+ },
+ {
+  "i": 4,
+  "text": "olan",
+  "start": 1.28,
+  "end": 1.52
+ },
+ {
+  "i": 5,
+  "text": "beş",
+  "start": 1.68,
+  "end": 1.84
+ },
+ {
+  "i": 6,
+  "text": "ingilis",
+  "start": 1.92,
+  "end": 2.24
+ },
+ {
+  "i": 7,
+  "text": "ifadəsi.",
+  "start": 2.32,
+  "end": 3.04
+ },
+ {
+  "i": 8,
+  "text": "Bir:",
+  "start": 3.28,
+  "end": 3.76
+ },
+ {
+  "i": 9,
+  "text": "I'll",
+  "start": 4.0,
+  "end": 4.08
+ },
+ {
+  "i": 10,
+  "text": "get",
+  "start": 4.16,
+  "end": 4.32
+ },
+ {
+  "i": 11,
+  "text": "back",
+  "start": 4.44,
+  "end": 4.56
+ },
+ {
+  "i": 12,
+  "text": "to",
+  "start": 4.6,
+  "end": 4.64
+ },
+ {
+  "i": 13,
+  "text": "you.",
+  "start": 4.72,
+  "end": 5.2
+ },
+ {
+  "i": 14,
+  "text": "Yəni,",
+  "start": 5.24,
+  "end": 5.68
+ },
+ {
+  "i": 15,
+  "text": "sənə",
+  "start": 5.76,
+  "end": 6.0
+ },
+ {
+  "i": 16,
+  "text": "sonra",
+  "start": 6.08,
+  "end": 6.24
+ },
+ {
+  "i": 17,
+  "text": "cavab",
+  "start": 6.32,
+  "end": 6.56
+ },
+ {
+  "i": 18,
+  "text": "verərəm.",
+  "start": 6.64,
+  "end": 7.36
+ },
+ {
+  "i": 19,
+  "text": "İki:",
+  "start": 7.44,
+  "end": 8.08
+ },
+ {
+  "i": 20,
+  "text": "Let",
+  "start": 8.16,
+  "end": 8.24
+ },
+ {
+  "i": 21,
+  "text": "me",
+  "start": 8.32,
+  "end": 8.4
+ },
+ {
+  "i": 22,
+  "text": "check",
+  "start": 8.48,
+  "end": 8.64
+ },
+ {
+  "i": 23,
+  "text": "and",
+  "start": 8.72,
+  "end": 8.8
+ },
+ {
+  "i": 24,
+  "text": "confirm.",
+  "start": 9.08,
+  "end": 9.68
+ },
+ {
+  "i": 25,
+  "text": "Yəni,",
+  "start": 9.72,
+  "end": 10.16
+ },
+ {
+  "i": 26,
+  "text": "yoxlayıb",
+  "start": 10.2,
+  "end": 10.64
+ },
+ {
+  "i": 27,
+  "text": "təsdiqləyim.",
+  "start": 10.667,
+  "end": 11.68
+ },
+ {
+  "i": 28,
+  "text": "Üç:",
+  "start": 11.76,
+  "end": 12.32
+ },
+ {
+  "i": 29,
+  "text": "Could",
+  "start": 12.4,
+  "end": 12.48
+ },
+ {
+  "i": 30,
+  "text": "you",
+  "start": 12.56,
+  "end": 12.64
+ },
+ {
+  "i": 31,
+  "text": "clarify?",
+  "start": 12.76,
+  "end": 13.6
+ },
+ {
+  "i": 32,
+  "text": "Yəni,",
+  "start": 13.64,
+  "end": 14.08
+ },
+ {
+  "i": 33,
+  "text": "dəqiqləşdirə",
+  "start": 14.107,
+  "end": 14.68
+ },
+ {
+  "i": 34,
+  "text": "bilərsən?",
+  "start": 14.72,
+  "end": 15.68
+ },
+ {
+  "i": 35,
+  "text": "Dörd:",
+  "start": 15.707,
+  "end": 16.32
+ },
+ {
+  "i": 36,
+  "text": "Just",
+  "start": 16.44,
+  "end": 16.56
+ },
+ {
+  "i": 37,
+  "text": "a",
+  "start": 16.613,
+  "end": 16.667
+ },
+ {
+  "i": 38,
+  "text": "quick",
+  "start": 16.72,
+  "end": 16.88
+ },
+ {
+  "i": 39,
+  "text": "reminder.",
+  "start": 17.16,
+  "end": 17.76
+ },
+ {
+  "i": 40,
+  "text": "Yəni,",
+  "start": 17.8,
+  "end": 18.2
+ },
+ {
+  "i": 41,
+  "text": "kiçik",
+  "start": 18.24,
+  "end": 18.48
+ },
+ {
+  "i": 42,
+  "text": "bir",
+  "start": 18.56,
+  "end": 18.64
+ },
+ {
+  "i": 43,
+  "text": "xatırlatma.",
+  "start": 18.693,
+  "end": 19.68
+ },
+ {
+  "i": 44,
+  "text": "Beş:",
+  "start": 19.72,
+  "end": 20.4
+ },
+ {
+  "i": 45,
+  "text": "I'm",
+  "start": 20.44,
+  "end": 20.64
+ },
+ {
+  "i": 46,
+  "text": "on",
+  "start": 20.68,
+  "end": 20.72
+ },
+ {
+  "i": 47,
+  "text": "it.",
+  "start": 20.8,
+  "end": 21.28
+ },
+ {
+  "i": 48,
+  "text": "Yəni,",
+  "start": 21.32,
+  "end": 21.72
+ },
+ {
+  "i": 49,
+  "text": "məşğulam,",
+  "start": 21.76,
+  "end": 22.4
+ },
+ {
+  "i": 50,
+  "text": "edirəm.",
+  "start": 22.48,
+  "end": 23.12
+ },
+ {
+  "i": 51,
+  "text": "Saxla,",
+  "start": 23.2,
+  "end": 23.76
+ },
+ {
+  "i": 52,
+  "text": "üç",
+  "start": 23.8,
+  "end": 23.92
+ },
+ {
+  "i": 53,
+  "text": "gün",
+  "start": 24.0,
+  "end": 24.08
+ },
+ {
+  "i": 54,
+  "text": "sonra",
+  "start": 24.16,
+  "end": 24.32
+ },
+ {
+  "i": 55,
+  "text": "yoxla.",
+  "start": 24.36,
+  "end": 25.12
+ },
+ {
+  "i": 56,
+  "text": "Bunları",
+  "start": 25.173,
+  "end": 25.44
+ },
+ {
+  "i": 57,
+  "text": "qutuya",
+  "start": 25.493,
+  "end": 25.68
+ },
+ {
+  "i": 58,
+  "text": "atmaq",
+  "start": 25.76,
+  "end": 25.96
+ },
+ {
+  "i": 59,
+  "text": "istəyirsən?",
+  "start": 26.0,
+  "end": 26.8
+ },
+ {
+  "i": 60,
+  "text": "Mesajla",
+  "start": 26.88,
+  "end": 27.28
+ },
+ {
+  "i": 61,
+  "text": "yaz,",
+  "start": 27.36,
+  "end": 27.68
+ },
+ {
+  "i": 62,
+  "text": "necə",
+  "start": 27.733,
+  "end": 27.88
+ },
+ {
+  "i": 63,
+  "text": "edəcəyini",
+  "start": 27.92,
+  "end": 28.32
+ },
+ {
+  "i": 64,
+  "text": "göstərək.",
+  "start": 28.4,
+  "end": 29.12
+ }
+]
