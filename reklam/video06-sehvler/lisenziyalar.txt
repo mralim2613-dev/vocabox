@@ -1,0 +1,7 @@
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), tək take (generation ONcmknH9yDgiK68ZVKxF). Flow: 6hkKJJWx8s3hvNRtbnqr
+Söz vaxtları: ElevenLabs eleven_scribe_v1
+Fon musiqisi: Epidemic Sound — "Sweat Peas", Arthur Benson
+Effektlər (Epidemic Sound): "User Interface, Alert, Error, Buzz 05"; "User Interface, Click, UI Buttons, Bubbly, Select"; "Paper, Handle, Notepad, Page Turn 01"; "Designed, Whoosh, Soft Airy"; "User Interface, Alert, Tonal, Soft Digital Confirm"
+Şrift: Inter (SIL OFL)
+Şəkillər: Vocabox loqosu və tətbiqin real ekran görüntüləri (video02 və video04 çəkilişlərindən)
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın hesaba bağlı olduğunu yoxlayın. dl/ repoya əlavə edilmir.

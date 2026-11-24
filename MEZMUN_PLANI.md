@@ -101,7 +101,7 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 | **3** | B · EN · S1–2 · F2 | İşdə hər gün lazım olan 5 ifadə ¹ | H1 "İşdə bunları bilməmək ayıb deyil, amma…" / H2 "5 ifadə, 30 saniyə" / H3 "Müdirin bunu yazanda nə cavab verirsən?" | "Saxla" + "İş üçün dəst — mesajla yaz" |
 | **4** | C · EN · S3 · F2 | Leitner qutuları 25 saniyədə (**Skript 9** əsasında) | H1 "Eyni siyahı. Fərqli nəticə." / H2 "Bildiyin sözü niyə yenə oxuyursan?" / H3 "6 qutu. Bir qayda." | "Mesajla yaz, dəstini göstərək" |
 | **5** | A · RU · S1 · — | Rusca başa düşürsən, cavabı azərbaycanca verirsən | H1 "Başa düşürəm… amma cavab verə bilmirəm" / H2 "Rusca sual, azərbaycanca cavab 😅" / H3 "Hamıda belə olur?" | "Rus dili dəsti üçün mesajla yaz" |
-| **6** | E · ümumi · S2 · F2 | Söz öyrənəndə 3 səhv ² | H1 "Söz öyrənəndə bu 3 səhvi edirsən?" / H2 "Problem yaddaşında deyil." / H3 "Siyahını bir dəfə oxumaq bəs deyil" | "Hansını edirsən? Mesajla yaz" |
+| **6** | E · ümumi · S2 · F2 | ✅ **Hazırdır (video06):** Söz öyrənəndə 3 səhv ² | H1 "Söz öyrənəndə bu 3 səhvi edirsən?" / H2 "Problem yaddaşında deyil." / H3 "Siyahını bir dəfə oxumaq bəs deyil" | "Hansını edirsən? Mesajla yaz" |
 | **7** | C · EN · S3 · F3, F2 | Serialdan öz lüğətin (**Skript 5**) | H1 "Bu söz nə demək idi?" / H2 "Altyazıdakı sözlər sənin kartın olsun" / H3 "Qeydə yazırsan, sonra heç nə olmur" | "Serialından lüğət düzəltmək üçün mesajla yaz" |
 
 ### Həftə 2 — "Mexanizm + dillər üzrə genişlənmə"
