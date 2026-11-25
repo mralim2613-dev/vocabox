@@ -33,8 +33,8 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 5 | video05-alman-imtahan | Alman dili, imtahana hazırlaşanlar | 18 əvəzinə |
 | 6 | video06-sehvler | Söz öyrənəndə 3 səhv | 6 |
 | 7 | video07-araliqli-tekrar | Aralıqlı təkrar (G seriyası, rəqəmsiz, mənbə Cepeda 2006) | 22 |
-| 9 | video09-passiv-aktiv | Passiv və aktiv söz ehtiyatı (aysberq; Nation 2001; yeni real ekranlar: yazma rejimi) | 24 |
 | 8 | video08-leitner-tarix | Leitner qutularının mənşəyi (kağız qutu, Leitner 1972; hook H3 əsasında — H1-dəki "50 il" rəqəmdir) | 23 |
+| 9 | video09-passiv-aktiv | Passiv və aktiv söz ehtiyatı (aysberq; Nation 2001; yeni real ekranlar: yazma rejimi) | 24 |
 
 ## 5. Açıq məsələlər / növbəti addımlar
 - **video07 (22-ci gün) hazırdır.** Qeyd: tətbiqdə vaxt əsaslı planlayıcı yoxdur (məşqdə qutunu istifadəçi seçir) — reklamda "Vocabox təkrarın vaxtını sənin yerinə təyin edir" demə; "təkrarı qutularla təşkil edir" de. G seriyasında növbəti: 21, 25, 26-cı günlər (22–24 hazırdır).
