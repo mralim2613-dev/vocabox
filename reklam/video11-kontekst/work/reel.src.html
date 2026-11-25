@@ -1,0 +1,136 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A;--cr:#FFF6E3}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:var(--tx);background:var(--cr)}
+#bg{position:absolute;inset:0;background:radial-gradient(ellipse 900px 820px at 50% 44%,#FFFDF6,var(--cr) 72%)}
+svg.full{position:absolute;left:0;top:0;width:1080px;height:1920px}
+#run{position:absolute;left:540px;top:770px;transform:translate(-50%,-50%);font-weight:800;font-size:130px;letter-spacing:-4px;white-space:nowrap}
+.mc{position:absolute;transform:translate(-50%,-50%);font-weight:700;font-size:40px;padding:10px 26px;border-radius:999px;background:#fff;color:var(--mu);box-shadow:0 8px 20px rgba(23,47,41,.1);white-space:nowrap}
+#sent{position:absolute;left:200px;right:200px;top:640px;text-align:center;font-weight:800;font-size:60px;letter-spacing:-1.5px;line-height:1.5}
+#sent span{display:inline-block;margin:0 6px}
+#sent .k{background:var(--y);border-radius:14px;padding:0 12px}
+#mean{position:absolute;left:540px;top:1090px;transform:translate(-50%,-50%);font-weight:800;font-size:50px;padding:14px 36px;border-radius:999px;background:var(--p);color:#fff;white-space:nowrap}
+#list{position:absolute;left:240px;top:560px;width:600px;height:560px;border-radius:30px;background:#fff;box-shadow:0 18px 44px rgba(23,47,41,.12)}
+.li{position:absolute;left:60px;right:60px;height:96px;border-bottom:3px solid #EEF0EA;font-size:56px;font-weight:800;line-height:96px}
+.li i{position:absolute;right:0;font-style:normal;color:#C9A96A}
+#src{position:absolute;left:540px;top:1200px;transform:translate(-50%,-50%);font-size:32px;font-weight:600;color:var(--mu);white-space:nowrap;background:#fff;border-radius:999px;padding:10px 28px;box-shadow:0 6px 16px rgba(23,47,41,.08)}
+#para{position:absolute;left:150px;top:520px;width:780px;border-radius:30px;background:#fff;box-shadow:0 18px 44px rgba(23,47,41,.12);padding:50px 54px;box-sizing:border-box;font-size:48px;font-weight:600;line-height:1.55;letter-spacing:-.5px}
+#para b{font-weight:800;border-radius:10px;padding:0 6px}
+.chip{position:absolute;transform:translate(-50%,-50%);font-weight:800;font-size:42px;padding:12px 28px;border-radius:20px;background:#fff;border-top:8px solid var(--p);box-shadow:0 10px 24px rgba(23,47,41,.14);white-space:nowrap}
+.shot{position:absolute;border-radius:28px;box-shadow:0 18px 50px rgba(23,47,41,.18);overflow:hidden;background:#fff}
+.shot img{display:block;width:100%}
+.ring{position:absolute;border:7px solid var(--yd);border-radius:18px;box-sizing:border-box}
+#top{position:absolute;left:0;right:0;top:280px;display:flex;justify-content:center;align-items:center;gap:20px}
+#aiP{position:absolute;left:540px;top:1250px;transform:translate(-50%,-50%);font-weight:800;font-size:40px;padding:12px 30px;border-radius:999px;background:var(--y);white-space:nowrap}
+#ctaT{position:absolute;left:60px;right:60px;top:360px;text-align:center;font-weight:800;font-size:78px;letter-spacing:-2px;line-height:1.06}
+#bub{position:absolute;left:250px;top:840px;width:580px;height:150px}
+#ctaLogo{position:absolute;left:0;right:0;top:1080px;display:flex;justify-content:center;align-items:center;gap:20px}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:20}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px #fff,0 2px 0 #fff}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:21}
+</style></head><body>
+<div id="bg"></div>
+<div id="house">
+ <svg class="full" viewBox="0 0 1080 1920">
+  <path id="roof" d="M120 590 L540 330 L960 590 Z" fill="#D8ED9B" stroke="#204E40" stroke-width="10" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+  <path id="walls" d="M170 590 V1010 H910 V590" fill="none" stroke="#204E40" stroke-width="10" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+  <rect id="wallF" x="175" y="595" width="730" height="410" fill="#fff"/>
+  <path id="arc1" d="M430 660 C 360 590, 260 590, 250 655" stroke="#16A34A" stroke-width="6" fill="none" stroke-dasharray="1" stroke-dashoffset="1" pathLength="1" stroke-linecap="round"/>
+  <path id="arc2" d="M460 690 C 520 840, 640 830, 690 790" stroke="#16A34A" stroke-width="6" fill="none" stroke-dasharray="1" stroke-dashoffset="1" pathLength="1" stroke-linecap="round"/>
+ </svg>
+ <div id="sent"><span>She</span><span class="k" id="kw">runs</span><span>a</span><span>small</span><span id="cafe">café</span><span>near</span><span>the</span><span>station.</span></div>
+</div>
+<div id="run">run</div>
+<div class="mc" id="m0" style="left:250px;top:560px">qaçmaq?</div>
+<div class="mc" id="m1" style="left:830px;top:600px">işləmək?</div>
+<div class="mc" id="m2" style="left:540px;top:980px">idarə etmək?</div>
+<div id="mean">idarə etmək</div>
+<div id="list"></div>
+<div id="src">I. S. P. Nation, 2001</div>
+<div id="para">She <b id="p1">runs</b> a small café near the station. The <b id="p2">regulars</b> know her by name, and at lunchtime it gets <b id="p3">crowded</b>.</div>
+<div class="chip" id="c1">run</div><div class="chip" id="c2">regular</div><div class="chip" id="c3">crowded</div>
+<div id="top"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:56px;letter-spacing:-1.5px">Vocabox</b></div>
+<div class="shot" id="sh1" style="left:220px;top:400px;width:640px"><img src="__STEP1__"><div class="ring" id="rCopy"></div></div>
+<div id="aiP">→ öz AI köməkçin</div>
+<div class="shot" id="sh2" style="left:250px;top:400px;width:580px"><img src="__PREVIEW__"></div>
+<div class="shot" id="sh3" style="left:120px;top:520px;width:840px"><img src="__PROMPT__"><div class="ring" id="rCtx"></div></div>
+<div class="shot" id="sh4" style="left:240px;top:400px;width:600px"><img src="__CARD__"></div>
+<div id="ctaT">Öz mətnindən<br><span style="color:var(--p)">lüğət?</span></div>
+<svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+ <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+ <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+<div id="ctaLogo"><div style="width:72px;height:72px">__LOGO2__</div><b style="font-size:46px;letter-spacing:-1px">Vocabox</b></div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=(txt,n=1)=>{let c=0;for(let i=0;i<WORDS.length;i++)if(WORDS[i].text===txt&&++c===n)return i;throw Error('söz yoxdur: '+txt)};
+const ST=i=>WORDS[i].start+OFF;
+const E={evi:ST(IX('evi'))-LEAD,cum:ST(IX('cümlədir.'))-LEAD,siy:ST(IX('Siyahıda'))-LEAD,tek:ST(IX('tək'))-LEAD,isl:ST(IX('işləndiyini'))-LEAD,
+ cum2:ST(IX('Cümlədə'))-LEAD,men:ST(IX('mənası'))-LEAD,yan:ST(IX('yanındakı'))-LEAD,dil:ST(IX('Dilçilər'))-LEAD,ona:ST(IX('Ona'))-LEAD,oxu:ST(IX('oxuduğun'))-LEAD,
+ met:ST(IX('mətndən'))-LEAD,voc:ST(IX('Vocabox'))-LEAD,pro:ST(IX('prompt'))-LEAD,ai:ST(IX('AI'))-LEAD,cav:ST(IX('cavabı'))-LEAD,yap:ST(IX('yapışdır.'))-LEAD,
+ pro2:ST(IX('Prompt'))-LEAD,kon:ST(IX('kontekstə'))-LEAD,son:ST(IX('Sonra'))-LEAD,qut:ST(IX('qutularla'))-LEAD,oz:ST(IX('Öz'))-LEAD,mes:ST(IX('Mesajla'))-LEAD};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+const vis=(el,on)=>{el.style.display=on?(el.dataset.d||'block'):'none';return on};
+function fade(id,t,a,b,din=.35,dout=.3){const el=$(id);const on=t>=a&&t<b;vis(el,on);if(on)el.style.opacity=Math.min(eo(seg(t,a,a+din)),1-seg(t,b-dout,b));return on}
+function popc(id,t,a,b=999,dur=.4){const el=$(id);const v=seg(t,a,a+dur);const on=v>0&&t<b;vis(el,on);if(on){el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;el.style.opacity=1-seg(t,b-.3,b)}return v}
+['top','ctaLogo'].forEach(i=>$(i).dataset.d='flex');
+['run','light','set','play','get'].forEach((w,i)=>{const d=document.createElement('div');d.className='li';d.style.top=(40+i*96)+'px';d.innerHTML=w+'<i>?</i>';$('list').appendChild(d)});
+
+let arcsDone=0;function layoutArcs(){if(arcsDone)return;const h=$('house');const d=h.style.display;h.style.display='block';
+ const c=el=>{const r=el.getBoundingClientRect();return [r.left+r.width/2,r.top]};const s=$('sent').children;const [rx,ry]=c(s[1]),[sx,sy]=c(s[0]),[cx,cy]=c($('cafe'));
+ $('arc1').setAttribute('d',`M${rx} ${ry-4} C ${rx} ${ry-42}, ${sx} ${sy-42}, ${sx} ${sy-4}`);$('arc2').setAttribute('d',`M${rx} ${ry-4} C ${rx} ${ry-52}, ${cx} ${cy-52}, ${cx} ${cy-4}`);h.style.display=d;arcsDone=1}
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ // house visible: [evi, siy) and [cum2, ona)
+ const hOn=(t>=E.evi&&t<E.siy+.35)||(t>=E.cum2-.1&&t<E.ona+.35);
+ const hOp=t<E.siy+.35?1-seg(t,E.siy,E.siy+.35):Math.min(seg(t,E.cum2-.1,E.cum2+.25),1-seg(t,E.ona,E.ona+.35));
+ vis($('house'),hOn);$('house').style.opacity=hOp;
+ $('roof').style.strokeDashoffset=1-eio(seg(t,E.evi,E.evi+.6));$('roof').style.fillOpacity=seg(t,E.evi+.4,E.evi+.8);
+ $('walls').style.strokeDashoffset=1-eio(seg(t,E.evi+.2,E.evi+.8));$('wallF').style.opacity=seg(t,E.evi+.5,E.evi+.8);
+ {const s=$('sent');const v=seg(t,E.cum,E.cum+.4);s.style.opacity=v;[...s.children].forEach((c,i)=>{c.style.opacity=i===1?1:seg(t,E.cum+i*.04,E.cum+.3+i*.04)});
+  $('kw').style.opacity=t>=E.cum+.35?1:0;$('cafe').style.background=t>=E.yan?'rgba(22,163,74,.14)':'transparent';$('cafe').style.borderRadius='12px';
+  s.children[0].style.background=t>=E.yan+.2?'rgba(22,163,74,.14)':'transparent';s.children[0].style.borderRadius='12px'}
+ layoutArcs();$('arc1').style.strokeDashoffset=1-eio(seg(t,E.yan,E.yan+.5));$('arc2').style.strokeDashoffset=1-eio(seg(t,E.yan+.15,E.yan+.65));
+ // standalone "run": hook, moves into sentence slot at "cümlədir"
+ {const el=$('run');const v=eio(seg(t,E.cum,E.cum+.4));const on=t<E.cum+.4;vis(el,on);
+  el.style.left=lerp(540,445,v)+'px';el.style.top=lerp(770,688,v)+'px';el.style.fontSize=lerp(130,60,v)+'px';el.style.opacity=Math.min(eo(seg(t,0,.25)),t>=E.cum+.35?0:1);
+  el.style.transform=`translate(-50%,-50%) rotate(${(1-v)*Math.sin(t*3)*3}deg)`}
+ // candidate meanings orbit; wrong ones fade at "cümlədir"
+ ['m0','m1','m2'].forEach((id,i)=>{const el=$(id);const v=seg(t,.3+i*.25,.7+i*.25);const out=seg(t,E.cum,E.cum+.3);vis(el,v>0&&t<E.cum+.3);
+  el.style.transform=`translate(-50%,-50%) translateY(${Math.sin(t*2+i*2)*10}px) scale(${bk(v)})`;el.style.opacity=1-out});
+ // meaning pill
+ {const el=$('mean');const v=seg(t,E.cum+.2,E.cum+.6);const on=v>0&&hOn;vis(el,on);if(on){el.style.opacity=hOp;el.style.transform=`translate(-50%,-50%) scale(${bk(v)*(1+.08*Math.sin(Math.PI*seg(t,E.men,E.men+.5)))})`}}
+ // list scene
+ {const on=fade('list',t,E.siy,E.cum2+.1);if(on){const items=$('list').children;[...items].forEach((it,i)=>{it.style.opacity=seg(t,E.siy+i*.1,E.siy+.3+i*.1);
+   it.querySelector('i').style.transform=`scale(${1+.35*Math.sin(Math.PI*seg(t,E.isl+i*.06,E.isl+.4+i*.06))})`})}}
+ // source
+ {const v=popc('src',t,E.dil,E.ona+.3);}
+ // paragraph
+ {const on=fade('para',t,E.ona,E.voc+.2);if(on){[['p1',0],['p2',.25],['p3',.5]].forEach(([id,d])=>{const v=seg(t,E.oxu+d,E.oxu+d+.3);$(id).style.background=`rgba(216,237,155,${v})`})}}
+ [['c1',300],['c2',540],['c3',790]].forEach(([id,x],i)=>{const el=$(id);const v=eio(seg(t,E.met+i*.15,E.met+.6+i*.15));const on=v>0&&t<E.pro+.3;vis(el,on);
+  if(on){el.style.left=x+'px';el.style.top=lerp(760,1170,v)+'px';el.style.opacity=Math.min(1,v*3)*(1-seg(t,E.voc+.2,E.pro+.3));el.style.transform=`translate(-50%,-50%) rotate(${(i-1)*4*v}deg)`}});
+ // real screens
+ fade('top',t,E.voc,E.oz+.2);
+ {const el=$('sh1');const v=seg(t,E.voc+.1,E.voc+.6);const on=v>0&&t<E.yap+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.yap,E.yap+.3));el.style.transform=`translateY(${(1-eo(v))*80}px)`}
+  const k=640/1062,r=$('rCopy');r.style.left=(48*k)+'px';r.style.top=(652*k)+'px';r.style.width=(494*k)+'px';r.style.height=(154*k)+'px';r.style.opacity=seg(t,E.pro,E.pro+.3)}
+ popc('aiP',t,E.ai,E.yap+.2);
+ {const el=$('sh2');const v=seg(t,E.yap,E.yap+.45);const on=v>0&&t<E.pro2+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.pro2,E.pro2+.3));el.style.transform=`translateY(${(1-eo(v))*120}px)`}}
+ {const el=$('sh3');const v=seg(t,E.pro2,E.pro2+.45);const on=v>0&&t<E.son+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.son,E.son+.3));el.style.transform=`scale(${lerp(.9,1,eo(v))})`}
+  const k=840/936,r=$('rCtx');r.style.left=(8*k)+'px';r.style.top=(392*k)+'px';r.style.width=(920*k)+'px';r.style.height=(78*k)+'px';r.style.opacity=seg(t,E.kon,E.kon+.3)}
+ {const el=$('sh4');const v=seg(t,E.son,E.son+.45);const on=v>0&&t<E.oz+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.oz,E.oz+.3));el.style.transform=`translateY(${(1-eo(v))*120}px)`}}
+ // CTA
+ fade('ctaT',t,E.oz,999);
+ {const b=$('bub');const v=seg(t,E.mes,E.mes+.4);vis(b,v>0);b.style.transform=`scale(${bk(v)})`;b.style.transformOrigin='290px 150px'}
+ fade('ctaLogo',t,E.mes+.3,999);
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>

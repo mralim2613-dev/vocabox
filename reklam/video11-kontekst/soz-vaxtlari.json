@@ -1,0 +1,392 @@
+[
+ {
+  "i": 0,
+  "text": "Sözün",
+  "start": 0.16,
+  "end": 0.48
+ },
+ {
+  "i": 1,
+  "text": "evi",
+  "start": 0.56,
+  "end": 0.8
+ },
+ {
+  "i": 2,
+  "text": "cümlədir.",
+  "start": 0.84,
+  "end": 1.56
+ },
+ {
+  "i": 3,
+  "text": "Siyahıda",
+  "start": 1.76,
+  "end": 2.16
+ },
+ {
+  "i": 4,
+  "text": "tək",
+  "start": 2.24,
+  "end": 2.4
+ },
+ {
+  "i": 5,
+  "text": "söz",
+  "start": 2.48,
+  "end": 2.64
+ },
+ {
+  "i": 6,
+  "text": "görürsən,",
+  "start": 2.72,
+  "end": 3.36
+ },
+ {
+  "i": 7,
+  "text": "amma",
+  "start": 3.48,
+  "end": 3.6
+ },
+ {
+  "i": 8,
+  "text": "onun",
+  "start": 3.68,
+  "end": 3.84
+ },
+ {
+  "i": 9,
+  "text": "necə",
+  "start": 3.92,
+  "end": 4.08
+ },
+ {
+  "i": 10,
+  "text": "işləndiyini",
+  "start": 4.16,
+  "end": 4.72
+ },
+ {
+  "i": 11,
+  "text": "görmürsən.",
+  "start": 4.747,
+  "end": 5.52
+ },
+ {
+  "i": 12,
+  "text": "Cümlədə",
+  "start": 5.56,
+  "end": 5.92
+ },
+ {
+  "i": 13,
+  "text": "isə",
+  "start": 6.0,
+  "end": 6.32
+ },
+ {
+  "i": 14,
+  "text": "sözün",
+  "start": 6.4,
+  "end": 6.72
+ },
+ {
+  "i": 15,
+  "text": "mənası",
+  "start": 6.8,
+  "end": 7.36
+ },
+ {
+  "i": 16,
+  "text": "və",
+  "start": 7.44,
+  "end": 7.52
+ },
+ {
+  "i": 17,
+  "text": "yanındakı",
+  "start": 7.6,
+  "end": 8.08
+ },
+ {
+  "i": 18,
+  "text": "sözlər",
+  "start": 8.16,
+  "end": 8.56
+ },
+ {
+  "i": 19,
+  "text": "birlikdə",
+  "start": 8.64,
+  "end": 8.96
+ },
+ {
+  "i": 20,
+  "text": "görünür.",
+  "start": 9.04,
+  "end": 9.68
+ },
+ {
+  "i": 21,
+  "text": "Dilçilər",
+  "start": 9.733,
+  "end": 10.16
+ },
+ {
+  "i": 22,
+  "text": "də",
+  "start": 10.2,
+  "end": 10.4
+ },
+ {
+  "i": 23,
+  "text": "sözü",
+  "start": 10.48,
+  "end": 10.72
+ },
+ {
+  "i": 24,
+  "text": "kontekstdə",
+  "start": 10.8,
+  "end": 11.28
+ },
+ {
+  "i": 25,
+  "text": "görməyin",
+  "start": 11.36,
+  "end": 11.76
+ },
+ {
+  "i": 26,
+  "text": "vacib",
+  "start": 11.88,
+  "end": 12.08
+ },
+ {
+  "i": 27,
+  "text": "olduğunu",
+  "start": 12.16,
+  "end": 12.48
+ },
+ {
+  "i": 28,
+  "text": "deyir.",
+  "start": 12.56,
+  "end": 13.04
+ },
+ {
+  "i": 29,
+  "text": "Ona",
+  "start": 13.12,
+  "end": 13.24
+ },
+ {
+  "i": 30,
+  "text": "görə",
+  "start": 13.28,
+  "end": 13.6
+ },
+ {
+  "i": 31,
+  "text": "sözləri",
+  "start": 13.68,
+  "end": 14.08
+ },
+ {
+  "i": 32,
+  "text": "oxuduğun",
+  "start": 14.16,
+  "end": 14.56
+ },
+ {
+  "i": 33,
+  "text": "mətndən",
+  "start": 14.587,
+  "end": 15.04
+ },
+ {
+  "i": 34,
+  "text": "götür.",
+  "start": 15.093,
+  "end": 15.6
+ },
+ {
+  "i": 35,
+  "text": "Vocabox",
+  "start": 15.64,
+  "end": 16.24
+ },
+ {
+  "i": 36,
+  "text": "hazır",
+  "start": 16.32,
+  "end": 16.64
+ },
+ {
+  "i": 37,
+  "text": "prompt",
+  "start": 16.72,
+  "end": 16.96
+ },
+ {
+  "i": 38,
+  "text": "verir:",
+  "start": 17.04,
+  "end": 17.6
+ },
+ {
+  "i": 39,
+  "text": "mətnini",
+  "start": 17.627,
+  "end": 18.24
+ },
+ {
+  "i": 40,
+  "text": "öz",
+  "start": 18.4,
+  "end": 18.56
+ },
+ {
+  "i": 41,
+  "text": "AI",
+  "start": 18.64,
+  "end": 19.04
+ },
+ {
+  "i": 42,
+  "text": "köməkçinə",
+  "start": 19.12,
+  "end": 19.56
+ },
+ {
+  "i": 43,
+  "text": "göndər,",
+  "start": 19.6,
+  "end": 20.24
+ },
+ {
+  "i": 44,
+  "text": "cavabı",
+  "start": 20.293,
+  "end": 20.64
+ },
+ {
+  "i": 45,
+  "text": "tətbiqə",
+  "start": 20.667,
+  "end": 21.04
+ },
+ {
+  "i": 46,
+  "text": "yapışdır.",
+  "start": 21.08,
+  "end": 21.76
+ },
+ {
+  "i": 47,
+  "text": "Prompt",
+  "start": 21.96,
+  "end": 22.16
+ },
+ {
+  "i": 48,
+  "text": "mənanı",
+  "start": 22.24,
+  "end": 22.72
+ },
+ {
+  "i": 49,
+  "text": "mətndəki",
+  "start": 22.747,
+  "end": 23.28
+ },
+ {
+  "i": 50,
+  "text": "kontekstə",
+  "start": 23.4,
+  "end": 23.76
+ },
+ {
+  "i": 51,
+  "text": "görə",
+  "start": 23.84,
+  "end": 24.0
+ },
+ {
+  "i": 52,
+  "text": "seçməyi",
+  "start": 24.08,
+  "end": 24.4
+ },
+ {
+  "i": 53,
+  "text": "istəyir.",
+  "start": 24.48,
+  "end": 25.04
+ },
+ {
+  "i": 54,
+  "text": "Sonra",
+  "start": 25.12,
+  "end": 25.52
+ },
+ {
+  "i": 55,
+  "text": "kartları",
+  "start": 25.64,
+  "end": 26.0
+ },
+ {
+  "i": 56,
+  "text": "qutularla",
+  "start": 26.053,
+  "end": 26.56
+ },
+ {
+  "i": 57,
+  "text": "təkrar",
+  "start": 26.587,
+  "end": 26.88
+ },
+ {
+  "i": 58,
+  "text": "et.",
+  "start": 26.96,
+  "end": 27.44
+ },
+ {
+  "i": 59,
+  "text": "Öz",
+  "start": 27.509,
+  "end": 27.6
+ },
+ {
+  "i": 60,
+  "text": "mətnindən",
+  "start": 27.68,
+  "end": 28.16
+ },
+ {
+  "i": 61,
+  "text": "lüğət",
+  "start": 28.2,
+  "end": 28.48
+ },
+ {
+  "i": 62,
+  "text": "istəyirsən?",
+  "start": 28.56,
+  "end": 29.28
+ },
+ {
+  "i": 63,
+  "text": "Mesajla",
+  "start": 29.36,
+  "end": 29.68
+ },
+ {
+  "i": 64,
+  "text": "yaz.",
+  "start": 29.76,
+  "end": 30.24
+ }
+]
