@@ -1,0 +1,130 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:var(--tx);
+ background:linear-gradient(180deg,#F3F6EF 0%,#E7EEDF 100%)}
+.ab{position:absolute}
+#world{position:absolute;inset:0;transform-origin:540px 860px}
+#wm{position:absolute;left:560px;top:250px;font-family:'Inter Display';font-weight:900;font-size:1100px;line-height:1;color:transparent;-webkit-text-stroke:6px rgba(32,78,64,.09)}
+#t0{position:absolute;left:80px;top:300px;font-weight:700;font-size:54px;color:var(--mu)}
+#t1{position:absolute;left:76px;top:360px;font-family:'Inter Display';font-weight:900;font-size:190px;letter-spacing:-6px;line-height:1}
+#t1 em{font-style:normal;color:var(--p)}
+/* sual sətirləri */
+.q{position:absolute;left:70px;width:860px;height:150px;background:#fff;border-radius:34px;box-shadow:0 14px 36px rgba(23,47,41,.10);box-sizing:border-box;padding-left:150px;font-weight:800;font-size:50px;line-height:150px;letter-spacing:-1px;white-space:nowrap}
+.q .n{position:absolute;left:34px;top:30px;width:90px;height:90px;border-radius:26px;background:var(--pl);color:var(--p);font-family:'Inter Display';font-weight:900;font-size:46px;line-height:90px;text-align:center}
+.q .pm{position:absolute;right:40px;top:0;font-size:60px;font-weight:700;color:var(--mu)}
+.q.open{background:var(--tx);color:#fff}.q.open .n{background:var(--y);color:var(--tx)}.q.open .pm{color:var(--y)}
+.ans{position:absolute;border-radius:999px;font-family:'Inter Display';font-weight:900;font-size:64px;padding:8px 38px;white-space:nowrap}
+.ok{background:var(--y);color:var(--tx)}
+/* real */
+.shot{position:absolute;border-radius:30px;overflow:hidden;box-shadow:0 22px 56px rgba(23,47,41,.18);background:#F5F4EF}
+.shot img{display:block;width:100%}
+#net{position:absolute;background:#fff;border-radius:999px;font-weight:800;font-size:36px;padding:12px 26px 12px 20px;box-shadow:0 10px 26px rgba(23,47,41,.18);white-space:nowrap}
+#net svg{vertical-align:middle;margin-right:10px}
+.hlb{position:absolute;background:rgba(216,237,155,.75);mix-blend-mode:multiply;border-radius:8px;transform-origin:0 50%}
+.lang{position:absolute;width:290px;height:300px;margin-left:-145px;background:#fff;border-radius:34px;box-shadow:0 16px 40px rgba(23,47,41,.12);text-align:center}
+.lang b{display:block;margin-top:60px;font-family:'Inter Display';font-weight:900;font-size:58px;letter-spacing:-1px}
+.lang span{display:block;margin-top:24px;font-weight:800;font-size:40px;color:var(--p)}
+.lang i{display:block;font-style:normal;font-size:30px;color:var(--mu);margin-top:6px}
+#q4{position:absolute;left:70px;width:860px;height:150px;border-radius:34px;border:5px dashed rgba(32,78,64,.35);box-sizing:border-box;padding-left:50px;font-weight:700;font-size:48px;line-height:140px;color:var(--mu)}
+#cur{display:inline-block;width:6px;height:56px;background:var(--p);vertical-align:middle;margin-left:8px}
+#bal{position:absolute;left:210px;width:660px;top:1130px;height:160px;border-radius:999px;background:var(--tx);color:#fff;font-weight:800;font-size:68px;line-height:160px;box-shadow:0 24px 50px rgba(23,47,41,.3)}
+#bal .pl{position:absolute;left:20px;top:20px;width:120px;height:120px;border-radius:50%;background:var(--y)}
+#bal .tx{position:absolute;left:175px}
+#bal:after{content:'';position:absolute;left:110px;bottom:-26px;border:22px solid transparent;border-top:30px solid var(--tx);border-bottom:0}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:30}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px #fff,0 2px 0 #fff}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:31}
+</style></head><body>
+<div id="world">
+ <div id="wm">?</div>
+ <div id="t0">Vocabox haqqında</div>
+ <div id="t1"><em>3</em> sual</div>
+ <div class="q" id="q1"><div class="n">01</div>İnternet olmayanda?<span class="pm">+</span></div>
+ <div class="q" id="q2"><div class="n">02</div>Reklam var?<span class="pm">+</span></div>
+ <div class="q" id="q3"><div class="n">03</div>Hansı dillər?<span class="pm">+</span></div>
+ <div class="ans ok" id="a1">Bəli ✓</div>
+ <div class="ans ok" id="a2">Yoxdur</div>
+ <div class="shot" id="sB" style="left:280px;top:560px;width:520px"><img src="__BACK__"></div>
+ <div class="shot" id="sR" style="left:280px;top:560px;width:520px"><img src="__RIGHT__"></div>
+ <div id="net"><svg width="44" height="44" viewBox="0 0 44 44"><path d="M6 17 Q22 3 38 17" fill="none" stroke="#172F29" stroke-width="4" stroke-linecap="round"/><path d="M12 24 Q22 15 32 24" fill="none" stroke="#172F29" stroke-width="4" stroke-linecap="round"/><circle cx="22" cy="32" r="4" fill="#172F29"/><path d="M6 40 L38 6" stroke="#B23B3B" stroke-width="5" stroke-linecap="round"/></svg>İnternet yoxdur</div>
+ <div class="shot" id="sP" style="left:90px;top:560px;width:820px;border-radius:26px;background:#fff"><img src="__PRIVACY__"></div>
+ <div class="hlb" id="hl1"></div><div class="hlb" id="hl2"></div><div class="hlb" id="hl3"></div><div class="hlb" id="hl4"></div>
+ <div class="lang" id="L0" style="left:220px;top:620px"><b>İngilis</b><span>2 500+</span><i>söz və ifadə</i></div>
+ <div class="lang" id="L1" style="left:540px;top:620px"><b>Rus</b><span>5 000+</span><i>söz</i></div>
+ <div class="lang" id="L2" style="left:860px;top:620px"><b>Alman</b><span>3 000+</span><i>söz</i></div>
+ <div class="ans ok" id="a3" style="font-size:52px">hazır dəstlər</div>
+ <div id="q4">Sənin sualın…<span id="cur"></span></div>
+ <div id="bal"><div class="pl"><svg width="120" height="120" viewBox="0 0 126 126"><path d="M34 62 L92 38 L78 92 L64 72 Z" fill="#172F29"/><path d="M64 72 L92 38" stroke="#D8ED9B" stroke-width="4"/></svg></div><span class="tx">Mesaj yaz</span></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2;
+const norm=s=>s.replace(/İ/g,'i').replace(/Ü/g,'ü').toLowerCase().replace(/[.,?!:;“”"«»]/g,'');
+function Wd(w,n=1){let c=0;for(const x of WORDS)if(norm(x.text)===w&&++c===n)return x;throw Error('söz yoxdur: '+w)}
+const W=(w,n)=>Wd(w,n).start+OFF-LEAD, WE=(w,n)=>Wd(w,n).end+OFF;
+const E={voc:W('vocabox'),uc:W('üç'),bir:W('birinci'),int:W('internet'),beli:W('bəli'),ilk:W('ilk'),cih:W('cihazda'),insiz:W('internetsiz'),mesq:W('məşq'),
+ iki:W('ikinci'),rek:W('reklam'),yox:W('yoxdur'),seb:W('şəbəkəsi'),izl:W('izləmə'),kam:W('kamera'),ist:W('istəmir'),
+ ucn:W('üçüncü'),dil:W('dillər'),ing:W('ingilis'),rus:W('rus'),alm:W('alman'),haz:W('hazır'),bas:W('başqa'),mes:W('mesajla')};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+function st(id,o){const s=$(id).style;for(const k in o)s[k]=o[k]}
+function vis(id,on){$(id).style.display=on?'block':'none';return on}
+function render(t){
+ caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ // hook
+ const hk=1-seg(t,E.bir-.1,E.bir+.3);
+ if(vis('t0',hk>0))st('t0',{opacity:hk});
+ if(vis('t1',hk>0)){const p=seg(t,E.uc-.1,E.uc+.3);st('t1',{opacity:hk,transform:`scale(${t<E.uc-.1?1:(p<1?lerp(1.12,1,back(p)):1)})`,transformOrigin:'0 50%'})}
+ st('wm',{transform:`rotate(${Math.sin(t*.8)*4}deg)`,opacity:1-seg(t,E.bas,E.bas+.4)*0});
+ // sual sətirləri: hook-da siyahı (y 640/810/980); öz növbəsində yuxarı (y 290) açılır; sonra çıxır
+ const base=[640,810,980],starts=[E.bir,E.iki,E.ucn],ends=[E.iki,E.ucn,E.bas];
+ for(let i=0;i<3;i++){const id='q'+(i+1),s0=starts[i],e0=ends[i];
+  const inP=seg(t,.0+.15*i,.35+.15*i); // giriş
+  let y=base[i],o=t<.05?1:eo(inP),x=0;
+  const up=eio(seg(t,s0-.1,s0+.5)),out=eio(seg(t,e0-.2,e0+.3));
+  if(t>=E.bir-.1){ // siyahı rejimindən çıx: açıq olmayanlar gizlənir
+   const hideOthers=seg(t,E.bir-.1,E.bir+.3);
+   if(t<s0-.1){o=Math.min(o,1-hideOthers);y=base[i]+60*hideOthers}
+   else{y=lerp(base[i]+60,290,up);o=Math.min(up,1-out);x=-out*200}
+  }
+  if(!vis(id,o>0.001))continue;
+  $(id).className='q'+(t>=s0+.2&&t<e0?' open':'');$(id).querySelector('.pm').textContent=t>=s0+.2&&t<e0?'−':'+';
+  st(id,{top:y+'px',opacity:o,transform:`translateX(${x}px)`});
+ }
+ // Q1 cavabı
+ if(vis('a1',t>=E.beli-.1&&t<E.iki)){const p=seg(t,E.beli-.1,E.beli+.25);st('a1',{left:'640px',top:'470px',opacity:Math.min(p,1-seg(t,E.iki-.3,E.iki)),transform:`scale(${back(p)}) rotate(-4deg)`})}
+ if(vis('sB',t>=E.ilk-.1&&t<E.mesq+.15)){const p=seg(t,E.ilk-.1,E.ilk+.35);st('sB',{opacity:p,transform:`translateY(${(1-eo(p))*100}px)`})}
+ if(vis('sR',t>=E.mesq&&t<E.iki)){st('sR',{opacity:Math.min(seg(t,E.mesq,E.mesq+.15),1-seg(t,E.iki-.3,E.iki))})}
+ if(vis('net',t>=E.insiz-.1&&t<E.iki)){const p=seg(t,E.insiz-.1,E.insiz+.25);st('net',{left:'90px',top:'470px',opacity:Math.min(p,1-seg(t,E.iki-.3,E.iki)),transform:`scale(${back(p)}) rotate(3deg)`})}
+ // Q2 cavabı + real məxfilik mətni
+ if(vis('a2',t>=E.yox-.1&&t<E.ucn)){const p=seg(t,E.yox-.1,E.yox+.25);st('a2',{left:'620px',top:'470px',opacity:Math.min(p,1-seg(t,E.ucn-.3,E.ucn)),transform:`scale(${back(p)}) rotate(-4deg)`})}
+ const PK=820/948; // şəkil px → ekran
+ const pOn=vis('sP',t>=E.rek+.1&&t<E.ucn);if(pOn){const p=seg(t,E.rek+.1,E.rek+.45);st('sP',{opacity:Math.min(p,1-seg(t,E.ucn-.3,E.ucn)),transform:`translateY(${(1-eo(p))*80}px)`})}
+ // marker: sətir 1–2 (reklam şəbəkəsi … yoxdur), sətir 2–3 (GPS, kamera, mikrofon … istəmir) — real mətn sətirləri
+ const L=[[18,140,846],[18,206,470],[600,206,305],[18,274,640]]; // [x,y,w] şəkil px
+ const hls=[['hl1',L[0],E.seb-.1],['hl2',L[1],E.izl-.1],['hl3',L[2],E.kam-.1],['hl4',L[3],E.kam+.35]];
+ hls.forEach(([id,[x,y,w],t0])=>{if(!vis(id,pOn&&t>=t0)){return}const p=eo(seg(t,t0,t0+.35));
+  st(id,{left:(90+x*PK)+'px',top:(560+y*PK)+'px',width:(w*PK)+'px',height:(54*PK)+'px',transform:`scaleX(${p})`,opacity:1-seg(t,E.ucn-.3,E.ucn)})});
+ // Q3 dillər
+ const lt=[E.ing,E.rus,E.alm];
+ for(let i=0;i<3;i++){if(!vis('L'+i,t>=lt[i]-.1&&t<E.bas+.2))continue;const p=seg(t,lt[i]-.1,lt[i]+.3),q=seg(t,E.bas-.1,E.bas+.2);
+  st('L'+i,{opacity:Math.min(p,1-q),transform:`translateY(${(1-eo(p))*80}px) scale(${lerp(.9,1,eo(p))})`})}
+ if(vis('a3',t>=E.haz-.1&&t<E.bas+.2)){const p=seg(t,E.haz-.1,E.haz+.25);st('a3',{left:'340px',top:'990px',opacity:Math.min(p,1-seg(t,E.bas-.1,E.bas+.2)),transform:`scale(${back(p)})`})}
+ // CTA
+ if(vis('q4',t>=E.bas-.1)){const p=seg(t,E.bas-.1,E.bas+.35);st('q4',{top:lerp(700,560,eo(p))+'px',opacity:p});$('cur').style.opacity=(Math.floor(t*2.5)%2)?0:1}
+ if(vis('bal',t>=E.mes-.1)){const m=seg(t,E.mes-.1,E.mes+.35);st('bal',{opacity:Math.min(1,m*2),transform:`scale(${m<1?lerp(.6,1,back(m)):1+.025*Math.sin((t-E.mes)*4)})`})}
+ const ch=[0,E.bir,E.iki,E.ucn,E.bas,99];let k=0;while(t>=ch[k+1])k++;
+ $('world').style.transform=`scale(${1+.025*eio(seg(t,ch[k],Math.min(ch[k+1],ch[k]+3)))})`;
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>

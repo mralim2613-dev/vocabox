@@ -1,0 +1,5 @@
+Səsləndirmə: ElevenLabs — model eleven_v4, səs "Abbas - Engaging Delivery" (IVMbfLv3KqUc4qDj6Yif), tək take.
+Fon musiqisi: Epidemic Sound — "Ducere", Christoffer Moe Ditlevsen. Trekin əvvəlindən.
+Effektlər (Epidemic Sound): "Mechanical, Switch, Light Switch, On, Off"; "User Interface, Click, UI Buttons, Bubbly, Select"; "Designed, Whoosh, Soft Airy"; "User Interface, Alert, Tonal, Soft Digital Confirm"
+Şəkillər: Vocabox loqosu və tətbiqin real ekran görüntüləri (lokal veb versiya, Playwright) — layihənin öz materialları; məxfilik siyasəti mətni tətbiqin özündəndir.
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın Epidemic Sound hesabına bağlı olduğunu yoxlayın. Musiqi və effekt faylları (dl/) repoya əlavə edilmir.
