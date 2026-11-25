@@ -148,7 +148,7 @@ Məqsəd: izləyiciyə **niyə** unutduğunu və **niyə** təkrarın işlədiyi
 | Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
 |---|---|---|---|---|
 | **21** | G · ümumi · S2 · F2 | **Unutma əyrisi:** sözlər niyə yadından çıxır? ⁷ | H1 "1885-ci ildə bir alim özünü sınağa çəkdi" / H2 "Unutmağın da qrafiki var" / H3 "Dünən öyrəndin, bu gün yoxdur. Niyə?" | "Saxla" + "Əyrini necə düzəldirik — mesajla yaz" |
-| **22** | G · ümumi · S2–3 · F2 | **Aralıqlı təkrar:** az, amma vaxtında ⁸ | H1 "Eyni vaxt, fərqli nəticə" / H2 "Bir gecədə əzbərləmək niyə tez unudulur?" / H3 "Təkrarın vaxtı onun sayından vacibdir" | "Mesajla yaz, təkrarı necə planladığımızı göstərək" |
+| **22** | G · ümumi · S2–3 · F2 | ✅ **Hazırdır (video07):** **Aralıqlı təkrar:** az, amma vaxtında ⁸ | H1 "Eyni vaxt, fərqli nəticə" / H2 "Bir gecədə əzbərləmək niyə tez unudulur?" / H3 "Təkrarın vaxtı onun sayından vacibdir" | "Mesajla yaz, təkrarı necə planladığımızı göstərək" |
 | **23** | G · ümumi · S3 · F2 | **Leitner qutuları:** 1970-ci illərin kağız sistemi ⁹ | H1 "Bu metod 50 ildən çoxdur kağız qutularda işləyir" / H2 "Bir qutu, bir qayda" / H3 "Düz bildin — irəli. Səhv — geri." | "Mesajla yaz, qutularını quraq" |
 | **24** | G · ümumi · S2 · F2 | **"Başa düşürəm, amma danışa bilmirəm":** passiv və aktiv söz ehtiyatı ¹⁰ | H1 "Başa düşürsən, amma danışa bilmirsən? Səbəbi var" / H2 "Sözü tanımaq və xatırlamaq fərqli bacarıqdır" / H3 "Sənin iki lüğətin var" | "Hansı dildə ilişirsən? Mesajla yaz" |
 | **25** | G · ümumi · S2–3 · F2 | **Oxumaq vs özünü yoxlamaq** (aktiv xatırlama) ¹¹ | H1 "Yenidən oxumaq səni aldada bilər" / H2 "Cavaba baxmadan əvvəl 3 saniyə dayan" / H3 "Bildiyini hiss etmək ≠ bilmək" | "Mesajla yaz, necə işlədiyini göstərək" |

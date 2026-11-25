@@ -1,0 +1,202 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A;--ink:#0F211B;--co:#E58C76}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:#fff;background:var(--ink)}
+#bg{position:absolute;inset:0;background:
+ radial-gradient(ellipse 900px 800px at 50% 40%,rgba(216,237,155,.10),transparent 70%),
+ linear-gradient(rgba(216,237,155,.06) 2px,transparent 2px) 0 0/60px 60px,
+ linear-gradient(90deg,rgba(216,237,155,.06) 2px,transparent 2px) 0 0/60px 60px,var(--ink)}
+#world{position:absolute;inset:0;transform-origin:540px 860px}
+.h{position:absolute;left:60px;right:60px;text-align:center;font-weight:800;letter-spacing:-1.5px;line-height:1.08}
+.lane{position:absolute;left:70px;width:860px;height:420px;border-radius:34px;background:rgba(255,255,255,.035);box-shadow:inset 0 0 0 2px rgba(216,237,155,.16)}
+.lane .lb{position:absolute;left:40px;top:28px;font-size:38px;font-weight:800;letter-spacing:-.5px;display:flex;align-items:center;gap:16px}
+.moon{width:36px;height:36px;border-radius:50%;box-shadow:inset -11px -4px 0 0 #f3e7b5}
+.sun{width:22px;height:22px;border-radius:50%;background:var(--y);box-shadow:0 0 0 7px rgba(216,237,155,.22)}
+.col{position:absolute;width:120px;margin-left:-60px}
+.col i{display:block;margin:0 auto;width:46px;height:40px;border-radius:10px;border:3px solid rgba(255,255,255,.35);border-top-width:10px;box-sizing:border-box}
+.col u{display:block;margin:12px auto 0;width:0;height:262px;border-left:3px dashed rgba(255,255,255,.14)}
+.tile{position:absolute;width:124px;height:40px;margin:-20px 0 0 -62px;border-radius:12px;background:#fff;color:var(--tx);font-size:23px;font-weight:800;text-align:center;line-height:40px;letter-spacing:-.3px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.tile.b{background:var(--y)}
+svg.sp{position:absolute}
+#graph{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.chip{position:absolute;border-radius:999px;font-weight:800;font-size:34px;padding:10px 26px 10px 20px;display:flex;align-items:center;gap:14px;white-space:nowrap}
+.chip s{display:block;width:40px;height:8px;border-radius:4px;text-decoration:none}
+#term{position:absolute;left:150px;right:150px;top:470px;height:230px;border-radius:40px;background:#fff;color:var(--tx);text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+#term b{display:block;font-size:84px;letter-spacing:-2.5px;padding-top:42px}
+#term span{display:block;font-size:34px;color:var(--mu);font-weight:600;margin-top:6px}
+.paper{position:absolute;width:230px;height:300px;margin:-150px 0 0 -115px;border-radius:18px;background:#f4f3ec;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.paper p{margin:0;position:absolute;left:26px;right:26px;height:12px;border-radius:6px;background:#d6dbd2}
+.paper em{position:absolute;right:-18px;top:-18px;width:62px;height:62px;border-radius:50%;background:var(--y);color:var(--tx);font-style:normal;font-weight:800;font-size:40px;line-height:62px;text-align:center}
+#src{position:absolute;left:90px;right:90px;top:1236px;text-align:center;font-size:30px;font-weight:600;color:rgba(255,255,255,.78)}
+/* light world */
+#light{position:absolute;inset:0;background:radial-gradient(ellipse 950px 760px at 50% 42%,var(--pl),#fff 72%);display:none}
+#lw{position:absolute;inset:0;display:none;color:var(--tx)}
+.shot{position:absolute;border-radius:28px;box-shadow:0 18px 50px rgba(32,78,64,.16),0 0 0 2px var(--pl);overflow:hidden;background:#fff}
+.shot img{display:block;width:100%}
+.pill{position:absolute;border-radius:999px;font-weight:800;font-size:42px;padding:12px 30px;white-space:nowrap;z-index:7}
+.pp{background:var(--p);color:#fff}.py{background:var(--y);color:var(--tx)}
+#ring{position:absolute;border:6px solid var(--yd);border-radius:22px;box-sizing:border-box}
+#top{position:absolute;left:0;right:0;top:300px;display:flex;justify-content:center;align-items:center;gap:20px}
+#bub{position:absolute;left:250px;top:880px;width:580px;height:150px}
+#ctaLogo{position:absolute;left:0;right:0;top:1120px;display:flex;justify-content:center;align-items:center;gap:20px}
+/* caption */
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:20}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+body.lt #cap b{color:var(--tx);text-shadow:0 0 12px #fff,0 2px 0 #fff}
+#cap b.on,body.lt #cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--y);z-index:21}
+body.lt #prog{background:var(--p)}
+</style></head><body>
+<div id="bg"></div>
+<div id="world">
+ <div class="h" id="hk1" style="top:268px;font-size:92px">Eyni vaxt,</div>
+ <div class="h" id="hk2" style="top:268px;font-size:92px;color:var(--y)">fərqli nəticə.</div>
+ <div class="h" id="t2" style="top:300px;font-size:60px;opacity:0">Eyni sözlər · <span style="color:var(--y)">iki yol</span></div>
+ <div class="lane" id="laneA" style="top:440px"><div class="lb"><div class="moon"></div>Bir gecədə</div></div>
+ <div class="lane" id="laneB" style="top:900px"><div class="lb"><div class="sun"></div>Bir neçə günə bölünmüş</div></div>
+ <svg id="graph" viewBox="0 0 1080 1920"></svg>
+ <div class="chip" id="lgA" style="left:120px;top:300px;background:rgba(229,140,118,.16);color:#f6c3b6"><s style="background:var(--co)"></s>Bir gecədə</div>
+ <div class="chip" id="lgB" style="left:500px;top:300px;background:rgba(216,237,155,.16);color:var(--y)"><s style="background:var(--y)"></s>Bölünmüş</div>
+ <div id="term"><b>Aralıqlı təkrar</b><span>spacing effect</span></div>
+ <div id="papers"></div>
+ <div id="src">Mənbə: Cepeda və həmkarları, 2006 (meta-analiz)</div>
+</div>
+<div id="light"></div>
+<div id="lw">
+ <div id="top"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:56px;letter-spacing:-1.5px">Vocabox</b></div>
+ <div class="shot" id="shBox" style="left:178px;top:430px;width:724px"><img src="__BOXES__"></div>
+ <div class="shot" id="shWeak" style="left:150px;top:700px;width:780px"><img src="__WEAK__"><div id="ring"></div></div>
+ <div class="pill py" id="pUp">Düz → bir qutu irəli</div>
+ <div class="pill pp" id="pWeak">Çətin söz yenə qarşında</div>
+ <div class="h" id="ctaT" style="top:330px;font-size:78px;opacity:0">Təkrarı birlikdə<br><span style="color:var(--p)">planlayaq</span></div>
+ <div id="mini"></div>
+ <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+  <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+ <div id="ctaLogo"><div style="width:72px;height:72px">__LOGO2__</div><b style="font-size:46px;letter-spacing:-1px">Vocabox</b></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=(txt,n=1)=>{let c=0;for(let i=0;i<WORDS.length;i++)if(WORDS[i].text===txt&&++c===n)return i;throw Error('söz yoxdur: '+txt)};
+const ST=i=>WORDS[i].start+OFF,EN=i=>WORDS[i].end+OFF;
+const E={fr:ST(IX('fərqli'))-LEAD,net:ST(IX('nəticə.'))-LEAD,s2:ST(IX('Eyni',2))-LEAD,iki:ST(IX('iki'))-LEAD,gec:ST(IX('gecəyə'))-LEAD,
+ gun:ST(IX('günə'))-LEAD,hem:ST(IX('həmin'))-LEAD,bol:ST(IX('bölürsən.'))-LEAD,s3:ST(IX('Ertəsi'))-LEAD,az:ST(IX('az'))-LEAD,amma:ST(IX('Amma'))-LEAD,
+ kec:ST(IX('keçdikcə,'))-LEAD,bolen:ST(IX('bölən'))-LEAD,daha:ST(IX('daha'))-LEAD,s4:ST(IX('Buna'))-LEAD,ara:ST(IX('aralıqlı'))-LEAD,
+ psi:ST(IX('psixoloqlar'))-LEAD,tec:ST(IX('təcrübədə'))-LEAD,yox:ST(IX('yoxlayıb.'))-LEAD,
+ vbx:ST(IX('Vocabox'))-LEAD,qut:ST(IX('qutularla'))-LEAD,ire:ST(IX('irəli'))-LEAD,cet:ST(IX('çətin'))-LEAD,yene:ST(IX('yenə'))-LEAD,
+ msg:ST(IX('Mesajla'))-LEAD,plan:ST(IX('planladığımızı'))-LEAD};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+const vis=(el,on)=>{el.style.display=on?'block':'none';return on};
+function fade(id,t,a,b,din=.35,dout=.3){const el=$(id);const on=t>=a&&t<b;el.style.display=on?(el.dataset.d||'block'):'none';if(on)el.style.opacity=Math.min(eo(seg(t,a,a+din)),1-seg(t,b-dout,b));return on?Math.min(eo(seg(t,a,a+din)),1):0}
+function popc(el,t,a,x,y,b=999,dur=.4){const v=seg(t,a,a+dur);const on=v>0&&t<b;el.style.display=on?'block':'none';if(!on)return;el.style.left=x+'px';el.style.top=y+'px';el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;el.style.opacity=1-seg(t,b-.3,b)}
+['lgA','lgB','top','ctaLogo'].forEach(i=>$(i).dataset.d='flex');
+
+// ---- lanes: columns + tiles
+const COLX=[230,380,530,680,830],LA=440,LB=900;
+[LA,LB].forEach((y0,l)=>COLX.forEach((x,k)=>{const d=document.createElement('div');d.className='col';d.style.left=x+'px';d.style.top=(y0+96)+'px';d.innerHTML='<i></i><u></u>';d.dataset.l=l;d.dataset.k=k;$('world').appendChild(d)}));
+const COLS=[...document.querySelectorAll('.col')];
+const WD=['deadline','borrow','likely','remind','achieve','support'];
+const PILE=i=>({x:290+(i%3)*150,y:(i<3?190:250)});
+const tA=WD.map(w=>{const d=document.createElement('div');d.className='tile';d.textContent=w;$('world').appendChild(d);return d});
+const tB=WD.map(w=>{const d=document.createElement('div');d.className='tile b';d.textContent=w;$('world').appendChild(d);return d});
+const DIST=[[0,0],[0,1],[1,0],[2,0],[3,0],[4,0]];
+// sparklines (hook tease)
+function spark(id,y0,col,fall){const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('class','sp');s.id=id;s.setAttribute('viewBox','0 0 200 200');s.style.cssText=`left:710px;top:${y0+150}px;width:180px;height:180px`;
+ const p=fall?'M10 30 C 50 40, 70 140, 190 165':'M10 30 C 60 40, 90 55, 190 58';s.innerHTML=`<path d="M10 10 V190 H195" stroke="rgba(255,255,255,.3)" stroke-width="4" fill="none"/><path class="ln" d="${p}" stroke="${col}" stroke-width="10" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>`;$('world').appendChild(s);return s}
+const spA=spark('spA',LA,'#E58C76',1),spB=spark('spB',LB,'#D8ED9B',0);
+
+// ---- graph
+const GX=x=>150+x*760,GY=r=>1170-r*640;
+const massed=x=>x<.05?0.15+x/.05*.8:Math.max(.11,.95*Math.exp(-(x-.05)/.2));
+const REV=[.05,.2,.4,.65],TAU=[.2,.3,.5,.85];
+const spaced=x=>{if(x<.05)return 0.15+x/.05*.8;let k=0;for(let j=0;j<REV.length;j++)if(x>=REV[j])k=j;const base=.95*Math.exp(-(x-REV[k])/TAU[k]);
+ if(k<REV.length-1&&x>REV[k+1]-.02){const pre=.95*Math.exp(-(REV[k+1]-.02-REV[k])/TAU[k]);return lerp(pre,.95,(x-(REV[k+1]-.02))/.02)}return base};
+const path=f=>{let d='';for(let i=0;i<=400;i++){const x=i/400;d+=(i?'L':'M')+GX(x).toFixed(1)+' '+GY(f(x)).toFixed(1)}return d};
+$('graph').innerHTML=`<g id="gAx"><path d="M150 500 V1170 H905" stroke="rgba(255,255,255,.55)" stroke-width="5" fill="none" stroke-linecap="round"/>
+ <path d="M150 480 l-14 26 h28z M925 1170 l-26 -14 v28z" fill="rgba(255,255,255,.55)"/>
+ <text x="176" y="530" font-family="Inter" font-weight="700" font-size="32" fill="rgba(255,255,255,.75)">yadda qalan</text>
+ <text x="905" y="1226" text-anchor="end" font-family="Inter" font-weight="700" font-size="32" fill="rgba(255,255,255,.75)">vaxt</text></g>
+ <line id="mk" x1="0" y1="560" x2="0" y2="1170" stroke="rgba(255,255,255,.5)" stroke-width="3" stroke-dasharray="10 10"/>
+ <text id="mkT" x="0" y="606" text-anchor="middle" font-family="Inter" font-weight="700" font-size="32" fill="#fff">ertəsi gün</text>
+ <path id="cA" d="${path(massed)}" stroke="#E58C76" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+ <path id="cB" d="${path(spaced)}" stroke="#D8ED9B" stroke-width="11" fill="none" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+ ${REV.map((x,j)=>`<circle id="rv${j}" cx="${GX(x)}" cy="${GY(.95)}" r="14" fill="#D8ED9B" stroke="#0F211B" stroke-width="5"/>`).join('')}
+ <g id="gap"><path id="gapL" d="" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <rect id="gapR" x="560" y="0" width="340" height="66" rx="33" fill="#D8ED9B"/><text id="gapT" x="730" y="0" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#172F29">daha çox qalır</text></g>`;
+// x along the curve where drawing has reached (approx: path length ~ proportional to x is not exact; use dashoffset by x)
+const lenTo={};function drawTo(id,f,x){const p=$(id);if(!lenTo[id]){const L=[];let acc=0,px=GX(0),py=GY(f(0));for(let i=0;i<=400;i++){const X=GX(i/400),Y=GY(f(i/400));acc+=Math.hypot(X-px,Y-py);px=X;py=Y;L.push(acc)}lenTo[id]=L.map(v=>v/acc)}
+ const L=lenTo[id];p.style.strokeDashoffset=1-L[Math.round(cl(x)*400)]}
+// papers
+const PP=[[330,980,-8],[540,960,2],[750,985,9]];const papers=PP.map(([x,y,r],j)=>{const d=document.createElement('div');d.className='paper';
+ d.innerHTML=[40,74,108,142,190,224].map((y,i)=>`<p style="top:${y}px;${i==4?'background:#c7d9a8;right:80px':i%2?'right:60px':''}"></p>`).join('')+'<em>✓</em>';$('papers').appendChild(d);return d});
+// mini strip for CTA
+const MI=[];COLX.forEach((x,k)=>{const c=document.createElement('div');c.className='col';c.style.left=(x)+'px';c.style.top='640px';c.innerHTML='<i style="border-color:#204E40"></i>';$('mini').appendChild(c);MI.push(c)});
+const mt=WD.map((w,i)=>{const d=document.createElement('div');d.className='tile b';d.textContent=w;d.style.boxShadow='0 6px 16px rgba(32,78,64,.18)';$('mini').appendChild(d);return d});
+
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ const ss=[0,E.s2,E.s3,E.s4,E.vbx,E.msg].filter(a=>a<=t).at(-1);$('world').style.transform=`scale(${1+0.03*eio(seg(t,ss,ss+3))})`;
+ // hook titles
+ const h1=$('hk1'),h2=$('hk2');
+ if(vis(h1,t<E.s2)){h1.style.opacity=1-seg(t,E.s2-.3,E.s2);h1.style.transform=`translateY(${-lerp(0,0,1)}px)`}
+ if(vis(h2,t>=E.fr&&t<E.s2)){const v=eo(seg(t,E.fr,E.fr+.4));h2.style.opacity=Math.min(v,1-seg(t,E.s2-.3,E.s2));h2.style.top=(268+lerp(140,100,v))+'px'}
+ fade('t2',t,E.s2,E.s3);
+ // lanes
+ const laneOn=t<E.s3+.35;['laneA','laneB'].forEach((id,l)=>{const el=$(id);vis(el,laneOn);el.style.opacity=Math.min(eo(seg(t,.1+l*.12,.5+l*.12)),1-seg(t,E.s3,E.s3+.35))});
+ const lo=1-seg(t,E.s3,E.s3+.35);
+ COLS.forEach(c=>{const k=+c.dataset.k,l=+c.dataset.l;const v=eo(seg(t,E.iki+k*.08+l*.05,E.iki+.35+k*.08+l*.05));vis(c,laneOn&&v>0);c.style.opacity=v*lo;
+   if(l===0&&k===0)c.firstChild.style.borderColor=t>=E.gec?'#f3e7b5':'';if(l===1)c.firstChild.style.borderColor=t>=E.hem+.5+k*.15?'#D8ED9B':''});
+ // tiles
+ [[tA,LA,0],[tB,LB,1]].forEach(([arr,y0,l])=>arr.forEach((el,i)=>{if(!vis(el,laneOn))return;const p0=PILE(i);let x=p0.x,y=y0+p0.y;
+   const tin=.25+l*.12+i*.05;const vin=seg(t,tin,tin+.35);
+   if(l===0){const v=eio(seg(t,E.gec+i*.04,E.gec+.7+i*.04));x=lerp(x,COLX[0],v);y=lerp(y,y0+170+i*44,v)}
+   else{const [k,r]=DIST[i];const a=E.hem+i*.15;const v=eio(seg(t,a,a+.7));x=lerp(x,COLX[k],v);y=lerp(y,y0+170+r*44,v)-Math.sin(Math.PI*v)*50}
+   el.style.left=x+'px';el.style.top=y+'px';el.style.opacity=Math.min(eo(vin),lo);el.style.transform=`scale(${bk(vin)})`}));
+ // sparklines tease
+ [[spA,0],[spB,1]].forEach(([s,l])=>{const on=t>=E.net-.1&&t<E.s2+.3;vis(s,on);if(!on)return;s.style.opacity=1-seg(t,E.s2,E.s2+.3);s.querySelector('.ln').style.strokeDashoffset=1-eo(seg(t,E.net+l*.15,E.net+.8+l*.15))});
+ // graph
+ const gOn=t>=E.s3&&t<E.vbx+.4;vis($('graph'),gOn);
+ if(gOn){const gv=eo(seg(t,E.s3,E.s3+.4));const dim=lerp(1,.22,eo(seg(t,E.s4,E.s4+.5)));$('graph').style.opacity=Math.min(gv,1-seg(t,E.vbx,E.vbx+.4))*dim;
+  const xd=t<E.amma?lerp(0,.14,eio(seg(t,E.s3+.1,E.az))):lerp(.14,1,eio(seg(t,E.kec-.1,E.bolen+.3)));
+  drawTo('cA',massed,xd);drawTo('cB',spaced,xd);REV.forEach((x,j)=>{const c=$('rv'+j);c.style.opacity=xd>=x?1:0;c.setAttribute('cy',GY(spaced(x+.001)))});
+  const mx=GX(xd);$('mk').setAttribute('x1',mx);$('mk').setAttribute('x2',mx);$('mkT').setAttribute('x',Math.max(330,Math.min(mx,800)));
+  const mo=seg(t,E.s3+.2,E.s3+.5)*(1-seg(t,E.daha,E.daha+.3));$('mk').style.opacity=mo;$('mkT').style.opacity=mo;
+  $('mkT').textContent=t<E.amma?'ertəsi gün':'vaxt keçdikcə';
+  const gp=seg(t,E.daha,E.daha+.5);$('gap').style.opacity=gp;const X=GX(.97),ya=GY(massed(.97)),yb=GY(spaced(.97));
+  $('gapL').setAttribute('d',`M${X-22} ${yb+12} h22 V${ya-12} h-22`);$('gapR').setAttribute('y',(ya+yb)/2-33-0);$('gapR').setAttribute('x',X-40-340);$('gapT').setAttribute('x',X-40-170);$('gapT').setAttribute('y',(ya+yb)/2+12);
+  $('gapR').setAttribute('transform',`translate(0 ${-(1-eo(gp))*20})`)}
+ fade('lgA',t,E.s3+.15,E.s4+.3);fade('lgB',t,E.s3+.3,E.s4+.3);
+ // term + papers + source
+ {const el=$('term');const v=seg(t,E.ara,E.ara+.45);const on=v>0&&t<E.vbx+.3;vis(el,on);if(on){el.style.opacity=Math.min(1,v*2)*(1-seg(t,E.vbx,E.vbx+.3));el.style.transform=`scale(${bk(v)})`}}
+ papers.forEach((p,j)=>{const [x,y,r]=PP[j];const a=E.psi+j*.15;const v=seg(t,a,a+.45);const on=v>0&&t<E.vbx+.3;vis(p,on);if(!on)return;
+  p.style.left=x+'px';p.style.top=(y+(1-eo(v))*120)+'px';p.style.transform=`rotate(${r*eo(v)}deg)`;p.style.opacity=Math.min(1,v*2)*(1-seg(t,E.vbx,E.vbx+.3));
+  const em=p.querySelector('em');const ev=seg(t,E.tec+j*.12,E.tec+.35+j*.12);em.style.transform=`scale(${bk(ev)})`;em.style.opacity=ev>0?1:0});
+ fade('src',t,E.yox,E.vbx+.3);
+ // light wipe
+ const wv=seg(t,E.vbx,E.vbx+.75);const L=$('light');vis(L,wv>0);if(wv>0){const r=lerp(0,1300,eio(wv));L.style.clipPath=`circle(${r}px at 540px 900px)`}
+ document.body.classList.toggle('lt',wv>.5);
+ const lw=$('lw');vis(lw,t>=E.vbx+.3);
+ if(t>=E.vbx+.3){fade('top',t,E.vbx+.35,E.msg+.3);
+  const sb=$('shBox');const v=seg(t,E.qut,E.qut+.5);vis(sb,v>0&&t<E.msg+.3);sb.style.opacity=Math.min(eo(v),1-seg(t,E.msg,E.msg+.3));sb.style.transform=`translateY(${(1-eo(v))*80}px)`;
+  popc($('pUp'),t,E.ire,540,1000,E.cet+.25);
+  const sw=$('shWeak');const w2=seg(t,E.cet,E.cet+.55);vis(sw,w2>0&&t<E.msg+.3);sw.style.opacity=Math.min(eo(w2),1-seg(t,E.msg,E.msg+.3));sw.style.transform=`translateY(${(1-eo(w2))*260}px)`;
+  const ring=$('ring'),k=780/1062;ring.style.left=(540*k)+'px';ring.style.top=(108*k)+'px';ring.style.width=(470*k)+'px';ring.style.height=(146*k)+'px';ring.style.opacity=seg(t,E.yene,E.yene+.3);
+  popc($('pWeak'),t,E.yene,540,640,E.msg+.2);
+  // CTA
+  fade('ctaT',t,E.msg,999);
+  MI.forEach((c,k)=>{const v=eo(seg(t,E.msg+.1+k*.06,E.msg+.45+k*.06));vis(c,v>0);c.style.opacity=v});
+  mt.forEach((el,i)=>{const [k,r]=DIST[i];const a=E.plan+i*.08;const v=seg(t,a,a+.4);vis(el,v>0);el.style.left=COLX[k]+'px';el.style.top=(700+r*46)+'px';el.style.transform=`scale(${bk(v)})`});
+  const b=$('bub');const bv=seg(t,E.msg+.15,E.msg+.55);vis(b,bv>0);b.style.transform=`scale(${bk(bv)})`;b.style.transformOrigin='290px 150px';
+  fade('ctaLogo',t,E.msg+.4,999);}
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>

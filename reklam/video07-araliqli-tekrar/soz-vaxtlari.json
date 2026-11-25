@@ -1,0 +1,404 @@
+[
+ {
+  "i": 0,
+  "text": "Eyni",
+  "start": 0.145,
+  "end": 0.28
+ },
+ {
+  "i": 1,
+  "text": "vaxt,",
+  "start": 0.32,
+  "end": 0.88
+ },
+ {
+  "i": 2,
+  "text": "fərqli",
+  "start": 0.96,
+  "end": 1.28
+ },
+ {
+  "i": 3,
+  "text": "nəticə.",
+  "start": 1.32,
+  "end": 2.16
+ },
+ {
+  "i": 4,
+  "text": "Eyni",
+  "start": 2.2,
+  "end": 2.4
+ },
+ {
+  "i": 5,
+  "text": "sözləri",
+  "start": 2.48,
+  "end": 3.04
+ },
+ {
+  "i": 6,
+  "text": "iki",
+  "start": 3.16,
+  "end": 3.28
+ },
+ {
+  "i": 7,
+  "text": "yolla",
+  "start": 3.32,
+  "end": 3.6
+ },
+ {
+  "i": 8,
+  "text": "öyrənmək",
+  "start": 3.64,
+  "end": 4.04
+ },
+ {
+  "i": 9,
+  "text": "olar.",
+  "start": 4.08,
+  "end": 4.64
+ },
+ {
+  "i": 10,
+  "text": "Hamısını",
+  "start": 4.72,
+  "end": 5.12
+ },
+ {
+  "i": 11,
+  "text": "bir",
+  "start": 5.16,
+  "end": 5.2
+ },
+ {
+  "i": 12,
+  "text": "gecəyə",
+  "start": 5.28,
+  "end": 5.6
+ },
+ {
+  "i": 13,
+  "text": "yığırsan,",
+  "start": 5.68,
+  "end": 6.32
+ },
+ {
+  "i": 14,
+  "text": "ya",
+  "start": 6.4,
+  "end": 6.48
+ },
+ {
+  "i": 15,
+  "text": "da",
+  "start": 6.64,
+  "end": 6.8
+ },
+ {
+  "i": 16,
+  "text": "həmin",
+  "start": 6.827,
+  "end": 7.12
+ },
+ {
+  "i": 17,
+  "text": "vaxtı",
+  "start": 7.2,
+  "end": 7.52
+ },
+ {
+  "i": 18,
+  "text": "bir",
+  "start": 7.56,
+  "end": 7.6
+ },
+ {
+  "i": 19,
+  "text": "neçə",
+  "start": 7.68,
+  "end": 7.88
+ },
+ {
+  "i": 20,
+  "text": "günə",
+  "start": 7.92,
+  "end": 8.08
+ },
+ {
+  "i": 21,
+  "text": "bölürsən.",
+  "start": 8.16,
+  "end": 8.987
+ },
+ {
+  "i": 22,
+  "text": "Ertəsi",
+  "start": 9.013,
+  "end": 9.36
+ },
+ {
+  "i": 23,
+  "text": "gün",
+  "start": 9.44,
+  "end": 9.68
+ },
+ {
+  "i": 24,
+  "text": "fərq",
+  "start": 9.707,
+  "end": 10.0
+ },
+ {
+  "i": 25,
+  "text": "az",
+  "start": 10.12,
+  "end": 10.24
+ },
+ {
+  "i": 26,
+  "text": "görünür.",
+  "start": 10.293,
+  "end": 10.853
+ },
+ {
+  "i": 27,
+  "text": "Amma",
+  "start": 10.907,
+  "end": 11.04
+ },
+ {
+  "i": 28,
+  "text": "vaxt",
+  "start": 11.08,
+  "end": 11.32
+ },
+ {
+  "i": 29,
+  "text": "keçdikcə,",
+  "start": 11.36,
+  "end": 12.107
+ },
+ {
+  "i": 30,
+  "text": "təkrarı",
+  "start": 12.133,
+  "end": 12.56
+ },
+ {
+  "i": 31,
+  "text": "bölən",
+  "start": 12.613,
+  "end": 12.96
+ },
+ {
+  "i": 32,
+  "text": "daha",
+  "start": 13.04,
+  "end": 13.2
+ },
+ {
+  "i": 33,
+  "text": "çox",
+  "start": 13.24,
+  "end": 13.36
+ },
+ {
+  "i": 34,
+  "text": "yadda",
+  "start": 13.44,
+  "end": 13.68
+ },
+ {
+  "i": 35,
+  "text": "saxlayır.",
+  "start": 13.76,
+  "end": 14.427
+ },
+ {
+  "i": 36,
+  "text": "Buna",
+  "start": 14.453,
+  "end": 14.8
+ },
+ {
+  "i": 37,
+  "text": "aralıqlı",
+  "start": 14.84,
+  "end": 15.28
+ },
+ {
+  "i": 38,
+  "text": "təkrar",
+  "start": 15.36,
+  "end": 15.68
+ },
+ {
+  "i": 39,
+  "text": "deyilir",
+  "start": 15.76,
+  "end": 16.24
+ },
+ {
+  "i": 40,
+  "text": "və",
+  "start": 16.32,
+  "end": 16.373
+ },
+ {
+  "i": 41,
+  "text": "psixoloqlar",
+  "start": 16.4,
+  "end": 17.12
+ },
+ {
+  "i": 42,
+  "text": "bunu",
+  "start": 17.16,
+  "end": 17.44
+ },
+ {
+  "i": 43,
+  "text": "çox",
+  "start": 17.48,
+  "end": 17.68
+ },
+ {
+  "i": 44,
+  "text": "sayda",
+  "start": 17.76,
+  "end": 18.0
+ },
+ {
+  "i": 45,
+  "text": "təcrübədə",
+  "start": 18.027,
+  "end": 18.48
+ },
+ {
+  "i": 46,
+  "text": "yoxlayıb.",
+  "start": 18.52,
+  "end": 19.32
+ },
+ {
+  "i": 47,
+  "text": "Vocabox",
+  "start": 19.36,
+  "end": 19.92
+ },
+ {
+  "i": 48,
+  "text": "təkrarı",
+  "start": 20.0,
+  "end": 20.48
+ },
+ {
+  "i": 49,
+  "text": "qutularla",
+  "start": 20.533,
+  "end": 21.04
+ },
+ {
+  "i": 50,
+  "text": "təşkil",
+  "start": 21.067,
+  "end": 21.36
+ },
+ {
+  "i": 51,
+  "text": "edir:",
+  "start": 21.44,
+  "end": 21.92
+ },
+ {
+  "i": 52,
+  "text": "bildiyin",
+  "start": 22.04,
+  "end": 22.32
+ },
+ {
+  "i": 53,
+  "text": "söz",
+  "start": 22.36,
+  "end": 22.56
+ },
+ {
+  "i": 54,
+  "text": "irəli",
+  "start": 22.64,
+  "end": 22.88
+ },
+ {
+  "i": 55,
+  "text": "gedir,",
+  "start": 22.96,
+  "end": 23.52
+ },
+ {
+  "i": 56,
+  "text": "çətin",
+  "start": 23.56,
+  "end": 23.84
+ },
+ {
+  "i": 57,
+  "text": "söz",
+  "start": 23.92,
+  "end": 24.24
+ },
+ {
+  "i": 58,
+  "text": "yenə",
+  "start": 24.32,
+  "end": 24.56
+ },
+ {
+  "i": 59,
+  "text": "qarşına",
+  "start": 24.613,
+  "end": 24.96
+ },
+ {
+  "i": 60,
+  "text": "çıxır.",
+  "start": 25.0,
+  "end": 25.6
+ },
+ {
+  "i": 61,
+  "text": "Mesajla",
+  "start": 25.806,
+  "end": 26.08
+ },
+ {
+  "i": 62,
+  "text": "yaz,",
+  "start": 26.12,
+  "end": 26.56
+ },
+ {
+  "i": 63,
+  "text": "təkrarı",
+  "start": 26.613,
+  "end": 27.04
+ },
+ {
+  "i": 64,
+  "text": "necə",
+  "start": 27.093,
+  "end": 27.28
+ },
+ {
+  "i": 65,
+  "text": "planladığımızı",
+  "start": 27.4,
+  "end": 27.96
+ },
+ {
+  "i": 66,
+  "text": "göstərək.",
+  "start": 28.0,
+  "end": 28.72
+ }
+]
