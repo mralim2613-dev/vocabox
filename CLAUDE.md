@@ -38,16 +38,18 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 11 | video11-faq | FAQ: oflayn (internet kəsik halda real məşq), reklam yoxdur (real məxfilik mətni), EN/RU/DE | 14 |
 | 12 | video12-borrow-lend | Yenə bu söz?! — borrow/lend skeçi, neo-brutal stiker üslubu, real "Səhv cavab · Qutu 3 → 2" | 15 |
 | 13 | video13-ai-yarisi | AI-dan soruşmaq yarısıdır — iki yarı (Soruşmaq / Yadda saxlamaq), real prompt mətni, "Yazaraq xatırla" | 19 |
+| 14 | video14-unutma-ayrisi | Unutma əyrisi (Ebbinghaus 1885) — laboratoriya dəftəri üslubu, sxematik qrafik, real "Yaddaş qutuları" | 21 |
 
 ## 5. Açıq məsələlər / növbəti addımlar
 - **Ləğv edilmiş günlər (sahib qərarı, 2026-11-25):** 8, 11, 12 — edilməyəcək.
-- **Növbəti video:** 20-ci gün (D/F · 20 günün xülasəsi — real DM/rəy olmadan çətin, əvvəl sahibdən material soruş) və ya 21–26 (elm seriyası). Qalan: 16 (sahib atladı?), 17 (gözləmədə: təsisçinin real qutular ekranı + faktlar lazımdır), 20, 21–26; 5-ci gün rus dili — gözləmədə.
+- **Növbəti video:** 22-ci gün (G · aralıqlı təkrar). Elm seriyası 21-dən davam edir (sahib qərarı); 20-ci gün üçün real DM/rəy lazımdır. Qalan: 16 (sahib atladı?), 17 (gözləmədə: təsisçinin real qutular ekranı + faktlar lazımdır), 20, 21–26; 5-ci gün rus dili — gözləmədə.
 - Tətbiqin lokal brauzer yaddaşı hər Playwright kontekstində təmizdir; nümunə dəstlər ("Serial sözləri", "Oxuduğum mətnlər") hər çəkilişdə JSON ilə yenidən yaradılır (skriptlər: video07/09 `work/ekran-meta.json` yanında koordinatlar).
 - **Diqqət (vaxt iddiası):** tətbiqdə vaxta bağlı avtomatik təkrar YOXDUR ("Təkrar üçün vaxt məhdudiyyəti yoxdur"). "Vaxtında xatırladır" demə; real funksiya: qutular + "Zəiflər · 1–2" ilə ayrıca məşq. Qutu 3-də dəstin dəqiq sayı (məs. 2960) görünür — kadra salma (yuvarlaq rəqəm qaydası).
 - **Məlumat xətası (istifadəçiyə bildirilib):** `src/data/languages/en/en-cards.csv:2802` — "tyre — şin; təkər rezini" kartının izahı "a port in southern Lebanon…" (Tyre şəhəri). Reklamda bu kartı göstərmə.
 - **Məlumat xətası 2:** ingilis dəstində "lend — borc vermək" kartının izahı "bestow a quality on" (əsas məna deyil; düzgün: "to give something to someone for a short time").
 - **İngiliscə cümlələr:** aksent riskinə görə ingiliscə cümlələri yalnız ekranda göstər, səs yalnız tək sözləri desin (video12 kimi).
 - **F seriyası:** real DM yoxdursa "bu sualı çox alıram" demə, uydurma DM ekranı qadağandır.
+- **video14:** səs qulaqla yoxlanmayıb ("1885-ci", "Hermann Ebbinghaus", "əyrisidir").
 - **video13:** səs qulaqla yoxlanmayıb ("AI", "tarixçəsinə", "köməkçindən").
 - **video12:** səs qulaqla yoxlanmayıb ("borrow", "lend", "Göndərməmiş").
 - **video11:** səs qulaqla yoxlanmayıb ("internetsiz", "yüklənmədən", "kamera").

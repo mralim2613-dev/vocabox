@@ -1,0 +1,147 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A;--paper:#F3EEDD;--ink:#22342E}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:var(--ink);background:var(--paper)}
+body:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(32,78,64,.10) 2px,transparent 2px),linear-gradient(90deg,rgba(32,78,64,.10) 2px,transparent 2px);background-size:60px 60px}
+body:after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 1100px at 50% 45%,transparent 55%,rgba(120,100,60,.18) 100%);pointer-events:none}
+.ab{position:absolute}
+#world{position:absolute;inset:0;transform-origin:540px 860px}
+.serif{font-family:'DejaVu Serif',serif}
+.mono{font-family:'JetBrains Mono',monospace}
+#year{position:absolute;left:0;right:0;top:360px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:300px;letter-spacing:-10px;line-height:1;color:var(--ink)}
+#year span{display:inline-block}
+#book{position:absolute;left:220px;top:720px;width:640px;height:300px;background:#FBF8EE;border:4px solid var(--ink);border-radius:10px;box-shadow:12px 12px 0 rgba(34,52,46,.18);text-align:center}
+#book .t{margin-top:62px;font-size:56px;font-style:italic}
+#book .a{margin-top:22px;font-size:34px;color:var(--mu)}
+.syl{position:absolute;width:190px;height:150px;margin-left:-95px;background:#FBF8EE;border:4px solid var(--ink);border-radius:16px;text-align:center;line-height:142px;font-family:'JetBrains Mono';font-weight:800;font-size:64px;box-shadow:8px 8px 0 rgba(34,52,46,.15)}
+#name{position:absolute;left:0;right:0;top:300px;text-align:center;font-family:'DejaVu Serif';font-style:italic;font-size:60px}
+#tl{position:absolute;left:100px;width:720px;top:1000px;height:300px}
+#tl .ax{position:absolute;left:0;right:0;top:120px;height:5px;background:var(--ink);border-radius:3px}
+.tick{position:absolute;top:96px;width:6px;height:54px;margin-left:-3px;background:var(--ink)}
+.tl{position:absolute;top:170px;width:220px;margin-left:-110px;text-align:center;font-family:'DejaVu Serif';font-style:italic;font-size:31px}
+.sw{position:absolute;top:-20px;width:70px;height:70px;margin-left:-35px;border:5px solid var(--ink);border-radius:50%;box-sizing:border-box;background:#FBF8EE}
+.sw:before{content:'';position:absolute;left:28px;top:8px;width:4px;height:24px;background:var(--ink);transform-origin:2px 22px}
+/* qrafik */
+#graph{position:absolute;left:70px;top:420px;width:860px;height:760px}
+#gsvg{position:absolute;left:0;top:0}
+.al{position:absolute;font-family:'JetBrains Mono';font-weight:700;font-size:30px;color:var(--ink)}
+#tag{position:absolute;right:0;top:-6px;font-family:'JetBrains Mono';font-weight:700;font-size:26px;color:var(--mu);border:3px dashed var(--mu);border-radius:10px;padding:4px 12px}
+#clab{position:absolute;font-family:'DejaVu Serif';font-style:italic;font-weight:700;font-size:54px;color:var(--p);white-space:nowrap}
+#hd{position:absolute;left:60px;right:60px;top:290px;text-align:center;font-family:'Inter Display';font-weight:900;font-size:76px;letter-spacing:-2px;line-height:1.05}
+#hd em{font-style:normal;background:linear-gradient(transparent 60%,var(--y) 60%)}
+#src{position:absolute;left:60px;right:60px;top:1330px;text-align:center;font-family:'DejaVu Serif';font-style:italic;font-size:30px;color:var(--mu)}
+.shot{position:absolute;border:4px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:12px 12px 0 rgba(34,52,46,.18);background:#F5F4EF}
+.shot img{display:block;width:100%}
+.ring{position:absolute;border:8px solid var(--yd);border-radius:22px;box-shadow:0 0 0 8px rgba(216,237,155,.5)}
+#brand{position:absolute;left:0;right:0;top:280px;text-align:center;font-weight:800;font-size:52px}
+#brand span{display:inline-block;width:86px;height:86px;vertical-align:middle;margin-right:18px}
+#bal{position:absolute;left:210px;width:660px;top:1110px;height:160px;border-radius:999px;background:var(--ink);color:#fff;font-weight:800;font-size:68px;line-height:160px;box-shadow:12px 12px 0 rgba(34,52,46,.2)}
+#bal .pl{position:absolute;left:20px;top:20px;width:120px;height:120px;border-radius:50%;background:var(--y)}
+#bal .tx{position:absolute;left:175px}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:30}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px var(--paper),0 2px 0 var(--paper)}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--ink);z-index:31}
+</style></head><body>
+<div id="world">
+ <div id="year"><span>1</span><span>8</span><span>8</span><span>5</span></div>
+ <div id="book" class="serif"><div class="t">Über das Gedächtnis</div><div class="a">Hermann Ebbinghaus · 1885</div></div>
+ <div id="name">Hermann Ebbinghaus</div>
+ <div class="syl" id="s0" style="left:240px;top:470px">DAX</div><div class="syl" id="s1" style="left:540px;top:470px">BUP</div><div class="syl" id="s2" style="left:840px;top:470px">ZOL</div>
+ <div class="syl" id="s3" style="left:390px;top:660px">KEF</div><div class="syl" id="s4" style="left:690px;top:660px">MIV</div>
+ <div id="tl"><div class="ax"></div>
+  <div class="tick" style="left:0"></div><div class="tl" style="left:0">öyrəndi</div>
+  <div class="tick" id="k1" style="left:240px"></div><div class="tl" id="l1" style="left:240px">sonra</div><div class="sw" id="w1" style="left:240px"></div>
+  <div class="tick" id="k2" style="left:480px"></div><div class="tl" id="l2" style="left:480px">daha sonra</div><div class="sw" id="w2" style="left:480px"></div>
+  <div class="tick" id="k3" style="left:720px"></div><div class="tl" id="l3" style="left:720px">xeyli sonra</div><div class="sw" id="w3" style="left:720px"></div>
+ </div>
+ <div id="hd">Unutmağın da <em>qrafiki</em> var</div>
+ <div id="graph">
+  <svg id="gsvg" width="860" height="760" viewBox="0 0 860 760">
+   <path d="M80 40 L80 640 L830 640" fill="none" stroke="#22342E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M66 60 L80 36 L94 60" fill="none" stroke="#22342E" stroke-width="6" stroke-linecap="round"/><path d="M806 626 L832 640 L806 654" fill="none" stroke="#22342E" stroke-width="6" stroke-linecap="round"/>
+   <path id="c0" d="M80 90 C 140 330, 220 470, 360 530 S 700 590, 830 600" fill="none" stroke="#22342E" stroke-width="9" stroke-linecap="round"/>
+   <path id="r1" d="M260 470 L260 110 C 310 260, 380 350, 500 390 S 760 440, 830 448" fill="none" stroke="#8FD463" stroke-width="9" stroke-linecap="round"/>
+   <path id="r2" d="M440 382 L440 110 C 490 200, 560 250, 660 270 S 790 290, 830 292" fill="none" stroke="#5DAE3E" stroke-width="9" stroke-linecap="round"/>
+   <path id="r3" d="M620 262 L620 110 C 670 150, 730 170, 830 178" fill="none" stroke="#204E40" stroke-width="9" stroke-linecap="round"/>
+   <circle id="dot" r="16" fill="#D8ED9B" stroke="#22342E" stroke-width="5"/>
+  </svg>
+  <div class="al" style="left:0;top:-10px;transform:rotate(-90deg) translate(-330px,-40px);transform-origin:0 0">yadda qalan</div>
+  <div class="al" style="left:640px;top:660px">vaxt →</div>
+  <div id="tag">sxem · rəqəmsiz</div>
+  <div id="clab">unutma əyrisi</div>
+ </div>
+ <div id="src">Mənbə: H. Ebbinghaus, «Über das Gedächtnis» (1885)</div>
+ <div id="brand"><span>__LOGO__</span>Vocabox</div>
+ <div class="shot" id="sX" style="left:170px;top:420px;width:740px"><img src="__BOXES__"></div>
+ <div class="ring" id="g1"></div>
+ <div id="bal"><div class="pl"><svg width="120" height="120" viewBox="0 0 126 126"><path d="M34 62 L92 38 L78 92 L64 72 Z" fill="#22342E"/></svg></div><span class="tx">Mesaj yaz</span></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2;
+const norm=s=>s.replace(/İ/g,'i').replace(/Ə/g,'ə').toLowerCase().replace(/[.,?!:;“”"«»]/g,'');
+function Wd(w,n=1){let c=0;for(const x of WORDS)if(norm(x.text)===w&&++c===n)return x;throw Error('söz yoxdur: '+w)}
+const W=(w,n)=>Wd(w,n).start+OFF-LEAD, WE=(w,n)=>Wd(w,n).end+OFF;
+const E={y:W('1885-ci'),alim:W('alim'),sin:W('sınağa'),her:W('hermann'),men:W('mənasız'),hec:W('hecalar'),ezb:W('əzbərləyir'),fer:W('fərqli'),fas:W('fasilələrdən'),son:W('sonra'),yen:W('yenidən'),vaxt:W('vaxt'),olc:W('ölçürdü'),
+ net:W('nəticə'),unut:W('unutmaq'),sur:W('sürətli'),son2:W('sonra',2),yav:W('yavaşlayır'),bu:W('bu'),eyr:W('əyrisidir'),tek:W('təkrar'),etd:W('etdikcə'),asan:W('asanlaşırdı'),
+ voc:W('vocabox-da'),qut:W('qutular'),cet:W('çətin'),tez:W('tez-tez'),eyr2:W('əyrini'),mes:W('mesajla')};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+function st(id,o){const s=$(id).style;for(const k in o)s[k]=o[k]}
+function vis(id,on){$(id).style.display=on?'block':'none';return on}
+function draw(id,p){const e=$(id),L=e.getTotalLength();e.style.strokeDasharray=L;e.style.strokeDashoffset=L*(1-p)}
+function render(t){
+ caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ // ---- 1885 ----
+ const yOut=seg(t,E.her-.1,E.her+.3);
+ if(vis('year',yOut<1)){[...$('year').children].forEach((s,i)=>{const p=t<.05?1:seg(t,E.y-.05+.12*i,E.y+.25+.12*i);s.style.opacity=p;s.style.transform=`translateY(${(1-eo(p))*40}px)`});
+  st('year',{opacity:1-yOut,transform:`scale(${lerp(1,.9,yOut)})`})}
+ if(vis('book',t>=E.alim-.1&&t<E.her+.3)){const p=seg(t,E.alim-.1,E.alim+.3);st('book',{opacity:Math.min(p,1-yOut),transform:`rotate(${lerp(-6,-2,eo(p))}deg) translateY(${(1-eo(p))*60}px)`})}
+ // ---- Ebbinghaus + hecalar ----
+ const eOut=seg(t,E.net-.15,E.net+.25);
+ if(vis('name',t>=E.her-.1&&t<E.net+.25)){st('name',{opacity:Math.min(seg(t,E.her-.1,E.her+.3),1-eOut)})}
+ for(let i=0;i<5;i++){const t0=E.men+.12*i;if(!vis('s'+i,t>=t0&&t<E.net+.25))continue;const p=seg(t,t0,t0+.3);
+  // "əzbərləyir": kartlar fırlanır (öyrənilir)
+  const fl=seg(t,E.ezb+.08*i,E.ezb+.08*i+.4);
+  st('s'+i,{opacity:Math.min(p,1-eOut),transform:`rotate(${(i%2?4:-4)}deg) scale(${p<1?back(p):1}) rotateY(${Math.sin(fl*Math.PI)*180}deg)`})}
+ if(vis('tl',t>=E.fer-.1&&t<E.net+.25)){st('tl',{opacity:Math.min(seg(t,E.fer-.1,E.fer+.25),1-eOut)});
+  [1,2,3].forEach(k=>{const t0=E.fas+.25*(k-1),p=seg(t,t0,t0+.3);['k','l'].forEach(x=>{$(x+k).style.opacity=p});
+   const sw=$('w'+k);sw.style.opacity=seg(t,E.vaxt-.1+.15*(k-1),E.vaxt+.2+.15*(k-1));sw.style.transform=`scale(${back(seg(t,E.vaxt-.1+.15*(k-1),E.vaxt+.2+.15*(k-1)))})`});}
+ // ---- QRAFİK ----
+ const gOn=t>=E.net-.1&&t<E.voc+.3;vis('graph',gOn);vis('hd',gOn);vis('src',t>=E.y&&t<E.voc+.3);
+ st('src',{opacity:Math.min(seg(t,E.y,E.y+.4),1-seg(t,E.voc,E.voc+.3))});
+ if(gOn){const a=Math.min(seg(t,E.net-.1,E.net+.3),1-seg(t,E.voc,E.voc+.3));st('graph',{opacity:a});st('hd',{opacity:a});
+  // əyri: "sürətli" — dik hissə, "yavaşlayır" — yatıq hissə
+  const p=lerp(0,.45,eio(seg(t,E.unut,E.sur+.5)))+lerp(0,.55,eio(seg(t,E.son2,E.yav+.6)));draw('c0',p);
+  const c0=$('c0'),pt=c0.getPointAtLength(c0.getTotalLength()*Math.max(.001,p));
+  // təkrarlar: hər biri yuxarı qaldırır, sonrakı əyri daha yatıq (sxematik)
+  const rt=[E.tek,E.etd,E.asan-.1];let dot=pt;
+  ['r1','r2','r3'].forEach((id,i)=>{const q=eio(seg(t,rt[i],rt[i]+.7));draw(id,q);if(q>0){const e=$(id);dot=e.getPointAtLength(e.getTotalLength()*Math.max(.001,q))}
+   $('c0').style.opacity=t>=E.tek?.35:1});
+  $('dot').setAttribute('cx',dot.x);$('dot').setAttribute('cy',dot.y);
+  st('clab',{left:'380px',top:'470px',opacity:seg(t,E.eyr-.1,E.eyr+.3),transform:`rotate(-4deg) scale(${back(seg(t,E.eyr-.1,E.eyr+.3))})`});
+  $('hd').innerHTML=t<E.tek?'Unutmağın da <em>qrafiki</em> var':'Təkrar etdikcə <em>asanlaşır</em>';
+ }
+ // ---- VOCABOX ----
+ if(vis('brand',t>=E.voc-.1&&t<E.eyr2)){st('brand',{opacity:Math.min(seg(t,E.voc-.1,E.voc+.3),1-seg(t,E.eyr2-.3,E.eyr2))})}
+ if(vis('sX',t>=E.qut-.15&&t<E.eyr2)){const p=seg(t,E.qut-.15,E.qut+.3);st('sX',{opacity:Math.min(p,1-seg(t,E.eyr2-.3,E.eyr2)),transform:`translateY(${(1-eo(p))*100}px)`})}
+ const K=740/354; // css → ekran (Yaddaş qutuları, sətir 2 = Möhkəmləndir)
+ if(vis('g1',t>=E.cet-.1&&t<E.eyr2)){const a=seg(t,E.cet-.1,E.cet+.25);st('g1',{left:(170+16*K)+'px',top:(420+(154-28)*K)+'px',width:(322*K)+'px',height:(56*K)+'px',opacity:Math.min(a,1-seg(t,E.eyr2-.3,E.eyr2)),transform:`scale(${lerp(1.1,1,eo(a))})`})}
+ // ---- CTA ----
+ if(t>=E.eyr2-.1){vis('graph',1);vis('hd',1);const p=seg(t,E.eyr2-.1,E.eyr2+.4);st('graph',{opacity:p,transform:'translateY(-40px) scale(.82)'});st('hd',{opacity:p});$('hd').innerHTML='Əyrini necə <em>düzəldirik?</em>';
+  draw('c0',1);['r1','r2','r3'].forEach(id=>draw(id,1));$('c0').style.opacity=.35;const e=$('r3'),d=e.getPointAtLength(e.getTotalLength());$('dot').setAttribute('cx',d.x);$('dot').setAttribute('cy',d.y);st('clab',{opacity:0})}
+ if(vis('bal',t>=E.mes-.1)){const m=seg(t,E.mes-.1,E.mes+.35);st('bal',{opacity:Math.min(1,m*2),transform:`scale(${m<1?lerp(.6,1,back(m)):1+.025*Math.sin((t-E.mes)*4)})`})}
+ const ch=[0,E.her,E.net,E.tek,E.voc,E.eyr2,99];let k=0;while(t>=ch[k+1])k++;
+ $('world').style.transform=`scale(${1+.03*eio(seg(t,ch[k],Math.min(ch[k+1],ch[k]+3)))})`;
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>
