@@ -1,0 +1,5 @@
+Səsləndirmə: ElevenLabs — model eleven_v4, səs "Abbas - Engaging Delivery" (IVMbfLv3KqUc4qDj6Yif), tək take.
+Fon musiqisi: Epidemic Sound — "Sly Fox", Jon Björk. Trekin 4,6-cı saniyəsindən; videonun 5,6–8,7 s aralığında musiqi susdurulub (dl/music.mp3, orijinal dl/music_orig.mp3).
+Effektlər (Epidemic Sound): "Communications, Phonograph, Vinyl, Record Scratch 04"; "Communications, Cellphone, Smartphone, Tablet, iPad, Typing, Touch Screen, Tap, Close Perspective"; "User Interface, Click, UI Buttons, Bubbly, Select"; "Designed, Whoosh, Soft Airy"; "User Interface, Alert, Tonal, Soft Digital Confirm"
+Şəkillər: tətbiqin real ekran görüntüləri (lokal veb versiya, Playwright) — layihənin öz materialları. Mesajlaşma ekranı sxematikdir.
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın Epidemic Sound hesabına bağlı olduğunu yoxlayın. Musiqi və effekt faylları (dl/) repoya əlavə edilmir.

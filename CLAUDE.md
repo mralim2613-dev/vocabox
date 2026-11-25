@@ -36,13 +36,18 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 9 | video09-oxu-cixar | Oxu. Çıxar. Təkrar et. — dövrə diaqramı, marker sözlər, real məşq kartı (düz 3→4, səhv 3→2) | 10 |
 | 10 | video10-vaxtinda | Uzun dərs yox — vaxtında təkrar: tünd fon, həftə şəbəkəsi, real "Zəiflər · 1–2" | 13 |
 | 11 | video11-faq | FAQ: oflayn (internet kəsik halda real məşq), reklam yoxdur (real məxfilik mətni), EN/RU/DE | 14 |
+| 12 | video12-borrow-lend | Yenə bu söz?! — borrow/lend skeçi, neo-brutal stiker üslubu, real "Səhv cavab · Qutu 3 → 2" | 15 |
 
 ## 5. Açıq məsələlər / növbəti addımlar
-- **Növbəti video:** 8-ci gün (B · DE · Almaniyada ilk həftə 5 söz) hələ edilməyib; plan sırası ilə 11-ci gün (A · EN · e-poçt anı). 12-ci gün rus dili — gözləmədə.
+- **Ləğv edilmiş günlər (sahib qərarı, 2026-11-25):** 8, 11, 12 — edilməyəcək.
+- **Növbəti video:** 16-cı gün (B · EN · seriallarda tez-tez eşidilən 5 ifadə). Qalan: 16, 17, 19, 20, 21–26 (5-ci gün rus dili — gözləmədə).
 - Tətbiqin lokal brauzer yaddaşı hər Playwright kontekstində təmizdir; nümunə dəstlər ("Serial sözləri", "Oxuduğum mətnlər") hər çəkilişdə JSON ilə yenidən yaradılır (skriptlər: video07/09 `work/ekran-meta.json` yanında koordinatlar).
 - **Diqqət (vaxt iddiası):** tətbiqdə vaxta bağlı avtomatik təkrar YOXDUR ("Təkrar üçün vaxt məhdudiyyəti yoxdur"). "Vaxtında xatırladır" demə; real funksiya: qutular + "Zəiflər · 1–2" ilə ayrıca məşq. Qutu 3-də dəstin dəqiq sayı (məs. 2960) görünür — kadra salma (yuvarlaq rəqəm qaydası).
 - **Məlumat xətası (istifadəçiyə bildirilib):** `src/data/languages/en/en-cards.csv:2802` — "tyre — şin; təkər rezini" kartının izahı "a port in southern Lebanon…" (Tyre şəhəri). Reklamda bu kartı göstərmə.
+- **Məlumat xətası 2:** ingilis dəstində "lend — borc vermək" kartının izahı "bestow a quality on" (əsas məna deyil; düzgün: "to give something to someone for a short time").
+- **İngiliscə cümlələr:** aksent riskinə görə ingiliscə cümlələri yalnız ekranda göstər, səs yalnız tək sözləri desin (video12 kimi).
 - **F seriyası:** real DM yoxdursa "bu sualı çox alıram" demə, uydurma DM ekranı qadağandır.
+- **video12:** səs qulaqla yoxlanmayıb ("borrow", "lend", "Göndərməmiş").
 - **video11:** səs qulaqla yoxlanmayıb ("internetsiz", "yüklənmədən", "kamera").
 - **video10:** səs qulaqla yoxlanmayıb ("asanlaşdırır", "tez-tez").
 - **video09:** səs qulaqla yoxlanmayıb ("e-poçt", "AI", "yapışdırırsan").

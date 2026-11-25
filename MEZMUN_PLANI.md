@@ -108,11 +108,11 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 
 | Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
 |---|---|---|---|---|
-| **8** | B · DE · S1–2 · F1 | Almaniyada ilk həftə lazım olan 5 söz ³ | H1 "Almaniyaya getmədən bu 5 sözü öyrən" / H2 "Birinci gün bu sözlər lazım olacaq" / H3 "A1-dən əvvəl bunlar" | "Saxla" + "A1–B1 dəstləri üçün mesajla yaz" |
+| **8** | ✖ **Ləğv edildi (sahib qərarı, 2026-11-25)** · B · DE · S1–2 · F1 | Almaniyada ilk həftə lazım olan 5 söz ³ | H1 "Almaniyaya getmədən bu 5 sözü öyrən" / H2 "Birinci gün bu sözlər lazım olacaq" / H3 "A1-dən əvvəl bunlar" | "Saxla" + "A1–B1 dəstləri üçün mesajla yaz" |
 | **9** | D · ümumi · S1–2 · F1, F3 | ✅ **Hazırdır (video08):** **Uğursuzluq hekayəsi:** dil öyrənməyə başlayıb buraxdığım dəfələr (təsisçinin öz cavabları; motion + Abbas səsi) | H1 "Dil öyrənməyi neçə dəfə yarımçıq qoymuşam" / H2 "Hər yanvar yenidən başlayırdım" / H3 "Problem tənbəllik deyildi" | "Sən neçə dəfə başlamısan? Mesajla yaz" |
 | **10** | C · EN · S3 · F3, F2 | ✅ **Hazırdır (video09):** Mətn → lüğət demosu — "Oxu. Çıxar. Təkrar et." dövrəsi + real məşq kartı (**Skript 11** əsasında) | H1 "Oxu. Çıxar. Təkrar et." / H2 "Oxuduğun sözlər harada qalır?" / H3 "Hər mətn bir dərsdir" | "Mesajla yaz, necə işlədiyini göstərək" |
-| **11** | A · EN · S1 · — | E-poçt yazanda "tam bilmirəm" (**Skript 1** canlı versiyası) | H1 "Bilirəm… amma tam yox." / H2 "E-poçtu 4-cü dəfə silirəm" / H3 "Translate-ə 'just in case' baxıram" | "Səndə də olur? Mesajla yaz" |
-| **12** | B · RU · S1–2 · F1 | Ən çox işlənən 5 rus feli ⁴ | H1 "Rus dilində bu 5 feli bilmədən danışmaq çətindir" / H2 "Hər cümlədə lazım olan 5 söz" / H3 "Rusca başlamaq üçün ilk 5" | "Saxla" + "Rus dili dəsti üçün mesajla yaz" |
+| **11** | ✖ **Ləğv edildi (sahib qərarı, 2026-11-25)** · A · EN · S1 · — | E-poçt yazanda "tam bilmirəm" (**Skript 1** canlı versiyası) | H1 "Bilirəm… amma tam yox." / H2 "E-poçtu 4-cü dəfə silirəm" / H3 "Translate-ə 'just in case' baxıram" | "Səndə də olur? Mesajla yaz" |
+| **12** | ✖ **Ləğv edildi (sahib qərarı, 2026-11-25)** · B · RU · S1–2 · F1 | Ən çox işlənən 5 rus feli ⁴ | H1 "Rus dilində bu 5 feli bilmədən danışmaq çətindir" / H2 "Hər cümlədə lazım olan 5 söz" / H3 "Rusca başlamaq üçün ilk 5" | "Saxla" + "Rus dili dəsti üçün mesajla yaz" |
 | **13** | E · ümumi · S2–3 · F2 | ✅ **Hazırdır (video10):** Aykırı: "Uzun dərs yox — vaxtında təkrar" (həftə şəbəkəsi; H1 fikir kimi: "Mənim fikrim başqadır") | H1 "Hamı 'hər gün 1 saat' deyir. Mən başqa yol seçdim." / H2 "Daha çox oxumaq kömək etmədi" / H3 "Az, amma vaxtında" | "Razısan? Mesajla yaz" |
 | **14** | F · ümumi · S4 · F1–3 | ✅ **Hazırdır (video11):** FAQ: internet olmayanda işləyir? reklam var? hansı dillər? ⁵ (H2 ilə — real DM olmadığı üçün H1 işlədilmədi) | H1 "Bu sualı ən çox alıram" / H2 "Vocabox haqqında 3 sual" / H3 "Almadan əvvəl bunu bil" | "Sualın var? Mesajla yaz" |
 
@@ -120,7 +120,7 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 
 | Gün | Seriya · Dil · Səviyyə · F | Mövzu | H1 / H2 / H3 | CTA |
 |---|---|---|---|---|
-| **15** | A · EN · S1–2 · F2 | Eyni söz yenə çaşdırır (**Skript 8** canlı versiyası) | H1 "Yenə bu söz?!" / H2 "Bu sözü 3 dəfə öyrənmişəm" / H3 "Hər dəfə eyni yerdə ilişirəm" | "Belə söz hansıdır? Mesajla yaz" |
+| **15** | A · EN · S1–2 · F2 | ✅ **Hazırdır (video12):** Eyni söz yenə çaşdırır — borrow / lend (**Skript 8** əsasında, mesajlaşma skeçi) | H1 "Yenə bu söz?!" / H2 "Bu sözü 3 dəfə öyrənmişəm" / H3 "Hər dəfə eyni yerdə ilişirəm" | "Belə söz hansıdır? Mesajla yaz" |
 | **16** | B · EN · S1–2 · F3 | Seriallarda tez-tez eşidilən 5 ifadə ⁶ | H1 "Seriallarda bunu hər bölümdə eşidirsən" / H2 "Altyazısız başa düşmək üçün 5 ifadə" / H3 "'Hang on' nə deməkdir?" | "Saxla" + "Öz serialından lüğət — mesajla yaz" |
 | **17** | D · ümumi · S4 · F2 | **Uğur hekayəsi:** "əvvəl–sonra" — təsisçinin öz qutuları (real ekran) | H1 "Bir ay əvvəlki qutularım və indikilər" / H2 "Bu ekran mənim irəliləyişimdir" / H3 "1-ci qutu boşalanda…" | "Mesajla yaz, səninkini də quraq" |
 | **18** | C · DE · S3 · F1, F2 | ✅ **Hazırdır (video05):** "İmtahana az qalıb" — imtahana hazırlaşanlar üçün: artikl, A1/A2/B1, real kart (Skript 18-in yerinə) | H1 "Alman dilində haradan başlayım?" / H2 "A1, A2, B1 — sən hansındasan?" / H3 "Səviyyənə uyğun hazır dəst" | "Səviyyəni mesajla yaz, dəsti göstərək" |
