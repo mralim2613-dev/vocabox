@@ -122,9 +122,9 @@ Hər gün üçün **3 hook** verilib (H1 əsasdır, H2/H3 test). Test qaydası: 
 |---|---|---|---|---|
 | **15** | A · EN · S1–2 · F2 | ✅ **Hazırdır (video12):** Eyni söz yenə çaşdırır — borrow / lend (**Skript 8** əsasında, mesajlaşma skeçi) | H1 "Yenə bu söz?!" / H2 "Bu sözü 3 dəfə öyrənmişəm" / H3 "Hər dəfə eyni yerdə ilişirəm" | "Belə söz hansıdır? Mesajla yaz" |
 | **16** | B · EN · S1–2 · F3 | Seriallarda tez-tez eşidilən 5 ifadə ⁶ | H1 "Seriallarda bunu hər bölümdə eşidirsən" / H2 "Altyazısız başa düşmək üçün 5 ifadə" / H3 "'Hang on' nə deməkdir?" | "Saxla" + "Öz serialından lüğət — mesajla yaz" |
-| **17** | D · ümumi · S4 · F2 | **Uğur hekayəsi:** "əvvəl–sonra" — təsisçinin öz qutuları (real ekran) | H1 "Bir ay əvvəlki qutularım və indikilər" / H2 "Bu ekran mənim irəliləyişimdir" / H3 "1-ci qutu boşalanda…" | "Mesajla yaz, səninkini də quraq" |
+| **17** | D · ümumi · S4 · F2 | ⏸ **Gözləmədə:** təsisçinin real "Yaddaş qutuları" ekran şəkli və faktları lazımdır · **Uğur hekayəsi:** "əvvəl–sonra" — təsisçinin öz qutuları (real ekran) | H1 "Bir ay əvvəlki qutularım və indikilər" / H2 "Bu ekran mənim irəliləyişimdir" / H3 "1-ci qutu boşalanda…" | "Mesajla yaz, səninkini də quraq" |
 | **18** | C · DE · S3 · F1, F2 | ✅ **Hazırdır (video05):** "İmtahana az qalıb" — imtahana hazırlaşanlar üçün: artikl, A1/A2/B1, real kart (Skript 18-in yerinə) | H1 "Alman dilində haradan başlayım?" / H2 "A1, A2, B1 — sən hansındasan?" / H3 "Səviyyənə uyğun hazır dəst" | "Səviyyəni mesajla yaz, dəsti göstərək" |
-| **19** | E · EN · S3 · F3, F2 | "AI-dan soruşmaq yarısıdır" | H1 "AI sözün mənasını deyir. Bəs sabah?" / H2 "Soruşdun, öyrəndin, unutdun" / H3 "AI + qutular" | "Mesajla yaz, necə işlədiyini göstərək" |
+| **19** | E · EN · S3 · F3, F2 | ✅ **Hazırdır (video13):** "AI-dan soruşmaq yarısıdır" (iki yarı kompozisiya; real prompt mətni + "Yazaraq xatırla") | H1 "AI sözün mənasını deyir. Bəs sabah?" / H2 "Soruşdun, öyrəndin, unutdun" / H3 "AI + qutular" | "Mesajla yaz, necə işlədiyini göstərək" |
 | **20** | D/F · ümumi · S4–5 · F1–3 | 20 günün xülasəsi: nə öyrəndik, sizdən gələn suallar, ilk istifadəçilərin rəyi (icazə ilə) | H1 "20 gün, hər gün bir video. Nə oldu?" / H2 "Sizdən ən çox gələn sual" / H3 "İlk istifadəçilər nə dedi?" | "Başlamaq istəyirsən? Dilini mesajla yaz" |
 
 **Mövzu qeydləri (dərs məzmunu — çəkilişdən əvvəl yoxlanır):**
