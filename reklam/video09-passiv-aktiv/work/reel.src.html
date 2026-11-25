@@ -1,0 +1,143 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:var(--tx);background:#0E2A22}
+#world{position:absolute;inset:0;transform-origin:540px 900px}
+#sky{position:absolute;left:-200px;right:-200px;top:-400px;height:1160px;background:linear-gradient(#FBFDF6,#E6EFDC)}
+#sea{position:absolute;left:-200px;right:-200px;top:760px;height:1600px;background:linear-gradient(#2E6B57,#123A2F 55%,#0B231C)}
+#surf{position:absolute;left:-200px;right:-200px;top:752px;height:16px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 60px,rgba(255,255,255,.15) 60px 120px)}
+svg#berg{position:absolute;left:0;top:0;width:1080px;height:1920px}
+.w{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;font-weight:800;border-radius:999px}
+.uw{font-size:32px;padding:8px 20px;color:#E9F3EE;background:rgba(255,255,255,.10);box-shadow:inset 0 0 0 2px rgba(255,255,255,.16)}
+.uw i{font-style:normal;color:var(--y);margin-left:8px;font-size:26px}
+.aw{font-size:36px;padding:10px 24px;background:#fff;color:var(--tx);box-shadow:0 10px 24px rgba(23,47,41,.14)}
+#ex{font-size:44px;padding:12px 28px;color:var(--tx);background:var(--y);z-index:5}
+#ex i{font-style:normal;margin-left:10px;font-size:34px;color:var(--p)}
+.lab{position:absolute;font-weight:800;font-size:40px;padding:10px 26px;border-radius:16px;white-space:nowrap}
+#hd{position:absolute;left:60px;right:60px;top:280px;text-align:center;font-weight:800;font-size:66px;letter-spacing:-1.8px;line-height:1.08}
+#bubE{position:absolute;left:640px;top:450px;width:230px;height:130px}
+.shot{position:absolute;border-radius:28px;box-shadow:0 18px 50px rgba(23,47,41,.2);overflow:hidden;background:#fff}
+.shot img{display:block;width:100%}
+.ring{position:absolute;border:7px solid var(--yd);border-radius:22px;box-sizing:border-box}
+#pill{position:absolute;left:540px;top:1352px;transform:translate(-50%,-50%);font-weight:800;font-size:40px;padding:12px 30px;border-radius:999px;background:var(--y);color:var(--tx);white-space:nowrap;z-index:6}
+#arr{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none}
+/* light */
+#light{position:absolute;inset:0;background:radial-gradient(ellipse 950px 760px at 50% 42%,var(--pl),#fff 72%);display:none}
+#lw{position:absolute;inset:0;display:none}
+#top{position:absolute;left:0;right:0;top:280px;display:flex;justify-content:center;align-items:center;gap:20px}
+#ctaT{position:absolute;left:60px;right:60px;top:360px;text-align:center;font-weight:800;font-size:82px;letter-spacing:-2px;line-height:1.06}
+#bub{position:absolute;left:250px;top:820px;width:580px;height:150px}
+#ctaLogo{position:absolute;left:0;right:0;top:1060px;display:flex;justify-content:center;align-items:center;gap:20px}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:20}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.55)}
+body.lt #cap b{color:var(--tx);text-shadow:0 0 12px #fff,0 2px 0 #fff}
+#cap b.on,body.lt #cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--y);z-index:21}
+body.lt #prog{background:var(--p)}
+</style></head><body>
+<div id="world">
+ <div id="sky"></div><div id="sea"></div>
+ <svg id="berg" viewBox="0 0 1080 1920">
+  <polygon id="under" points="300,760 790,760 880,900 850,1080 730,1300 430,1330 250,1160 200,960" fill="rgba(220,240,232,.13)" stroke="rgba(255,255,255,.35)" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="410,762 470,640 530,566 590,612 640,690 690,762" fill="#fff" stroke="#cfe0d8" stroke-width="4" stroke-linejoin="round"/>
+  <polygon points="530,566 560,640 520,762 410,762 470,640" fill="#E8F1EC"/>
+ </svg>
+ <div id="surf"></div>
+ <div class="lab" id="lA" style="left:90px;top:640px;background:#fff;color:var(--p);box-shadow:0 8px 20px rgba(23,47,41,.12)">Aktiv</div>
+ <div class="lab" id="lP" style="left:90px;top:790px;background:rgba(216,237,155,.18);color:var(--y)">Passiv</div>
+ <div id="uws"></div><div id="aws"></div>
+ <svg id="arr" viewBox="0 0 1080 1920"><path id="arrP" d="M540 1080 C 540 900, 550 700, 550 480" stroke="#D8ED9B" stroke-width="7" fill="none" stroke-dasharray="16 14" stroke-linecap="round"/></svg>
+ <div class="w" id="ex">excited<i>✓</i></div>
+ <div id="pill">tanıdıqların adətən daha çox</div>
+ <div id="hd">Başa düşürsən,<br>amma danışa bilmirsən?</div>
+ <svg id="bubE" viewBox="0 0 230 130"><path d="M30 0h170a30 30 0 0 1 30 30v40a30 30 0 0 1-30 30H70l-40 26 8-26h-8A30 30 0 0 1 0 70V30A30 30 0 0 1 30 0z" fill="#fff" stroke="#cfe0d8" stroke-width="3"/>
+  <circle class="dt" cx="75" cy="50" r="11" fill="#6B7872"/><circle class="dt" cx="115" cy="50" r="11" fill="#6B7872"/><circle class="dt" cx="155" cy="50" r="11" fill="#6B7872"/></svg>
+ <div class="shot" id="shP" style="left:310px;top:250px;width:460px"><img src="__PASSIVE__"></div>
+</div>
+<div id="light"></div>
+<div id="lw">
+ <div id="top"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:56px;letter-spacing:-1.5px">Vocabox</b></div>
+ <div class="shot" id="shS" style="left:160px;top:400px;width:760px"><img src="__SETUP__"><div class="ring" id="rMode"></div><div class="ring" id="rDir"></div></div>
+ <div class="shot" id="sh0" style="left:220px;top:780px;width:640px"><img src="__ACT0__"></div>
+ <div class="shot" id="sh1" style="left:220px;top:780px;width:640px"><img src="__ACT1__"></div>
+ <div id="ctaT">Hansı dildə<br><span style="color:var(--p)">ilişirsən?</span></div>
+ <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+  <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+ <div id="ctaLogo"><div style="width:72px;height:72px">__LOGO2__</div><b style="font-size:46px;letter-spacing:-1px">Vocabox</b></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=(txt,n=1)=>{let c=0;for(let i=0;i<WORDS.length;i++)if(WORDS[i].text===txt&&++c===n)return i;throw Error('söz yoxdur: '+txt)};
+const ST=i=>WORDS[i].start+OFF;
+const E={bas:ST(IX('Başa'))-LEAD,dan:ST(IX('danışa'))-LEAD,bun:ST(IX('Bunun'))-LEAD,dil:ST(IX('Dilçilər'))-LEAD,iki:ST(IX('iki'))-LEAD,
+ pas:ST(IX('Passiv'))-LEAD,gor:ST(IX('görəndə'))-LEAD,tan:ST(IX('tanıyırsan.'))-LEAD,akt:ST(IX('Aktiv'))-LEAD,laz:ST(IX('lazım'))-LEAD,tap:ST(IX('tapıb'))-LEAD,
+ tdn:ST(IX('Tanıdığın'))-LEAD,ade:ST(IX('adətən'))-LEAD,dms:ST(IX('Danışmaq'))-LEAD,tnm:ST(IX('tanımaq'))-LEAD,xat:ST(IX('xatırlamaq'))-LEAD,
+ voc:ST(IX('Vocabox-da'))-LEAD,on:ST(IX('ön'))-LEAD,aze:ST(IX('azərbaycanca'))-LEAD,qar:ST(IX('qarşılığı'))-LEAD,soz4:ST(IX('sözü',4))-LEAD,yaz:ST(IX('yaz.'))-LEAD,
+ han:ST(IX('Hansı'))-LEAD,mes:ST(IX('Mesajla'))-LEAD};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+const vis=(el,on)=>{el.style.display=on?(el.dataset.d||'block'):'none';return on};
+function fade(id,t,a,b,din=.35,dout=.3){const el=$(id);const on=t>=a&&t<b;vis(el,on);if(on)el.style.opacity=Math.min(eo(seg(t,a,a+din)),1-seg(t,b-dout,b));return on}
+['top','ctaLogo'].forEach(i=>$(i).dataset.d='flex');
+// underwater (passive) words — two waves; above-water (active) words
+const UW=[['although',400,830],['borrow',680,830],['likely',300,930],['remind',540,925],['achieve',770,935],['however',360,1030],['improve',720,1030],
+ ['journey',280,1130],['deadline',790,1120],['decide',430,1225],['support',650,1225]];
+const uw=UW.map(([w,x,y],i)=>{const d=document.createElement('div');d.className='w uw';d.innerHTML=w+'<i>✓</i>';d.style.left=x+'px';d.style.top=y+'px';$('uws').appendChild(d);return d});
+const AW=[['hello',390,505],['thanks',690,520]];
+const aw=AW.map(([w,x,y])=>{const d=document.createElement('div');d.className='w aw';d.textContent=w;d.style.left=x+'px';d.style.top=y+'px';$('aws').appendChild(d);return d});
+const pop=(el,t,a,dur=.4)=>{const v=seg(t,a,a+dur);vis(el,v>0);el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;return v};
+
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ const lt=seg(t,E.voc,E.voc+.6);document.body.classList.toggle('lt',lt>.5);
+ // camera: gentle drift, zoom-out at "Tanıdığın"
+ const z=lerp(1.04,.94,eio(seg(t,E.tdn,E.tdn+1)))*lerp(1,1.04,eio(seg(t,E.dms,E.dms+1)));
+ $('world').style.transform=`scale(${z}) translateY(${Math.sin(t*1.1)*4}px)`;vis($('world'),t<E.voc+.7);
+ $('surf').style.backgroundPosition=`${t*40}px 0`;
+ // hook
+ {const el=$('hd');vis(el,t<E.bun+.35);el.style.opacity=Math.min(eo(seg(t,0,.3)),1-seg(t,E.bun,E.bun+.35))}
+ {const b=$('bubE');const v=seg(t,E.dan,E.dan+.4);vis(b,v>0&&t<E.dil+.3);b.style.transformOrigin='40px 126px';b.style.transform=`scale(${bk(v)})`;b.style.opacity=1-seg(t,E.dil,E.dil+.3);
+  b.querySelectorAll('.dt').forEach((d,i)=>d.style.opacity=.35+.65*Math.max(0,Math.sin((t-E.dan)*5-i*.9)))}
+ // excited (tracked word): underwater from start; rises at "xatırlamaq"
+ {const ex=$('ex');const v0=seg(t,E.bas,E.bas+.4);const r=eio(seg(t,E.xat,E.xat+1.1));
+  vis(ex,v0>0);const y=lerp(1130,430,r)+(r>0&&r<1?0:Math.sin(t*2)*6);ex.style.left=lerp(540,550,r)+'px';ex.style.top=y+'px';
+  const g=seg(t,E.dms,E.dms+.3);ex.style.boxShadow=`0 0 0 ${g*10}px rgba(216,237,155,${.35*g}),0 10px 26px rgba(0,0,0,.25)`;
+  ex.style.transform=`translate(-50%,-50%) scale(${bk(v0)*(1+.08*Math.sin(Math.PI*seg(t,E.xat+.95,E.xat+1.35)))})`;
+  ex.querySelector('i').textContent=t>=E.xat+1?'💬':'✓';ex.querySelector('i').style.display=t>=E.xat+1?'none':'inline'}
+ // arrow
+ {const a=$('arrP');const v=seg(t,E.xat-.2,E.xat+.6);vis($('arr'),v>0&&t<E.voc);$('arr').style.opacity=1-seg(t,E.xat+1,E.xat+1.4);a.style.strokeDashoffset=-t*60}
+ // labels
+ [['lA',E.iki],['lP',E.iki+.15]].forEach(([id,a])=>{const el=$(id);const v=seg(t,a,a+.4);vis(el,v>0);el.style.opacity=v;el.style.transform=`translateX(${(1-eo(v))*-60}px)`});
+ // passive words
+ uw.forEach((d,i)=>{const a=i<5?E.gor+i*.1:E.tdn+(i-5)*.12;pop(d,t,a)});
+ // passive real card
+ {const el=$('shP');const v=seg(t,E.gor,E.gor+.4);const on=v>0&&t<E.akt+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.akt,E.akt+.3));el.style.transform=`translateY(${(1-eo(v))*-40}px)`}}
+ // active words
+ aw.forEach((d,i)=>pop(d,t,E.tap+i*.15));
+ // pill
+ {const el=$('pill');const v=seg(t,E.ade,E.ade+.4);vis(el,v>0&&t<E.dms+.3);el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;el.style.opacity=1-seg(t,E.dms,E.dms+.3)}
+ // light scene
+ const L=$('light');vis(L,lt>0);L.style.opacity=eo(lt);
+ vis($('lw'),t>=E.voc+.25);
+ if(t>=E.voc+.25){fade('top',t,E.voc+.3,E.han+.3);
+  {const el=$('shS');const v=seg(t,E.voc+.4,E.voc+.9);const on=v>0&&t<E.han+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.han,E.han+.3));el.style.transform=`translateY(${(1-eo(v))*60}px)`}
+   const k=760/936;const rd=$('rDir'),rm=$('rMode');
+   rd.style.left=(482*k)+'px';rd.style.top=(232*k)+'px';rd.style.width=(450*k)+'px';rd.style.height=(160*k)+'px';rd.style.opacity=seg(t,E.on,E.on+.3);
+   rm.style.left=(4*k)+'px';rm.style.top=(232*k)+'px';rm.style.width=(466*k)+'px';rm.style.height=(160*k)+'px';rm.style.opacity=seg(t,E.soz4,E.soz4+.3)}
+  {const el=$('sh0');const v=seg(t,E.qar,E.qar+.45);const on=v>0&&t<E.yaz+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1);el.style.transform=`translateY(${(1-eo(v))*120}px)`}}
+  {const el=$('sh1');const v=seg(t,E.yaz,E.yaz+.25);const on=v>0&&t<E.han+.3;vis(el,on);if(on){el.style.opacity=Math.min(v,1-seg(t,E.han,E.han+.3))}}
+  fade('ctaT',t,E.han,999);
+  {const b=$('bub');const v=seg(t,E.mes,E.mes+.4);vis(b,v>0);b.style.transform=`scale(${bk(v)})`;b.style.transformOrigin='290px 150px'}
+  fade('ctaLogo',t,E.mes+.3,999);}
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>

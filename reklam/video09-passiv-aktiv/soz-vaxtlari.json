@@ -1,0 +1,344 @@
+[
+ {
+  "i": 0,
+  "text": "Başa",
+  "start": 0.16,
+  "end": 0.4
+ },
+ {
+  "i": 1,
+  "text": "düşürsən,",
+  "start": 0.44,
+  "end": 1.2
+ },
+ {
+  "i": 2,
+  "text": "amma",
+  "start": 1.28,
+  "end": 1.36
+ },
+ {
+  "i": 3,
+  "text": "danışa",
+  "start": 1.44,
+  "end": 1.68
+ },
+ {
+  "i": 4,
+  "text": "bilmirsən?",
+  "start": 1.72,
+  "end": 2.6
+ },
+ {
+  "i": 5,
+  "text": "Bunun",
+  "start": 2.64,
+  "end": 2.88
+ },
+ {
+  "i": 6,
+  "text": "səbəbi",
+  "start": 2.96,
+  "end": 3.28
+ },
+ {
+  "i": 7,
+  "text": "var.",
+  "start": 3.56,
+  "end": 3.867
+ },
+ {
+  "i": 8,
+  "text": "Dilçilər",
+  "start": 3.893,
+  "end": 4.48
+ },
+ {
+  "i": 9,
+  "text": "iki",
+  "start": 4.6,
+  "end": 4.72
+ },
+ {
+  "i": 10,
+  "text": "söz",
+  "start": 4.76,
+  "end": 4.88
+ },
+ {
+  "i": 11,
+  "text": "ehtiyatını",
+  "start": 4.96,
+  "end": 5.44
+ },
+ {
+  "i": 12,
+  "text": "ayırır.",
+  "start": 5.52,
+  "end": 6.32
+ },
+ {
+  "i": 13,
+  "text": "Passiv",
+  "start": 6.4,
+  "end": 6.56
+ },
+ {
+  "i": 14,
+  "text": "ehtiyat:",
+  "start": 6.64,
+  "end": 7.4
+ },
+ {
+  "i": 15,
+  "text": "sözü",
+  "start": 7.44,
+  "end": 7.68
+ },
+ {
+  "i": 16,
+  "text": "görəndə",
+  "start": 7.72,
+  "end": 8.08
+ },
+ {
+  "i": 17,
+  "text": "tanıyırsan.",
+  "start": 8.16,
+  "end": 9.08
+ },
+ {
+  "i": 18,
+  "text": "Aktiv",
+  "start": 9.12,
+  "end": 9.44
+ },
+ {
+  "i": 19,
+  "text": "ehtiyat:",
+  "start": 9.52,
+  "end": 10.2
+ },
+ {
+  "i": 20,
+  "text": "lazım",
+  "start": 10.24,
+  "end": 10.56
+ },
+ {
+  "i": 21,
+  "text": "olanda",
+  "start": 10.64,
+  "end": 11.12
+ },
+ {
+  "i": 22,
+  "text": "sözü",
+  "start": 11.16,
+  "end": 11.44
+ },
+ {
+  "i": 23,
+  "text": "özün",
+  "start": 11.52,
+  "end": 11.76
+ },
+ {
+  "i": 24,
+  "text": "tapıb",
+  "start": 11.84,
+  "end": 12.053
+ },
+ {
+  "i": 25,
+  "text": "işlədirsən.",
+  "start": 12.107,
+  "end": 13.0
+ },
+ {
+  "i": 26,
+  "text": "Tanıdığın",
+  "start": 13.04,
+  "end": 13.52
+ },
+ {
+  "i": 27,
+  "text": "sözlər",
+  "start": 13.56,
+  "end": 14.04
+ },
+ {
+  "i": 28,
+  "text": "adətən",
+  "start": 14.08,
+  "end": 14.48
+ },
+ {
+  "i": 29,
+  "text": "işlədə",
+  "start": 14.56,
+  "end": 14.8
+ },
+ {
+  "i": 30,
+  "text": "bildiklərindən",
+  "start": 14.88,
+  "end": 15.627
+ },
+ {
+  "i": 31,
+  "text": "çox",
+  "start": 15.653,
+  "end": 15.76
+ },
+ {
+  "i": 32,
+  "text": "olur.",
+  "start": 15.84,
+  "end": 16.36
+ },
+ {
+  "i": 33,
+  "text": "Danışmaq",
+  "start": 16.4,
+  "end": 16.84
+ },
+ {
+  "i": 34,
+  "text": "üçün",
+  "start": 16.88,
+  "end": 17.04
+ },
+ {
+  "i": 35,
+  "text": "isə",
+  "start": 17.12,
+  "end": 17.36
+ },
+ {
+  "i": 36,
+  "text": "sözü",
+  "start": 17.4,
+  "end": 17.68
+ },
+ {
+  "i": 37,
+  "text": "tanımaq",
+  "start": 17.76,
+  "end": 18.16
+ },
+ {
+  "i": 38,
+  "text": "yox,",
+  "start": 18.2,
+  "end": 18.6
+ },
+ {
+  "i": 39,
+  "text": "xatırlamaq",
+  "start": 18.64,
+  "end": 19.2
+ },
+ {
+  "i": 40,
+  "text": "lazımdır.",
+  "start": 19.28,
+  "end": 20.12
+ },
+ {
+  "i": 41,
+  "text": "Vocabox-da",
+  "start": 20.16,
+  "end": 20.88
+ },
+ {
+  "i": 42,
+  "text": "kartın",
+  "start": 20.96,
+  "end": 21.36
+ },
+ {
+  "i": 43,
+  "text": "ön",
+  "start": 21.44,
+  "end": 21.52
+ },
+ {
+  "i": 44,
+  "text": "tərəfinə",
+  "start": 21.56,
+  "end": 22.0
+ },
+ {
+  "i": 45,
+  "text": "azərbaycanca",
+  "start": 22.08,
+  "end": 22.8
+ },
+ {
+  "i": 46,
+  "text": "qarşılığı",
+  "start": 22.84,
+  "end": 23.36
+ },
+ {
+  "i": 47,
+  "text": "qoy",
+  "start": 23.4,
+  "end": 23.68
+ },
+ {
+  "i": 48,
+  "text": "və",
+  "start": 23.733,
+  "end": 23.84
+ },
+ {
+  "i": 49,
+  "text": "sözü",
+  "start": 23.88,
+  "end": 24.16
+ },
+ {
+  "i": 50,
+  "text": "özün",
+  "start": 24.24,
+  "end": 24.48
+ },
+ {
+  "i": 51,
+  "text": "yaz.",
+  "start": 24.52,
+  "end": 25.131
+ },
+ {
+  "i": 52,
+  "text": "Hansı",
+  "start": 25.2,
+  "end": 25.44
+ },
+ {
+  "i": 53,
+  "text": "dildə",
+  "start": 25.48,
+  "end": 25.76
+ },
+ {
+  "i": 54,
+  "text": "ilişirsən?",
+  "start": 25.84,
+  "end": 26.52
+ },
+ {
+  "i": 55,
+  "text": "Mesajla",
+  "start": 26.56,
+  "end": 26.96
+ },
+ {
+  "i": 56,
+  "text": "yaz.",
+  "start": 27.04,
+  "end": 27.52
+ }
+]
