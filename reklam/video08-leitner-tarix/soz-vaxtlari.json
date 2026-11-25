@@ -1,0 +1,410 @@
+[
+ {
+  "i": 0,
+  "text": "Düz",
+  "start": 0.08,
+  "end": 0.24
+ },
+ {
+  "i": 1,
+  "text": "bildin,",
+  "start": 0.36,
+  "end": 0.76
+ },
+ {
+  "i": 2,
+  "text": "irəli.",
+  "start": 0.88,
+  "end": 1.44
+ },
+ {
+  "i": 3,
+  "text": "Səhv",
+  "start": 1.68,
+  "end": 1.92
+ },
+ {
+  "i": 4,
+  "text": "etdin,",
+  "start": 2.0,
+  "end": 2.4
+ },
+ {
+  "i": 5,
+  "text": "geri.",
+  "start": 2.56,
+  "end": 3.08
+ },
+ {
+  "i": 6,
+  "text": "Bu",
+  "start": 3.36,
+  "end": 3.44
+ },
+ {
+  "i": 7,
+  "text": "qayda",
+  "start": 3.48,
+  "end": 3.92
+ },
+ {
+  "i": 8,
+  "text": "kağız",
+  "start": 4.0,
+  "end": 4.24
+ },
+ {
+  "i": 9,
+  "text": "qutudan",
+  "start": 4.32,
+  "end": 4.64
+ },
+ {
+  "i": 10,
+  "text": "başlayıb.",
+  "start": 4.72,
+  "end": 5.52
+ },
+ {
+  "i": 11,
+  "text": "Yetmişinci",
+  "start": 5.64,
+  "end": 6.08
+ },
+ {
+  "i": 12,
+  "text": "illərdə",
+  "start": 6.16,
+  "end": 6.72
+ },
+ {
+  "i": 13,
+  "text": "alman",
+  "start": 6.84,
+  "end": 7.12
+ },
+ {
+  "i": 14,
+  "text": "elm",
+  "start": 7.2,
+  "end": 7.36
+ },
+ {
+  "i": 15,
+  "text": "jurnalisti",
+  "start": 7.44,
+  "end": 8.0
+ },
+ {
+  "i": 16,
+  "text": "Sebastian",
+  "start": 8.08,
+  "end": 8.56
+ },
+ {
+  "i": 17,
+  "text": "Leitner",
+  "start": 8.64,
+  "end": 9.2
+ },
+ {
+  "i": 18,
+  "text": "onu",
+  "start": 9.28,
+  "end": 9.52
+ },
+ {
+  "i": 19,
+  "text": "öz",
+  "start": 9.6,
+  "end": 9.68
+ },
+ {
+  "i": 20,
+  "text": "kitabında",
+  "start": 9.76,
+  "end": 10.16
+ },
+ {
+  "i": 21,
+  "text": "təsvir",
+  "start": 10.2,
+  "end": 10.48
+ },
+ {
+  "i": 22,
+  "text": "edib.",
+  "start": 10.56,
+  "end": 11.067
+ },
+ {
+  "i": 23,
+  "text": "Kartlar",
+  "start": 11.093,
+  "end": 11.44
+ },
+ {
+  "i": 24,
+  "text": "qutunun",
+  "start": 11.52,
+  "end": 11.92
+ },
+ {
+  "i": 25,
+  "text": "bölmələrinə",
+  "start": 11.96,
+  "end": 12.48
+ },
+ {
+  "i": 26,
+  "text": "düzülür.",
+  "start": 12.52,
+  "end": 13.24
+ },
+ {
+  "i": 27,
+  "text": "Bildiyin",
+  "start": 13.28,
+  "end": 13.68
+ },
+ {
+  "i": 28,
+  "text": "kart",
+  "start": 13.84,
+  "end": 14.0
+ },
+ {
+  "i": 29,
+  "text": "növbəti",
+  "start": 14.08,
+  "end": 14.4
+ },
+ {
+  "i": 30,
+  "text": "bölməyə",
+  "start": 14.48,
+  "end": 14.8
+ },
+ {
+  "i": 31,
+  "text": "keçir,",
+  "start": 14.88,
+  "end": 15.48
+ },
+ {
+  "i": 32,
+  "text": "səhv",
+  "start": 15.52,
+  "end": 15.76
+ },
+ {
+  "i": 33,
+  "text": "cavablanan",
+  "start": 15.8,
+  "end": 16.32
+ },
+ {
+  "i": 34,
+  "text": "kart",
+  "start": 16.48,
+  "end": 16.64
+ },
+ {
+  "i": 35,
+  "text": "geri",
+  "start": 16.72,
+  "end": 16.88
+ },
+ {
+  "i": 36,
+  "text": "qayıdır.",
+  "start": 16.96,
+  "end": 17.653
+ },
+ {
+  "i": 37,
+  "text": "Beləcə",
+  "start": 17.707,
+  "end": 18.08
+ },
+ {
+  "i": 38,
+  "text": "çətin",
+  "start": 18.12,
+  "end": 18.4
+ },
+ {
+  "i": 39,
+  "text": "kartlar",
+  "start": 18.52,
+  "end": 18.88
+ },
+ {
+  "i": 40,
+  "text": "daha",
+  "start": 18.96,
+  "end": 19.12
+ },
+ {
+  "i": 41,
+  "text": "tez-tez",
+  "start": 19.16,
+  "end": 19.52
+ },
+ {
+  "i": 42,
+  "text": "qarşına",
+  "start": 19.573,
+  "end": 19.92
+ },
+ {
+  "i": 43,
+  "text": "çıxır.",
+  "start": 19.96,
+  "end": 20.52
+ },
+ {
+  "i": 44,
+  "text": "Vocabox",
+  "start": 20.56,
+  "end": 21.2
+ },
+ {
+  "i": 45,
+  "text": "bu",
+  "start": 21.28,
+  "end": 21.36
+ },
+ {
+  "i": 46,
+  "text": "qaydanı",
+  "start": 21.413,
+  "end": 21.92
+ },
+ {
+  "i": 47,
+  "text": "altı",
+  "start": 22.0,
+  "end": 22.16
+ },
+ {
+  "i": 48,
+  "text": "qutu",
+  "start": 22.24,
+  "end": 22.44
+ },
+ {
+  "i": 49,
+  "text": "ilə",
+  "start": 22.48,
+  "end": 22.6
+ },
+ {
+  "i": 50,
+  "text": "işlədir:",
+  "start": 22.64,
+  "end": 23.387
+ },
+ {
+  "i": 51,
+  "text": "yeni",
+  "start": 23.413,
+  "end": 23.6
+ },
+ {
+  "i": 52,
+  "text": "söz",
+  "start": 23.68,
+  "end": 24.0
+ },
+ {
+  "i": 53,
+  "text": "üçüncüdən",
+  "start": 24.08,
+  "end": 24.56
+ },
+ {
+  "i": 54,
+  "text": "başlayır,",
+  "start": 24.64,
+  "end": 25.307
+ },
+ {
+  "i": 55,
+  "text": "düz",
+  "start": 25.333,
+  "end": 25.52
+ },
+ {
+  "i": 56,
+  "text": "cavab",
+  "start": 25.56,
+  "end": 25.92
+ },
+ {
+  "i": 57,
+  "text": "bir",
+  "start": 26.0,
+  "end": 26.08
+ },
+ {
+  "i": 58,
+  "text": "qutu",
+  "start": 26.12,
+  "end": 26.32
+ },
+ {
+  "i": 59,
+  "text": "irəli,",
+  "start": 26.4,
+  "end": 27.08
+ },
+ {
+  "i": 60,
+  "text": "səhv",
+  "start": 27.12,
+  "end": 27.6
+ },
+ {
+  "i": 61,
+  "text": "bir",
+  "start": 27.68,
+  "end": 27.76
+ },
+ {
+  "i": 62,
+  "text": "qutu",
+  "start": 27.8,
+  "end": 28.08
+ },
+ {
+  "i": 63,
+  "text": "geri.",
+  "start": 28.16,
+  "end": 28.651
+ },
+ {
+  "i": 64,
+  "text": "Mesajla",
+  "start": 28.72,
+  "end": 29.12
+ },
+ {
+  "i": 65,
+  "text": "yaz,",
+  "start": 29.2,
+  "end": 29.6
+ },
+ {
+  "i": 66,
+  "text": "qutularını",
+  "start": 29.653,
+  "end": 30.08
+ },
+ {
+  "i": 67,
+  "text": "quraq.",
+  "start": 30.133,
+  "end": 30.64
+ }
+]

@@ -1,0 +1,145 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#4E5E57;--gr:#16A34A;--kr:#C99A68;--kd:#A97A4C;--kl:#E2C49E}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:var(--tx);background:var(--y)}
+#bg{position:absolute;inset:0;background:radial-gradient(ellipse 900px 760px at 50% 44%,#EEF7CF,var(--y) 72%)}
+.h{position:absolute;left:60px;right:60px;text-align:center;font-weight:800;letter-spacing:-1.5px;line-height:1.08}
+#cont{position:absolute;inset:0;transform-origin:540px 960px}
+#bxg{position:absolute;inset:0}
+#back{position:absolute;left:90px;top:700px;width:830px;height:520px;border-radius:18px 18px 26px 26px;background:var(--kl)}
+.dv{position:absolute;top:712px;width:10px;height:500px;margin-left:-5px;border-radius:5px;background:var(--kd)}
+.sc{position:absolute;height:200px;border-radius:12px;background:#fffdf6;border-top:8px solid #8fb3a6;box-sizing:border-box;box-shadow:0 -2px 0 rgba(0,0,0,.06)}
+#front{position:absolute;left:78px;top:930px;width:854px;height:300px;border-radius:20px 20px 30px 30px;background:var(--kr);box-shadow:inset 0 10px 0 var(--kd),0 24px 50px rgba(23,47,41,.22)}
+#front i{position:absolute;left:337px;top:110px;width:180px;height:56px;border-radius:28px;background:var(--kd);opacity:.55}
+.glow{position:absolute;border-radius:14px;background:rgba(255,255,255,.55);box-shadow:0 0 0 6px var(--p)}
+.fc{position:absolute;border-radius:28px;background:#fffdf6;border-top:12px solid var(--p);box-sizing:border-box;text-align:center;box-shadow:0 18px 40px rgba(23,47,41,.18);overflow:hidden}
+.fc b{display:block;font-weight:800;letter-spacing:-2px;white-space:nowrap}
+.fc span{display:block;color:var(--mu);font-weight:600;white-space:nowrap}
+.pill{position:absolute;border-radius:999px;font-weight:800;font-size:46px;padding:14px 34px;white-space:nowrap;z-index:9}
+.pp{background:var(--p);color:#fff}.pw{background:#fff;color:var(--tx);box-shadow:0 10px 26px rgba(23,47,41,.14)}
+#book{position:absolute;left:330px;top:360px;width:420px;height:400px;border-radius:12px 26px 26px 12px;background:var(--p);color:#fff;box-shadow:inset 22px 0 0 var(--pd),0 24px 50px rgba(23,47,41,.3);text-align:center}
+#book b{display:block;font-size:54px;letter-spacing:-1.5px;line-height:1.05;padding:84px 40px 0 60px}
+#book span{display:block;margin:34px 0 0 22px;font-size:30px;font-weight:600;color:var(--y)}
+#book i{position:absolute;left:84px;right:44px;top:56px;height:6px;border-radius:3px;background:var(--y)}
+#who{top:800px;font-size:44px}
+#who small{display:block;font-size:34px;font-weight:600;color:var(--mu);letter-spacing:-.5px;margin-top:8px}
+.shot{position:absolute;border-radius:28px;box-shadow:0 18px 50px rgba(23,47,41,.18);overflow:hidden;background:#fff}
+.shot img{display:block;width:100%}
+.ring{position:absolute;border:7px solid var(--p);border-radius:20px;box-sizing:border-box}
+#top{position:absolute;left:0;right:0;top:290px;display:flex;justify-content:center;align-items:center;gap:20px}
+#bub{position:absolute;left:250px;top:800px;width:580px;height:150px}
+#ctaLogo{position:absolute;left:0;right:0;top:1040px;display:flex;justify-content:center;align-items:center;gap:20px}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:20}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 14px #EEF7CF,0 2px 0 #EEF7CF}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:21}
+</style></head><body>
+<div id="bg"></div>
+<div class="pill pp" id="pF">→ irəli</div>
+<div class="pill pw" id="pB">geri ←</div>
+<div id="cont">
+ <div id="bxg"><div id="back"></div><div id="dvs"></div><div id="scs"></div><div class="glow" id="glow"></div></div>
+ <div class="fc" id="fc"><b>neighbour</b><span>qonşu</span></div>
+ <div class="fc" id="wc"><b>borrow</b><span>borc almaq</span></div>
+ <div id="front"><i></i></div>
+</div>
+<div class="pill pw" id="pOld">1970-ci illər</div>
+<div id="book"><i></i><b>So lernt man lernen</b><span>Sebastian Leitner · 1972</span></div>
+<div class="h" id="who">Sebastian Leitner<small>alman elm jurnalisti</small></div>
+<div class="pill pp" id="pHard">çətin kart → tez-tez</div>
+<div id="top"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:56px;letter-spacing:-1.5px">Vocabox</b></div>
+<div class="shot" id="shBox" style="left:220px;top:400px;width:640px"><img src="__BOXES__"><div class="ring" id="rNum"></div><div class="ring" id="r3"></div></div>
+<div class="pill pp" id="pNew">yeni söz → 3</div>
+<div class="shot" id="shR" style="left:190px;top:650px;width:700px"><img src="__FBR__"></div>
+<div class="shot" id="shW" style="left:190px;top:650px;width:700px"><img src="__FBW__"></div>
+<div class="h" id="ctaT" style="top:360px;font-size:84px">Qutularını<br><span style="color:var(--p)">quraq?</span></div>
+<svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+ <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+ <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+<div id="ctaLogo"><div style="width:72px;height:72px">__LOGO2__</div><b style="font-size:46px;letter-spacing:-1px">Vocabox</b></div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=(txt,n=1)=>{let c=0;for(let i=0;i<WORDS.length;i++)if(WORDS[i].text===txt&&++c===n)return i;throw Error('söz yoxdur: '+txt)};
+const ST=i=>WORDS[i].start+OFF;
+const E={ire:ST(IX('irəli.'))-LEAD,sehv:ST(IX('Səhv'))-LEAD,geri:ST(IX('geri.'))-LEAD,bu:ST(IX('Bu'))-LEAD,kag:ST(IX('kağız'))-LEAD,
+ yet:ST(IX('Yetmişinci'))-LEAD,seb:ST(IX('Sebastian'))-LEAD,kit:ST(IX('kitabında'))-LEAD,kart:ST(IX('Kartlar'))-LEAD,bol:ST(IX('bölmələrinə'))-LEAD,
+ bil:ST(IX('Bildiyin'))-LEAD,nov:ST(IX('növbəti'))-LEAD,sv:ST(IX('səhv'))-LEAD,gq:ST(IX('geri'))-LEAD,bel:ST(IX('Beləcə'))-LEAD,tez:ST(IX('tez-tez'))-LEAD,
+ voc:ST(IX('Vocabox'))-LEAD,alti:ST(IX('altı'))-LEAD,yeni:ST(IX('yeni'))-LEAD,ucu:ST(IX('üçüncüdən'))-LEAD,duz:ST(IX('düz'))-LEAD,
+ sv2:ST(IX('səhv',2))-LEAD,mes:ST(IX('Mesajla'))-LEAD,qur:ST(IX('qutularını'))-LEAD};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+const vis=(el,on)=>{el.style.display=on?(el.dataset.d||'block'):'none';return on};
+function fade(id,t,a,b,din=.35,dout=.3){const el=$(id);const on=t>=a&&t<b;vis(el,on);if(on)el.style.opacity=Math.min(eo(seg(t,a,a+din)),1-seg(t,b-dout,b));return on}
+function popc(id,t,a,x,y,b=999,dur=.4){const el=$(id);const v=seg(t,a,a+dur);const on=v>0&&t<b;vis(el,on);if(!on)return;el.style.left=x+'px';el.style.top=y+'px';el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;el.style.opacity=1-seg(t,b-.3,b)}
+['top','ctaLogo'].forEach(i=>$(i).dataset.d='flex');
+// box geometry: compartments widen toward the back (as in Leitner's box)
+const CW=[110,129,157,194,240],CL=[];{let x=90;CW.forEach(w=>{CL.push(x);x+=w})}
+CL.slice(1).forEach(x=>{const d=document.createElement('div');d.className='dv';d.style.left=x+'px';$('dvs').appendChild(d)});
+const CNT=[4,4,3,3,2];CNT.forEach((n,k)=>{for(let j=n-1;j>=0;j--){const d=document.createElement('div');d.className='sc';d.style.left=(CL[k]+12)+'px';d.style.width=(CW[k]-24)+'px';d.style.top=(800-j*18)+'px';d.style.filter=`brightness(${1-j*.05})`;$('scs').appendChild(d)}});
+const SLOT=k=>({x:CL[k]+10,w:CW[k]-20,y:822,h:200});
+// flying card: big (hook) -> small (slot)
+function card(el,t,st){ // st:{x,y,w,h,lab}
+ el.style.left=st.x+'px';el.style.top=st.y+'px';el.style.width=st.w+'px';el.style.height=st.h+'px';
+ const b=el.querySelector('b'),s=el.querySelector('span');const k=st.w/560;b.style.fontSize=(96*k)+'px';b.style.paddingTop=(92*k)+'px';s.style.fontSize=(44*k)+'px';
+ b.style.opacity=s.style.opacity=st.lab}
+const BIG={x:260,y:560,w:560,h:330,lab:1};
+const mix=(a,b,v)=>({x:lerp(a.x,b.x,v),y:lerp(a.y,b.y,v),w:lerp(a.w,b.w,v),h:lerp(a.h,b.h,v),lab:lerp(a.lab,b.lab,v)});
+const RAISE=(s,dy,w=220,h=130)=>({x:s.x+s.w/2-w/2,y:s.y-dy,w,h,lab:1});
+const sm=(k)=>({...SLOT(k),lab:0});
+function hop(t,a,from,to,dur=.8){const v=eio(seg(t,a,a+dur));const A=from,B=to;const up=Math.sin(Math.PI*v);
+ const s=mix(A,B,v);const r=RAISE(s,0);return mix(s,{...r,y:s.y-300},up)}
+
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ // hook pills
+ popc('pF',t,E.ire,720,420,E.sehv+.15);popc('pB',t,E.geri,360,420,E.bu+.2);
+ // container (box + cards) transform
+ const s3=eio(seg(t,E.yet,E.yet+.8))*(1-eio(seg(t,E.kart,E.kart+.8)));const out=eio(seg(t,E.voc,E.voc+.7));
+ const zoom=eio(seg(t,E.kart,E.kart+.8))*(1-out);
+ $('cont').style.transform=`translate(${-1150*out}px,${280*s3-90*zoom}px) scale(${lerp(1,.74,s3)})`;$('cont').style.opacity=lerp(1,.4,s3);
+ vis($('cont'),t<E.voc+.8);
+ // box graphics enter
+ const be=eo(seg(t,E.bu,E.bu+.6));$('bxg').style.transform=`translateY(${(1-be)*1300}px)`;$('front').style.transform=`translateY(${(1-be)*1300}px)`;vis($('bxg'),t>=E.bu);vis($('front'),t>=E.bu);
+ // hook card
+ const fc=$('fc');let st;
+ if(t<E.bu){const dx=220*eio(seg(t,E.ire,E.ire+.45))*(1-eio(seg(t,E.sehv,E.sehv+.45)))-220*eio(seg(t,E.geri,E.geri+.45))*(1-eio(seg(t,E.bu-.2,E.bu+.25)));
+  st={...BIG,x:BIG.x+dx};st.y=BIG.y+(1-eo(seg(t,0,.35)))*30;}
+ else if(t<E.bil){const v=eio(seg(t,E.bu+.1,E.kag+.5));st=mix(BIG,sm(0),v);st.y-=Math.sin(Math.PI*v)*120}
+ else st=hop(t,E.bil,sm(0),sm(1),.95);
+ card(fc,t,st);fc.style.zIndex=1;
+ // wrong card in comp 2 front, hops back to comp 1, then bobs (hard card comes back often)
+ const wc=$('wc');let ws=sm(1);ws={...ws,x:ws.x+2};
+ if(t>=E.sv)ws=hop(t,E.sv+.25,sm(1),sm(0),.9);
+ const bob=(a)=>Math.sin(Math.PI*seg(t,a,a+.6));const bb=Math.max(bob(E.bel+.1),bob(E.tez),bob(E.tez+.8));
+ if(t>=E.bel){const s0=sm(0);ws=mix(s0,{...RAISE(s0,0),y:s0.y-230},bb)}
+ vis(wc,t>=E.kart-.2);card(wc,t,ws);wc.style.opacity=eo(seg(t,E.kart-.2,E.kart+.2));
+ // glow on comp 1
+ const g=$('glow');const gv=seg(t,E.bel,E.bel+.4);vis(g,gv>0);g.style.left=(CL[0]+4)+'px';g.style.top='720px';g.style.width=(CW[0]-8)+'px';g.style.height='500px';g.style.opacity=gv*(.7+.3*Math.sin((t-E.bel)*6));
+ popc('pHard',t,E.tez,540,480,E.voc+.2);
+ // history
+ popc('pOld',t,E.yet,540,300,E.kart+.1);
+ {const b=$('book');const v=seg(t,E.kit-.15,E.kit+.35);const on=v>0&&t<E.kart+.3;vis(b,on);if(on){b.style.transform=`translateY(${(1-eo(v))*-500}px) rotate(${lerp(-12,-3,eo(v))}deg)`;b.style.opacity=1-seg(t,E.kart,E.kart+.3)}}
+ fade('who',t,E.seb,E.kart+.3);
+ // Vocabox
+ fade('top',t,E.voc+.3,E.mes+.3);
+ {const el=$('shBox');const v=seg(t,E.voc+.35,E.voc+.85);const on=v>0&&t<E.mes+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.mes,E.mes+.3));el.style.transform=`translateX(${(1-eo(v))*700}px)`}
+  const k=640/1062;const r=$('rNum');r.style.left=(48*k)+'px';r.style.top=(240*k)+'px';r.style.width=(124*k)+'px';r.style.height=(960*k)+'px';r.style.opacity=seg(t,E.alti,E.alti+.3)*(1-seg(t,E.yeni,E.yeni+.3));
+  const r3=$('r3');r3.style.left=(36*k)+'px';r3.style.top=(586*k)+'px';r3.style.width=(990*k)+'px';r3.style.height=(130*k)+'px';r3.style.opacity=seg(t,E.yeni,E.yeni+.3)}
+ popc('pNew',t,E.ucu,540,1300,E.duz+.1);
+ {const el=$('shR');const v=seg(t,E.duz,E.duz+.45);const on=v>0&&t<E.sv2+.4;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.sv2+.1,E.sv2+.4));el.style.transform=`translateY(${(1-eo(v))*300}px)`}}
+ {const el=$('shW');const v=seg(t,E.sv2,E.sv2+.45);const on=v>0&&t<E.mes+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.mes,E.mes+.3));el.style.transform=`translateY(${(1-eo(v))*300}px)`}}
+ // CTA
+ fade('ctaT',t,E.mes,999);
+ {const b=$('bub');const v=seg(t,E.mes+.15,E.mes+.55);vis(b,v>0);b.style.transform=`scale(${bk(v)})`;b.style.transformOrigin='290px 150px'}
+ fade('ctaLogo',t,E.qur,999);
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>
