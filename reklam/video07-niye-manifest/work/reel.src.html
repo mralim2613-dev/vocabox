@@ -1,0 +1,304 @@
+<!doctype html><html lang="az"><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A;
+ --bg:#0A1411;--bg2:#10211B;--ink:#F2F5EE;--dim:#7E8F87;--line:rgba(216,237,155,.16);--red:#E2726A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;background:var(--bg);font-family:Inter,sans-serif;color:var(--ink)}
+#bgGrid{position:absolute;left:-120px;top:-120px;width:1320px;height:2160px;
+ background-image:linear-gradient(rgba(216,237,155,.045) 2px,transparent 2px),linear-gradient(90deg,rgba(216,237,155,.045) 2px,transparent 2px);background-size:60px 60px}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse 760px 900px at 50% 46%,rgba(32,78,64,.45),rgba(10,20,17,0) 70%),radial-gradient(ellipse 900px 1300px at 50% 50%,transparent 55%,rgba(0,0,0,.55))}
+#flash{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(216,237,155,.55),rgba(32,78,64,.35) 38%,rgba(10,20,17,0) 70%);opacity:0}
+#world{position:absolute;inset:0;transform-origin:540px 820px}
+.sc{position:absolute;inset:0;display:none}
+.mono{font-family:'DejaVu Sans Mono',monospace;letter-spacing:4px;text-transform:none}
+/* header */
+#hdr{position:absolute;left:90px;right:90px;top:262px;height:64px;z-index:9}
+#tag{position:absolute;left:0;top:10px;font-size:30px;color:var(--y);font-weight:700}
+#tag i{display:inline-block;width:16px;height:16px;border-radius:50%;background:var(--y);margin-right:16px;vertical-align:3px;font-style:normal}
+#tag span{color:var(--dim)}
+#hlogo{position:absolute;right:0;top:0;width:58px;height:58px}
+#hline{position:absolute;left:0;right:0;top:78px;height:2px;background:var(--line)}
+/* type */
+.big{position:absolute;left:90px;right:90px;font-family:'Inter Display',Inter,sans-serif;font-weight:900;letter-spacing:-3px;line-height:.98}
+.big span{display:inline-block}
+.lime{color:var(--y)}
+.lab{position:absolute;left:90px;font-size:30px;color:var(--y);font-weight:700}
+/* tiles */
+.tile{position:absolute;width:400px;height:330px;border-radius:30px;border:2px dashed rgba(216,237,155,.22);box-sizing:border-box}
+.tile .in{position:absolute;inset:-2px;border-radius:30px;background:linear-gradient(160deg,#16302a,#0f201b);border:2px solid rgba(216,237,155,.35);box-sizing:border-box}
+.tile svg{position:absolute;left:50%;top:46px;width:150px;height:150px;margin-left:-75px}
+.tile .tl{position:absolute;left:0;right:0;top:228px;text-align:center;font-size:27px;color:var(--ink)}
+.q{position:absolute;right:-18px;top:-18px;width:64px;height:64px;border-radius:50%;background:var(--y);color:var(--tx);font-weight:900;font-size:40px;line-height:64px;text-align:center;box-shadow:0 0 30px rgba(216,237,155,.5)}
+/* chaos */
+.chip{position:absolute;font-size:34px;font-weight:600;color:rgba(242,245,238,.55);white-space:nowrap;padding:8px 18px;border-radius:14px;border:2px solid rgba(242,245,238,.12);background:rgba(16,33,27,.7)}
+#sys{position:absolute;left:540px;top:830px;transform:translate(-50%,-50%);font-family:'Inter Display',Inter;font-weight:900;font-size:120px;letter-spacing:-2px;padding:10px 50px;border-radius:26px;background:var(--bg);border:4px solid var(--y);color:var(--y);white-space:nowrap}
+#sysx{position:absolute;left:-30px;right:-30px;top:50%;height:12px;margin-top:-6px;background:var(--red);border-radius:6px;transform-origin:0 50%}
+/* notebook */
+#page{position:absolute;left:180px;top:470px;width:720px;height:830px;border-radius:28px;background:#13261f;border:2px solid rgba(216,237,155,.2);overflow:hidden}
+#page .rl{position:absolute;left:60px;right:40px;height:2px;background:rgba(216,237,155,.12)}
+#page .mg{position:absolute;left:44px;top:0;bottom:0;width:3px;background:rgba(226,114,106,.4)}
+#page .en{position:absolute;left:76px;font-size:36px;font-weight:600;font-style:italic;color:#E6ECE1;white-space:nowrap}
+/* road */
+#road{position:absolute;left:0;top:0;width:1080px;height:1920px}
+/* stat cards */
+.stat{position:absolute;left:90px;width:840px;height:150px;border-radius:28px;background:linear-gradient(160deg,#16302a,#0f201b);border:2px solid rgba(216,237,155,.25);box-sizing:border-box}
+.stat svg{position:absolute;left:30px;top:30px;width:88px;height:88px}
+.stat .nm{position:absolute;left:146px;top:30px;font-size:46px;font-weight:800;letter-spacing:-1px}
+.stat .sb{position:absolute;left:148px;top:94px;font-size:24px;color:var(--dim)}
+.stat .vl{position:absolute;right:34px;top:42px;font-family:'DejaVu Sans Mono',monospace;font-size:50px;font-weight:700;color:var(--y)}
+#you{position:absolute;left:90px;top:850px;width:840px;height:470px;border-radius:32px;background:linear-gradient(160deg,#1b3a31,#10231d);border:3px solid var(--y);box-sizing:border-box;box-shadow:0 0 60px rgba(216,237,155,.12)}
+#you .nm{position:absolute;left:40px;top:34px;font-size:58px;font-weight:900;letter-spacing:-1px}
+#you .row{position:absolute;left:40px;right:40px;height:120px;border-top:2px solid rgba(216,237,155,.15)}
+#you .row b{position:absolute;left:0;top:34px;font-size:42px;font-weight:700}
+#you .row .qq{position:absolute;right:0;top:22px;width:76px;height:76px;border-radius:50%;background:var(--y);color:var(--tx);text-align:center;line-height:76px;font-size:48px;font-weight:900}
+/* thoughts */
+.th{position:absolute;padding:24px 34px;border-radius:34px;background:#17302a;border:2px solid rgba(242,245,238,.16);font-size:40px;font-weight:600;font-style:italic;color:#E6ECE1;white-space:nowrap}
+#stampN{position:absolute;left:540px;top:860px;padding:14px 40px;border:10px solid var(--red);color:var(--red);border-radius:20px;font-family:'DejaVu Sans Mono',monospace;font-weight:700;font-size:74px;letter-spacing:6px;background:rgba(10,20,17,.82);white-space:nowrap}
+/* shots */
+.shot{position:absolute;border-radius:30px;box-shadow:0 0 0 3px rgba(216,237,155,.35),0 30px 80px rgba(0,0,0,.55);display:none}
+.pill{position:absolute;border-radius:999px;font-weight:800;font-size:42px;padding:14px 32px;white-space:nowrap;z-index:7;display:none;background:var(--y);color:var(--tx);box-shadow:0 10px 40px rgba(0,0,0,.4)}
+/* reveal */
+#rLogo{position:absolute;left:390px;top:560px;width:300px;height:300px;filter:drop-shadow(0 0 60px rgba(216,237,155,.45))}
+#rWord{position:absolute;left:0;right:0;top:900px;text-align:center;font-family:'Inter Display',Inter;font-weight:900;font-size:150px;letter-spacing:-5px}
+/* tapes */
+.tape{position:absolute;left:-40px;width:1160px;height:120px;background:repeating-linear-gradient(-45deg,var(--y) 0 34px,#0A1411 34px 68px);box-shadow:0 14px 40px rgba(0,0,0,.5)}
+.tape b{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--bg);color:var(--y);font-family:'DejaVu Sans Mono',monospace;font-size:46px;letter-spacing:5px;padding:12px 34px;border-radius:10px;white-space:nowrap}
+.tape i{position:absolute;left:50%;top:50%;height:12px;margin-top:-6px;background:var(--red);border-radius:6px;transform-origin:0 50%}
+/* carousel labels */
+.cl{position:absolute;left:0;right:0;top:400px;text-align:center;font-size:34px;color:var(--y);font-weight:700}
+/* series posters */
+.post{position:absolute;top:560px;width:250px;height:400px;border-radius:26px;background:linear-gradient(170deg,#173229,#0d1c17);border:2px solid rgba(216,237,155,.25);box-sizing:border-box;text-align:center}
+.post .pt{position:absolute;left:0;right:0;top:150px;font-family:'Inter Display',Inter;font-weight:900;font-size:66px;letter-spacing:-2px}
+.post .pn{position:absolute;left:0;right:0;top:40px;font-size:24px;color:var(--dim)}
+.post .ps{position:absolute;left:0;right:0;bottom:40px;font-size:22px;color:var(--y)}
+/* CTA */
+.lang{position:absolute;top:640px;height:110px;border-radius:999px;background:#17302a;border:2px solid rgba(216,237,155,.3);font-size:44px;font-weight:800;line-height:106px;padding:0 40px 0 30px;box-sizing:border-box;white-space:nowrap;display:none}
+.lang em{display:inline-block;font-style:normal;font-family:'DejaVu Sans Mono',monospace;font-size:28px;background:var(--y);color:var(--tx);border-radius:12px;padding:0 10px;line-height:48px;margin-right:18px;vertical-align:6px}
+#bub{position:absolute;left:250px;top:880px;width:580px;height:150px;display:none}
+#endL{position:absolute;left:0;right:0;top:1130px;display:none;align-items:center;justify-content:center;gap:20px}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:10;color:var(--ink)}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 14px var(--bg),0 2px 0 var(--bg)}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--y);z-index:11}
+</style></head><body>
+<div id="bgGrid"></div><div id="vig"></div><div id="flash"></div>
+<div id="world">
+ <div id="hdr"><div id="tag" class="mono"><i></i>NİYƏ? <span>· 01</span></div><div id="hlogo">__LOGO1__</div><div id="hline"></div></div>
+
+ <!-- HOOK -->
+ <div class="sc" id="HOOK">
+  <div class="big" id="t1" style="top:560px;font-size:136px;transform-origin:0 0"><span>DİL</span> <span>ÖYRƏNƏN</span><br><span class="lime">NƏ</span> <span>AXTARIR?</span></div>
+  <div class="big" id="t2" style="top:900px;font-size:136px"><span>YADDA</span> <span>QALAN</span><br><span class="lime">SÖZLƏR.</span></div>
+ </div>
+
+ <!-- GRID -->
+ <div class="sc" id="GRID">
+  <div class="tile" id="g0" style="left:90px;top:470px"><div class="in"><svg viewBox="0 0 100 100" fill="none" stroke="#D8ED9B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="22" y="12" width="56" height="76" rx="6"/><path d="M22 26h-8M22 44h-8M22 62h-8M22 80h-8M36 32h30M36 46h30M36 60h20"/></svg><div class="tl mono">DƏFTƏR</div></div><div class="q">?</div></div>
+  <div class="tile" id="g1" style="left:530px;top:470px"><div class="in"><svg viewBox="0 0 100 100" fill="none" stroke="#D8ED9B" stroke-width="5" stroke-linecap="round"><circle cx="20" cy="24" r="4"/><circle cx="20" cy="50" r="4"/><circle cx="20" cy="76" r="4"/><path d="M34 24h48M34 50h48M34 76h34"/></svg><div class="tl mono">SİYAHI</div></div><div class="q">?</div></div>
+  <div class="tile" id="g2" style="left:90px;top:860px"><div class="in"><svg viewBox="0 0 100 100" fill="none" stroke="#D8ED9B" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path d="M50 26c-10-8-24-10-36-8v62c12-2 26 0 36 8 10-8 24-10 36-8V18c-12-2-26 0-36 8z"/><path d="M50 26v62"/></svg><div class="tl mono">KURS KİTABI</div></div><div class="q">?</div></div>
+  <div class="tile" id="g3" style="left:530px;top:860px"><div class="in"><svg viewBox="0 0 100 100" fill="none" stroke="#D8ED9B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="16" width="80" height="56" rx="6"/><path d="M38 86h24M50 72v14M24 58h30M60 58h16"/></svg><div class="tl mono">SERİAL ALTYAZISI</div></div><div class="q">?</div></div>
+ </div>
+
+ <!-- CHAOS -->
+ <div class="sc" id="CHAOS"><div id="chips"></div><div id="sys">SİSTEM<div id="sysx"></div></div></div>
+
+ <!-- NOTEBOOK -->
+ <div class="sc" id="NOTE"><div class="lab mono" style="top:400px">İŞİN SONUNDA:</div><div id="page"><div class="mg"></div></div></div>
+
+ <!-- ROAD -->
+ <div class="sc" id="ROAD">
+  <div class="big" id="rdT" style="top:470px;font-size:120px">DAHA YAXŞI<br>BİR <span class="lime">YOL?</span></div>
+  <svg id="road" viewBox="0 0 1080 1920"><path id="rp" d="M110 1290 C 330 1290, 330 1000, 560 1000 S 790 760, 940 760" fill="none" stroke="#D8ED9B" stroke-width="14" stroke-linecap="round"/><path id="ra" d="M900 730 L944 760 L906 800" fill="none" stroke="#D8ED9B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M110 1290 C 260 1160, 180 1060, 330 1110 S 420 900, 520 980" fill="none" stroke="rgba(242,245,238,.18)" stroke-width="8" stroke-dasharray="4 22" stroke-linecap="round"/></svg>
+ </div>
+
+ <!-- ANALOGY -->
+ <div class="sc" id="ANAL">
+  <div class="lab mono" style="top:400px">BELƏ DÜŞÜNƏK:</div>
+  <div class="stat" id="sA" style="top:480px"><svg viewBox="0 0 100 100" fill="none" stroke="#D8ED9B" stroke-width="5" stroke-linecap="round"><path d="M10 88h80M10 54h80M10 20h80"/><path d="M20 54V30M30 54V26M40 54V32M58 88V64M68 88V60M78 88V66"/></svg><div class="nm">Kitabxanaçı</div><div class="sb mono">RƏFLƏR</div><div class="vl">RƏF 12·C</div></div>
+  <div class="stat" id="sB" style="top:650px"><svg viewBox="0 0 100 100" fill="none" stroke="#D8ED9B" stroke-width="5" stroke-linejoin="round"><path d="M14 34 50 16l36 18v40L50 92 14 74z"/><path d="M14 34l36 18 36-18M50 52v40"/></svg><div class="nm">Anbardar</div><div class="sb mono">QUTULAR</div><div class="vl">48 ƏD.</div></div>
+  <div id="you"><div class="nm">Sən</div>
+   <div class="row" style="top:140px"><b>Bildiyin sözlər</b><div class="qq">?</div></div>
+   <div class="row" style="top:270px"><b>Unutduğun sözlər</b><div class="qq">?</div></div></div>
+ </div>
+
+ <!-- HISS -->
+ <div class="sc" id="HISS">
+  <div class="th" id="h0" style="left:90px;top:470px">“Deyəsən, bilirəm…”</div>
+  <div class="th" id="h1" style="left:330px;top:640px">“Bu söz asandır.”</div>
+  <div class="th" id="h2" style="left:120px;top:1010px">“Tanış gəlir…”</div>
+  <div class="th" id="h3" style="left:420px;top:1170px">“Yəqin unutmuşam.”</div>
+  <div id="stampN">YOXLANMAYIB</div>
+ </div>
+
+ <!-- WANT -->
+ <div class="sc" id="WANT"><div class="lab mono" style="top:400px">BİZ İSTƏYİRİK Kİ:</div></div>
+ <img class="shot" id="iR" src="__FBR__" style="left:160px;top:470px;width:760px">
+ <img class="shot" id="iW" src="__FBW__" style="left:160px;top:470px;width:760px">
+ <div class="pill" id="pR">bildiyin söz → irəli</div>
+ <div class="pill" id="pW">çətin söz → yenə qarşına</div>
+
+ <!-- TEXT -->
+ <div class="sc" id="TEXT"><div class="lab mono" id="txL" style="top:400px">SIFIRDAN YOX:</div></div>
+ <img class="shot" id="iT" src="__TOP__" style="left:160px;top:480px;width:760px">
+ <img class="shot" id="iP" src="__PROMPT__" style="left:160px;top:480px;width:760px">
+ <img class="shot" id="iV" src="__PREVIEW__" style="left:230px;top:470px;width:620px">
+ <div class="pill" id="pAI">AI köməkçinlə</div>
+ <div class="pill" id="pOz">öz lüğətin</div>
+
+ <!-- REVEAL -->
+ <div class="sc" id="REV"><div id="rLogo">__LOGO2__</div><div id="rWord">Vocabox</div></div>
+
+ <!-- NEGATE -->
+ <div class="sc" id="NEG">
+  <div class="tape" id="tp0" style="top:440px"><b>DAĞINIQ DƏFTƏR<i></i></b></div>
+  <div class="tape" id="tp1" style="top:630px"><b>BİTMƏYƏN SİYAHI<i></i></b></div>
+  <div class="tape" id="tp2" style="top:820px"><b>TƏSADÜFİ TƏKRAR<i></i></b></div>
+ </div>
+
+ <!-- THREE -->
+ <div class="sc" id="THREE"><div class="cl mono" id="clT">HAZIR DƏSTLƏR</div></div>
+ <img class="shot" id="c0" src="__TOP__" style="width:700px">
+ <img class="shot" id="c1" src="__BOXES__" style="width:640px">
+ <img class="shot" id="c2" src="__PREVIEW__" style="width:640px">
+
+ <!-- SERIES -->
+ <div class="sc" id="SER">
+  <div class="post" id="ps0" style="left:90px"><div class="pn mono">01</div><div class="pt lime">NİYƏ?</div><div class="ps mono">✓ İZLƏDİN</div></div>
+  <div class="post" id="ps1" style="left:415px"><div class="pn mono">02</div><div class="pt">NƏ?</div><div class="ps mono">NÖVBƏTİ</div></div>
+  <div class="post" id="ps2" style="left:740px"><div class="pn mono">03</div><div class="pt">NECƏ?</div><div class="ps mono">NÖVBƏTİ</div></div>
+ </div>
+
+ <!-- CTA -->
+ <div class="sc" id="CTA">
+  <div class="big" id="ctT" style="top:400px;font-size:104px;text-align:center;left:60px;right:60px">HANSI DİLİ<br><span class="lime">ÖYRƏNİRSƏN?</span></div>
+ </div>
+ <div class="lang" id="l0" style="left:90px"><em>EN</em>İngilis</div>
+ <div class="lang" id="l1" style="left:420px"><em>RU</em>Rus</div>
+ <div class="lang" id="l2" style="left:680px"><em>DE</em>Alman</div>
+ <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#D8ED9B"/>
+  <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#204E40"/><path d="M2 6 L34 -26" stroke="#D8ED9B" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#172F29">Mesaj yaz</text></svg>
+ <div id="endL"><div style="width:96px;height:96px">__LOGO3__</div><b style="font-size:62px;letter-spacing:-1.5px">Vocabox</b></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const rng=s=>()=>(s=s*16807%2147483647)/2147483647;
+const S=i=>WORDS[i].start+OFF, SE=i=>WORDS[i].end+OFF;
+const CHK=[[0,'Dil'],[7,'Bəs'],[19,'Sözlər'],[24,'İşin'],[35,'Daha'],[40,'Belə'],[51,'Bəs'],[61,'Sadəcə'],[68,'Biz'],[75,'çətin'],[80,'Sözləri'],[90,'Məhz'],[95,'Nə'],[105,'Hazır'],[113,'Bəs'],[120,'Hansı'],[123,'Mesajla'],[129,'Qutularda']];
+CHK.forEach(([i,w])=>{if(WORDS[i].text.replace(/[.,?!:]/g,'')!==w)throw Error('indeks: '+i+' '+WORDS[i].text)});
+const E={hook:0,grid:S(7)-LEAD,chaos:S(19)-LEAD,note:S(24)-LEAD,road:S(35)-LEAD,anal:S(40)-LEAD,hiss:S(61)-LEAD,want:S(68)-LEAD,text:S(80)-LEAD,
+ rev:S(90)-LEAD,neg:S(95)-LEAD,three:S(105)-LEAD,ser:S(113)-LEAD,cta:S(120)-LEAD};
+// altyazı
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+function show(id,t,a,b,disp='block'){const el=$(id);if(t<a||t>=b){el.style.display='none';return 0}el.style.display=disp;el.style.opacity=Math.min(eo(seg(t,a,a+.35)),1-seg(t,b-.3,b));return 1}
+function rise(el,t,a,dy=50,d=.4){const v=seg(t,a,a+d);el.style.opacity=eo(v);el.style.transform=`translateY(${(1-eo(v))*dy}px)`;return v}
+function pop(el,t,a,b,x,y,d=.4){const v=seg(t,a,a+d);const on=v>0&&t<b;el.style.display=on?'block':'none';if(!on)return 0;el.style.left=x+'px';el.style.top=y+'px';
+ el.style.transform=`translate(-50%,-50%) scale(${bk(v)})`;el.style.opacity=Math.min(cl(v*2),1-seg(t,b-.3,b));return v}
+function shot(el,t,a,b,dx=0,dy=70){const v=seg(t,a,a+.5),o=seg(t,b-.3,b);const on=v>0&&o<1;el.style.display=on?'block':'none';if(!on)return 0;
+ el.style.opacity=Math.min(cl(v*1.6),1-o);el.style.transform=`translate(${(1-eo(v))*dx}px,${(1-eo(v))*dy}px)`;return v}
+// chips
+const CW=['remember','although','Wetter','however','спасибо','decide','Freund','likely','вопрос','borrow','achieve','Arbeit','weather','дорога','support','schnell','remind','window','город','feature','Zeit','вчера','eventually','Antwort','figure out','сегодня','maybe','Stadt'];
+const chips=[];{const r=rng(7);CW.forEach((w,i)=>{const d=document.createElement('div');d.className='chip';d.textContent=w;$('chips').appendChild(d);
+ chips.push({el:d,x:90+r()*760,y:440+r()*880,vx:(r()-.5)*70,vy:(r()-.5)*50,ro:(r()-.5)*24,dl:r()*.6})})}
+// notebook entries
+const NE=['although — baxmayaraq','Wetter — hava','вопрос — sual','decide — qərar vermək','Freund — dost','likely — ehtimal ki','дорога — yol','remind — xatırlatmaq','Zeit — vaxt','borrow — borc almaq'];
+const nes=[];for(let i=0;i<12;i++){const l=document.createElement('div');l.className='rl';l.style.top=(118+i*62)+'px';$('page').appendChild(l)}
+NE.forEach((w,i)=>{const d=document.createElement('div');d.className='en';d.style.top=(72+i*62)+'px';d.textContent=w;$('page').appendChild(d);nes.push(d)});
+const RP=$('rp'),RL=RP.getTotalLength();RP.style.strokeDasharray=RL;
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ $('bgGrid').style.transform=`translate(${(t*7)%60}px,${(t*11)%60}px)`;
+ const ks=Object.values(E).filter(a=>a<=t).at(-1)||0;$('world').style.transform=`scale(${1+0.03*eio(seg(t,ks,ks+3.2))})`;
+ // header
+ $('hdr').style.opacity=1;
+ // HOOK
+ if(show('HOOK',t,-1,E.grid+.3)){
+  const sp=$('t1').querySelectorAll('span');[1,2,3].forEach(i=>{const v=seg(t,S(i)-LEAD-.15,S(i)-LEAD+.25);sp[i].style.opacity=eo(v);sp[i].style.transform=`translateY(${(1-eo(v))*60}px)`});
+  const up=eio(seg(t,S(4)-LEAD-.1,S(4)-LEAD+.6));$('t1').style.transform=`translateY(${-150*up}px) scale(${1-.42*up})`;$('t1').style.opacity=1-.55*up;
+  const s2=$('t2').querySelectorAll('span');[4,5,6].forEach((w,i)=>{const v=seg(t,S(w)-LEAD-.1,S(w)-LEAD+.3);s2[i].style.opacity=eo(v);s2[i].style.transform=`translateY(${(1-eo(v))*60}px)`});
+  $('t2').style.top=lerp(900,600,up)+'px';
+ }
+ // GRID
+ if(show('GRID',t,E.grid,E.chaos+.35)){
+  const at=[S(12),S(13),S(14),S(17)];
+  for(let i=0;i<4;i++){const g=$('g'+i),inn=g.querySelector('.in'),q=g.querySelector('.q');const v=seg(t,at[i]-LEAD,at[i]-LEAD+.4);
+   inn.style.opacity=eo(v);inn.style.transform=`scale(${.85+.15*bk(v)})`;const qv=seg(t,at[i]+.15,at[i]+.5);q.style.opacity=cl(qv*2);q.style.transform=`scale(${bk(qv)})`;
+   const sc=eio(seg(t,E.chaos,E.chaos+.35));g.style.transform=`scale(${1-.3*sc})`;g.style.opacity=t<E.grid+.2?eo(seg(t,E.grid,E.grid+.3)):1}
+ }
+ // CHAOS
+ if(show('CHAOS',t,E.chaos,E.note+.3)){const a=E.chaos;
+  chips.forEach(c=>{const v=seg(t,a+c.dl*.5,a+c.dl*.5+.35);const dt=t-a;c.el.style.left=(c.x+c.vx*dt)+'px';c.el.style.top=(c.y+c.vy*dt)+'px';c.el.style.opacity=eo(v)*(t>S(21)?.45:1);c.el.style.transform=`rotate(${c.ro+dt*c.vx*.05}deg) scale(${.7+.3*eo(v)})`});
+  const sv=seg(t,S(21)-LEAD,S(21)-LEAD+.4);const sy=$('sys');sy.style.display=sv>0?'block':'none';sy.style.transform=`translate(-50%,-50%) scale(${bk(sv)})`;
+  const xv=eio(seg(t,S(23)-LEAD,S(23)+.3));$('sysx').style.transform=`scaleX(${xv})`;sy.style.color=xv>.5?'rgba(216,237,155,.45)':'#D8ED9B';
+ }
+ // NOTEBOOK
+ if(show('NOTE',t,E.note,E.road+.3)){rise($('page'),t,E.note,80,.5);
+  const f0=S(28)-LEAD,f1=SE(29)+.1;nes.forEach((d,i)=>{const a=f0+(f1-f0)*i/NE.length;const v=seg(t,a,a+.2);
+   const fo=seg(t,S(30)+i*.12,S(30)+i*.12+.6);d.style.opacity=eo(v)*(1-.88*fo);d.style.filter=`blur(${fo*6}px)`;d.style.transform=`translate(${fo*40}px,${-fo*18}px)`;d.style.clipPath=`inset(0 ${(1-eo(v))*100}% 0 0)`});
+ }
+ // ROAD
+ if(show('ROAD',t,E.road,E.anal+.3)){rise($('rdT'),t,E.road,50);const dv=eio(seg(t,S(37),S(39)+.4));RP.style.strokeDashoffset=RL*(1-dv);$('ra').style.opacity=seg(t,S(39)+.3,S(39)+.5)}
+ // ANALOGY
+ if(show('ANAL',t,E.anal,E.hiss+.3)){
+  const A=$('sA'),B=$('sB');rise(A,t,S(42)-LEAD,50);rise(B,t,S(48)-LEAD,50);
+  const dimv=eio(seg(t,S(51)-LEAD,S(51)+.4));A.style.opacity=(+A.style.opacity)*(1-.6*dimv);B.style.opacity=(+B.style.opacity)*(1-.6*dimv);
+  const Y=$('you');rise(Y,t,S(51)-LEAD,90,.5);const rows=Y.querySelectorAll('.row');[S(55),S(57)].forEach((a,i)=>{rise(rows[i],t,a-LEAD,30,.35)});
+  Y.querySelectorAll('.qq').forEach((q,i)=>{const p=t>S(58)?1+.12*Math.max(0,Math.sin((t-S(58))*7)):1;q.style.transform=`scale(${p})`;q.style.background=t>S(60)?'#E2726A':'#D8ED9B'});
+ }
+ // HISS
+ if(show('HISS',t,E.hiss,E.want+.3)){
+  ['h0','h1','h2','h3'].forEach((id,i)=>{const a=S(62)-LEAD+i*.32;const el=$(id);const v=seg(t,a,a+.4);el.style.opacity=eo(v)*(t>S(67)?.55:1);el.style.transform=`translateY(${(1-eo(v))*40+Math.sin(t*1.6+i)*6}px) scale(${.9+.1*bk(v)})`});
+  const st=$('stampN');const sv=seg(t,S(67)-LEAD,S(67)-LEAD+.3);st.style.display=sv>0?'block':'none';st.style.transform=`translate(-50%,-50%) rotate(-9deg) scale(${lerp(1.9,1,eo(sv))})`;st.style.opacity=cl(sv*2);
+ }
+ // WANT
+ show('WANT',t,E.want,E.text+.3);
+ shot($('iR'),t,S(71)-LEAD,S(75)-LEAD+.3,0,70);pop($('pR'),t,S(73)-LEAD,S(75)-LEAD+.3,540,1260);
+ shot($('iW'),t,S(75)-LEAD,E.text+.3,0,70);pop($('pW'),t,S(77)-LEAD,E.text+.3,540,1260);
+ // TEXT
+ if(show('TEXT',t,E.text,E.rev-.1)){$('txL').textContent=t<S(83)-LEAD?'SIFIRDAN YOX:':'ÖZ MƏTNİNDƏN:'}
+ {const a=shot($('iT'),t,E.text,S(83)-LEAD+.3,0,70);
+  const b=shot($('iP'),t,S(83)-LEAD,S(87)-LEAD+.4,80,0);
+  const c=shot($('iV'),t,S(87)-LEAD,E.rev-.15,0,80);
+  pop($('pAI'),t,S(85)-LEAD,S(87)-LEAD+.3,540,1180);pop($('pOz'),t,S(88)-LEAD,E.rev-.15,540,1290)}
+ // REVEAL
+ const fl=seg(t,E.rev-.05,E.rev+.15)*(1-seg(t,E.rev+.4,E.neg+.2));$('flash').style.opacity=fl;
+ if(show('REV',t,E.rev,E.neg+.4)){const lv=seg(t,E.rev,E.rev+.55);$('rLogo').style.transform=`scale(${bk(lv)}) rotate(${(1-eo(lv))*-20}deg)`;
+  const wv=seg(t,S(93)-LEAD,S(93)-LEAD+.4);$('rWord').style.opacity=eo(wv);$('rWord').style.transform=`translateY(${(1-eo(wv))*50}px)`;$('rWord').style.letterSpacing=lerp(10,-5,eo(wv))+'px';
+  const out=eio(seg(t,E.neg-.1,E.neg+.35));$('REV').style.transform=`translateY(${-120*out}px) scale(${1-.3*out})`}
+ $('hlogo').style.opacity=t>=E.rev&&t<E.neg+.3?0:1;
+ // NEGATE
+ if(show('NEG',t,E.neg,E.three+.3)){[[96,97],[99,100],[103,104]].forEach(([a,b],i)=>{const tp=$('tp'+i);const v=seg(t,S(a)-LEAD-.05,S(a)-LEAD+.35);
+   tp.style.transform=`translateX(${(1-eo(v))*(i%2?1200:-1200)}px) rotate(${i%2?3:-3}deg)`;
+   const x=eio(seg(t,SE(b)-.25,SE(b)+.15));const ii=tp.querySelector('i'),bb=tp.querySelector('b');ii.style.left='-20px';ii.style.width=(bb.offsetWidth+40)+'px';ii.style.transform=`scaleX(${x})`;bb.style.opacity=1-.45*x})}
+ // THREE (carousel)
+ if(show('THREE',t,E.three,E.ser+.3)){const L=['HAZIR DƏSTLƏR','6 QUTU','ÖZ SÖZLƏRİN'];const st=[E.three,S(107)-LEAD,S(110)-LEAD];
+  let k=0;st.forEach((a,i)=>{if(t>=a)k=i});$('clT').textContent=L[k];$('clT').style.opacity=eo(seg(t,st[k],st[k]+.3))}
+ {const st=[E.three,S(107)-LEAD,S(110)-LEAD];const end=E.ser+.3;const H=[0,0,0];
+  [['c0',700,700*990/1170],['c1',600,600*1374/1062],['c2',610,610*1370/1062]].forEach(([id,w,h],i)=>{const el=$(id);
+   const on=t>=st[i]&&t<end;el.style.display=on?'block':'none';if(!on)return;
+   let pos=0;for(let j=i+1;j<3;j++){pos-=eio(seg(t,st[j],st[j]+.6))}
+   const v=seg(t,st[i],st[i]+.55);pos+=1-eo(v);
+   const cx=540+pos*720,sc=1-.25*Math.abs(pos);const cy=470+h/2;
+   el.style.width=w+'px';el.style.left=(cx-w/2)+'px';el.style.top=(cy-h/2)+'px';el.style.transform=`scale(${sc})`;
+   el.style.opacity=Math.min(1-.6*Math.min(1,Math.abs(pos)),1-seg(t,end-.3,end))})}
+ // SERIES
+ if(show('SER',t,E.ser,E.cta+.3)){[0,1,2].forEach(i=>{const p=$('ps'+i);const v=seg(t,E.ser+.1+i*.15,E.ser+.5+i*.15);p.style.opacity=eo(v)*(i==0?1:.55+.45*seg(t,S(117)-LEAD,S(117)));
+   const g=i>0&&t>S(117)?.5+.5*Math.sin((t-S(117))*5+i):0;p.style.boxShadow=i==0?'0 0 0 3px #D8ED9B':`0 0 ${40*g}px rgba(216,237,155,${.35*g})`;p.style.transform=`translateY(${(1-eo(v))*60}px)`;
+   p.style.borderColor=i>0&&t>S(117)?'rgba(216,237,155,.6)':''})}
+ // CTA
+ if(show('CTA',t,E.cta,99)){rise($('ctT'),t,E.cta,50)}
+ [S(121),S(121)+.18,S(121)+.36].forEach((a,i)=>{const el=$('l'+i);const v=seg(t,a-LEAD,a-LEAD+.4);el.style.display=v>0?'block':'none';el.style.opacity=eo(v);el.style.transform=`translateY(${(1-eo(v))*40}px) scale(${.9+.1*bk(v)})`});
+ {const b=seg(t,S(123)-LEAD,S(123)-LEAD+.45);$('bub').style.display=b>0?'block':'none';$('bub').style.transform=`scale(${bk(b)})`}
+ {const g=seg(t,S(129)-LEAD,S(129)-LEAD+.45);$('endL').style.display=g>0?'flex':'none';$('endL').style.opacity=eo(g);$('endL').style.transform=`translateY(${(1-eo(g))*30}px)`}
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>

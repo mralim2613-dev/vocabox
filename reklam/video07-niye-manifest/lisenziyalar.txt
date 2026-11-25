@@ -1,0 +1,8 @@
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), tək take (generation GvbOem0gO7g0NUbW8VP6), montajda 1,08× atempo. Flow: 6hkKJJWx8s3hvNRtbnqr
+Söz vaxtları: ElevenLabs eleven_scribe_v1 (vaxtlar 1/1,08 miqyaslanıb)
+Fon musiqisi: Epidemic Sound — "The Gordian Knot", Jakob Ahlbom (37,9 s-dən)
+Effektlər (Epidemic Sound): "User Interface, Click, UI Buttons, Bubbly, Option"; "Swooshes, Swish, Stick, Fast Swipe Through Air 02"; "Office Supplies, Rubber Stamp, Document 01"
+Şriftlər: Inter / Inter Display (SIL OFL), DejaVu Sans Mono (Bitstream Vera/DejaVu lisenziyası)
+Şəkillər: Vocabox loqosu və tətbiqin real ekran görüntüləri (video01, 02, 04 çəkilişlərindən)
+Referens: istifadəçinin göndərdiyi "Sporsoft neden kuruldu?" videosu yalnız quruluş/temp/musiqi təhlili üçün işlədilib; ondan heç bir görüntü, səs və ya mətn videoya daxil edilməyib.
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın hesaba bağlı olduğunu yoxlayın. dl/ repoya əlavə edilmir.

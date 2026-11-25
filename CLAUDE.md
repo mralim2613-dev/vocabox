@@ -1,7 +1,7 @@
 # Vocabox — Claude üçün davam təlimatı
 
 > Bu fayl hər yeni sessiyada avtomatik oxunur. İstifadəçi Azərbaycan dilində yazır — **Azərbaycan dilində cavab ver.**
-> Son yenilənmə: 2026-11-24. İş branch-ı: `claude/vocabox-sales-marketing-strategy-jwhgpk`.
+> Son yenilənmə: 2026-11-25. İş branch-ı: `claude/vocabox-sales-marketing-strategy-jwhgpk`.
 
 ## 1. Rolun
 Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, məzmun planı, qısa şaquli reklam/kontent videoları (Reels/TikTok/Shorts).
@@ -31,8 +31,10 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 4 | video04-leitner | Leitner qutuları (6 qutu, +1/−1) | 4 |
 | 5 | video05-alman-imtahan | Alman dili, imtahana hazırlaşanlar | 18 əvəzinə |
 | 6 | video06-sehvler | Söz öyrənəndə 3 səhv | 6 |
+| 7 | video07-niye-manifest | "NİYƏ? · 01" manifest (~60 s, referens videodan skript/temp/musiqi quruluşu, tünd şəbəkə üslubu) | plandan kənar |
 
 ## 5. Açıq məsələlər / növbəti addımlar
+- **video07 seriya vədi verir** ("növbəti videolarda göstərəcəyik") → "NƏ? · 02" və "NECƏ? · 03" videoları lazımdır; istifadəçidən təsdiq gözlənilir. Səs 1,08× atempo ilə sürətləndirilib (referens tempi ~5,7 heca/s).
 - **Növbəti video:** 7-ci gün (serialdan lüğət) video02 ilə üst-üstə düşür → istifadəçiyə 8-ci günə (Almaniyada ilk həftə 5 söz) keçmək təklif olunub, **cavab gözlənilir**.
 - **video03:** ingiliscə ifadələri Azərbaycan səsi oxuyur — aksent riski. Təklif: ingiliscə hissələri ingilisdilli səslə yaradıb calamaq. Cavab gözlənilir.
 - video02: pleyer saatı saniyədə ~10 s irəliləyir (kiçik qüsur, istəsə düzəldilə bilər, səs krediti tələb etmir).

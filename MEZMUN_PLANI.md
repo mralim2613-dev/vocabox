@@ -253,6 +253,11 @@ Hər gün sıfırdan çəkmək 20 günü yarımçıq qoydurur. Həftədə **2 ç
 
 ---
 
+### Əlavə (plandan kənar): "NİYƏ? · 01" manifest seriyası
+| Video | Format | Mövzu | Status |
+|---|---|---|---|
+| video07 | D · ümumi · F1, F2, F3 · ~60 s | ✅ **Hazırdır (video07):** "Dil öyrənən nə axtarır?" — Vocabox-u niyə qurduq (istifadəçinin göndərdiyi referens videonun skript/temp/musiqi quruluşu ilə; bax `reklam/video07-niye-manifest/referens-analizi.md`) | Sonunda "Bəs bu necə işləyir? Növbəti videolarda göstərəcəyik" tizeri var → "NƏ? · 02" və "NECƏ? · 03" videoları planlaşdırılmalıdır |
+
 ## 8. Ehtiyat fikir bankı (21-ci gündən sonra və ya boşluq olanda)
 
 **A — Tanış an:** Lüğət dəftərinin son səhifəsi boşdur · Tətbiq yükləyib 3-cü gün buraxmaq · Rus qonşu ilə liftdə söhbət · Almanca "der/die/das" qarşısında donmaq · Səsli mesajı 5 dəfə dinləmək · Müsahibədə "how to say…" anı.
