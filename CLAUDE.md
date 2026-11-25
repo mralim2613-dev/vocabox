@@ -35,9 +35,10 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 7 | video07-araliqli-tekrar | Aralıqlı təkrar (G seriyası, rəqəmsiz, mənbə Cepeda 2006) | 22 |
 | 8 | video08-leitner-tarix | Leitner qutularının mənşəyi (kağız qutu, Leitner 1972; hook H3 əsasında — H1-dəki "50 il" rəqəmdir) | 23 |
 | 9 | video09-passiv-aktiv | Passiv və aktiv söz ehtiyatı (aysberq; Nation 2001; yeni real ekranlar: yazma rejimi) | 24 |
+| 10 | video10-ozunu-yoxla | Oxumaq vs özünü yoxlamaq (Roediger & Karpicke 2006; hook H1; real fləşkart "Cavabı göstər") | 25 |
 
 ## 5. Açıq məsələlər / növbəti addımlar
-- **video07 (22-ci gün) hazırdır.** Qeyd: tətbiqdə vaxt əsaslı planlayıcı yoxdur (məşqdə qutunu istifadəçi seçir) — reklamda "Vocabox təkrarın vaxtını sənin yerinə təyin edir" demə; "təkrarı qutularla təşkil edir" de. G seriyasında növbəti: 21, 25, 26-cı günlər (22–24 hazırdır).
+- **video07 (22-ci gün) hazırdır.** Qeyd: tətbiqdə vaxt əsaslı planlayıcı yoxdur (məşqdə qutunu istifadəçi seçir) — reklamda "Vocabox təkrarın vaxtını sənin yerinə təyin edir" demə; "təkrarı qutularla təşkil edir" de. G seriyasında növbəti: 21 və 26-cı günlər (22–25 hazırdır).
 - **Növbəti video:** 7-ci gün (serialdan lüğət) video02 ilə üst-üstə düşür → istifadəçiyə 8-ci günə (Almaniyada ilk həftə 5 söz) keçmək təklif olunub, **cavab gözlənilir**.
 - **video03:** ingiliscə ifadələri Azərbaycan səsi oxuyur — aksent riski. Təklif: ingiliscə hissələri ingilisdilli səslə yaradıb calamaq. Cavab gözlənilir.
 - video02: pleyer saatı saniyədə ~10 s irəliləyir (kiçik qüsur, istəsə düzəldilə bilər, səs krediti tələb etmir).

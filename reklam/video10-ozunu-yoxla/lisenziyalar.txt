@@ -1,0 +1,8 @@
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), tək take (generation ju7exKaHHFLkiuntl74G). Flow: 6hkKJJWx8s3hvNRtbnqr
+Söz vaxtları: ElevenLabs eleven_scribe_v1
+Fon musiqisi: Epidemic Sound — "The King of Thieves", Christoffer Moe Ditlevsen
+Effektlər (Epidemic Sound): "Objects, Writing, Text, Highlight Drag, Marker Highlighter"; "Glass, Break, Smash, Small"; "Magic, Shimmer, Spell, Cast, Dispel Magic, Cleanse, Twinkle, Glimmer, Short 01"; "User Interface, Click, Pops, Glass, UI, Pops"; "Swooshes, Whoosh, Softs"
+Şrift: Inter (SIL OFL)
+Şəkillər: Vocabox loqosu və tətbiqin real ekran görüntüləri (2026-11-25, lokal veb versiya)
+Mənbə (caption üçün): Roediger, H. L., & Karpicke, J. D. (2006). Test-enhanced learning: Taking memory tests improves long-term retention. Psychological Science, 17(3), 249–255.
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın hesaba bağlı olduğunu yoxlayın. dl/ repoya əlavə edilmir.

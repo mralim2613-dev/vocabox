@@ -1,0 +1,146 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+:root{--p:#204E40;--pd:#15382D;--pl:#EEF2E9;--y:#D8ED9B;--yd:#8FD463;--tx:#172F29;--mu:#6B7872;--gr:#16A34A;--pe:#FBE4D6;--co:#D9664A}
+html,body{width:1080px;height:1920px;margin:0;overflow:hidden;font-family:Inter,sans-serif;color:var(--tx);background:var(--pe)}
+#bg{position:absolute;inset:0;background:radial-gradient(ellipse 900px 800px at 50% 45%,#FFF3EA,var(--pe) 70%)}
+#right{position:absolute;top:0;bottom:0;left:540px;width:1080px;background:radial-gradient(ellipse 700px 900px at 30% 45%,#F7FBEF,var(--pl) 70%);box-shadow:-2px 0 0 rgba(23,47,41,.08)}
+.h{position:absolute;left:60px;right:60px;text-align:center;font-weight:800;letter-spacing:-1.8px;line-height:1.06}
+#sheet{position:absolute;left:190px;top:560px;width:700px;height:680px;border-radius:30px;background:#fff;box-shadow:0 20px 50px rgba(120,60,30,.14);transform-origin:0 0;overflow:hidden}
+.row{position:absolute;left:0;right:0;height:100px}
+.row .hl{position:absolute;left:24px;top:22px;height:58px;border-radius:12px;background:rgba(216,237,155,.85)}
+.row b{position:absolute;left:44px;top:28px;font-size:42px;font-weight:800;letter-spacing:-.8px}
+.row span{position:absolute;left:380px;top:31px;font-size:36px;font-weight:600;color:var(--mu)}
+.row i{position:absolute;right:30px;top:26px;font-style:normal;font-size:40px;font-weight:800;color:var(--gr)}
+.row u{position:absolute;z-index:3;left:380px;top:20px;text-decoration:none;font-size:46px;font-weight:800;color:#fff}
+#cover{position:absolute;left:350px;top:0;width:350px;height:680px;background:var(--p);border-radius:0 30px 30px 0}
+#thought{position:absolute;left:560px;top:360px;width:420px;height:200px}
+#thought text{font-family:Inter;font-weight:800}
+.ttl{position:absolute;top:290px;width:540px;text-align:center;font-weight:800;font-size:50px;letter-spacing:-1px}
+#src{position:absolute;left:0;right:0;top:372px;text-align:center;font-size:28px;font-weight:600;color:var(--mu)}
+#qc{position:absolute;left:640px;top:470px;width:340px;height:420px;border-radius:30px;background:#fff;box-shadow:0 18px 44px rgba(32,78,64,.15);text-align:center}
+#qc b{display:block;font-size:54px;letter-spacing:-1.5px;padding-top:70px}
+#qc .ln{margin:36px 40px 0;height:3px;background:#E3E8E0}
+#qc .ans{position:absolute;left:0;right:0;top:230px;font-size:50px;font-weight:800}
+#qc .dots{position:absolute;left:0;right:0;top:240px;font-size:60px;font-weight:800;color:var(--mu);letter-spacing:8px}
+.bar{position:absolute;bottom:610px;width:150px;border-radius:22px 22px 10px 10px}
+.blab{position:absolute;top:1330px;width:540px;text-align:center;font-weight:700;font-size:32px;color:var(--mu)}
+#upP{position:absolute;left:810px;top:930px;transform:translate(-50%,-50%);border-radius:999px;background:var(--p);color:#fff;font-weight:800;font-size:34px;padding:10px 26px;white-space:nowrap}
+#lw{position:absolute;inset:0;display:none}
+#light{position:absolute;inset:0;background:radial-gradient(ellipse 950px 760px at 50% 42%,var(--pl),#fff 72%);display:none}
+.shot{position:absolute;border-radius:28px;box-shadow:0 18px 50px rgba(23,47,41,.18);overflow:hidden;background:#fff}
+.shot img{display:block;width:100%}
+.ring{position:absolute;border:7px solid var(--yd);border-radius:26px;box-sizing:border-box}
+#top{position:absolute;left:0;right:0;top:280px;display:flex;justify-content:center;align-items:center;gap:20px}
+#think2{position:absolute;left:640px;top:370px;font-weight:800;font-size:40px;padding:12px 28px;border-radius:999px;background:var(--y);white-space:nowrap}
+#bub{position:absolute;left:250px;top:820px;width:580px;height:150px}
+#ctaLogo{position:absolute;left:0;right:0;top:1060px;display:flex;justify-content:center;align-items:center;gap:20px}
+#cap{position:absolute;left:40px;right:40px;top:1418px;text-align:center;font-weight:800;font-size:66px;line-height:1.25;z-index:20}
+#cap b{display:inline-block;padding:2px 16px;margin:0 2px;border-radius:16px;text-shadow:0 0 12px #fff,0 2px 0 #fff}
+#cap b.on{background:var(--gr);color:#fff;text-shadow:none}
+#prog{position:absolute;left:0;bottom:0;height:10px;background:var(--p);z-index:21}
+</style></head><body>
+<div id="bg"></div>
+<div id="right"></div>
+<div class="h" id="hk" style="top:290px;font-size:78px">Yenidən oxumaq<br>səni <span style="color:var(--co)">aldada</span> bilər</div>
+<div id="sheet"><div id="rows"></div><div id="cover"></div></div>
+<svg id="thought" viewBox="0 0 420 200"><circle cx="40" cy="186" r="10" fill="#fff"/><circle cx="70" cy="160" r="16" fill="#fff"/>
+ <rect x="80" y="10" width="330" height="130" rx="65" fill="#fff"/><text id="thT" x="245" y="94" text-anchor="middle" font-size="54" fill="#16A34A">Bilirəm!</text>
+ <path id="crk" d="M200 10 L215 50 L195 72 L222 104 L205 140" stroke="#D9664A" stroke-width="6" fill="none" stroke-linejoin="round"/></svg>
+<div class="ttl" id="tL" style="left:0;color:var(--co)">Yenidən oxu</div>
+<div class="ttl" id="tR" style="left:540px;color:var(--p)">Özünü yoxla</div>
+<div id="src">Roediger və Karpicke, 2006</div>
+<div id="qc"><b>practice</b><div class="ln"></div><div class="dots">···</div><div class="ans">məşq</div></div>
+<div class="bar" id="bL" style="left:195px;background:#F0B9A6"></div>
+<div class="bar" id="bR" style="left:735px;background:var(--yd)"></div>
+<div class="blab" id="lbL" style="left:0">uzun müddətdə</div>
+<div class="blab" id="lbR" style="left:540px">uzun müddətdə</div>
+<div id="upP">daha çox qalır</div>
+<div id="light"></div>
+<div id="lw">
+ <div id="top"><div style="width:84px;height:84px">__LOGO__</div><b style="font-size:56px;letter-spacing:-1.5px">Vocabox</b></div>
+ <div class="shot" id="shF" style="left:220px;top:400px;width:640px"><img src="__FRONT__"><div class="ring" id="rBtn"></div></div>
+ <div class="shot" id="shB" style="left:220px;top:400px;width:640px"><img src="__BACK__"></div>
+ <div id="think2">məşq?</div>
+ <div class="h" id="ctaT" style="top:360px;font-size:78px">Necə işlədiyini<br><span style="color:var(--p)">göstərək</span></div>
+ <svg id="bub" viewBox="0 0 580 150"><path d="M40 0h500a40 40 0 0 1 40 40v50a40 40 0 0 1-40 40H120l-50 20 10-20H40A40 40 0 0 1 0 90V40A40 40 0 0 1 40 0z" fill="#204E40"/>
+  <g transform="translate(118 64) rotate(-18)"><path d="M-34 -4 L34 -26 L12 30 L2 6 Z" fill="#D8ED9B"/><path d="M2 6 L34 -26" stroke="#204E40" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="330" y="84" text-anchor="middle" font-family="Inter" font-weight="800" font-size="54" fill="#fff">Mesaj yaz</text></svg>
+ <div id="ctaLogo"><div style="width:72px;height:72px">__LOGO2__</div><b style="font-size:46px;letter-spacing:-1px">Vocabox</b></div>
+</div>
+<div id="cap"></div><div id="prog"></div>
+<script>
+const WORDS=__WORDS__,OFF=0.4,LEAD=2/30;
+const TT=Math.ceil((WORDS.at(-1).end+OFF+2)*30)/30;
+const cl=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),seg=(t,a,b)=>cl((t-a)/(b-a)),lerp=(a,b,x)=>a+(b-a)*x;
+const eo=x=>1-(1-x)**3,eio=x=>x<.5?4*x**3:1-(-2*x+2)**3/2,back=x=>1+2.70158*(x-1)**3+1.70158*(x-1)**2,bk=x=>x<=0?0:x<1?back(x):1;
+const IX=(txt,n=1)=>{let c=0;for(let i=0;i<WORDS.length;i++)if(WORDS[i].text===txt&&++c===n)return i;throw Error('söz yoxdur: '+txt)};
+const ST=i=>WORDS[i].start+OFF;
+const E={ald:ST(IX('aldada'))-LEAD,siy:ST(IX('Siyahını'))-LEAD,tek:ST(IX('təkrar'))-LEAD,tan:ST(IX('tanış'))-LEAD,ele:ST(IX('elə'))-LEAD,bil2:ST(IX('bilirsən.'))-LEAD,
+ amma:ST(IX('Amma'))-LEAD,xat:ST(IX('xatırlamaq'))-LEAD,dey:ST(IX('deyil.'))-LEAD,psi:ST(IX('Psixoloqların'))-LEAD,gos:ST(IX('göstərir:'))-LEAD,
+ yen2:ST(IX('yenidən'))-LEAD,ozu:ST(IX('özünü'))-LEAD,cav:ST(IX('cavabı'))-LEAD,cal:ST(IX('çalışmaq,'))-LEAD,uzun:ST(IX('uzun'))-LEAD,daha:ST(IX('daha'))-LEAD,
+ voc:ST(IX('Vocabox-da'))-LEAD,giz:ST(IX('gizlidir:'))-LEAD,evv:ST(IX('əvvəl'))-LEAD,cvb:ST(IX('cavaba'))-LEAD,mes:ST(IX('Mesajla'))-LEAD,nec:ST(IX('necə'))-LEAD};
+const CH=[];{let c=[];const L=a=>a.reduce((s,i)=>s+WORDS[i].text.length+1,0);
+ WORDS.forEach((w,i)=>{if(c.length&&L(c)+w.text.length>24){CH.push(c);c=[]}c.push(i);if(c.length===3||/[.,?!:]$/.test(w.text)||i===WORDS.length-1){CH.push(c);c=[]}})}
+function caption(t){const el=document.getElementById('cap');let k=-1;CH.forEach((c,j)=>{if(t>=WORDS[c[0]].start+OFF-.02)k=j});
+ if(k<0)return el.innerHTML='';const last=WORDS[CH[k].at(-1)],nx=CH[k+1];
+ if(t>last.end+OFF+.6&&(!nx||t<WORDS[nx[0]].start+OFF-.02))return el.innerHTML='';
+ const h=CH[k].map(i=>{const w=WORDS[i];return `<b${t>=w.start+OFF&&t<w.end+OFF?' class="on"':''}>${w.text}</b>`}).join('');if(el.innerHTML!==h)el.innerHTML=h}
+const $=id=>document.getElementById(id);
+const vis=(el,on)=>{el.style.display=on?(el.dataset.d||'block'):'none';return on};
+function fade(id,t,a,b,din=.35,dout=.3){const el=$(id);const on=t>=a&&t<b;vis(el,on);if(on)el.style.opacity=Math.min(eo(seg(t,a,a+din)),1-seg(t,b-dout,b));return on}
+['top','ctaLogo'].forEach(i=>$(i).dataset.d='flex');
+const RW=[['practice','məşq'],['improve','yaxşılaşdırmaq'],['journey','səyahət'],['borrow','borc almaq'],['likely','ehtimal ki'],['remind','xatırlatmaq']];
+const rows=RW.map(([a,b],i)=>{const d=document.createElement('div');d.className='row';d.style.top=(40+i*100)+'px';d.innerHTML=`<div class="hl"></div><b>${a}</b><span>${b}</span><i>✓</i><u>?</u>`;$('rows').appendChild(d);return d});
+
+function render(t){caption(t);$('prog').style.width=(1080*(1-4**-cl(t/TT))/(1-1/4))+'px';
+ const sp=eio(seg(t,E.psi,E.psi+.8)); // split
+ // hook title
+ {const el=$('hk');vis(el,t<E.siy+.35);el.style.opacity=Math.min(eo(seg(t,0,.3)),1-seg(t,E.siy,E.siy+.35));
+  el.querySelector('span').style.background=t>=E.ald?'rgba(217,102,74,.14)':'transparent'}
+ // sheet: highlighter passes
+ const pass=(a,dur)=>{rows.forEach((r,i)=>{const v=seg(t,a+i*dur/6,a+(i+1)*dur/6);if(v>0){r._w=Math.max(r._w||0,v)}})};
+ rows.forEach(r=>r._w=0);
+ const p1=t>=0.3,p2=seg(t,E.tek,E.tek+1.6);
+ rows.forEach((r,i)=>{const a1=.35+i*.28,w1=seg(t,a1,a1+.28);const a2=E.tek+i*.22,w2=seg(t,a2,a2+.22);
+  const hl=r.querySelector('.hl');const w=t<E.tek?w1:(t<a2?1:w2);const sweep=t<E.tek?w1:w2;
+  hl.style.width=(652*sweep)+'px';hl.style.opacity=t<E.tek?.55:(.55+.45*seg(t,E.tan,E.tan+.4));
+  if(t>=E.tek&&t<a2){hl.style.width='652px';hl.style.opacity=.55}
+  const ck=r.querySelector('i');const cv=seg(t,E.tan+i*.08,E.tan+.3+i*.08);ck.style.opacity=cv*(1-seg(t,E.amma,E.amma+.3));ck.style.transform=`scale(${bk(cv)})`;
+  const q=r.querySelector('u');const qv=seg(t,E.xat+i*.08,E.xat+.3+i*.08);q.style.opacity=qv*(1-seg(t,E.psi+.2,E.psi+.5));q.style.transform=`scale(${bk(qv)})`});
+ // cover over translations
+ {const c=$('cover');const v=eio(seg(t,E.amma,E.amma+.5))*(1-eio(seg(t,E.psi+.2,E.psi+.8)));c.style.transform=`translateX(${(1-v)*360}px)`}
+ // sheet position: center -> left panel
+ {const s=$('sheet');s.style.transform=`translate(${lerp(0,-150,sp)}px,${lerp(0,-120,sp)}px) scale(${lerp(1,.64,sp)})`;
+  s.style.left='190px';vis(s,t<E.voc+.3);s.style.opacity=1-seg(t,E.voc,E.voc+.3);s.style.transformOrigin='0 0'}
+ // thought bubble
+ {const th=$('thought');const v=seg(t,E.ele,E.ele+.4);vis(th,v>0&&t<E.psi+.3);th.style.transformOrigin='40px 190px';th.style.transform=`scale(${bk(v)})`;th.style.opacity=1-seg(t,E.psi,E.psi+.3);
+  const cr=t>=E.dey;$('crk').style.display=cr?'block':'none';$('thT').textContent=t>=E.dey+.25?'Hmm… nə idi?':'Bilirəm!';$('thT').setAttribute('fill',t>=E.dey+.25?'#D9664A':'#16A34A');$('thT').setAttribute('font-size',t>=E.dey+.25?'42':'54');
+  th.style.transform+=cr&&t<E.dey+.3?` translateX(${Math.sin(t*90)*6}px)`:''}
+ // split panel
+ {const r=$('right');vis(r,t<E.voc+.5);r.style.transform=`translateX(${(1-sp)*560}px)`;r.style.left=lerp(540,0,eio(seg(t,E.voc,E.voc+.5)))+'px'}
+ fade('tL',t,E.psi+.3,E.voc+.2);fade('tR',t,E.psi+.45,E.voc+.2);fade('src',t,E.gos,E.voc+.2);
+ {const L=$('tL'),R=$('tR');L.style.transform=`scale(${1+.08*Math.sin(Math.PI*seg(t,E.yen2,E.yen2+.6))})`;R.style.transform=`scale(${1+.08*Math.sin(Math.PI*seg(t,E.ozu,E.ozu+.6))})`}
+ // question card
+ {const q=$('qc');const v=seg(t,E.psi+.6,E.psi+1.05);vis(q,v>0&&t<E.voc+.2);q.style.opacity=Math.min(1,v*2)*(1-seg(t,E.voc,E.voc+.2));q.style.transform=`translateY(${(1-eo(v))*80}px)`;
+  const d=q.querySelector('.dots');d.style.opacity=t>=E.cav&&t<E.cal?.4+.6*Math.abs(Math.sin((t-E.cav)*4)):0;
+  const a=q.querySelector('.ans');const av=seg(t,E.cal,E.cal+.35);a.style.opacity=av;a.style.transform=`scale(${bk(av)})`}
+ // bars (shape only, no numbers)
+ {const bv=eio(seg(t,E.uzun,E.uzun+.9));const on=t>=E.uzun&&t<E.voc+.2;vis($('bL'),on);vis($('bR'),on);
+  $('bL').style.height=(lerp(0,110,bv))+'px';$('bR').style.height=(lerp(0,300,bv))+'px';$('bL').style.opacity=$('bR').style.opacity=1-seg(t,E.voc,E.voc+.2);
+  fade('lbL',t,E.uzun,E.voc+.2);fade('lbR',t,E.uzun+.1,E.voc+.2);
+  const up=$('upP');const uv=seg(t,E.daha,E.daha+.4);vis(up,uv>0&&t<E.voc+.2);up.style.transform=`translate(-50%,-50%) scale(${bk(uv)})`}
+ // light / real screens
+ const lv=seg(t,E.voc,E.voc+.5);vis($('light'),lv>0);$('light').style.opacity=eo(lv);
+ vis($('lw'),t>=E.voc+.2);
+ if(t>=E.voc+.2){fade('top',t,E.voc+.3,E.mes+.3);
+  {const el=$('shF');const v=seg(t,E.voc+.35,E.voc+.85);const on=v>0&&t<E.cvb+.35;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.cvb+.05,E.cvb+.35));el.style.transform=`translateY(${(1-eo(v))*80}px)`}
+   const k=640/936,r=$('rBtn');r.style.left=(255*k)+'px';r.style.top=(970*k)+'px';r.style.width=(424*k)+'px';r.style.height=(170*k)+'px';r.style.opacity=seg(t,E.giz,E.giz+.3)}
+  {const el=$('think2');const v=seg(t,E.evv,E.evv+.4);vis(el,v>0&&t<E.cvb+.2);el.style.transform=`scale(${bk(v)})`;el.style.opacity=1-seg(t,E.cvb,E.cvb+.2);
+   el.textContent=t>=E.evv+.9?'məşq?':'…'}
+  {const el=$('shB');const v=seg(t,E.cvb,E.cvb+.4);const on=v>0&&t<E.mes+.3;vis(el,on);if(on){el.style.opacity=Math.min(eo(v),1-seg(t,E.mes,E.mes+.3));el.style.transform=`rotateY(${(1-eo(v))*-60}deg)`}}
+  fade('ctaT',t,E.mes,999);
+  {const b=$('bub');const v=seg(t,E.mes+.15,E.mes+.55);vis(b,v>0);b.style.transform=`scale(${bk(v)})`;b.style.transformOrigin='290px 150px'}
+  fade('ctaLogo',t,E.nec,999);}
+}
+window.render=render;window.E=E;window.TT=TT;
+</script></body></html>
