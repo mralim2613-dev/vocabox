@@ -256,7 +256,9 @@ Hər gün sıfırdan çəkmək 20 günü yarımçıq qoydurur. Həftədə **2 ç
 ### Əlavə (plandan kənar): "NİYƏ? · 01" manifest seriyası
 | Video | Format | Mövzu | Status |
 |---|---|---|---|
-| video07 | D · ümumi · F1, F2, F3 · ~60 s | ✅ **Hazırdır (video07):** "Dil öyrənən nə axtarır?" — Vocabox-u niyə qurduq (istifadəçinin göndərdiyi referens videonun skript/temp/musiqi quruluşu ilə; bax `reklam/video07-niye-manifest/referens-analizi.md`) | Sonunda "Bəs bu necə işləyir? Növbəti videolarda göstərəcəyik" tizeri var → "NƏ? · 02" və "NECƏ? · 03" videoları planlaşdırılmalıdır |
+| video07 | D · ümumi · F1, F2, F3 · ~60 s | ✅ **Hazırdır (video07):** "Dil öyrənən nə axtarır?" — Vocabox-u niyə qurduq (istifadəçinin göndərdiyi referens videonun skript/temp/musiqi quruluşu ilə; bax `reklam/video07-niye-manifest/referens-analizi.md`) | Seriyanın 1-ci hissəsi |
+| video08 | D · ümumi · F1, F2, F3 · ~49 s | ✅ **Hazırdır (video08):** "NƏ? · 02 — Vocabox nədir?" — "sözlərin evi", 3 otaq = 3 funksiya | Seriyanın 2-ci hissəsi |
+| video09 | C · ümumi · F1, F2, F3 · ~48 s | ✅ **Hazırdır (video09):** "NECƏ? · 03 — Vocabox necə işləyir?" — 4 addım (seç → məşq → qutular → öz sözlərin), real ekranlar | Seriyanın 3-cü hissəsi; paylaşma sırası: 07 → 08 → 09 |
 
 ## 8. Ehtiyat fikir bankı (21-ci gündən sonra və ya boşluq olanda)
 

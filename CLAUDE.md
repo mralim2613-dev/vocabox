@@ -32,9 +32,12 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 5 | video05-alman-imtahan | Alman dili, imtahana hazırlaşanlar | 18 əvəzinə |
 | 6 | video06-sehvler | Söz öyrənəndə 3 səhv | 6 |
 | 7 | video07-niye-manifest | "NİYƏ? · 01" manifest (~60 s, referens videodan skript/temp/musiqi quruluşu, tünd şəbəkə üslubu) | plandan kənar |
+| 8 | video08-ne | "NƏ? · 02" — sözlərin evi, 3 otaq = 3 funksiya (~49 s) | plandan kənar |
+| 9 | video09-nece | "NECƏ? · 03" — 4 addım, real ekranlar (~48 s) | plandan kənar |
 
 ## 5. Açıq məsələlər / növbəti addımlar
-- **video07 seriya vədi verir** ("növbəti videolarda göstərəcəyik") → "NƏ? · 02" və "NECƏ? · 03" videoları lazımdır; istifadəçidən təsdiq gözlənilir. Səs 1,08× atempo ilə sürətləndirilib (referens tempi ~5,7 heca/s).
+- **NİYƏ/NƏ/NECƏ seriyası (video07–09) tamamlandı.** Seriya vahid üslubdadır (tünd fon, laym vurğu, seriya teqi), amma fon naxışı, metafora və musiqi hər videoda fərqlidir. Səslər referens tempinə (~5,6–5,7 heca/s) çatdırmaq üçün atempo ilə sürətləndirilib (1,08× / 1,12× / 1,15×) — istifadəçi dinləyib təsdiqləməlidir.
+- Lokal veb tətbiqdə giriş tələb olunmur; `npm install` lazımdır (node_modules repoda yoxdur).
 - **Növbəti video:** 7-ci gün (serialdan lüğət) video02 ilə üst-üstə düşür → istifadəçiyə 8-ci günə (Almaniyada ilk həftə 5 söz) keçmək təklif olunub, **cavab gözlənilir**.
 - **video03:** ingiliscə ifadələri Azərbaycan səsi oxuyur — aksent riski. Təklif: ingiliscə hissələri ingilisdilli səslə yaradıb calamaq. Cavab gözlənilir.
 - video02: pleyer saatı saniyədə ~10 s irəliləyir (kiçik qüsur, istəsə düzəldilə bilər, səs krediti tələb etmir).

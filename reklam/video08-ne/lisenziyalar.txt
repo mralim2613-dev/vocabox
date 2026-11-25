@@ -1,0 +1,7 @@
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), tək take (generation nzrUZAiqLHffsoitM9gX), montajda 1,12× atempo. Flow: 6hkKJJWx8s3hvNRtbnqr
+Söz vaxtları: ElevenLabs eleven_scribe_v1 (vaxtlar 1/1,12 miqyaslanıb)
+Fon musiqisi: Epidemic Sound — "Observatory", Out To The World (65 s-dən)
+Effektlər (Epidemic Sound): "User Interface, Click, UI Buttons, Bubbly, Option"; "Swooshes, Swish, Stick, Fast Swipe Through Air 02"
+Şriftlər: Inter / Inter Display (SIL OFL), DejaVu Sans Mono
+Şəkillər: Vocabox loqosu və tətbiqin real ekran görüntüləri (lokal veb versiya)
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın hesaba bağlı olduğunu yoxlayın. dl/ repoya əlavə edilmir.
