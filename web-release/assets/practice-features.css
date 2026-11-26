@@ -1,0 +1,25 @@
+#mobileNavButton { display: none; }
+#mobileNavigation { inset: 0 0 0 auto; margin: 0; padding: 20px; width: min(300px, 85vw); height: 100%; max-height: none; border-radius: 14px 0 0 14px; }
+#mobileNavigation::backdrop { background: #091e17a6; }
+#mobileNavigation nav { display: grid; margin-top: 16px; gap: 8px; }
+#mobileNavigation nav button { text-align: start; }
+.practice-card-tools { display: flex; justify-content: flex-end; gap: 6px; }
+.practice-card-tools button, .library-bookmark { min-width: 40px; min-height: 40px; }
+.practice-card-tools [aria-pressed="true"], .library-bookmark[aria-pressed="true"] { color: #785100; }
+.session-bar h2 { margin: 0; }
+.in-practice main > .selectbar,
+.in-practice #tab-study > .topline,
+.in-practice #stats,
+.in-practice #tab-study .study-grid > aside { display: none; }
+.in-practice #tab-study .study-grid { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 680px) {
+  header > nav { display: none; }
+  #mobileNavButton { display: inline-grid; place-items: center; min-height: 44px; margin-top: 8px; }
+  #start { width: 100%; }
+  #savedCards article { display: flex; flex-wrap: wrap; gap: 8px; }
+}
+
+.box-cefr { display: flex; flex-wrap: wrap; gap: 4px; margin: -4px 0 6px; }
+.box-cefr button { padding: 3px 6px; font-size: .7rem; }
+#tab-library .toolbar { display: flex; flex-wrap: wrap; }
+#tab-library .toolbar select { width: auto; max-width: 100%; }

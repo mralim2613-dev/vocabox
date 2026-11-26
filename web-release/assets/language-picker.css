@@ -1,0 +1,25 @@
+.header-actions { display: flex; align-items: center; gap: 8px; margin-inline-start: auto; }
+.header-actions #accountButton { margin-inline-start: 0; }
+#languagePicker { anchor-name: --language-picker; }
+#languagePicker, #languageFlags button { display: inline-grid; place-items: center; min-height: 44px; padding: 8px 10px; }
+#languageFlags { margin: 0; inset: auto; border: 1px solid #d4ded6; border-radius: 12px; padding: 6px; background: #fff; }
+#languageFlags:popover-open { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; position: fixed; top: 72px; right: 16px; }
+@supports (top: anchor(bottom)) {
+  #languageFlags:popover-open { position-anchor: --language-picker; top: calc(anchor(bottom) + 6px); right: anchor(right); }
+}
+#languageFlags button[aria-pressed="true"] { outline: 2px solid #477961; outline-offset: -2px; }
+.language-flag { display: block; width: 26px; height: 17px; border-radius: 3px; box-shadow: 0 0 0 1px #0002; }
+.language-flag[data-flag="en"] {
+  background: linear-gradient(90deg, transparent 43%, #c8102e 43% 57%, transparent 57%),
+    linear-gradient(transparent 39%, #c8102e 39% 61%, transparent 61%),
+    linear-gradient(90deg, transparent 38%, #fff 38% 62%, transparent 62%),
+    linear-gradient(transparent 32%, #fff 32% 68%, transparent 68%),
+    linear-gradient(33deg, transparent 45%, #fff 45% 55%, transparent 55%),
+    linear-gradient(-33deg, transparent 45%, #fff 45% 55%, transparent 55%), #012169;
+}
+.language-flag[data-flag="ru"] { background: linear-gradient(#fff 33.33%, #0039a6 33.33% 66.66%, #d52b1e 66.66%); }
+.language-flag[data-flag="de"] { background: linear-gradient(#000 33.33%, #d00 33.33% 66.66%, #ffce00 66.66%); }
+.language-flag[data-flag="fr"] { background: linear-gradient(90deg, #002395 33.33%, #fff 33.33% 66.66%, #ed2939 66.66%); }
+.language-flag[data-flag="it"] { background: linear-gradient(90deg, #009246 33.33%, #fff 33.33% 66.66%, #ce2b37 66.66%); }
+.language-flag[data-flag="es"] { background: linear-gradient(#aa151b 25%, #f1bf00 25% 75%, #aa151b 75%); }
+main > .selectbar { grid-template-columns: minmax(0, 460px); }

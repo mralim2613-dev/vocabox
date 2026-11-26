@@ -1,0 +1,26 @@
+#vocaboxAccount {
+  width: min(440px, calc(100% - 24px));
+}
+
+#vocaboxAccount h2 {
+  margin: 0;
+}
+
+#vocaboxAccount form {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+#vocaboxAccount [data-member-email] {
+  overflow-wrap: anywhere;
+}
+
+#vocaboxAccount [data-status]:empty,
+#vocaboxAccount [data-availability]:empty {
+  display: none;
+}
+
+#accountButton {
+  margin-inline-start: auto;
+}
