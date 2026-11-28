@@ -36,8 +36,13 @@ Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, m
 | 5 | video05-alman-imtahan | Alman dili, imtahana hazırlaşanlar | 18 əvəzinə |
 | 6 | video06-sehvler | Söz öyrənəndə 3 səhv | 6 |
 
+### 4.1 Dəyər seriyası (DEYER_SERIYASI.md)
+| Gün | Qovluq | Mövzu | Stil xülasəsi |
+|---|---|---|---|
+| 01 | gun01 | Söz əzbərləyirsən, bir həftə sonra unudursan? (F2) | divar təqvimi + qrafit qövslər; Fraunces/Plex; soyuq kağız + təqvim qırmızısı; "Gentle Steps" |
+
 ## 5. Açıq məsələlər / növbəti addımlar
-- **Növbəti video:** 7-ci gün (serialdan lüğət) video02 ilə üst-üstə düşür → istifadəçiyə 8-ci günə (Almaniyada ilk həftə 5 söz) keçmək təklif olunub, **cavab gözlənilir**.
+- **Növbəti video:** DEYER_SERIYASI.md Gün 02 (Leitner qutuları nədir?). Diqqət: video04 ilə mövzu oxşardır — vizual olaraq fərqli et. (Köhnə plandakı 7/8-ci gün sualı artıq aktual deyil.)
 - **video03:** ingiliscə ifadələri Azərbaycan səsi oxuyur — aksent riski. Təklif: ingiliscə hissələri ingilisdilli səslə yaradıb calamaq. Cavab gözlənilir.
 - video02: pleyer saatı saniyədə ~10 s irəliləyir (kiçik qüsur, istəsə düzəldilə bilər, səs krediti tələb etmir).
 - Rus dili üçün story sorğusu mətni hazırlamaq təklif olunub.

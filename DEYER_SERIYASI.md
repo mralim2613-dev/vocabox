@@ -46,7 +46,7 @@ Hər gün bir video. Hər video **dil öyrənmə üsulu haqqında bir faydalı f
 - Format: 9:16, 30–40 saniyə, Reels / TikTok / Shorts.
 - Səs: ElevenLabs "Abbas" (voice_id `IVMbfLv3KqUc4qDj6Yif`), `eleven_v4`, 1 variant.
 - Görüntü: Remotion + SVG, kodla çəkilir (AI görüntü və ya video modeli yoxdur).
-- Fayl adları: `gunNN` (iki rəqəmli): `reklam/gun01/sahne_plani.md`, `reklam/remotion/src/gun01/`, `reklam/remotion/public/gun01/`, `reklam/remotion/cikti/gun01.mp4`.
+- Fayl adları: `gunNN` (iki rəqəmli). **Faktiki quruluş (CLAUDE.md şablonu ilə):** `reklam/gunNN/` → `skript.txt`, `soz-vaxtlari.json`, `stil-karti.md`, `vurgu-yoxlama.md`, `lisenziyalar.txt`, `uz-qabigi.png`, `vocabox_gunNN.mp4`, `work/reel.src.html`, `fonts/`.
 
 ---
 
@@ -102,7 +102,7 @@ F1 = hazır söz bazaları, F2 = Leitner qutuları, F3 = mətn → lüğət. "M�
 
 | Gün | Mövzu (başlıq) | Fikir (bir cümlə) | Məhsul | Status |
 |---|---|---|---|---|
-| 01 | Söz əzbərləyirsən, bir həftə sonra unudursan? | Sözlə bir dəfə görüşmək azdır, ona aralarla qayıtmaq lazımdır. | F2 | **mətn təsdiqlənib, istehsalda** |
+| 01 | Söz əzbərləyirsən, bir həftə sonra unudursan? | Sözlə bir dəfə görüşmək azdır, ona aralarla qayıtmaq lazımdır. | F2 | ✅ **hazırdır (reklam/gun01/vocabox_gun01.mp4)** |
 | 02 | Leitner qutuları nədir? Bir dəqiqəlik izah | Kartları qutulara böl: bildiyin irəli, bilmədiyin geri. | F2 | — |
 | 03 | Bir gündə 100 söz niyə işləmir | Az, amma aralarla təkrar, bir dəfəlik böyük yükdən yaxşıdır. | F2 | — |
 | 04 | Tanımaq və xatırlamaq fərqlidir | Sözü görəndə tanımaq hələ onu deyə bilmək deyil, özünü yazaraq yoxla. | F2 (yazaraq xatırla) | — |
@@ -149,7 +149,7 @@ F1 = hazır söz bazaları, F2 = Leitner qutuları, F3 = mətn → lüğət. "M�
 > **Fikir:** Sözlə bir dəfə görüşmək azdır. Ona aralarla qayıtmaq lazımdır, çətin sözə isə daha tez-tez.
 > **Məhsul (5–10 san.):** F2: Leitner qutuları. Bildiyin söz irəli gedir, çətin söz geri qayıdıb yenə qarşına çıxır.
 > **Auditoriya:** ümumi, ingilis dili nümunəsi ilə.
-> **Status:** mətn təsdiqlənib (CTA dəyişdirilib) → istehsalda
+> **Status:** ✅ hazırdır — `reklam/gun01/vocabox_gun01.mp4` (38,2 s). Stil kartı: `reklam/gun01/stil-karti.md`.
 
 ---
 
@@ -255,4 +255,4 @@ Səs:          Abbas səsi + sakit Epidemic treki (≥10 dB aşağı) + yumşaq 
 - **Əvvəlki videolar** (yeni video onlardan ən azı 3 oxda fərqlənməlidir):
   - **Skript 1:** krem kağız, əl çizgisi ilə çəkilmiş xarakter, Segoe şriftləri, söz-söz altyazı.
   - **Skript 5:** gecə otağı, televizor, Bahnschrift + Ink Free, qeyd sarısı, imza öğə "inevitable" sözü.
-- **Gün 01-in statusu:** mətn təsdiqlənib (2026-11-28), istehsal `reklam/gun01/`-də.
+- **Gün 01-in statusu:** hazırdır (2026-11-28), `reklam/gun01/`. Növbəti: Gün 02.

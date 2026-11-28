@@ -1,0 +1,7 @@
+Səsləndirmə: ElevenLabs, model eleven_v4, səs "Abbas - Engaging Delivery" (voice_id IVMbfLv3KqUc4qDj6Yif), tək take (generation rAmF1gG3UP0txWCcA5oe, 586 kredit). Flow: 6hkKJJWx8s3hvNRtbnqr
+Söz vaxtları: ElevenLabs eleven_scribe_v1
+Fon musiqisi: Epidemic Sound — "Gentle Steps", Spectacles Wallet and Watch
+Effektlər (Epidemic Sound): "Office Supplies, Rubber Stamp, Document 01"; "Playing Card, Slide On Table 02"; "Objects, Writing, Marker Pen, Scribble On Cardboard Sheet, Short"; "Paper, Handle, Notepad, Several Pages, Flick Through, Flip Over"
+Şriftlər: Fraunces, IBM Plex Mono, IBM Plex Sans (SIL OFL, @fontsource paketlərindən; fonts/ qovluğunda)
+Şəkillər: Vocabox loqosu və tətbiqin real "Yaddaş qutuları" ekranı (video04 çəkilişindən)
+Epidemic Sound materialları hesabın lisenziyası ilə işlənir; paylaşmadan əvvəl kanalın hesaba bağlı olduğunu yoxlayın. dl/ repoya əlavə edilmir.

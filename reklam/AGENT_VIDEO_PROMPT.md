@@ -167,6 +167,7 @@ Hər `Video.tsx`-də `useFontlar()` çağır (render şriftlər yüklənənə q�
 | 0 | Skript 1 (ilk sınaq, canvas) | `reklam/skript1/vocabox_skript1.mp4` | 746 (2 variant) | Kinetik tipografiya, tünd yaşıl fon. Sistemdən əvvəl; arxiv. |
 | 1 | Skript 1 · İngilis · iş | `reklam/remotion/cikti/skript1.mp4` | eyni səs | Kağız toxuması, əl çizgisi xarakter (iş masası), Segoe Print + Segoe UI, krem + Vocabox yaşılı/laym, söz-söz vurğulu altyazı. İmza: e-poçtdakı boşluq "improve" ilə dolur. |
 | 2 | Skript 5 · İngilis · serial | `reklam/remotion/cikti/skript5.mp4` | 800 (2 variant) | Gecə otağı, televizor işığı, personaj yox (yalnız əllər), Bahnschrift + Ink Free, qeyd sarısı vurğu, neytral cümlə altyazısı, damğa böyük yazı. İmza: altyazıdakı "inevitable" sözü. Klişe balı 2. |
+| 3 | Dəyər seriyası Gün 01 · ümumi · F2 (HTML şablonu, CLAUDE.md) | `reklam/gun01/vocabox_gun01.mp4` | 586 (1 variant) | Divar təqvimi (soyuq kağız #ecebe5, bazar günü qırmızısı), qrafit qövslər, Fraunces 900 + IBM Plex Mono/Sans, real "Yaddaş qutuları" ekranı, "Gentle Steps" musiqisi + möhür/qələm effektləri. İmza: "borrow" kartının böyüyən qövslərlə tullanması. |
 
 **Növbəti video:** yuxarıdakılardan ən azı 3 oxda fərqlən (şrift, palitra, kadraj, imza öğə, zaman). Eyni şrift və imza öğə ardıcıl iki videoda təkrar olunmasın.
 
