@@ -1,5 +1,6 @@
 // Skriptlər üçün ortaq köməkçilər (Windows və Linux).
 import {spawnSync} from 'node:child_process';
+import {existsSync} from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -25,3 +26,8 @@ export function bayraqlar(argv) {
   }
   return o;
 }
+
+// Brauzer: Remotion öz Chrome Headless Shell-ini remotion.media-dan yükləyir. Bulud mühitində bu host
+// bağlı ola bilər; onda hazır Chromium işlədilir. REMOTION_BROWSER_EXECUTABLE ilə də vermək olar.
+const HAZIR = ['/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell'];
+export const BRAUZER = process.env.REMOTION_BROWSER_EXECUTABLE || HAZIR.find((p) => existsSync(p)) || null;

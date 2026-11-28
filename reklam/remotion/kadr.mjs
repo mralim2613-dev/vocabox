@@ -10,7 +10,8 @@ import {cpSync, mkdirSync, rmSync} from 'node:fs';
 import path from 'node:path';
 import {bundle} from '@remotion/bundler';
 import {renderStill, selectComposition} from '@remotion/renderer';
-import {KOK, bayraqlar} from './ortak.mjs';
+import {BRAUZER, KOK, bayraqlar} from './ortak.mjs';
+const B = BRAUZER ? {browserExecutable: BRAUZER} : {};
 
 const o = bayraqlar(process.argv.slice(2));
 const skript = o._[0];
@@ -22,11 +23,11 @@ mkdirSync(cikti, {recursive: true});
 
 console.log('Bundle…');
 const serveUrl = await bundle({entryPoint: path.join(KOK, 'src', skript, 'index.ts'), publicDir: path.join(KOK, 'public')});
-const comp = await selectComposition({serveUrl, id: komp, inputProps});
+const comp = await selectComposition({serveUrl, id: komp, inputProps, ...B});
 
 if (komp !== 'Video') {
   const out = path.join(cikti, `${skript}_${komp}.png`);
-  await renderStill({composition: comp, serveUrl, output: out, frame: 0, inputProps, imageFormat: 'png'});
+  await renderStill({...B, composition: comp, serveUrl, output: out, frame: 0, inputProps, imageFormat: 'png'});
   console.log('Hazırdır:', path.relative(KOK, out));
   process.exit(0);
 }
@@ -45,7 +46,7 @@ mkdirSync(kadrDir, {recursive: true});
 const fayllar = [];
 for (const f of kadrlar) {
   const out = path.join(kadrDir, `k_${String(f).padStart(4, '0')}.jpg`);
-  await renderStill({composition: comp, serveUrl, output: out, frame: f, scale: olcu, inputProps, imageFormat: 'jpeg', jpegQuality: 85});
+  await renderStill({...B, composition: comp, serveUrl, output: out, frame: f, scale: olcu, inputProps, imageFormat: 'jpeg', jpegQuality: 85});
   fayllar.push(out);
   process.stdout.write(`  kadr ${f} (${(f / fps).toFixed(1)} san.)\n`);
 }
@@ -60,9 +61,9 @@ if (o.pano || o.say || o.klise) {
   const en = 240, hund = Math.round(en * comp.height / comp.width);
   const pUrl = await bundle({entryPoint: path.join(KOK, 'src', 'pano', 'index.tsx'), publicDir: path.join(KOK, 'public')});
   const props = {resimler, etiketler: kadrlar.map((f) => `${(f / fps).toFixed(1)}s`), sutun, en, hund};
-  const pComp = await selectComposition({serveUrl: pUrl, id: 'Pano', inputProps: props});
+  const pComp = await selectComposition({serveUrl: pUrl, id: 'Pano', inputProps: props, ...B});
   const out = path.join(cikti, `${skript}_${ad}.jpg`);
-  await renderStill({composition: pComp, serveUrl: pUrl, output: out, frame: 0, inputProps: props, imageFormat: 'jpeg', jpegQuality: 88});
+  await renderStill({...B, composition: pComp, serveUrl: pUrl, output: out, frame: 0, inputProps: props, imageFormat: 'jpeg', jpegQuality: 88});
   rmSync(pDir, {recursive: true, force: true});
   console.log('Pano:', path.relative(KOK, out));
 } else console.log('Kadrlar:', path.relative(KOK, kadrDir));

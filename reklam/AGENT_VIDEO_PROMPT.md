@@ -132,6 +132,7 @@ Hər `Video.tsx`-də `useFontlar()` çağır (render şriftlər yüklənənə q�
 
 - **Tələblər:** sessiyada ElevenLabs connector-u olmalıdır (creative_generate_speech, creative_get_generations). Yoxdursa, dayan və istifadəçiyə de.
 - **Şəbəkə:** `registry.npmjs.org` (npm ci), Remotion-un Chrome Headless Shell yükləməsi (ilk render-də avtomatik), `elevenlabsusercontent.com` (səs). Biri bağlıdırsa, xətanı olduğu kimi istifadəçiyə yaz.
+- **Chrome yüklənmirsə (`getaddrinfo remotion.media`):** `ortak.mjs` hazır Chromium-u (`/opt/pw-browsers/chromium_headless_shell-*`) avtomatik işlədir, və ya `REMOTION_BROWSER_EXECUTABLE` ver.
 - **Chrome işləmirsə (Linux kitabxanaları):** `npx remotion browser ensure` işlət. Yenə alınmasa, xəta mətnini göstər.
 - **Render müddəti:** 24 san. video ~3–6 dəq. Arxa planda işlət.
 - **Təhvil:** commit + push. Video GitHub-da açılır. Fayl ölçüsü adətən 5–20 MB-dır.
@@ -170,6 +171,8 @@ Hər `Video.tsx`-də `useFontlar()` çağır (render şriftlər yüklənənə q�
 
 **Növbəti video:** yuxarıdakılardan ən azı 3 oxda fərqlən (şrift, palitra, kadraj, imza öğə, zaman). Eyni şrift və imza öğə ardıcıl iki videoda təkrar olunmasın.
 
-**Qalan seçilmiş skriptlər:** 6, 7, 8, 9, 11 (ingilis), 12, 15 (rus), 18 (alman) — `REKLAM_SKRIPTLERI_v1.md`. Qalan videolar üçün yeni skriptləri REKLAM_QAYDALARI.md-yə görə yaz və təsdiq al.
+**NÖVBƏTİ İŞ — dəyər məzmunu seriyası (26 video):** növbəti videolar `DEYER_SERIYASI.md`-dəki "Söz öyrənmə üsulu" seriyasıdır (`gun01` … `gun26`). Skriptlər həmin sənədin 2-ci bölməsindəki dəyər məzmunu prinsiplərinə görə yazılır: əvvəl faydalı fikir, məhsul yalnız 5–10 saniyə. Prompt-dakı "skriptN" yerinə "gunNN" işlət. Status və mövzular həmin sənəddədir.
+
+**Qalan seçilmiş skriptlər (seriyadan sonra):** 6, 7, 8, 9, 11 (ingilis), 12, 15 (rus), 18 (alman) — `REKLAM_SKRIPTLERI_v1.md`. Qalan videolar üçün yeni skriptləri REKLAM_QAYDALARI.md-yə görə yaz və təsdiq al.
 
 **Səs büdcəsi:** hər video ~400 kredit (1 variant).

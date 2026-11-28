@@ -3,7 +3,7 @@
 // İstifadə: node render.mjs skriptN [--concurrency 2]
 import {existsSync, mkdirSync, rmSync, statSync, writeFileSync} from 'node:fs';
 import path from 'node:path';
-import {KOK, bayraqlar, ffmpeg, npx} from './ortak.mjs';
+import {BRAUZER, KOK, bayraqlar, ffmpeg, npx} from './ortak.mjs';
 
 const o = bayraqlar(process.argv.slice(2));
 const skript = o._[0];
@@ -13,7 +13,7 @@ mkdirSync(path.join(KOK, 'cikti'), {recursive: true});
 
 const props = `cikti/${skript}_props.json`, sessiz = `cikti/${skript}_sessiz.mp4`, son = `cikti/${skript}.mp4`;
 writeFileSync(path.join(KOK, props), JSON.stringify({sessiz: true}));
-npx(['remotion', 'render', `src/${skript}/index.ts`, 'Video', sessiz, `--concurrency=${o.concurrency ?? 2}`, '--overwrite', '--muted', `--props=${props}`]);
+npx(['remotion', 'render', `src/${skript}/index.ts`, 'Video', sessiz, `--concurrency=${o.concurrency ?? 2}`, '--overwrite', '--muted', `--props=${props}`, ...(BRAUZER ? [`--browser-executable=${BRAUZER}`] : [])]);
 rmSync(path.join(KOK, son), {force: true});
 // Diqqət: -af apad -shortest + -vcodec copy sonsuza qədər işləyir — işlətmə.
 ffmpeg(['-y', '-loglevel', 'error', '-i', sessiz, '-i', `public/${skript}/ses.mp3`, '-map', '0:v', '-map', '1:a', '-vcodec', 'copy', '-acodec', 'aac', '-ab', '192k', son]);
