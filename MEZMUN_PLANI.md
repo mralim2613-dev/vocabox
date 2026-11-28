@@ -1,5 +1,7 @@
 # Vocabox — Məzmun Planı v1 (ilk 20 gün + davamlı ritm)
 
+> **2026-11-28 yeniləməsi:** hazır olmayan günlərin mövzuları **[DEYER_SERIYASI.md](DEYER_SERIYASI.md)**-dəki 26 günlük "Söz öyrənmə üsulu" seriyası ilə əvəz olunub. Növbəti videolar oradan götürülür; aşağıdakı cədvəl yalnız hazır videolar (video01–06) və arxiv üçün saxlanılır.
+
 > **Tarix:** 2026-11-24 · **Status:** layihə
 > **Əsas sənədlər:** [SATIS_MARKETINQ_STRATEGIYASI.md](SATIS_MARKETINQ_STRATEGIYASI.md) (niyə və kimə) · [REKLAM_QAYDALARI.md](REKLAM_QAYDALARI.md) (nə deyilə bilər — **üstündür**) · [REKLAM_SKRIPTLERI_v1.md](REKLAM_SKRIPTLERI_v1.md) (hazır skriptlər) · [reklam/AGENT_VIDEO_PROMPT.md](reklam/AGENT_VIDEO_PROMPT.md) (motion video istehsalı)
 > **Qısaltmalar:** F1 = hazır söz bazaları, F2 = Leitner qutuları, F3 = mətn → lüğət · S1–S3 = məlumatlılıq səviyyəsi (1 xəbərsiz … 5 tam xəbərdar) · EN/RU/DE = ingilis/rus/alman

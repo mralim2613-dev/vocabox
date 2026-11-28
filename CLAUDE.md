@@ -1,19 +1,23 @@
 # Vocabox — Claude üçün davam təlimatı
 
 > Bu fayl hər yeni sessiyada avtomatik oxunur. İstifadəçi Azərbaycan dilində yazır — **Azərbaycan dilində cavab ver.**
-> Son yenilənmə: 2026-11-24. İş branch-ı: `claude/vocabox-sales-marketing-strategy-jwhgpk`.
+> Son yenilənmə: 2026-11-28. İş branch-ı: `ccr-af0c972d-epacv7`.
+
+**Növbəti iş: DEYER_SERIYASI.md-dəki 26 videoluq seriya. Statusu 'hazırdır' olmayan ilk gündən davam et.** Məzmun/skript həmin sənəddən, texniki və vizual istehsal bu fayldan (bölmə 6) və `reklam/video-sablon/LAYIHE_VIDEO_TELIMATI.md`-dən. Qovluq: `reklam/gunNN/`, mp4: `reklam/gunNN/vocabox_gunNN.mp4`.
 
 ## 1. Rolun
 Vocabox-un **marketinq və satış şöbəsi** kimi işləyirsən: strategiya, məzmun planı, qısa şaquli reklam/kontent videoları (Reels/TikTok/Shorts).
 
 ## 2. Əvvəlcə oxu (bu sırayla)
+0. `DEYER_SERIYASI.md` — **cari iş:** 26 günlük dəyər seriyası (mövzu, skript, status).
 1. `REKLAM_QAYDALARI.md` — **məcburi**, hər şeydən üstündür (Q1–Q6 qadağalar, CTA qaydası).
 2. `SATIS_MARKETINQ_STRATEGIYASI.md` — strategiya, seqmentlər, satış skripti (DM).
 3. `MEZMUN_PLANI.md` — 26 günlük məzmun planı (✅ = hazır video).
 4. `reklam/video-sablon/LAYIHE_VIDEO_TELIMATI.md` — video istehsal təlimatı (istifadəçinin verdiyi "layihe-video" skill-i).
 
 ## 3. Sabit qərarlar (istifadəçi təsdiqləyib)
-- **CTA həmişə mesaja (DM) yönləndirir** (Instagram DM / TikTok mesajları). Videoda platforma adı/loqosu yoxdur; "Mesaj yaz" balonu (kağız təyyarə ikonu).
+- **Dəyər seriyasında (DEYER_SERIYASI.md) CTA:** "Ətraflı məlumat üçün rəyə "Vocabox" yazın." (2026-11-28 qərarı; DM qaydasına istisna). Seriyada məhsul hissəsində 1 funksiya kifayətdir; musiqi + effektlər var.
+- **Köhnə videolarda CTA həmişə mesaja (DM) yönləndirirdi** (Instagram DM / TikTok mesajları). Videoda platforma adı/loqosu yoxdur; "Mesaj yaz" balonu (kağız təyyarə ikonu).
 - **ElevenLabs: əvvəl TƏK səs variantı** (`generations_count: 1`). Fasilələr 0,2–0,45 s-dirsə və problem yoxdursa ikinci yaratma.
 - Səs: "Abbas - Engaging Delivery", `voice_id IVMbfLv3KqUc4qDj6Yif`, model `eleven_v4`. Flow: `6hkKJJWx8s3hvNRtbnqr` (yenisini də yaratmaq olar).
 - Musiqi/effekt: Epidemic Sound MCP. Musiqi danışıqdan ≥10 dB aşağı. Hər videoda **fərqli trek** və fərqli vizual üslub (3+ oxda əvvəlkilərdən fərqlən).
